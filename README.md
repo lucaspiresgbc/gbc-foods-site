@@ -2,6 +2,12 @@
 
 Este pacote é o site inteiro: os textos, as fotos, o gerador e a versão pronta para publicar. Ninguém depende de agência para mexer nele. Este manual explica **onde cada coisa fica**, **como alterar** e **como publicar**.
 
+> **Como o trabalho acontece neste repositório:** toda tarefa é uma Issue no GitHub
+> (`Correção`, `Melhoria` ou `Nova função`), o trabalho vai numa branch e chega a `main`
+> só por Pull Request que mencione a Issue (`Closes #N`). Merge em `main` = deploy
+> automático na Cloudflare. O padrão completo, que vale para pessoas e para agentes de
+> qualquer modelo, está em **[AGENTS.md](AGENTS.md)**.
+
 ```
 gbc-foods-site/
 ├── README.md              ← este manual
@@ -25,10 +31,10 @@ gbc-foods-site/
 │   ├── site.css / site.js ← visual e comportamento
 │   └── favicon, og-image  ← ícones e imagem de compartilhamento
 ├── templates/             ← a estrutura HTML das páginas (só mexer se quiser mudar o layout)
-└── dist/                  ← O SITE PRONTO. É esta pasta que vai para o ar.
+└── dist/                  ← O SITE PRONTO (gerada pelo build; não é versionada no git)
 ```
 
-O site é **estático**: não tem banco de dados, painel, senha nem servidor para manter. Cada alteração é: editar um arquivo em `content/` → rodar `python3 build.py` → publicar a pasta `dist/`. Leva um minuto.
+O site é **estático**: não tem banco de dados, painel, senha nem servidor para manter. Cada alteração é: editar um arquivo em `content/` → rodar `python3 build.py` para conferir → abrir o Pull Request. O merge publica sozinho (ver `COMO-PUBLICAR.md`).
 
 ---
 

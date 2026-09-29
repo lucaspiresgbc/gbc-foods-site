@@ -1,0 +1,30 @@
+name: Nova função
+description: Algo que não existia passa a existir (página, categoria, integração, idioma)
+title: "Adicionar "
+labels: ["Nova função"]
+body:
+  - type: textarea
+    id: o-que
+    attributes:
+      label: O que vai existir
+      description: Descreva a função como o visitante ou o administrador vai perceber.
+    validations:
+      required: true
+  - type: textarea
+    id: por-que
+    attributes:
+      label: Por quê
+    validations:
+      required: true
+  - type: textarea
+    id: pronto
+    attributes:
+      label: Critério de pronto
+      description: Inclua "nos 4 idiomas" quando houver texto novo.
+    validations:
+      required: true
+  - type: textarea
+    id: conteudo
+    attributes:
+      label: Conteúdo ou material necessário
+      description: Textos, fotos, especificações, acessos — o que precisa vir da GBC antes de começar.

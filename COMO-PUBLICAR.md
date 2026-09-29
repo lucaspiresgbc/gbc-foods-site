@@ -53,12 +53,27 @@ Depois, envie uma solicitação de teste pelo site publicado. Me avise — eu co
 
 ---
 
-## Atualizar o site depois
+## Atualizar o site depois — pelo GitHub
 
-Cada nova versão é o mesmo gesto: descompactar o zip novo e publicar. Dois jeitos:
+O site vive num repositório no GitHub e **cada merge em `main` publica sozinho** na
+Cloudflare. Ninguém arrasta pasta nem roda comando de deploy: a alteração entra por
+Pull Request ligado a uma Issue (o padrão está em `AGENTS.md`), o CI gera e confere o
+site, e o merge dispara `.github/workflows/deploy.yml`.
 
-- **Sem instalar nada:** Cloudflare Drop de novo, e Claim para o mesmo Worker.
-- **Com Node.js instalado** (o mesmo que o gerador da apresentação usa): na pasta do site, uma vez `npx wrangler login`, e a cada versão `npx wrangler deploy`. Vinte segundos.
+Para isso funcionar, cadastre uma vez os dois segredos no repositório
+(**Settings → Secrets and variables → Actions → New repository secret**):
+
+| Secret | O que é | Onde pegar |
+|---|---|---|
+| `CF_ACCOUNT_ID` | ID da conta Cloudflare | Painel Cloudflare → Workers & Pages → lado direito, "Account ID" |
+| `CF_API_TOKEN` | Token de API só para publicar Workers | Painel → My Profile → API Tokens → Create Token → modelo **"Edit Cloudflare Workers"** (ou permissão *Account · Workers Scripts · Edit*) |
+
+Enquanto os segredos não existirem, o workflow não falha: ele gera o site e deixa a pasta
+`dist/` anexada como artefato da execução (**Actions → Deploy → site-dist-…**) para
+publicar à mão pelo Cloudflare Drop, como na Etapa 1.
+
+Se um deploy falhar, o site anterior continua no ar. Abre-se uma Issue de `Correção` e
+resolve-se pelo fluxo normal.
 
 Fotos próprias: coloque em `static/img/products/`, aponte o campo `image` do produto e gere de novo (ver README.md).
 
@@ -81,3 +96,4 @@ O ERP. Ele é um arquivo estático também, e subiria pelo mesmo caminho em um m
 - [ ] Google Analytics 4 ativo (ID em config.json)
 - [ ] Número de WhatsApp e ID do Analytics em `content/config.json`
 - [ ] Fotos próprias em `static/img/` quando existirem
+- [ ] `CF_ACCOUNT_ID` e `CF_API_TOKEN` cadastrados como Secrets no GitHub (deploy automático)
