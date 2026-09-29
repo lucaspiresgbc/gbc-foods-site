@@ -1,0 +1,66 @@
+# Deploy do site (AGENTS.md, seção 2.6): todo merge em main publica na Cloudflare.
+#
+# Precisa de dois Secrets no repositório (Settings → Secrets and variables → Actions):
+#   CF_API_TOKEN   token da Cloudflare com permissão "Workers Scripts: Edit"
+#   CF_ACCOUNT_ID  ID da conta Cloudflare
+# Enquanto os Secrets não existirem, o workflow gera o site, anexa dist/ como
+# artefato (para publicar à mão pelo Cloudflare Drop) e avisa — sem falhar.
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-main
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: Gerar e publicar na Cloudflare
+    runs-on: ubuntu-latest
+    environment: production
+    env:
+      HAS_CF: ${{ secrets.CF_API_TOKEN != '' && secrets.CF_ACCOUNT_ID != '' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Instalar dependências
+        run: pip install -r requirements.txt
+
+      - name: Conteúdo completo nos 4 idiomas
+        run: python3 build.py --check
+
+      - name: Gerar o site
+        run: python3 build.py
+
+      - name: Links internos
+        run: python3 check_links.py
+
+      - name: Guardar dist/ desta versão
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-dist-${{ github.sha }}
+          path: dist/
+          retention-days: 30
+
+      - name: Publicar na Cloudflare
+        if: env.HAS_CF == 'true'
+        env:
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+        run: python3 cf-deploy.py --name gbc-foods-site --dir dist
+
+      - name: Sem credenciais da Cloudflare
+        if: env.HAS_CF != 'true'
+        run: |
+          echo "::warning::CF_API_TOKEN / CF_ACCOUNT_ID não cadastrados. O site foi gerado e está no artefato site-dist-${{ github.sha }}; publique pelo Cloudflare Drop ou cadastre os Secrets para o deploy automático."

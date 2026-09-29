@@ -1,0 +1,43 @@
+# Verificação de todo Pull Request (AGENTS.md, seção 2.4).
+# Gera o site, confere os 4 idiomas e os links internos, e anexa dist/ ao PR
+# para o revisor abrir localmente sem instalar nada.
+name: CI
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Gerar e verificar o site
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Instalar dependências
+        run: pip install -r requirements.txt
+
+      - name: Conteúdo completo nos 4 idiomas
+        run: python3 build.py --check
+
+      - name: Gerar o site
+        run: python3 build.py
+
+      - name: Links internos
+        run: python3 check_links.py
+
+      - name: Anexar dist/ ao PR
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-dist
+          path: dist/
+          retention-days: 14

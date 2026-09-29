@@ -1,0 +1,29 @@
+name: Melhoria
+description: Algo existe e vai ficar melhor (SEO, desempenho, texto, foto própria)
+title: "Melhorar "
+labels: ["Melhoria"]
+body:
+  - type: textarea
+    id: o-que
+    attributes:
+      label: O que melhorar
+      description: O que existe hoje e o que muda.
+    validations:
+      required: true
+  - type: textarea
+    id: por-que
+    attributes:
+      label: Por quê
+      description: O ganho — para o comprador, para o Google, para quem administra o site.
+    validations:
+      required: true
+  - type: textarea
+    id: pronto
+    attributes:
+      label: Critério de pronto
+    validations:
+      required: true
+  - type: input
+    id: paginas
+    attributes:
+      label: Páginas ou arquivos afetados

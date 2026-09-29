@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Padrão de trabalho (AGENTS.md)
+    url: https://github.com/lucaspiresgbc/gbc-foods-site/blob/main/AGENTS.md
+    about: Toda tarefa é uma Issue de um dos três tipos; nada entra em main sem PR.
