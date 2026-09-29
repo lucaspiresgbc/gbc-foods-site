@@ -4,8 +4,7 @@
 name: CI
 
 on:
-  pull_request:
-    branches: [main]
+  pull_request: # qualquer base — PRs empilhados (base numa branch de trabalho) também passam pelo CI
   workflow_dispatch:
 
 permissions:
