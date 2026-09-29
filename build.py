@@ -190,7 +190,9 @@ def release_id() -> str:
     if env:
         return env[:7]
     try:
-        out = subprocess.run(["git", "rev-parse", "--short", "HEAD"], cwd=ROOT, capture_output=True, text=True, check=False)
+        out = subprocess.run(
+            ["git", "rev-parse", "--short", "HEAD"], cwd=ROOT, capture_output=True, text=True, check=False
+        )
         return out.stdout.strip() if out.returncode == 0 else ""
     except OSError:
         return ""
