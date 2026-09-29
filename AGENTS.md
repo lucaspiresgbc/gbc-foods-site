@@ -88,6 +88,10 @@ python3 check_contract.py               # contratos de arquitetura (URLs estáve
 python3 build.py --check                # conteúdo completo nos 4 idiomas (PT/EN/ES/RU)
 python3 build.py                        # gera dist/ sem erro
 python3 check_links.py                  # 0 links internos quebrados em dist/
+npm run test:py                         # pytest: unitários de build.py + integração sobre dist/ + scripts (cobertura)
+npm test                                # Vitest: módulos JS puros e de DOM (npm run test:coverage para o relatório)
+npm run test:e2e                        # Playwright: desktop e móvel sobre dist/ servida localmente
+npm run test:mutation                   # Stryker (≈3 min): score mínimo 70 %; rode quando mexer em static/js/
 ```
 
 `ruff format .` e `npm run lint:fix` corrigem o que é automático. O CI roda exatamente isso
@@ -152,6 +156,13 @@ Abrir PR com verificação quebrada é perder tempo do revisor.
   `.env`: nunca. No CI eles vivem em *Secrets* do GitHub (`CF_API_TOKEN`,
   `CF_ACCOUNT_ID`). O site só conhece a URL pública da função `site-lead`, nunca uma
   chave.
+- **Testes acompanham o código.** Função nova em `build.py` → teste em `tests/test_build_unit.py`;
+  regra nova sobre o site gerado → `tests/test_site_integration.py`; módulo JS novo → `tests/js/`
+  (puro em Node, DOM em happy-dom) e o Stryker precisa continuar ≥ 70 %; fluxo novo que o
+  visitante usa → `e2e/site.spec.js` (roda em desktop e Pixel 5). O CI recusa PR com cobertura
+  do código alterado abaixo de 70 % (Codecov, `codecov.yml`). O `vitest` fica **fixado em 4.1**:
+  com o 5 o Stryker não ativa os mutantes (score cai a 2 %) — só subir quando o
+  `@stryker-mutator/vitest-runner` suportar.
 - **Motion tem regras** (`static/motion.css` + `static/js/motion.js`, feitos com a skill
   *design-motion-principles*, ponderação Jakub · Jhey · Emil): só `transform`, `opacity`
   e `filter` animam; entrada = opacidade + `translateY` + blur com `var(--ease-out)`,
@@ -211,8 +222,9 @@ trabalho já rejeitado.
 3. Criei a branch a partir de `main` atualizada, com o prefixo certo.
 4. Fiz a alteração em `content/`, `templates/` ou `static/` — nunca em `dist/`.
 5. Chave nova? Está nos quatro idiomas.
-6. `ruff`, `npm run lint`, `check_contract.py`, `build.py --check`, `build.py` e
-   `check_links.py` passaram (seção 2.4).
+6. `ruff`, `npm run lint`, `check_contract.py`, `build.py --check`, `build.py`,
+   `check_links.py`, `npm run test:py`, `npm test` e `npm run test:e2e` passaram (seção 2.4);
+   mexeu em `static/js/`? `npm run test:mutation` também.
 7. Abri o PR com `Closes #N`, descrição pelo template, print se for visual.
 8. Não mesclei. Entreguei o link do PR para a pessoa e disse o que ela vai ver.
 9. Se algo neste fluxo estava fora do meu alcance, disse isso claramente em vez de

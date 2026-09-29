@@ -1,0 +1,24 @@
+# Cobertura publicada no Codecov (Issue #18). Dois relatórios por PR: python (pytest) e js (vitest).
+# Sem CODECOV_TOKEN nos Secrets o envio é pulado pelo CI; os testes rodam do mesmo jeito.
+coverage:
+  status:
+    project:
+      default:
+        target: auto
+        threshold: 1%      # a cobertura total não pode cair mais de 1 ponto num PR
+    patch:
+      default:
+        target: 70%        # código novo ou alterado precisa de 70 % de cobertura
+comment:
+  layout: "condensed_header, diff, flags, files"
+  require_changes: true
+flags:
+  python:
+    paths: ["build.py", "check_links.py", "check_contract.py"]
+  js:
+    paths: ["static/js/"]
+ignore:
+  - "tests/**"
+  - "e2e/**"
+  - "dist/**"
+  - "cf-deploy.py"

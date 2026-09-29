@@ -1,10 +1,17 @@
 {
   "$schema": "https://unpkg.com/knip@6/schema.json",
   "entry": [
-    "static/js/site.js"
+    "static/js/site.js",
+    "tests/js/**/*.test.js",
+    "e2e/**/*.spec.js"
   ],
   "project": [
-    "static/js/**/*.js"
+    "static/js/**/*.js",
+    "tests/js/**/*.js",
+    "e2e/**/*.js"
   ],
-  "ignoreExportsUsedInFile": true
+  "ignoreExportsUsedInFile": true,
+  "ignoreBinaries": [
+    "pytest"
+  ]
 }
