@@ -29,6 +29,7 @@ gbc-foods-site/
 │   ├── img/products/      ← fotos dos produtos
 │   ├── img/brand/         ← logos
 │   ├── site.css           ← visual
+│   ├── motion.css         ← movimento e estados de carregamento (concatenado ao site.css no build)
 │   ├── js/                ← comportamento (site.js é a entrada; módulos puros e de DOM separados)
 │   └── favicon, og-image  ← ícones e imagem de compartilhamento
 ├── templates/             ← a estrutura HTML das páginas (só mexer se quiser mudar o layout)

@@ -1,0 +1,115 @@
+/* ============================================================================
+   MOTION — estados de carregamento e movimento (Issue #16)
+   Ponderação: Jakub (polimento sutil) · Jhey (só no herói) · Emil (menus e formulário).
+   Regras: só transform/opacity/filter animam; entrada com opacidade+translateY+blur, saída mais curta;
+   nada anima sem prefers-reduced-motion tratado; sem JS, tudo fica visível.
+   Este arquivo é concatenado ao fim de site.css pelo build.py.
+   ============================================================================ */
+:root{
+  --ease-out:cubic-bezier(.22,1,.36,1);   /* entradas: rápido no começo, assenta sem sobressalto */
+  --ease-in:cubic-bezier(.4,0,1,1);       /* saídas */
+  --ease-io:cubic-bezier(.65,0,.35,1);    /* mudança de estado enquanto visível */
+  --d-fast:160ms;                         /* menus, hover, pressão (Emil: frequente = rápido) */
+  --d-base:240ms;                         /* fades de imagem, estado do formulário */
+  --d-slow:380ms;                         /* entrada de blocos ao rolar (Jakub) */
+}
+
+/* --- entradas de página (View Transitions; cabeçalho e botão flutuante ficam parados) --- */
+@view-transition{navigation:auto}
+::view-transition-old(root){animation:110ms var(--ease-in) both vt-out}
+::view-transition-new(root){animation:260ms var(--ease-out) both vt-in}
+@keyframes vt-out{to{opacity:0}}
+@keyframes vt-in{from{opacity:0;transform:translateY(6px)}}
+.site-header{view-transition-name:site-header}
+.wa-float{view-transition-name:wa-float}
+.cookie{view-transition-name:cookie}
+
+/* --- herói: entrada escalonada, só CSS (funciona sem JS) --- */
+@keyframes enter{from{opacity:0;transform:translateY(8px);filter:blur(4px)}to{opacity:1;transform:none;filter:blur(0)}}
+.hero h1,.hero .lead,.hero .cta,.hero-art,.page-hero h1,.page-hero .lead,.page-hero .eyebrow,.page-hero .cta,.page-hero-photo,.post-head>*,.post-cover{animation:enter 460ms var(--ease-out) both}
+.hero .lead,.page-hero .lead,.post-head h1{animation-delay:70ms}
+.hero .cta,.page-hero .cta,.post-head .lead{animation-delay:140ms}
+.hero-art,.page-hero-photo,.post-cover{animation-delay:120ms;animation-duration:560ms}
+.page-hero .eyebrow,.post-head .meta{animation-delay:0ms}
+.page-hero h1{animation-delay:40ms}
+
+/* --- blocos revelados ao entrar na tela (JS adiciona .in; sem JS nada fica escondido) --- */
+html.js :where(.grid3>*,.steps>li,.strip-grid>div,.duo>*,.head,.origin-row,.roof-card,.svc-item,.channel,.panel,.cup-photo,.cup h2,.cup .prose,.cta-in>*,.form,.spec-card,.mosaic-grid>*,.gallery>div,.two>*,.two-1>*,.coffee-text>*,.contact-photo,.mini-steps):not(.in){
+  opacity:0;transform:translateY(10px);filter:blur(4px);
+  /* rede de segurança: se o JS não rodar em 2,5 s, o CSS mostra tudo */
+  animation:reveal-fallback 0s linear 2.5s both;
+}
+html.js .in{opacity:1;transform:none;filter:blur(0);transition:opacity var(--d-slow) var(--ease-out),transform var(--d-slow) var(--ease-out),filter var(--d-slow) var(--ease-out);transition-delay:calc(var(--i,0)*55ms)}
+@keyframes reveal-fallback{to{opacity:1;transform:none;filter:blur(0)}}
+/* blocos com foto grande entram sem blur (blur em área grande custa caro na GPU) */
+html.js :where(.origin-row,.two>*,.two-1>*,.cup-photo,.contact-photo,.mosaic-grid>*,.gallery>div,.coffee-text>*):not(.in){filter:none}
+
+/* --- imagens: skeleton enquanto carrega, fade quando chega --- */
+picture{position:relative;background:var(--panel)}
+picture::before{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(100deg,transparent 30%,rgba(255,255,255,.55) 50%,transparent 70%);transform:translateX(-100%);animation:shimmer 1.5s var(--ease-io) infinite}
+@keyframes shimmer{to{transform:translateX(100%)}}
+html.js picture img{opacity:0;transition:opacity var(--d-base) var(--ease-out)}
+html.js picture.is-loaded img{opacity:1}
+html.js picture.is-loaded.instant img{transition:none}
+picture.is-loaded::before,html:not(.js) picture::before{display:none}
+html:not(.js) picture{background:transparent}
+
+/* --- renderização adiada do que está longe da dobra --- */
+.related,.svc-list,.mosaic,.site-footer{content-visibility:auto;contain-intrinsic-size:auto 640px}
+
+/* --- menus: origem no gatilho, entrada 160 ms, saída 120 ms (Emil: navegação é frequente) --- */
+.sub{opacity:0;transform:translateY(-4px) scale(.98);transform-origin:top left;transition:opacity 120ms var(--ease-in),transform 120ms var(--ease-in),display 120ms allow-discrete}
+.has-sub:hover .sub,.has-sub:focus-within .sub,.has-sub.open .sub{opacity:1;transform:none;transition:opacity var(--d-fast) var(--ease-out),transform var(--d-fast) var(--ease-out),display var(--d-fast) allow-discrete}
+.lang-list{opacity:0;transform:translateY(-4px) scale(.98);transform-origin:top right;transition:opacity 120ms var(--ease-in),transform 120ms var(--ease-in),display 120ms allow-discrete}
+.lang.open .lang-list{opacity:1;transform:none;transition:opacity var(--d-fast) var(--ease-out),transform var(--d-fast) var(--ease-out),display var(--d-fast) allow-discrete}
+@starting-style{
+  .has-sub:hover .sub,.has-sub:focus-within .sub,.has-sub.open .sub{opacity:0;transform:translateY(-4px) scale(.98)}
+  .lang.open .lang-list{opacity:0;transform:translateY(-4px) scale(.98)}
+}
+@media (max-width:900px){
+  .nav{opacity:0;transform:translateY(-6px);transition:opacity 140ms var(--ease-in),transform 140ms var(--ease-in),display 140ms allow-discrete}
+  .nav.open{opacity:1;transform:none;transition:opacity 200ms var(--ease-out),transform 200ms var(--ease-out),display 200ms allow-discrete}
+  @starting-style{.nav.open{opacity:0;transform:translateY(-6px)}}
+  .sub{transform-origin:top left;transform:translateY(-3px)}
+}
+
+/* --- banner de cookies: entra depois do herói, sai mais rápido do que entrou --- */
+.cookie{opacity:0;transform:translateY(6px);transition:opacity 180ms var(--ease-in),transform 180ms var(--ease-in),display 180ms allow-discrete}
+.cookie:not([hidden]){opacity:1;transform:none;transition:opacity 320ms var(--ease-out),transform 320ms var(--ease-out),display 320ms allow-discrete}
+@starting-style{.cookie:not([hidden]){opacity:0;transform:translateY(12px)}}
+
+/* --- botões, cartões, links: resposta ao toque (Emil) e hover polido (Jakub) --- */
+.btn{transition:transform var(--d-fast) var(--ease-out),background var(--d-fast) var(--ease-out),color var(--d-fast) var(--ease-out),border-color var(--d-fast) var(--ease-out),box-shadow var(--d-fast) var(--ease-out)}
+.btn:active{transform:translateY(0) scale(.98)}
+.pcard,.bcard,.channel{transition:transform var(--d-fast) var(--ease-out),box-shadow var(--d-fast) var(--ease-out)}
+.more,.tag,.nav a,.sub a,.lang-list a,.site-footer a,.crumbs a{transition:color var(--d-fast) var(--ease-out),background-color var(--d-fast) var(--ease-out)}
+.wa-float{transition:transform var(--d-fast) var(--ease-out)}
+.wa-float:active{transform:scale(.96)}
+.burger span{transition:transform 200ms var(--ease-io),opacity 120ms var(--ease-io)}
+
+/* --- barra de progresso: navegação lenta (JS liga .on após 300 ms) e leitura nos artigos --- */
+.progress{position:fixed;left:0;top:0;height:3px;width:100%;z-index:90;pointer-events:none;background:linear-gradient(90deg,var(--red-warm),var(--red));transform:scaleX(0);transform-origin:left;opacity:0}
+.progress.on{opacity:1;transform:scaleX(.72);transition:transform 4s cubic-bezier(.1,.6,.2,1),opacity 120ms var(--ease-out)}
+@supports (animation-timeline:scroll()){
+  body.post-page .progress{opacity:1;animation:read-progress linear both;animation-timeline:scroll(root)}
+  @keyframes read-progress{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+}
+
+/* --- formulário: enviando → enviado --- */
+.btn.is-loading{position:relative;color:transparent!important;pointer-events:none}
+.btn.is-loading::after{content:"";position:absolute;inset:50% auto auto 50%;width:18px;height:18px;margin:-9px 0 0 -9px;border:2px solid rgba(255,255,255,.35);border-top-color:#fff;border-radius:50%;animation:spin 700ms linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.form-status.pop{animation:pop 260ms var(--ease-out) both}
+@keyframes pop{from{opacity:0;transform:scale(.97);filter:blur(3px)}to{opacity:1;transform:none;filter:blur(0)}}
+.form input,.form select,.form textarea{transition:border-color var(--d-fast) var(--ease-out),box-shadow var(--d-fast) var(--ease-out)}
+
+/* --- movimento reduzido: estados finais, sem transição, sem skeleton animado, sem troca de página animada --- */
+@media (prefers-reduced-motion:reduce){
+  html.js :where(.grid3>*,.steps>li,.strip-grid>div,.duo>*,.head,.origin-row,.roof-card,.svc-item,.channel,.panel,.cup-photo,.cup h2,.cup .prose,.cta-in>*,.form,.spec-card,.mosaic-grid>*,.gallery>div,.two>*,.two-1>*,.coffee-text>*,.contact-photo,.mini-steps):not(.in){opacity:1;transform:none;filter:none}
+  html.js picture img{opacity:1}
+  picture::before{animation:none;display:none}
+  .hero h1,.hero .lead,.hero .cta,.hero-art,.page-hero h1,.page-hero .lead,.page-hero .eyebrow,.page-hero .cta,.page-hero-photo,.post-head>*,.post-cover{animation:none}
+  ::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important}
+  .progress.on{transition:none}
+  .btn.is-loading::after{animation:none;border-top-color:rgba(255,255,255,.35)}
+}

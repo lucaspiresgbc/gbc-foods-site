@@ -37,6 +37,7 @@
 <script type="application/ld+json">{{ ld|tojson_ld|safe }}</script>
 {% endfor %}
 <script>
+document.documentElement.classList.add("js");
 window.GBC = {
   lang: "{{ lang }}",
   wa: "{{ wa }}",
@@ -60,6 +61,7 @@ window.GBC = {
 </script>
 </head>
 <body class="{{ body_class or '' }}">
+<div class="progress" id="progress" aria-hidden="true"></div>
 <a class="skip" href="#main">{{ ui('misc.skip') }}</a>
 
 <header class="site-header">

@@ -484,7 +484,9 @@ def build():
     for name in ("favicon.svg", "apple-touch-icon.png", "favicon-512.png", "og-image.png"):
         shutil.copy2(STATIC / name, DIST / name)
     (DIST / "css").mkdir()
-    shutil.copy2(STATIC / "site.css", DIST / "css" / "site.css")
+    # folha base + motion (static/motion.css) num único arquivo: uma requisição a menos
+    css = (STATIC / "site.css").read_text(encoding="utf-8") + "\n" + (STATIC / "motion.css").read_text(encoding="utf-8")
+    (DIST / "css" / "site.css").write_text(css, encoding="utf-8")
     shutil.copytree(STATIC / "js", DIST / "js")  # módulos ES: site.js importa os demais
     process_images()
 
