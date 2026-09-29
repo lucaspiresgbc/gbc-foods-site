@@ -42,6 +42,8 @@ window.GBC = {
   lang: "{{ lang }}",
   wa: "{{ wa }}",
   ga: "{{ ga }}",
+  sentry: { dsn: "{{ sentry_dsn }}", tracesSampleRate: {{ sentry_rate|tojson }} },
+  release: "{{ release }}",
   lead: "{{ lead_endpoint }}",
   domain: "{{ domain }}",
   email: "{{ cfg.email_comercial }}",

@@ -50,6 +50,8 @@ Depois, envie uma solicitação de teste pelo site publicado. Me avise — eu co
 
 1. **Google Search Console** (search.google.com/search-console): adicione `gbc-foods.com`, verifique pelo DNS (o Cloudflare facilita) e envie o sitemap `https://gbc-foods.com/sitemap.xml`. As quatro línguas entram pelo mesmo sitemap.
 2. **Google Analytics 4**: crie a propriedade, copie o ID `G-…` para `content/config.json` e gere o site de novo. O banner de consentimento já está pronto; sem aceite, nada do Google carrega.
+3. **Sentry** (saber quando algo quebra): conta gratuita em sentry.io → projeto *Browser / JavaScript* → copie o **DSN** para `sentry_dsn` em `content/config.json`. Para cada erro apontar o commit, cadastre no GitHub os Secrets `SENTRY_AUTH_TOKEN` (token com escopo `project:releases`), `SENTRY_ORG` e `SENTRY_PROJECT`. Nada disso é obrigatório para o site funcionar.
+4. **Monitor de disponibilidade**: em Settings → Secrets and variables → Actions → **Variables**, crie `SITE_URL` com o endereço do site no ar (o `workers.dev` já serve). A partir daí o GitHub confere o site a cada 30 minutos e abre uma Issue se ele cair.
 
 ---
 
@@ -94,6 +96,8 @@ O ERP. Ele é um arquivo estático também, e subiria pelo mesmo caminho em um m
 - [ ] Solicitação de teste enviada e confirmada no banco
 - [ ] Search Console com sitemap enviado
 - [ ] Google Analytics 4 ativo (ID em config.json)
+- [ ] `sentry_dsn` em config.json e Secrets do Sentry no GitHub (opcional, mas recomendado)
+- [ ] Variável `SITE_URL` no GitHub para o monitor de disponibilidade
 - [ ] Número de WhatsApp e ID do Analytics em `content/config.json`
 - [ ] Fotos próprias em `static/img/` quando existirem
 - [ ] `CF_ACCOUNT_ID` e `CF_API_TOKEN` cadastrados como Secrets no GitHub (deploy automático)

@@ -164,6 +164,17 @@ Abrir PR com verificação quebrada é perder tempo do revisor.
   duas listas iguais (`motion.css` e `REVEAL_SELECTOR` em `motion.js`). Sem loops
   chamativos (pulsar, brilhar): o único loop é o shimmer do skeleton e o spinner do
   botão, ambos funcionais.
+- **Observabilidade** (`static/js/observability.js`): Sentry no navegador (erros de JS,
+  erros de recurso, Web Vitals), carregado **só depois do consentimento** — o mesmo
+  gancho `onConsentAll` do GA4 — e só se `sentry_dsn` estiver preenchido em
+  `content/config.json`. `sendDefaultPii: false`, sem session replay, tag `lang`,
+  `release` = SHA curto gravado por `build.py` em `window.GBC.release` e registrado no
+  Sentry pelo `deploy.yml` (Secrets `SENTRY_AUTH_TOKEN`, `SENTRY_ORG`, `SENTRY_PROJECT`).
+  Qualquer script de terceiro novo entra pelo mesmo gancho de consentimento e ganha um
+  parágrafo em `content/legal/cookies/*.md` nos 4 idiomas. O monitor de disponibilidade
+  (`uptime.yml`) lê a variável `SITE_URL` e abre Issue de `Correção` quando o site não
+  responde. Datadog, New Relic e OpenTelemetry não se aplicam: o site não tem backend
+  próprio (o único é a função `site-lead`, no Supabase, fora deste repositório).
 - O manual completo de administração é o `README.md`; o roteiro de publicação e domínio
   é o `COMO-PUBLICAR.md`.
 

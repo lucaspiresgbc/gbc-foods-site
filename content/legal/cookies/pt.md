@@ -1,7 +1,7 @@
 ---
 title: Política de Cookies
 description: Quais cookies este site usa, para quê, por quanto tempo, e como mudar a sua escolha.
-updated: 2026-09-28
+updated: 2026-09-29
 ---
 
 Cookies são pequenos arquivos que o site grava no seu navegador para lembrar de alguma coisa entre uma página e outra — o idioma escolhido, por exemplo, ou a resposta que você deu ao banner de consentimento. Este site usa poucos, e só grava cookies de estatística se você autorizar.
@@ -25,6 +25,10 @@ Usamos o **Google Analytics 4** para entender quais páginas são visitadas, de 
 | `_ga_*` | Mantém o estado da sessão de navegação. | 24 meses |
 
 Mais informações sobre o uso de dados pelo Google: [policies.google.com/technologies/partner-sites](https://policies.google.com/technologies/partner-sites).
+
+## Monitoramento de erros (só com a sua autorização)
+
+Com a mesma autorização, carregamos o **Sentry**, um serviço que nos avisa quando alguma coisa quebra no site — um botão que não responde, uma página que não carrega — e mede a velocidade de carregamento. Ele registra o navegador, a página, o idioma, a versão do site e a descrição do erro. Não usa cookies, não grava replay da sua sessão e está configurado para não enviar dados pessoais. Se você clicar em “Só os essenciais”, o Sentry não é carregado. Mais informações: [sentry.io/privacy](https://sentry.io/privacy/).
 
 ## O que este site não usa
 

@@ -16,6 +16,7 @@ import json
 import os
 import re
 import shutil
+import subprocess
 import sys
 from pathlib import Path
 
@@ -178,6 +179,26 @@ WA = re.sub(r"\D", "", CFG.get("whatsapp_numero", ""))
 WA_OK = bool(WA) and "X" not in CFG.get("whatsapp_numero", "").upper()
 GA = CFG.get("ga4_measurement_id", "")
 GA_OK = bool(GA) and "X" not in GA.upper()
+SENTRY_DSN = CFG.get("sentry_dsn", "").strip()
+SENTRY_OK = bool(re.match(r"^https://[a-f0-9]{16,}@", SENTRY_DSN, re.I))
+SENTRY_RATE = CFG.get("sentry_traces_sample_rate", 0.2)
+
+
+def release_id() -> str:
+    """Identificador da versão publicada (SHA curto): o CI passa GITHUB_SHA; localmente vem do git."""
+    env = os.environ.get("SITE_RELEASE") or os.environ.get("GITHUB_SHA", "")
+    if env:
+        return env[:7]
+    try:
+        out = subprocess.run(
+            ["git", "rev-parse", "--short", "HEAD"], cwd=ROOT, capture_output=True, text=True, check=False
+        )
+        return out.stdout.strip() if out.returncode == 0 else ""
+    except OSError:
+        return ""
+
+
+RELEASE = release_id()
 
 PRODUCTS = []
 for p in sorted((CONTENT / "products").glob("*.json")):
@@ -467,6 +488,9 @@ def render(
         "wa": WA,
         "wa_ok": WA_OK,
         "ga": GA if GA_OK else "",
+        "sentry_dsn": SENTRY_DSN if SENTRY_OK else "",
+        "sentry_rate": SENTRY_RATE,
+        "release": RELEASE,
         "lead_endpoint": CFG.get("lead_endpoint", ""),
         "year": datetime.date.today().year,
     }
@@ -825,6 +849,8 @@ def build():
         print(
             "AVISO: ga4_measurement_id não configurado — o Google Analytics não foi incluído (o banner de cookies funciona mesmo assim)."
         )
+    if not SENTRY_OK:
+        print("info: sentry_dsn vazio — monitoramento de erros (Sentry) não incluído. Release:", RELEASE or "(sem git)")
 
 
 def write_sitemap():

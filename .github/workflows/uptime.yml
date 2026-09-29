@@ -1,0 +1,70 @@
+# Monitor de disponibilidade (Issue #17): a cada 30 minutos confere que o site publicado responde nos 4 idiomas.
+# Lê a variável de repositório SITE_URL (Settings → Secrets and variables → Actions → Variables), por exemplo
+# https://gbc-foods.com ou https://gbc-foods-site.<conta>.workers.dev. Sem SITE_URL, não faz nada.
+# Em falha, abre uma Issue de Correção (uma só; se já houver uma aberta, comenta nela).
+name: Disponibilidade
+
+on:
+  schedule:
+    - cron: "17,47 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  verificar:
+    name: Site no ar nos 4 idiomas
+    runs-on: ubuntu-latest
+    if: vars.SITE_URL != ''
+    env:
+      SITE_URL: ${{ vars.SITE_URL }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Conferir páginas
+        id: check
+        shell: bash
+        run: |
+          set +e
+          BASE="${SITE_URL%/}"
+          FALHAS=""
+          for path in / /pt/ /en/ /es/ /ru/ /sitemap.xml; do
+            for tentativa in 1 2; do
+              code=$(curl -sS -o /tmp/body -w "%{http_code}" --max-time 20 -L "$BASE$path")
+              [ "$code" = "200" ] && break
+              sleep 10
+            done
+            if [ "$code" != "200" ]; then
+              FALHAS="$FALHAS\n- \`$path\` respondeu HTTP $code"
+            elif [ "$path" != "/sitemap.xml" ] && ! grep -q "GBC Foods" /tmp/body; then
+              FALHAS="$FALHAS\n- \`$path\` respondeu 200 mas sem o conteúdo esperado"
+            fi
+          done
+          if [ -n "$FALHAS" ]; then
+            printf 'falhas<<EOF\n%b\nEOF\n' "$FALHAS" >> "$GITHUB_OUTPUT"
+            echo "ok=false" >> "$GITHUB_OUTPUT"
+            printf 'Falhas:%b\n' "$FALHAS"
+          else
+            echo "ok=true" >> "$GITHUB_OUTPUT"
+            echo "ok — $BASE responde nos 4 idiomas"
+          fi
+
+      - name: Abrir ou atualizar a Issue de Correção
+        if: steps.check.outputs.ok == 'false'
+        env:
+          FALHAS: ${{ steps.check.outputs.falhas }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          gh api -X POST "repos/${{ github.repository }}/labels" -f name=disponibilidade -f color=B60205 -f description="Site fora do ar ou respondendo errado" >/dev/null 2>&1 || true
+          TITULO="Corrigir: site fora do ar ou respondendo errado (monitor de disponibilidade)"
+          EXISTENTE=$(gh api "repos/${{ github.repository }}/issues?state=open&labels=disponibilidade&per_page=1" --jq '.[0].number // empty')
+          CORPO=$(printf '## O que está errado\n\nO monitor de disponibilidade encontrou falhas em `%s` em %s (UTC):\n%s\n\nExecução: %s\n\n## O que deveria acontecer\n\nTodas as páginas de idioma e o sitemap respondem HTTP 200 com o conteúdo do site.\n\n## Critério de pronto\n\n- [ ] Causa identificada (Cloudflare, DNS, deploy, conteúdo)\n- [ ] Site respondendo nos 4 idiomas\n- [ ] Próxima execução do monitor verde\n' "$SITE_URL" "$(date -u +'%Y-%m-%d %H:%M')" "$FALHAS" "$RUN_URL")
+          if [ -n "$EXISTENTE" ]; then
+            COMENTARIO=$(printf 'Ainda em falha em %s UTC:%s\n\n%s\n' "$(date -u +'%Y-%m-%d %H:%M')" "$FALHAS" "$RUN_URL")
+            gh api -X POST "repos/${{ github.repository }}/issues/$EXISTENTE/comments" -f body="$COMENTARIO" >/dev/null
+            echo "comentado na Issue #$EXISTENTE"
+          else
+            gh api -X POST "repos/${{ github.repository }}/issues" -f title="$TITULO" -f body="$CORPO" -f 'labels[]=Correção' -f 'labels[]=disponibilidade' --jq '.html_url'
+          fi
+          exit 1

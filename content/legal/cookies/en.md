@@ -1,7 +1,7 @@
 ---
 title: Cookie Policy
 description: Which cookies this site uses, what for, for how long, and how to change your choice.
-updated: 2026-09-28
+updated: 2026-09-29
 ---
 
 Cookies are small files a site stores in your browser to remember something between one page and the next — the language you chose, for instance, or the answer you gave to the consent banner. This site uses few of them, and only sets analytics cookies if you allow it.
@@ -25,6 +25,10 @@ We use **Google Analytics 4** to understand which pages are visited, from which 
 | `_ga_*` | Keeps the state of the browsing session. | 24 months |
 
 More on how Google uses data: [policies.google.com/technologies/partner-sites](https://policies.google.com/technologies/partner-sites).
+
+## Error monitoring (only with your permission)
+
+With the same permission we load **Sentry**, a service that tells us when something breaks on the site — a button that does not respond, a page that fails to load — and measures loading speed. It records the browser, the page, the language, the site version and the error description. It sets no cookies, records no session replay and is configured not to send personal data. If you click “Essential only”, Sentry is not loaded. More information: [sentry.io/privacy](https://sentry.io/privacy/).
 
 ## What this site does not use
 

@@ -26,6 +26,23 @@ export function bareDomain(url) {
 }
 
 /**
+ * URL do loader do Sentry a partir do DSN (https://<chave>@o<org>.ingest.sentry.io/<projeto>).
+ * Devolve "" para DSN inválido — e aí nada é carregado.
+ */
+export function sentryLoaderUrl(dsn) {
+  const m = /^https:\/\/([a-f0-9]{16,})@/i.exec(String(dsn || ""));
+  return m ? `https://js.sentry-cdn.com/${m[1]}.min.js` : "";
+}
+
+/** Ambiente para a telemetria: production no domínio oficial, preview em workers.dev, development no resto. */
+export function environmentFor(host, domain) {
+  const official = bareDomain(domain).replace(/\/.*$/, "");
+  if (host === official || host === `www.${official}`) return "production";
+  if (/\.workers\.dev$/.test(host)) return "preview";
+  return "development";
+}
+
+/**
  * Um clique num link vai carregar outra página deste site? (Serve para a barra de progresso de navegação.)
  * `a` precisa de target/hasAttribute/getAttribute/host/pathname/search/hash; `e` do evento (botão e modificadores).
  */

@@ -26,6 +26,7 @@ jobs:
     environment: production
     env:
       HAS_CF: ${{ secrets.CF_API_TOKEN != '' && secrets.CF_ACCOUNT_ID != '' }}
+      HAS_SENTRY: ${{ secrets.SENTRY_AUTH_TOKEN != '' && secrets.SENTRY_ORG != '' && secrets.SENTRY_PROJECT != '' }}
     steps:
       - uses: actions/checkout@v4
 
@@ -64,3 +65,21 @@ jobs:
         if: env.HAS_CF != 'true'
         run: |
           echo "::warning::CF_API_TOKEN / CF_ACCOUNT_ID não cadastrados. O site foi gerado e está no artefato site-dist-${{ github.sha }}; publique pelo Cloudflare Drop ou cadastre os Secrets para o deploy automático."
+
+      # Observabilidade: registra no Sentry a versão publicada (SHA curto, o mesmo que build.py grava em window.GBC.release),
+      # para cada erro apontar o commit. Só roda com SENTRY_AUTH_TOKEN, SENTRY_ORG e SENTRY_PROJECT cadastrados.
+      - name: Registrar release no Sentry
+        if: env.HAS_CF == 'true' && env.HAS_SENTRY == 'true'
+        env:
+          SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
+          SENTRY_ORG: ${{ secrets.SENTRY_ORG }}
+          SENTRY_PROJECT: ${{ secrets.SENTRY_PROJECT }}
+        run: |
+          VERSION="${GITHUB_SHA::7}"
+          curl -sS --fail -X POST "https://sentry.io/api/0/organizations/$SENTRY_ORG/releases/" \
+            -H "Authorization: Bearer $SENTRY_AUTH_TOKEN" -H "Content-Type: application/json" \
+            -d "{\"version\":\"$VERSION\",\"projects\":[\"$SENTRY_PROJECT\"],\"refs\":[{\"repository\":\"${{ github.repository }}\",\"commit\":\"$GITHUB_SHA\"}]}" >/dev/null
+          curl -sS --fail -X POST "https://sentry.io/api/0/organizations/$SENTRY_ORG/releases/$VERSION/deploys/" \
+            -H "Authorization: Bearer $SENTRY_AUTH_TOKEN" -H "Content-Type: application/json" \
+            -d '{"environment":"production"}' >/dev/null
+          echo "release $VERSION registrada no Sentry"
