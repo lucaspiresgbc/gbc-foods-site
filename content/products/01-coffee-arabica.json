@@ -1,0 +1,56 @@
+{
+  "id": "coffee-arabica",
+  "category": "granel",
+  "order": 1,
+  "featured": true,
+  "image": "coffee/coffee-green.jpg",
+  "gallery": ["coffee/origin-secagem.jpg", "coffee/coffee-special.jpg", "coffee/region-aerial.jpg"],
+  "hs": "0901.11",
+  "slug": { "pt": "cafe-verde-arabica", "en": "green-arabica-coffee", "es": "cafe-verde-arabica", "ru": "green-arabica-coffee" },
+  "name": { "pt": "Café verde arábica", "en": "Green arabica coffee", "es": "Café verde arábica", "ru": "Зелёный кофе арабика" },
+  "image_alt": { "pt": "Grãos de café verde", "en": "Green coffee beans", "es": "Granos de café verde", "ru": "Зёрна зелёного кофе" },
+  "short": {
+    "pt": "Arábica natural do Sudoeste de Minas, em três padrões: Special Coffee 17/18, Fine Cup 16/18 e Good Cup 14/16 e 16/18.",
+    "en": "Natural arabica from the southwest of Minas Gerais, in three standards: Special Coffee 17/18, Fine Cup 16/18 and Good Cup 14/16 and 16/18.",
+    "es": "Arábica natural del suroeste de Minas Gerais, en tres estándares: Special Coffee 17/18, Fine Cup 16/18 y Good Cup 14/16 y 16/18.",
+    "ru": "Арабика натуральной обработки с юго-запада Минас-Жерайс в трёх стандартах: Special Coffee 17/18, Fine Cup 16/18 и Good Cup 14/16 и 16/18."
+  },
+  "description": {
+    "pt": [
+      "Café arábica verde de uma cooperativa de famílias produtoras no Sudoeste de Minas Gerais, na faixa onde a mata atlântica encontra o cerrado. As lavouras ficam entre 700 e 1.250 metros, e é essa amplitude que permite a uma mesma origem entregar tanto uma bebida comercial limpa quanto um lote especial.",
+      "O processo é natural: o fruto seca inteiro, ao sol, em terreiro. O grão é classificado por peneira e por bebida em três padrões. O Special Coffee 17/18 vem das encostas mais altas e sai em lotes limitados por safra; o Fine Cup 16/18 e o Good Cup 14/16 e 16/18 têm volume recorrente ao longo do ano. A cooperativa tem certificação Fairtrade, e lotes certificados são preparados mediante solicitação."
+    ],
+    "en": [
+      "Green arabica coffee from a cooperative of producer families in the southwest of Minas Gerais, in the belt where the Atlantic Forest meets the cerrado. The farms sit between 700 and 1,250 metres, and that spread is what lets a single origin deliver both a clean commercial cup and a specialty lot.",
+      "The process is natural: the whole cherry dries in the sun on the patio. The bean is graded by screen and by cup into three standards. Special Coffee 17/18 comes from the higher slopes and is offered in limited lots per harvest; Fine Cup 16/18 and Good Cup 14/16 and 16/18 have recurring volume through the year. The cooperative holds Fairtrade certification, and certified lots are prepared on request."
+    ],
+    "es": [
+      "Café arábica verde de una cooperativa de familias productoras del suroeste de Minas Gerais, en la franja donde la Mata Atlántica se encuentra con el cerrado. Las fincas están entre 700 y 1.250 metros, y esa amplitud es lo que permite a un mismo origen entregar tanto una taza comercial limpia como un lote especial.",
+      "El proceso es natural: la cereza entera se seca al sol en patio. El grano se clasifica por criba y por taza en tres estándares. El Special Coffee 17/18 proviene de las laderas más altas y se ofrece en lotes limitados por cosecha; el Fine Cup 16/18 y el Good Cup 14/16 y 16/18 tienen volumen recurrente durante el año. La cooperativa cuenta con certificación Fairtrade, y los lotes certificados se preparan bajo solicitud."
+    ],
+    "ru": [
+      "Зелёный кофе арабика от кооператива семейных хозяйств на юго-западе штата Минас-Жерайс, на границе Атлантического леса и серрадо. Плантации расположены на высоте от 700 до 1 250 метров, и именно этот диапазон позволяет одному региону давать как чистую коммерческую чашку, так и спешелти-партии.",
+      "Обработка натуральная: целая ягода сушится на солнце на патио. Зерно классифицируется по ситу и по чашке на три стандарта. Special Coffee 17/18 собирается на самых высоких склонах и предлагается ограниченными партиями в каждый урожай; Fine Cup 16/18 и Good Cup 14/16 и 16/18 имеют регулярный объём в течение года. Кооператив имеет сертификат Fairtrade; сертифицированные партии готовятся по запросу."
+    ]
+  },
+  "specs": [
+    { "k": { "pt": "Espécie", "en": "Species", "es": "Especie", "ru": "Вид" },
+      "v": { "pt": "Coffea arabica", "en": "Coffea arabica", "es": "Coffea arabica", "ru": "Coffea arabica" } },
+    { "k": { "pt": "Special Coffee", "en": "Special Coffee", "es": "Special Coffee", "ru": "Special Coffee" },
+      "v": { "pt": "Peneira 17/18 · 1.000 – 1.250 m · lotes limitados por safra", "en": "Screen 17/18 · 1,000 – 1,250 m · limited lots per harvest", "es": "Criba 17/18 · 1.000 – 1.250 m · lotes limitados por cosecha", "ru": "Сито 17/18 · 1 000 – 1 250 м · ограниченные партии в каждый урожай" } },
+    { "k": { "pt": "Fine Cup", "en": "Fine Cup", "es": "Fine Cup", "ru": "Fine Cup" },
+      "v": { "pt": "Peneira 16/18 · 900 – 1.150 m · volume recorrente", "en": "Screen 16/18 · 900 – 1,150 m · recurring volume", "es": "Criba 16/18 · 900 – 1.150 m · volumen recurrente", "ru": "Сито 16/18 · 900 – 1 150 м · регулярный объём" } },
+    { "k": { "pt": "Good Cup", "en": "Good Cup", "es": "Good Cup", "ru": "Good Cup" },
+      "v": { "pt": "Peneira 14/16 e 16/18 · 700 – 1.000 m · volume mensal recorrente", "en": "Screen 14/16 and 16/18 · 700 – 1,000 m · recurring monthly volume", "es": "Criba 14/16 y 16/18 · 700 – 1.000 m · volumen mensual recurrente", "ru": "Сито 14/16 и 16/18 · 700 – 1 000 м · регулярный ежемесячный объём" } },
+    { "k": { "pt": "Processo", "en": "Process", "es": "Proceso", "ru": "Обработка" },
+      "v": { "pt": "Natural, secagem ao sol em terreiro", "en": "Natural, sun-dried on the patio", "es": "Natural, secado al sol en patio", "ru": "Натуральная, сушка на солнце на патио" } },
+    { "k": { "pt": "Colheita", "en": "Harvest", "es": "Cosecha", "ru": "Сбор урожая" },
+      "v": { "pt": "Maio a setembro; embarques de julho a março", "en": "May to September; shipments from July to March", "es": "Mayo a septiembre; embarques de julio a marzo", "ru": "Май – сентябрь; отгрузки с июля по март" } },
+    { "k": { "pt": "Certificação", "en": "Certification", "es": "Certificación", "ru": "Сертификация" },
+      "v": { "pt": "Cooperativa certificada Fairtrade — lotes certificados mediante solicitação", "en": "Fairtrade-certified cooperative — certified lots on request", "es": "Cooperativa certificada Fairtrade — lotes certificados bajo solicitud", "ru": "Кооператив сертифицирован Fairtrade — сертифицированные партии по запросу" } }
+  ],
+  "origin": { "pt": "Sudoeste de Minas Gerais, Brasil", "en": "Southwest of Minas Gerais, Brazil", "es": "Suroeste de Minas Gerais, Brasil", "ru": "Юго-запад штата Минас-Жерайс, Бразилия" },
+  "packaging": { "pt": "Sacas de juta de 60 kg; liner GrainPro ou big bag mediante solicitação", "en": "60 kg jute bags; GrainPro liner or big bags on request", "es": "Sacos de yute de 60 kg; liner GrainPro o big bags bajo solicitud", "ru": "Джутовые мешки по 60 кг; вкладыш GrainPro или биг-бэги по запросу" },
+  "container": { "pt": "20′ · 320 sacas (≈ 19 t) — 40′ HC · 440 sacas (≈ 26 t)", "en": "20′ · 320 bags (≈ 19 t) — 40′ HC · 440 bags (≈ 26 t)", "es": "20′ · 320 sacos (≈ 19 t) — 40′ HC · 440 sacos (≈ 26 t)", "ru": "20′ · 320 мешков (≈ 19 т) — 40′ HC · 440 мешков (≈ 26 т)" },
+  "availability": { "pt": "Fine Cup e Good Cup: volume recorrente. Special Coffee: lotes limitados por safra.", "en": "Fine Cup and Good Cup: recurring volume. Special Coffee: limited lots per harvest.", "es": "Fine Cup y Good Cup: volumen recurrente. Special Coffee: lotes limitados por cosecha.", "ru": "Fine Cup и Good Cup: регулярный объём. Special Coffee: ограниченные партии в каждый урожай." }
+}

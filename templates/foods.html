@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m %}
+{% block content %}
+{{ m.crumbs(breadcrumbs, ui) }}
+<section class="page-hero">
+  <div class="wrap two">
+    <div>
+      <div class="div-label big"><span>GBC</span><em>Foods</em></div>
+      <h1>{{ page.title }}</h1>
+      <p class="prose lead">{{ page.lead }}</p>
+      <div class="cta">
+        <a class="btn solid" href="{{ url('products') }}">{{ ui('btn.products') }}</a>
+        <a class="btn ghost" href="{{ url('quote') }}">{{ ui('btn.quote') }}</a>
+      </div>
+    </div>
+    <div class="page-hero-photo">{{ picture('coffee/origin-colheita.jpg', '', sizes="(max-width: 900px) 100vw, 45vw", loading="eager")|safe }}</div>
+  </div>
+</section>
+
+<section class="origins">
+  <div class="wrap">
+    <div class="head"><h2>{{ page.origins_title }}</h2></div>
+    {% for o in page.origins %}
+    <article class="origin-row {% if loop.index is even %}rev{% endif %}">
+      <div class="origin-photo">{{ picture(o.img, o.alt, sizes="(max-width: 900px) 100vw, 50vw")|safe }}</div>
+      <div class="origin-text">
+        <h3>{{ o.h }}</h3>
+        <p class="prose">{{ o.p }}</p>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="cup">
+  <div class="wrap two-1">
+    <div>
+      <h2>{{ page.cup_title }}</h2>
+      <dl class="facts big">
+        {% for c in page.cup %}<div><dt>{{ c.k }}</dt><dd>{{ c.v }}</dd></div>{% endfor %}
+      </dl>
+    </div>
+    <div class="cup-photo">{{ picture('coffee/cup-profile.jpg', '', sizes="(max-width: 900px) 100vw, 33vw")|safe }}</div>
+  </div>
+</section>
+
+<section class="how">
+  <div class="wrap">
+    <div class="head"><h2>{{ page.how_title }}</h2></div>
+    <ol class="steps three">
+      {% for s in page.how %}
+      <li><span class="num">{{ '%02d' % loop.index }}</span><div><h3>{{ s[0] }}</h3><p>{{ s[1] }}</p></div></li>
+      {% endfor %}
+    </ol>
+  </div>
+</section>
+
+{{ m.cta(page.cta_title, page.cta_text, ui('btn.products'), url('products'), ui('btn.quote'), url('quote')) }}
+{% endblock %}

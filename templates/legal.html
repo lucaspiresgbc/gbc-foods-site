@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m %}
+{% block content %}
+{{ m.crumbs(breadcrumbs, ui) }}
+<article class="legal">
+  <header class="post-head wrap">
+    <h1>{{ doc_title }}</h1>
+    <p class="meta">{{ updated }}</p>
+  </header>
+  <div class="post-body wrap prose">
+    {{ body_html|safe }}
+  </div>
+</article>
+{% endblock %}

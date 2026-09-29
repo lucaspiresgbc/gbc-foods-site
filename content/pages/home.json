@@ -1,0 +1,271 @@
+{
+  "_comentario": "Página inicial. Um bloco por idioma, mesma estrutura. Os produtos e os artigos do blog entram sozinhos (dos arquivos de produtos e de blog).",
+  "en": {
+    "meta_title": "GBC Foods — Brazilian food trading with its own international logistics",
+    "meta_description": "Green coffee, peanuts, Brazil nuts, macadamia, sesame, sugar, milk powder and corn starch from Brazil, almonds from Portugal. Trading and logistics under one roof, shipped from Santos on FOB, CFR or CIF terms.",
+    "hero_title": "Food from Brazil and Portugal, from the origin to your port.",
+    "hero_text": "GBC Foods is the food arm of GBC Group, a Brazilian trading company that runs its own international logistics. We originate coffee, nuts, seeds, sugar and powdered products against your specification and ship them out of Santos — with the trading desk and the shipping operation in the same building.",
+    "hero_cta1": "See the products",
+    "hero_cta2": "Request a quote",
+    "strip": [
+      {
+        "k": "Head office",
+        "v": "Santos, São Paulo — Brazil's main export port"
+      },
+      {
+        "k": "Structure",
+        "v": "Trading and logistics under one roof"
+      },
+      {
+        "k": "Catalogue",
+        "v": "Coffee · nuts · seeds · sugar · powders · almonds"
+      },
+      {
+        "k": "Terms",
+        "v": "FOB · CFR · CIF from Santos (BRSSZ)"
+      }
+    ],
+    "div_title": "Two divisions, one operation",
+    "div_text": "Most exporters sell you the goods and hand the shipment to somebody else. In this group both sit at the same table, which changes what we can tell you — and when.",
+    "div_foods_title": "Origination, grading and contract",
+    "div_foods_text": "Origination, grading, sampling and contract. Green arabica coffee from a partner cooperative in Minas Gerais, nuts, seeds, sugar and powders from Brazil, and almonds grown on the group's own orchards in Portugal.",
+    "div_foods_cta": "Products",
+    "div_log_title": "From the warehouse to your port",
+    "div_log_text": "Inland haulage, terminal, customs clearance, certificates, booking, bill of lading and cargo insurance, controlled by the same team that sold you the lot.",
+    "div_log_cta": "Logistics and transport",
+    "fam_title": "What we ship",
+    "fam_text": "Two families of product, one way of working: you set the specification, we source against it, and nothing is bought before you approve sample and price.",
+    "fam_bulk": "Bulk products",
+    "fam_powders": "Powdered products",
+    "coffee_title": "Coffee from the southwest of Minas Gerais",
+    "coffee_text": "Our arabica comes from a cooperative of producer families in the southwest of Minas Gerais, in the belt where the Atlantic Forest meets the cerrado, between 700 and 1,250 metres. Natural process, sun-dried on the patio, graded into three cup standards. We know the farms, and we go back to them every harvest.",
+    "coffee_facts": [
+      {
+        "k": "Standards",
+        "v": "Special Coffee 17/18 · Fine Cup 16/18 · Good Cup 14/16 and 16/18"
+      },
+      {
+        "k": "Process",
+        "v": "Natural, sun-dried on the patio"
+      },
+      {
+        "k": "Altitude",
+        "v": "700 – 1,250 m"
+      },
+      {
+        "k": "Harvest",
+        "v": "May to September"
+      }
+    ],
+    "coffee_cta": "See the coffee",
+    "steps_title": "How a shipment runs",
+    "steps_text": "The same ten steps every time, whichever product you buy. Specification first, purchase only after your approval, and one team from the warehouse to your port.",
+    "steps_cta": "See the whole process",
+    "blog_title": "From the blog",
+    "blog_text": "Practical notes on buying food from Brazil: grades, screen sizes, Incoterms and documents, written by the people who ship it.",
+    "cta_title": "Tell us the specification. We do the rest.",
+    "cta_text": "Product, grade, volume, Incoterm, destination port and shipment window. Your request opens in WhatsApp, already written and addressed to our commercial team.",
+    "cta_btn": "Request a quote"
+  },
+  "pt": {
+    "meta_title": "GBC Foods — Trading de alimentos do Brasil com logística internacional própria",
+    "meta_description": "Café verde, amendoim, castanha-do-brasil, macadâmia, gergelim, açúcar, leite em pó e amido de milho do Brasil, amêndoas de Portugal. Trading e logística sob o mesmo teto, embarque por Santos em FOB, CFR ou CIF.",
+    "hero_title": "Alimentos do Brasil e de Portugal, da origem ao seu porto.",
+    "hero_text": "A GBC Foods é o braço de alimentos do GBC Group, uma trading brasileira que opera a própria logística internacional. Originamos café, castanhas, sementes, açúcar e produtos em pó conforme a sua especificação e embarcamos por Santos — com a mesa de negociação e a operação de embarque no mesmo prédio.",
+    "hero_cta1": "Ver os produtos",
+    "hero_cta2": "Pedir cotação",
+    "strip": [
+      {
+        "k": "Sede",
+        "v": "Santos, São Paulo — o principal porto exportador do Brasil"
+      },
+      {
+        "k": "Estrutura",
+        "v": "Trading e logística sob o mesmo teto"
+      },
+      {
+        "k": "Catálogo",
+        "v": "Café · castanhas · sementes · açúcar · pós · amêndoas"
+      },
+      {
+        "k": "Termos",
+        "v": "FOB · CFR · CIF a partir de Santos (BRSSZ)"
+      }
+    ],
+    "div_title": "Duas divisões, uma operação",
+    "div_text": "A maioria dos exportadores vende a mercadoria e entrega o embarque a outra empresa. Neste grupo, as duas coisas ficam na mesma mesa — o que muda o que conseguimos te informar, e quando.",
+    "div_foods_title": "Originação, classificação e contrato",
+    "div_foods_text": "Originação, classificação, amostragem e contrato. Café arábica verde de uma cooperativa parceira em Minas Gerais, castanhas, sementes, açúcar e pós do Brasil, e amêndoas cultivadas nos pomares próprios do grupo em Portugal.",
+    "div_foods_cta": "Produtos",
+    "div_log_title": "Do armazém ao seu porto",
+    "div_log_text": "Transporte rodoviário, terminal, desembaraço aduaneiro, certificados, booking, conhecimento de embarque e seguro de carga, controlados pela mesma equipe que te vendeu o lote.",
+    "div_log_cta": "Logística e transporte",
+    "fam_title": "O que embarcamos",
+    "fam_text": "Duas famílias de produto, um jeito de trabalhar: você define a especificação, nós originamos conforme ela, e nada é comprado antes de você aprovar amostra e preço.",
+    "fam_bulk": "Produtos a granel",
+    "fam_powders": "Produtos em pó",
+    "coffee_title": "Café do Sudoeste de Minas",
+    "coffee_text": "Nosso arábica vem de uma cooperativa de famílias produtoras no Sudoeste de Minas Gerais, na faixa onde a mata atlântica encontra o cerrado, entre 700 e 1.250 metros. Processo natural, secagem ao sol em terreiro, classificado em três padrões de bebida. Conhecemos as lavouras, e voltamos a elas a cada safra.",
+    "coffee_facts": [
+      {
+        "k": "Padrões",
+        "v": "Special Coffee 17/18 · Fine Cup 16/18 · Good Cup 14/16 e 16/18"
+      },
+      {
+        "k": "Processo",
+        "v": "Natural, secagem ao sol em terreiro"
+      },
+      {
+        "k": "Altitude",
+        "v": "700 – 1.250 m"
+      },
+      {
+        "k": "Colheita",
+        "v": "Maio a setembro"
+      }
+    ],
+    "coffee_cta": "Ver o café",
+    "steps_title": "Como corre um embarque",
+    "steps_text": "Os mesmos dez passos, em qualquer produto. Especificação primeiro, compra só depois da sua aprovação, e uma única equipe do armazém ao seu porto.",
+    "steps_cta": "Ver o processo completo",
+    "blog_title": "Do blog",
+    "blog_text": "Notas práticas sobre comprar alimentos do Brasil: classificações, peneiras, Incoterms e documentos, escritas por quem embarca.",
+    "cta_title": "Diga a especificação. Nós fazemos o resto.",
+    "cta_text": "Produto, classificação, volume, Incoterm, porto de destino e janela de embarque. O pedido abre no WhatsApp, já escrito e endereçado à nossa equipe comercial.",
+    "cta_btn": "Pedir cotação"
+  },
+  "es": {
+    "meta_title": "GBC Foods — Trading de alimentos de Brasil con logística internacional propia",
+    "meta_description": "Café verde, cacahuete, nuez de Brasil, macadamia, sésamo, azúcar, leche en polvo y almidón de maíz de Brasil, almendras de Portugal. Trading y logística bajo un mismo techo, embarque desde Santos en FOB, CFR o CIF.",
+    "hero_title": "Alimentos de Brasil y Portugal, del origen a su puerto.",
+    "hero_text": "GBC Foods es la división de alimentos de GBC Group, una trading brasileña que opera su propia logística internacional. Originamos café, frutos secos, semillas, azúcar y productos en polvo según su especificación y los embarcamos desde Santos — con la mesa de negociación y la operación de embarque en el mismo edificio.",
+    "hero_cta1": "Ver los productos",
+    "hero_cta2": "Solicitar cotización",
+    "strip": [
+      {
+        "k": "Sede",
+        "v": "Santos, São Paulo — el principal puerto exportador de Brasil"
+      },
+      {
+        "k": "Estructura",
+        "v": "Trading y logística bajo un mismo techo"
+      },
+      {
+        "k": "Catálogo",
+        "v": "Café · frutos secos · semillas · azúcar · polvos · almendras"
+      },
+      {
+        "k": "Términos",
+        "v": "FOB · CFR · CIF desde Santos (BRSSZ)"
+      }
+    ],
+    "div_title": "Dos divisiones, una operación",
+    "div_text": "La mayoría de los exportadores vende la mercadería y entrega el embarque a otra empresa. En este grupo, ambas cosas están en la misma mesa — lo que cambia lo que podemos informarle, y cuándo.",
+    "div_foods_title": "Originación, clasificación y contrato",
+    "div_foods_text": "Originación, clasificación, muestreo y contrato. Café arábica verde de una cooperativa asociada en Minas Gerais, frutos secos, semillas, azúcar y polvos de Brasil, y almendras cultivadas en las plantaciones propias del grupo en Portugal.",
+    "div_foods_cta": "Productos",
+    "div_log_title": "Del almacén a su puerto",
+    "div_log_text": "Transporte terrestre, terminal, despacho aduanero, certificados, booking, conocimiento de embarque y seguro de carga, controlados por el mismo equipo que le vendió el lote.",
+    "div_log_cta": "Logística y transporte",
+    "fam_title": "Lo que embarcamos",
+    "fam_text": "Dos familias de producto, una forma de trabajar: usted define la especificación, nosotros originamos según ella, y nada se compra antes de que apruebe muestra y precio.",
+    "fam_bulk": "Productos a granel",
+    "fam_powders": "Productos en polvo",
+    "coffee_title": "Café del suroeste de Minas Gerais",
+    "coffee_text": "Nuestro arábica proviene de una cooperativa de familias productoras del suroeste de Minas Gerais, en la franja donde la Mata Atlántica se encuentra con el cerrado, entre 700 y 1.250 metros. Proceso natural, secado al sol en patio, clasificado en tres estándares de taza. Conocemos las fincas, y volvemos a ellas en cada cosecha.",
+    "coffee_facts": [
+      {
+        "k": "Estándares",
+        "v": "Special Coffee 17/18 · Fine Cup 16/18 · Good Cup 14/16 y 16/18"
+      },
+      {
+        "k": "Proceso",
+        "v": "Natural, secado al sol en patio"
+      },
+      {
+        "k": "Altitud",
+        "v": "700 – 1.250 m"
+      },
+      {
+        "k": "Cosecha",
+        "v": "Mayo a septiembre"
+      }
+    ],
+    "coffee_cta": "Ver el café",
+    "steps_title": "Cómo se desarrolla un embarque",
+    "steps_text": "Los mismos diez pasos, con cualquier producto. Primero la especificación, compra solo después de su aprobación, y un único equipo del almacén a su puerto.",
+    "steps_cta": "Ver el proceso completo",
+    "blog_title": "Del blog",
+    "blog_text": "Notas prácticas sobre comprar alimentos de Brasil: clasificaciones, cribas, Incoterms y documentos, escritas por quienes embarcan.",
+    "cta_title": "Díganos la especificación. Nosotros hacemos el resto.",
+    "cta_text": "Producto, clasificación, volumen, Incoterm, puerto de destino y ventana de embarque. La solicitud se abre en WhatsApp, ya redactada y dirigida a nuestro equipo comercial.",
+    "cta_btn": "Solicitar cotización"
+  },
+  "ru": {
+    "meta_title": "GBC Foods — торговля продовольствием из Бразилии с собственной международной логистикой",
+    "meta_description": "Зелёный кофе, арахис, бразильский орех, макадамия, кунжут, сахар, сухое молоко и кукурузный крахмал из Бразилии, миндаль из Португалии. Трейдинг и логистика под одной крышей, отгрузка из порта Сантос на условиях FOB, CFR или CIF.",
+    "hero_title": "Продовольствие из Бразилии и Португалии — от места происхождения до вашего порта.",
+    "hero_text": "GBC Foods — продовольственное подразделение GBC Group, бразильской торговой компании с собственной международной логистикой. Мы закупаем кофе, орехи, семена, сахар и порошковую продукцию по вашей спецификации и отгружаем из порта Сантос — торговый отдел и отдел отгрузок работают в одном здании.",
+    "hero_cta1": "Смотреть продукцию",
+    "hero_cta2": "Запросить цену",
+    "strip": [
+      {
+        "k": "Головной офис",
+        "v": "Сантос, штат Сан-Паулу — главный экспортный порт Бразилии"
+      },
+      {
+        "k": "Структура",
+        "v": "Трейдинг и логистика под одной крышей"
+      },
+      {
+        "k": "Каталог",
+        "v": "Кофе · орехи · семена · сахар · порошки · миндаль"
+      },
+      {
+        "k": "Условия",
+        "v": "FOB · CFR · CIF из Сантоса (BRSSZ)"
+      }
+    ],
+    "div_title": "Два подразделения — одна команда",
+    "div_text": "Большинство экспортёров продают товар, а отгрузку передают сторонней компании. В нашей группе обе задачи решаются за одним столом — и это меняет то, что и когда мы можем вам сообщить.",
+    "div_foods_title": "Закупка, классификация и контракт",
+    "div_foods_text": "Закупка, классификация, отбор образцов и контракт. Зелёный кофе арабика от кооператива-партнёра в штате Минас-Жерайс, орехи, семена, сахар и порошки из Бразилии, а также миндаль из собственных садов группы в Португалии.",
+    "div_foods_cta": "Продукция",
+    "div_log_title": "От склада до вашего порта",
+    "div_log_text": "Автоперевозка, терминал, таможенное оформление, сертификаты, букинг, коносамент и страхование груза — под контролем той же команды, которая продала вам партию.",
+    "div_log_cta": "Логистика и перевозки",
+    "fam_title": "Что мы отгружаем",
+    "fam_text": "Две группы продукции, один подход к работе: вы задаёте спецификацию, мы закупаем в соответствии с ней, и ничего не покупается до того, как вы утвердите образец и цену.",
+    "fam_bulk": "Насыпная продукция",
+    "fam_powders": "Порошковая продукция",
+    "coffee_title": "Кофе с юго-запада штата Минас-Жерайс",
+    "coffee_text": "Наша арабика поступает от кооператива семейных хозяйств на юго-западе штата Минас-Жерайс, на границе Атлантического леса и серрадо, на высоте от 700 до 1 250 метров. Натуральная обработка, сушка на солнце на патио, три стандарта качества чашки. Мы знаем эти хозяйства и возвращаемся к ним каждый урожай.",
+    "coffee_facts": [
+      {
+        "k": "Стандарты",
+        "v": "Special Coffee 17/18 · Fine Cup 16/18 · Good Cup 14/16 и 16/18"
+      },
+      {
+        "k": "Обработка",
+        "v": "Натуральная, сушка на солнце на патио"
+      },
+      {
+        "k": "Высота",
+        "v": "700 – 1 250 м"
+      },
+      {
+        "k": "Сбор урожая",
+        "v": "Май – сентябрь"
+      }
+    ],
+    "coffee_cta": "Смотреть кофе",
+    "steps_title": "Как проходит отгрузка",
+    "steps_text": "Одни и те же десять шагов для любого продукта. Сначала спецификация, закупка только после вашего утверждения, и одна команда от склада до вашего порта.",
+    "steps_cta": "Смотреть весь процесс",
+    "blog_title": "Из блога",
+    "blog_text": "Практические заметки о закупке продовольствия в Бразилии: сорта, калибры, Инкотермс и документы — от тех, кто отгружает.",
+    "cta_title": "Сообщите спецификацию. Остальное сделаем мы.",
+    "cta_text": "Продукт, сорт, объём, Инкотермс, порт назначения и период отгрузки. Запрос откроется в WhatsApp уже готовым и адресованным нашему коммерческому отделу.",
+    "cta_btn": "Запросить цену"
+  }
+}

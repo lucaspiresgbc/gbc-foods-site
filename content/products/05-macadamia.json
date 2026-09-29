@@ -1,0 +1,47 @@
+{
+  "id": "macadamia",
+  "category": "granel",
+  "order": 5,
+  "featured": false,
+  "image": "products/macadamia.jpg",
+  "hs": "0802.62",
+  "slug": { "pt": "macadamia", "en": "macadamia", "es": "macadamia", "ru": "macadamia" },
+  "name": { "pt": "Macadâmia", "en": "Macadamia", "es": "Macadamia", "ru": "Макадамия" },
+  "image_alt": { "pt": "Miolo de macadâmia", "en": "Macadamia kernels", "es": "Macadamia pelada", "ru": "Ядра макадамии" },
+  "short": {
+    "pt": "Miolo descascado nos tipos 1, 2 e Gourmet, embalado a vácuo, de pomares do Sudeste e do Nordeste do Brasil.",
+    "en": "Shelled kernels in Type 1, Type 2 and Gourmet, vacuum-packed, from orchards in southeast and northeast Brazil.",
+    "es": "Grano pelado en tipos 1, 2 y Gourmet, envasado al vacío, de plantaciones del sudeste y nordeste de Brasil.",
+    "ru": "Очищенные ядра типов 1, 2 и Gourmet, вакуумная упаковка, с плантаций юго-востока и северо-востока Бразилии."
+  },
+  "description": {
+    "pt": [
+      "Macadâmia brasileira, descascada e classificada por tipo: Tipo 1, Tipo 2 e Gourmet, que diferem na proporção de miolos inteiros e metades e na seleção de cor. A ficha de cada tipo, com a distribuição de tamanhos e o teor de umidade, é enviada com a cotação.",
+      "Os pomares ficam em São Paulo, Minas Gerais, Espírito Santo e Bahia. A colheita vai de março a agosto; a quebra, a secagem controlada e a seleção são feitas pelo beneficiador, e o miolo é embalado a vácuo para chegar ao destino com a mesma crocância com que saiu."
+    ],
+    "en": [
+      "Brazilian macadamia, shelled and graded by type: Type 1, Type 2 and Gourmet, which differ in the share of whole kernels and halves and in colour sorting. The sheet for each type, with size distribution and moisture, is sent with the quote.",
+      "The orchards are in São Paulo, Minas Gerais, Espírito Santo and Bahia. Harvest runs from March to August; cracking, controlled drying and sorting are done by the processor, and the kernel is vacuum-packed so it reaches destination as crisp as it left."
+    ],
+    "es": [
+      "Macadamia brasileña, pelada y clasificada por tipo: Tipo 1, Tipo 2 y Gourmet, que difieren en la proporción de granos enteros y mitades y en la selección de color. La ficha de cada tipo, con la distribución de tamaños y la humedad, se envía con la cotización.",
+      "Las plantaciones están en São Paulo, Minas Gerais, Espírito Santo y Bahía. La cosecha va de marzo a agosto; el quebrado, el secado controlado y la selección los realiza el procesador, y el grano se envasa al vacío para llegar a destino tan crujiente como salió."
+    ],
+    "ru": [
+      "Бразильская макадамия, очищенная и классифицированная по типам: Тип 1, Тип 2 и Gourmet, различающимся долей целых ядер и половинок и сортировкой по цвету. Спецификация каждого типа — распределение по размерам и влажность — отправляется вместе с коммерческим предложением.",
+      "Плантации расположены в штатах Сан-Паулу, Минас-Жерайс, Эспириту-Санту и Баия. Сбор урожая — с марта по август; раскалывание, контролируемая сушка и сортировка выполняются переработчиком, а ядро упаковывается в вакуум, чтобы прибыть в порт назначения таким же хрустящим, каким было отправлено."
+    ]
+  },
+  "specs": [
+    { "k": { "pt": "Forma", "en": "Form", "es": "Forma", "ru": "Форма" },
+      "v": { "pt": "Miolo descascado", "en": "Shelled kernels", "es": "Grano pelado", "ru": "Очищенные ядра" } },
+    { "k": { "pt": "Tipos", "en": "Types", "es": "Tipos", "ru": "Типы" },
+      "v": { "pt": "Tipo 1 · Tipo 2 · Gourmet", "en": "Type 1 · Type 2 · Gourmet", "es": "Tipo 1 · Tipo 2 · Gourmet", "ru": "Тип 1 · Тип 2 · Gourmet" } },
+    { "k": { "pt": "Colheita", "en": "Harvest", "es": "Cosecha", "ru": "Сбор урожая" },
+      "v": { "pt": "Março a agosto", "en": "March to August", "es": "Marzo a agosto", "ru": "Март – август" } }
+  ],
+  "origin": { "pt": "São Paulo, Minas Gerais, Espírito Santo e Bahia, Brasil", "en": "São Paulo, Minas Gerais, Espírito Santo and Bahia, Brazil", "es": "São Paulo, Minas Gerais, Espírito Santo y Bahía, Brasil", "ru": "Штаты Сан-Паулу, Минас-Жерайс, Эспириту-Санту и Баия, Бразилия" },
+  "packaging": { "pt": "Sacos a vácuo de 11,34 kg (25 lb), dois por caixa", "en": "11.34 kg (25 lb) vacuum bags, two per carton", "es": "Bolsas al vacío de 11,34 kg (25 lb), dos por caja", "ru": "Вакуумные пакеты по 11,34 кг (25 фунтов), два в коробке" },
+  "container": { "pt": "Confirmado na cotação, conforme a paletização", "en": "Confirmed in the quote, depending on palletisation", "es": "Confirmado en la cotización, según la paletización", "ru": "Подтверждается в коммерческом предложении в зависимости от паллетирования" },
+  "availability": { "pt": "Ao longo do ano, sujeito à safra", "en": "Year-round, subject to the crop", "es": "Durante todo el año, sujeto a la cosecha", "ru": "В течение года, в зависимости от урожая" }
+}

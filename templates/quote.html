@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m %}
+{% block content %}
+{{ m.crumbs(breadcrumbs, ui) }}
+<section class="page-hero compact">
+  <div class="wrap">
+    <h1>{{ page.quote_title }}</h1>
+    <p class="prose lead">{{ ui('form.intro') }}</p>
+  </div>
+</section>
+
+<section class="quote">
+  <div class="wrap two-1">
+    <form id="quote-form" class="form" novalidate autocomplete="on">
+      <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <div class="row">
+        <label>{{ ui('form.name') }} <small>({{ ui('form.required') }})</small><input type="text" name="nome" required maxlength="120" autocomplete="name"></label>
+        <label>{{ ui('form.company') }}<input type="text" name="empresa" maxlength="160" autocomplete="organization"></label>
+      </div>
+      <div class="row">
+        <label>{{ ui('form.email') }} <small>({{ ui('form.required') }})</small><input type="email" name="email" required maxlength="160" autocomplete="email"></label>
+        <label>{{ ui('form.phone') }}<input type="tel" name="telefone" maxlength="40" autocomplete="tel"></label>
+      </div>
+      <div class="row">
+        <label>{{ ui('form.country') }}<input type="text" name="pais" maxlength="80" autocomplete="country-name"></label>
+        <label>{{ ui('form.product') }} <small>({{ ui('form.required') }})</small>
+          <select name="produto" required>
+            <option value="">{{ ui('form.product_choose') }}</option>
+            {% for p in products %}<option value="{{ p.id }}" data-name="{{ L(p.name) }}">{{ L(p.name) }}</option>{% endfor %}
+            <option value="outro">{{ ui('form.product_other') }}</option>
+          </select>
+        </label>
+      </div>
+      <div class="row">
+        <label>{{ ui('form.volume') }}<input type="text" name="volume" maxlength="80" placeholder="{{ ui('form.volume_hint') }}"></label>
+        <label>{{ ui('form.incoterm') }}
+          <select name="incoterm">
+            <option value="">—</option><option>FOB</option><option>CFR</option><option>CIF</option>
+          </select>
+        </label>
+      </div>
+      <div class="row">
+        <label>{{ ui('form.port') }}<input type="text" name="portoDestino" maxlength="120"></label>
+        <label>{{ ui('form.window') }}<input type="text" name="janelaEmbarque" maxlength="80" placeholder="{{ ui('form.window_hint') }}"></label>
+      </div>
+      <label>{{ ui('form.payment') }}<input type="text" name="condPagamento" maxlength="160" placeholder="{{ ui('form.payment_hint') }}"></label>
+      <label>{{ ui('form.message') }}<textarea name="mensagem" rows="4" maxlength="2000"></textarea></label>
+      <label class="check"><input type="checkbox" name="consent" required> <span>{{ ui('form.consent') }} <a href="{{ url('privacy') }}" target="_blank" rel="noopener">{{ ui('form.consent_link') }}</a>.</span></label>
+      <div class="form-actions">
+        <button type="submit" class="btn solid wa-btn">
+          <svg viewBox="0 0 32 32" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M16 3C8.8 3 3 8.7 3 15.8c0 2.6.8 5.1 2.2 7.2L3 29l6.2-2.1c2 1.1 4.4 1.7 6.8 1.7 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.3c-2.1 0-4.2-.6-6-1.7l-.4-.2-3.7 1.2 1.2-3.6-.3-.4a10.4 10.4 0 0 1-1.7-5.8C5.1 10 10 5.2 16 5.2s10.9 4.8 10.9 10.6S22 26.3 16 26.3zm6-7.9c-.3-.2-1.9-1-2.2-1.1-.3-.1-.5-.2-.7.2-.2.3-.8 1.1-1 1.3-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6.3-.5c.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.5c.2.2 2.4 3.6 5.8 5 .8.4 1.4.6 1.9.7.8.3 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg>
+          {{ ui('btn.whatsapp') }}
+        </button>
+        <span class="form-alt">{{ ui('form.no_whatsapp') }} <a href="mailto:{{ cfg.email_comercial }}">{{ cfg.email_comercial }}</a></span>
+      </div>
+      <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+    </form>
+    <aside class="panel">
+      <h3>{{ page.quote_aside_title }}</h3>
+      <ol class="mini-steps">{% for s in page.quote_aside %}<li>{{ s }}</li>{% endfor %}</ol>
+      <dl class="facts">
+        <div><dt>{{ ui('labels.email') }}</dt><dd><a href="mailto:{{ cfg.email_comercial }}">{{ cfg.email_comercial }}</a></dd></div>
+        <div><dt>{{ ui('labels.phone') }}</dt><dd><a href="tel:{{ cfg.telefone_link }}">{{ cfg.telefone }}</a></dd></div>
+        <div><dt>{{ ui('labels.hours') }}</dt><dd>{{ ui('labels.hours_value') }}</dd></div>
+      </dl>
+    </aside>
+  </div>
+</section>
+{% endblock %}

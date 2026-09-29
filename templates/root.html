@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GBC Foods — Brazilian food trading with its own international logistics</title>
+<meta name="description" content="Green coffee, peanuts, nuts, seeds, sugar and powdered products from Brazil, almonds from Portugal. Trading and logistics under one roof, shipped from Santos.">
+<link rel="canonical" href="{{ domain }}/">
+{% for l in langs %}<link rel="alternate" hreflang="{{ l }}{% if l == 'pt' %}-BR{% endif %}" href="{{ domain }}/{{ l }}/">
+{% endfor %}
+<link rel="alternate" hreflang="x-default" href="{{ domain }}/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#26375E">
+<script>
+(function(){
+  var langs = {{ langs|tojson }};
+  var m = document.cookie.match(/(?:^|; )gbc_lang=([a-z]{2})/);
+  var pick = m && langs.indexOf(m[1]) >= 0 ? m[1] : null;
+  if (!pick) {
+    var prefs = navigator.languages || [navigator.language || "{{ default }}"];
+    for (var i = 0; i < prefs.length && !pick; i++) {
+      var p = String(prefs[i]).slice(0, 2).toLowerCase();
+      if (langs.indexOf(p) >= 0) pick = p;
+    }
+  }
+  location.replace("/" + (pick || "{{ default }}") + "/" + location.search + location.hash);
+})();
+</script>
+<noscript><meta http-equiv="refresh" content="0; url=/{{ default }}/"></noscript>
+<style>
+body{margin:0;font-family:Outfit,system-ui,sans-serif;background:#FBFBF9;color:#22262E;display:grid;place-items:center;min-height:100vh}
+.box{text-align:center;padding:32px}
+.box img{height:34px}
+.box p{color:#5C6470;margin:18px 0 26px}
+.box a{display:inline-block;margin:6px;padding:10px 18px;border:1px solid #DEE0D9;border-radius:8px;color:#26375E;text-decoration:none;font-weight:500}
+.box a:hover{border-color:#26375E}
+</style>
+</head>
+<body>
+<div class="box">
+  <img src="/img/brand/logo-color.png" alt="GBC Foods">
+  <p>{{ ui.misc.choose_lang.en }} · {{ ui.misc.choose_lang.pt }} · {{ ui.misc.choose_lang.es }} · {{ ui.misc.choose_lang.ru }}</p>
+  <nav>
+    {% for l in langs %}<a href="/{{ l }}/" hreflang="{{ l }}" lang="{{ l }}">{{ lang_names[l] }}</a>{% endfor %}
+  </nav>
+</div>
+</body>
+</html>

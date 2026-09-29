@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m %}
+{% set body_class = "home" %}
+{% block content %}
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <h1>{{ page.hero_title }}</h1>
+      <p class="lead">{{ page.hero_text }}</p>
+      <div class="cta">
+        <a class="btn solid" href="{{ url('products') }}">{{ page.hero_cta1 }}</a>
+        <a class="btn ghost" href="{{ url('quote') }}">{{ page.hero_cta2 }}</a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="hero-photo main">{{ picture('coffee/origin-secagem.jpg', '', sizes="(max-width: 900px) 100vw, 45vw", loading="eager", fetchpriority="high")|safe }}</div>
+      <div class="hero-photo aux">{{ picture('products/ship-sea.jpg', '', sizes="(max-width: 900px) 50vw, 22vw", loading="eager")|safe }}</div>
+      {{ screen_svg('hero-screen')|safe }}
+    </div>
+  </div>
+</section>
+
+<section class="strip">
+  <div class="wrap strip-grid">
+    {% for f in page.strip %}
+    <div><span class="k">{{ f.k }}</span><span class="v">{{ f.v }}</span></div>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="divisions">
+  <div class="wrap">
+    <div class="head">
+      <h2>{{ page.div_title }}</h2>
+      <p class="prose lead">{{ page.div_text }}</p>
+    </div>
+    <div class="duo">
+      <article class="div-card foods">
+        <div class="div-label"><span>GBC</span><em>Foods</em></div>
+        <h3>{{ page.div_foods_title }}</h3>
+        <p>{{ page.div_foods_text }}</p>
+        <a class="btn solid small" href="{{ url('products') }}">{{ page.div_foods_cta }}</a>
+      </article>
+      <article class="div-card logistics">
+        <div class="div-label"><span>GBC</span><em>Logistics</em></div>
+        <h3>{{ page.div_log_title }}</h3>
+        <p>{{ page.div_log_text }}</p>
+        <a class="btn solid small blue" href="{{ url('logistics') }}">{{ page.div_log_cta }}</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="families">
+  <div class="wrap">
+    <div class="head split">
+      <div><h2>{{ page.fam_title }}</h2><p class="prose">{{ page.fam_text }}</p></div>
+      <div class="head-links"><a href="{{ url('bulk') }}">{{ page.fam_bulk }}</a><a href="{{ url('powders') }}">{{ page.fam_powders }}</a></div>
+    </div>
+    <div class="grid3">
+      {% for p in featured %}{{ m.product_card(p, L, product_url, ui, placeholder_svg, picture) }}{% endfor %}
+    </div>
+    <p class="center"><a class="btn ghost" href="{{ url('products') }}">{{ ui('btn.all_products') }}</a></p>
+  </div>
+</section>
+
+<section class="coffee-band">
+  <div class="wrap coffee-grid">
+    <div class="coffee-photo">{{ picture('coffee/region-aerial.jpg', '', sizes="(max-width: 900px) 100vw, 55vw")|safe }}</div>
+    <div class="coffee-text">
+      <h2>{{ page.coffee_title }}</h2>
+      <p class="prose">{{ page.coffee_text }}</p>
+      <dl class="facts">
+        {% for f in page.coffee_facts %}<div><dt>{{ f.k }}</dt><dd>{{ f.v }}</dd></div>{% endfor %}
+      </dl>
+      <a class="btn solid" href="{{ product_url(products[0]) }}">{{ page.coffee_cta }}</a>
+    </div>
+  </div>
+</section>
+
+<section class="how">
+  <div class="wrap">
+    <div class="head">
+      <h2>{{ page.steps_title }}</h2>
+      <p class="prose">{{ page.steps_text }}</p>
+    </div>
+    {{ m.steps_list(steps, compact=True) }}
+    <p class="center"><a class="btn ghost" href="{{ url('logistics') }}">{{ page.steps_cta }}</a></p>
+  </div>
+</section>
+
+{% if latest %}
+<section class="blog-teaser">
+  <div class="wrap">
+    <div class="head split">
+      <div><h2>{{ page.blog_title }}</h2><p class="prose">{{ page.blog_text }}</p></div>
+      <div class="head-links"><a href="{{ url('blog') }}">{{ ui('btn.all_posts') }}</a></div>
+    </div>
+    <div class="grid3">
+      {% for post in latest %}{{ m.post_card(post, post_url, ui, picture) }}{% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{{ m.cta(page.cta_title, page.cta_text, page.cta_btn, url('quote'), ui('btn.contact'), url('contact')) }}
+{% endblock %}

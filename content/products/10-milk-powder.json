@@ -1,0 +1,49 @@
+{
+  "id": "milk-powder",
+  "category": "po",
+  "order": 10,
+  "featured": true,
+  "image": "",
+  "hs": "0402.21 / 0402.10",
+  "slug": { "pt": "leite-em-po", "en": "milk-powder", "es": "leche-en-polvo", "ru": "milk-powder" },
+  "name": { "pt": "Leite em pó", "en": "Milk powder", "es": "Leche en polvo", "ru": "Сухое молоко" },
+  "image_alt": { "pt": "Leite em pó", "en": "Milk powder", "es": "Leche en polvo", "ru": "Сухое молоко" },
+  "short": {
+    "pt": "Integral ou desnatado, em sacos de 25 kg paletizados, com laudo da planta produtora por lote.",
+    "en": "Whole or skimmed, in 25 kg bags on pallets, with the producing plant's certificate per lot.",
+    "es": "Entera o desnatada, en sacos de 25 kg paletizados, con certificado de la planta productora por lote.",
+    "ru": "Цельное или обезжиренное, в мешках по 25 кг на паллетах, с сертификатом завода-производителя по каждой партии."
+  },
+  "description": {
+    "pt": [
+      "Leite em pó produzido por spray-drying em plantas brasileiras habilitadas para exportação. Dois tipos: integral, com o teor de gordura definido em contrato, e desnatado. A especificação — gordura, umidade, proteína, acidez, solubilidade e contagem microbiológica — segue o padrão do mercado de destino e é conferida no laudo de cada lote.",
+      "A embalagem padrão é o saco multifolhado de 25 kg com liner interno, paletizado e envolto em filme. Validade e condições de armazenagem constam na ficha técnica enviada com a cotação, e a habilitação sanitária da planta para o país de destino é confirmada antes do contrato."
+    ],
+    "en": [
+      "Milk powder produced by spray-drying at Brazilian plants approved for export. Two types: whole, with the fat content set in the contract, and skimmed. The specification — fat, moisture, protein, acidity, solubility and microbiological counts — follows the destination market's standard and is checked on the certificate of each lot.",
+      "Standard packing is the 25 kg multiwall bag with inner liner, palletised and stretch-wrapped. Shelf life and storage conditions are on the technical sheet sent with the quote, and the plant's sanitary approval for the destination country is confirmed before the contract."
+    ],
+    "es": [
+      "Leche en polvo producida por secado por aspersión en plantas brasileñas habilitadas para exportación. Dos tipos: entera, con el contenido de grasa definido en contrato, y desnatada. La especificación — grasa, humedad, proteína, acidez, solubilidad y recuento microbiológico — sigue el estándar del mercado de destino y se verifica en el certificado de cada lote.",
+      "El envase estándar es el saco multipliego de 25 kg con liner interior, paletizado y envuelto en film. La vida útil y las condiciones de almacenamiento constan en la ficha técnica enviada con la cotización, y la habilitación sanitaria de la planta para el país de destino se confirma antes del contrato."
+    ],
+    "ru": [
+      "Сухое молоко распылительной сушки с бразильских заводов, аттестованных для экспорта. Два типа: цельное, с жирностью по контракту, и обезжиренное. Спецификация — жир, влага, белок, кислотность, растворимость и микробиологические показатели — соответствует стандарту рынка назначения и проверяется по сертификату каждой партии.",
+      "Стандартная упаковка — многослойный бумажный мешок по 25 кг с внутренним вкладышем, на паллетах в стретч-плёнке. Срок годности и условия хранения указаны в технической спецификации, отправляемой с предложением; санитарная аттестация завода для страны назначения подтверждается до заключения контракта."
+    ]
+  },
+  "specs": [
+    { "k": { "pt": "Tipos", "en": "Types", "es": "Tipos", "ru": "Типы" },
+      "v": { "pt": "Integral · desnatado", "en": "Whole · skimmed", "es": "Entera · desnatada", "ru": "Цельное · обезжиренное" } },
+    { "k": { "pt": "Processo", "en": "Process", "es": "Proceso", "ru": "Процесс" },
+      "v": { "pt": "Spray-drying", "en": "Spray-drying", "es": "Secado por aspersión", "ru": "Распылительная сушка" } },
+    { "k": { "pt": "Laudo", "en": "Analysis", "es": "Análisis", "ru": "Анализ" },
+      "v": { "pt": "Gordura, umidade, proteína, acidez, solubilidade e microbiologia por lote", "en": "Fat, moisture, protein, acidity, solubility and microbiology per lot", "es": "Grasa, humedad, proteína, acidez, solubilidad y microbiología por lote", "ru": "Жир, влага, белок, кислотность, растворимость и микробиология по партии" } },
+    { "k": { "pt": "Habilitação", "en": "Approval", "es": "Habilitación", "ru": "Аттестация" },
+      "v": { "pt": "Planta habilitada para o país de destino, confirmada antes do contrato", "en": "Plant approved for the destination country, confirmed before the contract", "es": "Planta habilitada para el país de destino, confirmada antes del contrato", "ru": "Завод аттестован для страны назначения, подтверждается до контракта" } }
+  ],
+  "origin": { "pt": "Brasil", "en": "Brazil", "es": "Brasil", "ru": "Бразилия" },
+  "packaging": { "pt": "Sacos multifolhados de 25 kg com liner, paletizados", "en": "25 kg multiwall bags with liner, palletised", "es": "Sacos multipliego de 25 kg con liner, paletizados", "ru": "Многослойные мешки по 25 кг с вкладышем, на паллетах" },
+  "container": { "pt": "20′ ≈ 18 – 20 t paletizado · 40′ HC ≈ 25 t", "en": "20′ ≈ 18 – 20 t palletised · 40′ HC ≈ 25 t", "es": "20′ ≈ 18 – 20 t paletizado · 40′ HC ≈ 25 t", "ru": "20′ ≈ 18 – 20 т на паллетах · 40′ HC ≈ 25 т" },
+  "availability": { "pt": "Ao longo do ano", "en": "Year-round", "es": "Durante todo el año", "ru": "В течение года" }
+}

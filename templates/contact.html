@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m %}
+{% block content %}
+{{ m.crumbs(breadcrumbs, ui) }}
+<section class="page-hero compact">
+  <div class="wrap">
+    <h1>{{ page.contact_title }}</h1>
+    <p class="prose lead">{{ page.contact_lead }}</p>
+  </div>
+</section>
+
+<section class="contact">
+  <div class="wrap grid3">
+    {% if wa %}
+    <a class="channel" href="https://wa.me/{{ wa }}?text={{ ui('form.wa_contact_greeting')|urlencode }}" target="_blank" rel="noopener">
+      <span class="ch-k">WhatsApp</span>
+      <span class="ch-v">+{{ wa }}</span>
+      <span class="ch-t">{{ page.contact_wa_text }}</span>
+    </a>
+    {% endif %}
+    <a class="channel" href="mailto:{{ cfg.email_comercial }}">
+      <span class="ch-k">{{ ui('labels.email') }}</span>
+      <span class="ch-v">{{ cfg.email_comercial }}</span>
+      <span class="ch-t">{{ page.contact_email_text }}</span>
+    </a>
+    <a class="channel" href="tel:{{ cfg.telefone_link }}">
+      <span class="ch-k">{{ ui('labels.phone') }}</span>
+      <span class="ch-v">{{ cfg.telefone }}</span>
+      <span class="ch-t">{{ page.contact_phone_text }}</span>
+    </a>
+  </div>
+  <div class="wrap two-1 contact-more">
+    <div class="panel">
+      <dl class="facts">
+        <div><dt>{{ ui('labels.address') }}</dt><dd>{{ cfg.endereco.cidade }}, {{ cfg.endereco.estado }} — {{ cfg.endereco['pais_' ~ lang] }}<br><small>{{ page.contact_address_text }}</small></dd></div>
+        <div><dt>{{ ui('labels.port') }}</dt><dd>{{ cfg.porto_embarque }}</dd></div>
+        <div><dt>{{ ui('labels.hours') }}</dt><dd>{{ ui('labels.hours_value') }}</dd></div>
+      </dl>
+    </div>
+    <div class="contact-photo">{{ picture('products/port-santos.jpg', '', sizes="(max-width: 900px) 100vw, 33vw")|safe }}</div>
+  </div>
+</section>
+
+{{ m.cta(ui('cta.title'), ui('cta.text'), ui('btn.quote'), url('quote'), ui('btn.products'), url('products')) }}
+{% endblock %}

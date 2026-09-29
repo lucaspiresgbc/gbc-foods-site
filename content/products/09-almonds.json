@@ -1,0 +1,50 @@
+{
+  "id": "almonds",
+  "category": "granel",
+  "order": 9,
+  "featured": true,
+  "image": "products/almonds.jpg",
+  "gallery": ["products/almond-orchard.jpg"],
+  "hs": "0802.12",
+  "slug": { "pt": "amendoas-de-portugal", "en": "almonds-from-portugal", "es": "almendras-de-portugal", "ru": "almonds-from-portugal" },
+  "name": { "pt": "Amêndoas de Portugal", "en": "Almonds from Portugal", "es": "Almendras de Portugal", "ru": "Миндаль из Португалии" },
+  "image_alt": { "pt": "Miolo de amêndoa", "en": "Almond kernels", "es": "Almendras peladas", "ru": "Ядра миндаля" },
+  "short": {
+    "pt": "Miolo de amêndoa dos pomares próprios do grupo em Portugal, certificados GLOBALG.A.P., por variedade e calibre.",
+    "en": "Almond kernels from the group's own GLOBALG.A.P.-certified orchards in Portugal, by variety and calibre.",
+    "es": "Almendra en grano de las plantaciones propias del grupo en Portugal, certificadas GLOBALG.A.P., por variedad y calibre.",
+    "ru": "Ядра миндаля из собственных садов группы в Португалии, сертифицированных GLOBALG.A.P., по сортам и калибрам."
+  },
+  "description": {
+    "pt": [
+      "A amêndoa é o único produto do catálogo que é nosso da árvore ao contêiner. O grupo cultiva amendoeiras em pomares próprios em Portugal — seis propriedades com certificação GLOBALG.A.P., cada uma com o seu número GGN —, e a colheita, a secagem, o descasque e a calibragem são acompanhados pela mesma equipe que vende.",
+      "O miolo é vendido por variedade e por calibre, e a lista da safra em curso — variedades, calibres e volumes disponíveis — é enviada com a cotação. A colheita em Portugal vai de agosto a setembro, e o embarque parte de portos portugueses ou, para cargas consolidadas com produtos brasileiros, é coordenado pela nossa logística."
+    ],
+    "en": [
+      "Almonds are the one product in the catalogue that is ours from the tree to the container. The group grows almond trees on its own orchards in Portugal — six farms with GLOBALG.A.P. certification, each with its own GGN — and harvest, drying, hulling, shelling and sizing are overseen by the same team that sells them.",
+      "Kernels are sold by variety and by calibre, and the list for the current crop — varieties, calibres and available volumes — is sent with the quote. Harvest in Portugal runs from August to September, and shipment leaves from Portuguese ports or, for cargo consolidated with Brazilian products, is coordinated by our own logistics."
+    ],
+    "es": [
+      "La almendra es el único producto del catálogo que es nuestro del árbol al contenedor. El grupo cultiva almendros en plantaciones propias en Portugal — seis fincas con certificación GLOBALG.A.P., cada una con su número GGN —, y la cosecha, el secado, el descascarado y el calibrado están supervisados por el mismo equipo que vende.",
+      "La almendra en grano se vende por variedad y por calibre, y la lista de la cosecha en curso — variedades, calibres y volúmenes disponibles — se envía con la cotización. La cosecha en Portugal va de agosto a septiembre, y el embarque sale de puertos portugueses o, para cargas consolidadas con productos brasileños, lo coordina nuestra logística."
+    ],
+    "ru": [
+      "Миндаль — единственный продукт каталога, который принадлежит нам от дерева до контейнера. Группа выращивает миндаль в собственных садах в Португалии — шесть хозяйств с сертификацией GLOBALG.A.P., каждое со своим номером GGN, — а сбор, сушка, очистка и калибровка контролируются той же командой, которая продаёт.",
+      "Ядра продаются по сортам и калибрам; список текущего урожая — сорта, калибры и доступные объёмы — отправляется вместе с коммерческим предложением. Сбор урожая в Португалии — с августа по сентябрь; отгрузка выполняется из португальских портов или, для грузов, консолидированных с бразильской продукцией, координируется нашей логистикой."
+    ]
+  },
+  "specs": [
+    { "k": { "pt": "Forma", "en": "Form", "es": "Forma", "ru": "Форма" },
+      "v": { "pt": "Miolo, por variedade e calibre", "en": "Kernels, by variety and calibre", "es": "Grano, por variedad y calibre", "ru": "Ядра, по сортам и калибрам" } },
+    { "k": { "pt": "Certificação", "en": "Certification", "es": "Certificación", "ru": "Сертификация" },
+      "v": { "pt": "GLOBALG.A.P. (número GGN por propriedade)", "en": "GLOBALG.A.P. (GGN per farm)", "es": "GLOBALG.A.P. (número GGN por finca)", "ru": "GLOBALG.A.P. (номер GGN для каждого хозяйства)" } },
+    { "k": { "pt": "Pomares", "en": "Orchards", "es": "Plantaciones", "ru": "Сады" },
+      "v": { "pt": "Seis propriedades próprias em Portugal", "en": "Six group-owned farms in Portugal", "es": "Seis fincas propias en Portugal", "ru": "Шесть собственных хозяйств в Португалии" } },
+    { "k": { "pt": "Colheita", "en": "Harvest", "es": "Cosecha", "ru": "Сбор урожая" },
+      "v": { "pt": "Agosto a setembro", "en": "August to September", "es": "Agosto a septiembre", "ru": "Август – сентябрь" } }
+  ],
+  "origin": { "pt": "Portugal — pomares próprios", "en": "Portugal — the group's own orchards", "es": "Portugal — plantaciones propias", "ru": "Португалия — собственные сады группы" },
+  "packaging": { "pt": "Caixas ou sacos de 25 kg; a vácuo mediante solicitação", "en": "25 kg cartons or bags; vacuum on request", "es": "Cajas o sacos de 25 kg; al vacío bajo solicitud", "ru": "Коробки или мешки по 25 кг; вакуум по запросу" },
+  "container": { "pt": "Confirmado na cotação, conforme a paletização", "en": "Confirmed in the quote, depending on palletisation", "es": "Confirmado en la cotización, según la paletización", "ru": "Подтверждается в коммерческом предложении в зависимости от паллетирования" },
+  "availability": { "pt": "Safra a safra; lista de variedades e calibres com a cotação", "en": "Crop by crop; list of varieties and calibres with the quote", "es": "Cosecha a cosecha; lista de variedades y calibres con la cotización", "ru": "От урожая к урожаю; список сортов и калибров — вместе с предложением" }
+}

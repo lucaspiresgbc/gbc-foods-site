@@ -1,0 +1,100 @@
+{
+  "_comentario": "Textos das páginas Cotação, Contato e índice do Blog.",
+
+  "en": {
+    "quote_meta_title": "Request a quote — GBC Foods",
+    "quote_meta_description": "Request a quote for green coffee, peanuts, nuts, seeds, sugar, milk powder, corn starch or almonds. FOB, CFR or CIF from Santos. Your request opens in WhatsApp, addressed to our commercial team.",
+    "quote_title": "Request a quote",
+    "quote_aside_title": "What happens next",
+    "quote_aside": [
+      "Your message reaches the commercial team's WhatsApp with everything you filled in.",
+      "We reply during business hours with questions, if any, and an indicative price.",
+      "Samples are prepared and couriered before anything is bought.",
+      "The firm price comes with the freight already known, because the logistics is ours."
+    ],
+    "contact_meta_title": "Contact — GBC Foods, Santos, Brazil",
+    "contact_meta_description": "Talk to the GBC Foods commercial team in Santos, Brazil: WhatsApp, e-mail commercial@gbc-foods.com and phone +55 (13) 3394-9686.",
+    "contact_title": "Contact",
+    "contact_lead": "The commercial team answers in English, Portuguese and Spanish, during business hours in Brazil. For a price, the quote form is the fastest route; for anything else, any of the channels below.",
+    "contact_wa_text": "Direct to the commercial team. Opens with a short greeting already written.",
+    "contact_email_text": "For documents, specifications and anything you want on paper.",
+    "contact_phone_text": "Office in Santos, Brasília time (UTC−3).",
+    "contact_address_text": "Santos, São Paulo, Brazil — at the port of loading.",
+    "blog_meta_title": "Blog — practical notes on buying food from Brazil | GBC Foods",
+    "blog_meta_description": "Grades, screen sizes, Incoterms, documents and calendars: practical notes for importers of Brazilian coffee, peanuts, nuts, sugar and powders, written by the team that ships them.",
+    "blog_title": "Blog",
+    "blog_lead": "Practical notes for importers: what the grades mean, how a container is loaded, which documents travel with it and when the harvests come in. Written by the people who ship the goods, not by an agency."
+  },
+  "pt": {
+    "quote_meta_title": "Pedir cotação — GBC Foods",
+    "quote_meta_description": "Peça uma cotação de café verde, amendoim, castanhas, sementes, açúcar, leite em pó, amido de milho ou amêndoas. FOB, CFR ou CIF a partir de Santos. O pedido abre no WhatsApp, endereçado à nossa equipe comercial.",
+    "quote_title": "Pedir cotação",
+    "quote_aside_title": "O que acontece depois",
+    "quote_aside": [
+      "Sua mensagem chega ao WhatsApp da equipe comercial com tudo o que você preencheu.",
+      "Respondemos em horário comercial com perguntas, se houver, e uma primeira indicação.",
+      "As amostras são preparadas e enviadas antes de qualquer compra.",
+      "O preço firme vem com o frete já conhecido, porque a logística é nossa."
+    ],
+    "contact_meta_title": "Contato — GBC Foods, Santos, Brasil",
+    "contact_meta_description": "Fale com a equipe comercial da GBC Foods em Santos: WhatsApp, e-mail commercial@gbc-foods.com e telefone +55 (13) 3394-9686.",
+    "contact_title": "Contato",
+    "contact_lead": "A equipe comercial responde em português, inglês e espanhol, em horário comercial no Brasil. Para preço, o formulário de cotação é o caminho mais rápido; para o resto, qualquer um dos canais abaixo.",
+    "contact_wa_text": "Direto com a equipe comercial. Abre com uma saudação curta já escrita.",
+    "contact_email_text": "Para documentos, especificações e tudo o que você quiser por escrito.",
+    "contact_phone_text": "Escritório em Santos, horário de Brasília (UTC−3).",
+    "contact_address_text": "Santos, São Paulo, Brasil — no porto de embarque.",
+    "blog_meta_title": "Blog — notas práticas sobre comprar alimentos do Brasil | GBC Foods",
+    "blog_meta_description": "Classificações, peneiras, Incoterms, documentos e calendários: notas práticas para importadores de café, amendoim, castanhas, açúcar e pós do Brasil, escritas pela equipe que embarca.",
+    "blog_title": "Blog",
+    "blog_lead": "Notas práticas para importadores: o que as classificações significam, como se ova um contêiner, quais documentos viajam com ele e quando entram as safras. Escritas por quem embarca a mercadoria, não por agência."
+  },
+  "es": {
+    "quote_meta_title": "Solicitar cotización — GBC Foods",
+    "quote_meta_description": "Solicite una cotización de café verde, cacahuete, frutos secos, semillas, azúcar, leche en polvo, almidón de maíz o almendras. FOB, CFR o CIF desde Santos. La solicitud se abre en WhatsApp, dirigida a nuestro equipo comercial.",
+    "quote_title": "Solicitar cotización",
+    "quote_aside_title": "Qué pasa después",
+    "quote_aside": [
+      "Su mensaje llega al WhatsApp del equipo comercial con todo lo que completó.",
+      "Respondemos en horario comercial con preguntas, si las hay, y un precio indicativo.",
+      "Las muestras se preparan y envían antes de cualquier compra.",
+      "El precio firme llega con el flete ya conocido, porque la logística es nuestra."
+    ],
+    "contact_meta_title": "Contacto — GBC Foods, Santos, Brasil",
+    "contact_meta_description": "Hable con el equipo comercial de GBC Foods en Santos, Brasil: WhatsApp, correo commercial@gbc-foods.com y teléfono +55 (13) 3394-9686.",
+    "contact_title": "Contacto",
+    "contact_lead": "El equipo comercial responde en español, inglés y portugués, en horario comercial de Brasil. Para un precio, el formulario de cotización es la vía más rápida; para lo demás, cualquiera de los canales de abajo.",
+    "contact_wa_text": "Directo con el equipo comercial. Se abre con un saludo corto ya escrito.",
+    "contact_email_text": "Para documentos, especificaciones y todo lo que quiera por escrito.",
+    "contact_phone_text": "Oficina en Santos, hora de Brasilia (UTC−3).",
+    "contact_address_text": "Santos, São Paulo, Brasil — en el puerto de embarque.",
+    "blog_meta_title": "Blog — notas prácticas sobre comprar alimentos de Brasil | GBC Foods",
+    "blog_meta_description": "Clasificaciones, cribas, Incoterms, documentos y calendarios: notas prácticas para importadores de café, cacahuete, frutos secos, azúcar y polvos de Brasil, escritas por el equipo que embarca.",
+    "blog_title": "Blog",
+    "blog_lead": "Notas prácticas para importadores: qué significan las clasificaciones, cómo se carga un contenedor, qué documentos viajan con él y cuándo llegan las cosechas. Escritas por quienes embarcan la mercadería, no por una agencia."
+  },
+  "ru": {
+    "quote_meta_title": "Запросить цену — GBC Foods",
+    "quote_meta_description": "Запросите цену на зелёный кофе, арахис, орехи, семена, сахар, сухое молоко, кукурузный крахмал или миндаль. FOB, CFR или CIF из Сантоса. Запрос откроется в WhatsApp, адресованный нашему коммерческому отделу.",
+    "quote_title": "Запросить цену",
+    "quote_aside_title": "Что происходит дальше",
+    "quote_aside": [
+      "Ваше сообщение поступает в WhatsApp коммерческого отдела со всем, что вы заполнили.",
+      "Мы отвечаем в рабочие часы — с уточняющими вопросами, если они есть, и ориентировочной ценой.",
+      "Образцы готовятся и отправляются курьером до любой покупки.",
+      "Твёрдая цена приходит с уже известным фрахтом, потому что логистика наша."
+    ],
+    "contact_meta_title": "Контакты — GBC Foods, Сантос, Бразилия",
+    "contact_meta_description": "Свяжитесь с коммерческим отделом GBC Foods в Сантосе, Бразилия: WhatsApp, e-mail commercial@gbc-foods.com и телефон +55 (13) 3394-9686.",
+    "contact_title": "Контакты",
+    "contact_lead": "Коммерческий отдел отвечает на английском, португальском и испанском языках в рабочие часы Бразилии. За ценой быстрее всего обратиться через форму запроса; по остальным вопросам — любой из каналов ниже.",
+    "contact_wa_text": "Напрямую в коммерческий отдел. Откроется с уже написанным коротким приветствием.",
+    "contact_email_text": "Для документов, спецификаций и всего, что нужно в письменном виде.",
+    "contact_phone_text": "Офис в Сантосе, время Бразилиа (UTC−3).",
+    "contact_address_text": "Сантос, штат Сан-Паулу, Бразилия — в порту отгрузки.",
+    "blog_meta_title": "Блог — практические заметки о закупке продовольствия в Бразилии | GBC Foods",
+    "blog_meta_description": "Сорта, калибры, Инкотермс, документы и календари: практические заметки для импортёров бразильского кофе, арахиса, орехов, сахара и порошков — от команды, которая их отгружает.",
+    "blog_title": "Блог",
+    "blog_lead": "Практические заметки для импортёров: что означают сорта, как загружается контейнер, какие документы его сопровождают и когда начинается сбор урожая. Написаны теми, кто отгружает товар, а не агентством."
+  }
+}

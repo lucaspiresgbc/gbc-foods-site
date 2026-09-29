@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>404 — GBC Foods</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/css/site.css">
+</head>
+<body>
+<main class="notfound">
+  <div class="wrap">
+    <img src="/img/brand/logo-color.png" alt="GBC Foods" width="180">
+    {% for l in langs %}
+    <section lang="{{ l }}">
+      <h1>{{ ui.misc.not_found_title[l] }}</h1>
+      <p>{{ ui.misc.not_found_text[l] }} <a href="/{{ l }}/">{{ ui.misc.in_lang[l] }}</a></p>
+    </section>
+    {% endfor %}
+  </div>
+</main>
+</body>
+</html>

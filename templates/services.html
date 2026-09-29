@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m %}
+{% block content %}
+{{ m.crumbs(breadcrumbs, ui) }}
+<section class="page-hero">
+  <div class="wrap">
+    <h1>{{ page.title }}</h1>
+    <p class="prose lead">{{ page.lead }}</p>
+  </div>
+</section>
+
+<section class="services">
+  <div class="wrap duo">
+    <article class="svc-card">
+      <div class="svc-photo">{{ picture('coffee/coffee-green.jpg', '', sizes="(max-width: 900px) 100vw, 50vw")|safe }}</div>
+      <div class="svc-body">
+        <div class="div-label"><span>GBC</span><em>Foods</em></div>
+        <h2>{{ page.foods_title }}</h2>
+        <p class="prose">{{ page.foods_text }}</p>
+        <div class="svc-links">
+          <a class="btn solid small" href="{{ url('foods') }}">{{ ui('btn.more') }}</a>
+          <a href="{{ url('bulk') }}">{{ page.foods_links[0] }}</a>
+          <a href="{{ url('powders') }}">{{ page.foods_links[1] }}</a>
+        </div>
+      </div>
+    </article>
+    <article class="svc-card">
+      <div class="svc-photo">{{ picture('products/ship-sea.jpg', '', sizes="(max-width: 900px) 100vw, 50vw")|safe }}</div>
+      <div class="svc-body">
+        <div class="div-label"><span>GBC</span><em class="blue">Logistics</em></div>
+        <h2>{{ page.log_title }}</h2>
+        <p class="prose">{{ page.log_text }}</p>
+        <div class="svc-links">
+          <a class="btn solid small blue" href="{{ url('logistics') }}">{{ page.log_link }}</a>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+{{ m.cta(ui('cta.title'), ui('cta.text'), ui('btn.quote'), url('quote'), ui('btn.contact'), url('contact')) }}
+{% endblock %}

@@ -1,0 +1,49 @@
+{
+  "id": "sugar",
+  "category": "granel",
+  "order": 8,
+  "featured": true,
+  "image": "products/sugar.jpg",
+  "hs": "1701.99",
+  "slug": { "pt": "acucar-cristal", "en": "crystal-sugar", "es": "azucar-cristal", "ru": "crystal-sugar" },
+  "name": { "pt": "Açúcar cristal", "en": "Crystal sugar", "es": "Azúcar cristal", "ru": "Кристаллический сахар" },
+  "image_alt": { "pt": "Cristais de açúcar", "en": "Sugar crystals", "es": "Cristales de azúcar", "ru": "Кристаллы сахара" },
+  "short": {
+    "pt": "Açúcar de cana ICUMSA 45 e ICUMSA 150, de usinas de São Paulo, em sacos de 50 kg ou big bags.",
+    "en": "Cane sugar ICUMSA 45 and ICUMSA 150 from São Paulo mills, in 50 kg bags or big bags.",
+    "es": "Azúcar de caña ICUMSA 45 e ICUMSA 150, de ingenios de São Paulo, en sacos de 50 kg o big bags.",
+    "ru": "Тростниковый сахар ICUMSA 45 и ICUMSA 150 с заводов штата Сан-Паулу, в мешках по 50 кг или биг-бэгах."
+  },
+  "description": {
+    "pt": [
+      "Açúcar de cana produzido em usinas do estado de São Paulo, o maior polo canavieiro do mundo. Dois padrões: ICUMSA 45, o açúcar branco refinado de cor mais baixa, para uso direto em alimentos e bebidas; e ICUMSA 150, o cristal branco para indústria e varejo.",
+      "Polarização, umidade, cinzas e cor são especificadas em contrato e conferidas no laudo de cada lote. A moagem vai de abril a novembro no Centro-Sul, e o embarque por Santos é feito em sacos de 50 kg, em big bags ou, para volumes maiores, a granel em contêiner com liner."
+    ],
+    "en": [
+      "Cane sugar produced by mills in São Paulo state, the largest sugar-cane area in the world. Two standards: ICUMSA 45, the low-colour refined white sugar for direct use in food and beverages; and ICUMSA 150, the white crystal for industry and retail.",
+      "Polarisation, moisture, ash and colour are specified in the contract and checked on the certificate of each lot. Crushing runs from April to November in the centre-south, and shipment through Santos is in 50 kg bags, in big bags or, for larger volumes, in bulk in lined containers."
+    ],
+    "es": [
+      "Azúcar de caña producido en ingenios del estado de São Paulo, el mayor polo cañero del mundo. Dos estándares: ICUMSA 45, el azúcar blanco refinado de color más bajo, para uso directo en alimentos y bebidas; e ICUMSA 150, el cristal blanco para industria y retail.",
+      "Polarización, humedad, cenizas y color se especifican en contrato y se verifican en el certificado de cada lote. La molienda va de abril a noviembre en el centro-sur, y el embarque por Santos se hace en sacos de 50 kg, en big bags o, para volúmenes mayores, a granel en contenedor con liner."
+    ],
+    "ru": [
+      "Тростниковый сахар с заводов штата Сан-Паулу — крупнейшего региона выращивания сахарного тростника в мире. Два стандарта: ICUMSA 45 — рафинированный белый сахар низкой цветности для прямого использования в пищевой промышленности и производстве напитков; и ICUMSA 150 — белый кристаллический сахар для промышленности и розницы.",
+      "Поляризация, влажность, зольность и цветность указываются в контракте и проверяются по сертификату каждой партии. Сезон переработки — с апреля по ноябрь в центрально-южном регионе; отгрузка через Сантос — в мешках по 50 кг, в биг-бэгах или, для крупных объёмов, навалом в контейнерах с вкладышем."
+    ]
+  },
+  "specs": [
+    { "k": { "pt": "ICUMSA 45", "en": "ICUMSA 45", "es": "ICUMSA 45", "ru": "ICUMSA 45" },
+      "v": { "pt": "Refinado branco, cor máx. 45 UI", "en": "Refined white, max. colour 45 IU", "es": "Refinado blanco, color máx. 45 UI", "ru": "Рафинированный белый, цветность макс. 45 IU" } },
+    { "k": { "pt": "ICUMSA 150", "en": "ICUMSA 150", "es": "ICUMSA 150", "ru": "ICUMSA 150" },
+      "v": { "pt": "Cristal branco, cor máx. 150 UI", "en": "White crystal, max. colour 150 IU", "es": "Cristal blanco, color máx. 150 UI", "ru": "Белый кристаллический, цветность макс. 150 IU" } },
+    { "k": { "pt": "Laudo", "en": "Analysis", "es": "Análisis", "ru": "Анализ" },
+      "v": { "pt": "Polarização, umidade, cinzas e cor por lote", "en": "Polarisation, moisture, ash and colour per lot", "es": "Polarización, humedad, cenizas y color por lote", "ru": "Поляризация, влажность, зольность и цветность по партии" } },
+    { "k": { "pt": "Moagem", "en": "Crushing season", "es": "Molienda", "ru": "Сезон переработки" },
+      "v": { "pt": "Abril a novembro", "en": "April to November", "es": "Abril a noviembre", "ru": "Апрель – ноябрь" } }
+  ],
+  "origin": { "pt": "Estado de São Paulo, Brasil", "en": "São Paulo state, Brazil", "es": "Estado de São Paulo, Brasil", "ru": "Штат Сан-Паулу, Бразилия" },
+  "packaging": { "pt": "Sacos de 50 kg com liner; big bags de 1.000 – 1.200 kg; granel em contêiner com liner", "en": "50 kg lined bags; 1,000 – 1,200 kg big bags; bulk in lined container", "es": "Sacos de 50 kg con liner; big bags de 1.000 – 1.200 kg; granel en contenedor con liner", "ru": "Мешки по 50 кг с вкладышем; биг-бэги 1 000 – 1 200 кг; навалом в контейнере с вкладышем" },
+  "container": { "pt": "20′ ≈ 25 – 26 t, conforme o limite de peso do armador", "en": "20′ ≈ 25 – 26 t, subject to the line's payload limit", "es": "20′ ≈ 25 – 26 t, según el límite de peso de la naviera", "ru": "20′ ≈ 25 – 26 т, в пределах допустимой нагрузки линии" },
+  "availability": { "pt": "Ao longo do ano", "en": "Year-round", "es": "Durante todo el año", "ru": "В течение года" }
+}

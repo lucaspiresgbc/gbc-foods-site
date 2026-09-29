@@ -1,0 +1,65 @@
+{% macro crumbs(breadcrumbs, ui) %}
+{% if breadcrumbs and breadcrumbs|length > 1 %}
+<nav class="crumbs wrap" aria-label="{{ ui('labels.breadcrumb') }}">
+  <ol>
+    {% for name, u in breadcrumbs %}
+    <li>{% if not loop.last %}<a href="{{ u }}">{{ name }}</a>{% else %}<span aria-current="page">{{ name }}</span>{% endif %}</li>
+    {% endfor %}
+  </ol>
+</nav>
+{% endif %}
+{% endmacro %}
+
+{% macro product_card(p, L, product_url, ui, placeholder_svg, picture) %}
+<article class="pcard">
+  <a class="pcard-media" href="{{ product_url(p) }}" tabindex="-1" aria-hidden="true">
+    {% if p.image %}{{ picture(p.image, L(p.image_alt), sizes="(max-width: 700px) 100vw, 33vw")|safe }}{% else %}{{ placeholder_svg(L(p.name))|safe }}{% endif %}
+  </a>
+  <div class="pcard-body">
+    <h3><a href="{{ product_url(p) }}">{{ L(p.name) }}</a></h3>
+    <p>{{ L(p.short) }}</p>
+    <div class="pcard-foot">
+      <span class="tag">{{ L(p.origin) }}</span>
+      <a class="more" href="{{ product_url(p) }}">{{ ui('btn.details') }}</a>
+    </div>
+  </div>
+</article>
+{% endmacro %}
+
+{% macro post_card(post, post_url, ui, picture) %}
+<article class="bcard">
+  {% if post.image %}<a class="bcard-media" href="{{ post_url(post.id) }}" tabindex="-1" aria-hidden="true">{{ picture(post.image, post.image_alt or '', sizes="(max-width: 700px) 100vw, 33vw")|safe }}</a>{% endif %}
+  <div class="bcard-body">
+    <div class="meta"><time datetime="{{ post.date }}">{{ post.date_fmt }}</time> · {{ post.minutes }} {{ ui('labels.reading') }}</div>
+    <h3><a href="{{ post_url(post.id) }}">{{ post.title }}</a></h3>
+    <p>{{ post.description }}</p>
+    <a class="more" href="{{ post_url(post.id) }}">{{ ui('btn.read') }}</a>
+  </div>
+</article>
+{% endmacro %}
+
+{% macro cta(title, text, btn, href, secondary=None, secondary_href=None) %}
+<section class="cta-band">
+  <div class="wrap cta-in">
+    <div>
+      <h2>{{ title }}</h2>
+      <p>{{ text }}</p>
+    </div>
+    <div class="cta-btns">
+      <a class="btn solid" href="{{ href }}">{{ btn }}</a>
+      {% if secondary %}<a class="btn ghost light" href="{{ secondary_href }}">{{ secondary }}</a>{% endif %}
+    </div>
+  </div>
+</section>
+{% endmacro %}
+
+{% macro steps_list(steps, compact=False) %}
+<ol class="steps {% if compact %}compact{% endif %}">
+  {% for s in steps %}
+  <li>
+    <span class="num">{{ '%02d' % loop.index }}</span>
+    <div><h3>{{ s[0] }}</h3>{% if not compact %}<p>{{ s[1] }}</p>{% endif %}</div>
+  </li>
+  {% endfor %}
+</ol>
+{% endmacro %}

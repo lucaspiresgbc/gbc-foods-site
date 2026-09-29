@@ -1,0 +1,47 @@
+{
+  "id": "corn-starch",
+  "category": "po",
+  "order": 11,
+  "featured": false,
+  "image": "",
+  "hs": "1108.12 / 3505.10",
+  "slug": { "pt": "amido-de-milho", "en": "corn-starch", "es": "almidon-de-maiz", "ru": "corn-starch" },
+  "name": { "pt": "Amido de milho", "en": "Corn starch", "es": "Almidón de maíz", "ru": "Кукурузный крахмал" },
+  "image_alt": { "pt": "Amido de milho em pó", "en": "Corn starch powder", "es": "Almidón de maíz en polvo", "ru": "Кукурузный крахмал" },
+  "short": {
+    "pt": "Amido nativo com umidade máxima de 14 % e amidos modificados por aplicação, em sacos de 25 kg ou big bags.",
+    "en": "Native starch at 14 % maximum moisture and modified starches by application, in 25 kg bags or big bags.",
+    "es": "Almidón nativo con humedad máxima de 14 % y almidones modificados por aplicación, en sacos de 25 kg o big bags.",
+    "ru": "Нативный крахмал с влажностью не более 14 % и модифицированные крахмалы под применение, в мешках по 25 кг или биг-бэгах."
+  },
+  "description": {
+    "pt": [
+      "Amido de milho de moagem úmida, produzido por indústrias brasileiras de milho. O nativo é o padrão — pó branco, fino, com umidade máxima de 14 %, para alimentos, panificação, bebidas e uso industrial. Os modificados (pré-gelatinizados, reticulados, oxidados e outros) são preparados conforme a aplicação, e a ficha técnica de cada um é enviada com a cotação.",
+      "A embalagem padrão é o saco de 25 kg paletizado; big bags de 500 a 1.000 kg para volumes industriais. Umidade, pH, cinzas, viscosidade e microbiologia constam no laudo de cada lote."
+    ],
+    "en": [
+      "Wet-milled corn starch from Brazilian corn processors. Native is the standard — a fine white powder at 14 % maximum moisture, for food, bakery, beverages and industrial use. Modified starches (pre-gelatinised, cross-linked, oxidised and others) are prepared by application, and the technical sheet of each is sent with the quote.",
+      "Standard packing is the palletised 25 kg bag; 500 to 1,000 kg big bags for industrial volumes. Moisture, pH, ash, viscosity and microbiology are on the certificate of each lot."
+    ],
+    "es": [
+      "Almidón de maíz de molienda húmeda, producido por industrias brasileñas de maíz. El nativo es el estándar — polvo blanco, fino, con humedad máxima de 14 %, para alimentos, panificación, bebidas y uso industrial. Los modificados (pregelatinizados, reticulados, oxidados y otros) se preparan según la aplicación, y la ficha técnica de cada uno se envía con la cotización.",
+      "El envase estándar es el saco de 25 kg paletizado; big bags de 500 a 1.000 kg para volúmenes industriales. Humedad, pH, cenizas, viscosidad y microbiología constan en el certificado de cada lote."
+    ],
+    "ru": [
+      "Кукурузный крахмал мокрого помола от бразильских переработчиков кукурузы. Нативный — стандарт: тонкий белый порошок с влажностью не более 14 % для пищевой промышленности, выпечки, напитков и промышленного применения. Модифицированные крахмалы (прежелатинизированные, сшитые, окисленные и другие) готовятся под конкретное применение; техническая спецификация каждого отправляется с предложением.",
+      "Стандартная упаковка — мешок по 25 кг на паллетах; биг-бэги от 500 до 1 000 кг для промышленных объёмов. Влажность, pH, зольность, вязкость и микробиология указаны в сертификате каждой партии."
+    ]
+  },
+  "specs": [
+    { "k": { "pt": "Nativo", "en": "Native", "es": "Nativo", "ru": "Нативный" },
+      "v": { "pt": "Umidade máx. 14 %", "en": "Max. moisture 14 %", "es": "Humedad máx. 14 %", "ru": "Влажность макс. 14 %" } },
+    { "k": { "pt": "Modificados", "en": "Modified", "es": "Modificados", "ru": "Модифицированные" },
+      "v": { "pt": "Pré-gelatinizado, reticulado, oxidado e outros, por aplicação", "en": "Pre-gelatinised, cross-linked, oxidised and others, by application", "es": "Pregelatinizado, reticulado, oxidado y otros, según aplicación", "ru": "Прежелатинизированный, сшитый, окисленный и другие — под применение" } },
+    { "k": { "pt": "Laudo", "en": "Analysis", "es": "Análisis", "ru": "Анализ" },
+      "v": { "pt": "Umidade, pH, cinzas, viscosidade e microbiologia por lote", "en": "Moisture, pH, ash, viscosity and microbiology per lot", "es": "Humedad, pH, cenizas, viscosidad y microbiología por lote", "ru": "Влажность, pH, зольность, вязкость и микробиология по партии" } }
+  ],
+  "origin": { "pt": "Brasil", "en": "Brazil", "es": "Brasil", "ru": "Бразилия" },
+  "packaging": { "pt": "Sacos de 25 kg paletizados; big bags de 500 – 1.000 kg", "en": "25 kg bags on pallets; 500 – 1,000 kg big bags", "es": "Sacos de 25 kg paletizados; big bags de 500 – 1.000 kg", "ru": "Мешки по 25 кг на паллетах; биг-бэги 500 – 1 000 кг" },
+  "container": { "pt": "20′ ≈ 20 t · 40′ HC ≈ 25 – 26 t", "en": "20′ ≈ 20 t · 40′ HC ≈ 25 – 26 t", "es": "20′ ≈ 20 t · 40′ HC ≈ 25 – 26 t", "ru": "20′ ≈ 20 т · 40′ HC ≈ 25 – 26 т" },
+  "availability": { "pt": "Ao longo do ano", "en": "Year-round", "es": "Durante todo el año", "ru": "В течение года" }
+}

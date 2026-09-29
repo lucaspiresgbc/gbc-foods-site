@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m %}
+{% set og_type = "product" %}
+{% block content %}
+{{ m.crumbs(breadcrumbs, ui) }}
+<article class="product">
+  <section class="page-hero">
+    <div class="wrap two">
+      <div>
+        <span class="eyebrow">{{ ui('nav.' ~ cat_key) }}</span>
+        <h1>{{ L(product.name) }}</h1>
+        <p class="prose lead">{{ L(product.short) }}</p>
+        <div class="cta">
+          <a class="btn solid" href="{{ url('quote') }}?produto={{ product.id }}">{{ ui('btn.quote_product') }}</a>
+          <a class="btn ghost" href="{{ url('logistics') }}">{{ ui('btn.logistics') }}</a>
+        </div>
+      </div>
+      <div class="product-photo ring">
+        {% if product.image %}{{ picture(product.image, L(product.image_alt), sizes="(max-width: 900px) 100vw, 45vw", loading="eager", fetchpriority="high")|safe }}{% else %}{{ placeholder_svg(L(product.name))|safe }}{% endif %}
+      </div>
+    </div>
+  </section>
+
+  <section class="article">
+    <div class="wrap two-1">
+      <div class="prose-col">
+        {% for para in L(product.description) %}<p class="prose">{{ para }}</p>{% endfor %}
+        {% if product.gallery %}
+        <div class="gallery">
+          {% for g in product.gallery %}<div>{{ picture(g, '', sizes="(max-width: 700px) 100vw, 25vw")|safe }}</div>{% endfor %}
+        </div>
+        {% endif %}
+      </div>
+      <aside class="spec-card">
+        <h2>{{ ui('labels.specs') }}</h2>
+        <table class="spec">
+          <tbody>
+          {% for s in product.specs %}<tr><th>{{ L(s.k) }}</th><td>{{ L(s.v) }}</td></tr>{% endfor %}
+          <tr><th>{{ ui('labels.origin') }}</th><td>{{ L(product.origin) }}</td></tr>
+          <tr><th>{{ ui('labels.packaging') }}</th><td>{{ L(product.packaging) }}</td></tr>
+          <tr><th>{{ ui('labels.container') }}</th><td>{{ L(product.container) }}</td></tr>
+          <tr><th>{{ ui('labels.incoterms') }}</th><td>FOB · CFR · CIF</td></tr>
+          <tr><th>{{ ui('labels.port') }}</th><td>{{ cfg.porto_embarque }}</td></tr>
+          <tr><th>{{ ui('labels.availability') }}</th><td>{{ L(product.availability) }}</td></tr>
+          {% if product.hs %}<tr><th>HS</th><td>{{ product.hs }}</td></tr>{% endif %}
+          </tbody>
+        </table>
+        <a class="btn solid wide" href="{{ url('quote') }}?produto={{ product.id }}">{{ ui('btn.quote_product') }}</a>
+        <p class="note">{{ page.note_photo }}</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="related">
+    <div class="wrap">
+      <div class="head split"><h2>{{ ui('labels.related') }}</h2><div class="head-links"><a href="{{ url('products') }}">{{ ui('btn.all_products') }}</a></div></div>
+      <div class="grid3">
+        {% for p in others %}{{ m.product_card(p, L, product_url, ui, placeholder_svg, picture) }}{% endfor %}
+      </div>
+    </div>
+  </section>
+</article>
+{% endblock %}

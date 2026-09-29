@@ -1,0 +1,19 @@
+# Saída gerada — o site é reconstruído por `python3 build.py` (localmente ou no CI)
+dist/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Sistema / editores
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Segredos e configuração local — nunca commitar
+.env
+.env.*
+.dev.vars
+.wrangler/

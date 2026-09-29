@@ -1,0 +1,163 @@
+{
+  "_comentario": "Página Empresa. Um bloco por idioma.",
+
+  "en": {
+    "meta_title": "Company — GBC Foods, the food division of GBC Group",
+    "meta_description": "GBC Foods is the food arm of GBC Group, a Brazilian trading company based in Santos that operates its own international logistics. Coffee, nuts, seeds, sugar, powders and almonds from Portugal.",
+    "title": "A trading company that also carries the cargo",
+    "lead": "GBC Foods is the food arm of GBC Group, a Brazilian trading company based in Santos that operates its own international logistics structure. Every lot we ship is supplied against the buyer's own specification and the requirements of the destination market.",
+    "sections": [
+      {
+        "h": "Where we are",
+        "p": [
+          "We are based in Santos, São Paulo, at the port through which most of Brazil's agricultural exports leave the country. Being at the port is not a detail: the terminal, the customs brokers, the surveyors and the shipping lines are minutes away, and the team that negotiates your contract is the team that watches the container leave.",
+          "Our supply comes from inland Brazil. Coffee comes from a partner cooperative of producer families in the southwest of Minas Gerais; peanuts, Brazil nuts, macadamia, sesame, sugar and powdered products come from processors we work with season after season; almonds are grown on the group's own orchards in Portugal."
+        ]
+      },
+      {
+        "h": "How we work",
+        "p": [
+          "Specification first. You tell us the grade, the screen or calibre, the packing, the destination and the shipment window, and we source against it. Samples are prepared and checked before anything is bought, and nothing is bought before you approve sample and price.",
+          "One team from the warehouse to your port. Inland haulage, terminal handling, customs clearance, fumigation, phytosanitary and MAPA certificates, booking, bill of lading and cargo insurance are handled inside the group, by people who sit next to the people who sold you the lot. When something changes — a vessel delay, a document, an inspection — you hear it from us, the same day."
+        ]
+      },
+      {
+        "h": "Two divisions",
+        "p": [
+          "GBC Foods originates, grades and contracts. GBC Logistics moves the cargo and handles the paperwork. The two share an office, a system and a phone number, which is what lets us quote FOB, CFR or CIF from Santos with the freight already known instead of estimated."
+        ]
+      }
+    ],
+    "facts_title": "In short",
+    "facts": [
+      { "k": "Company", "v": "GBC Foods — food division of GBC Group" },
+      { "k": "Head office", "v": "Santos, São Paulo, Brazil" },
+      { "k": "Port of loading", "v": "Santos (BRSSZ)" },
+      { "k": "Terms", "v": "FOB · CFR · CIF" },
+      { "k": "Languages", "v": "English, Portuguese, Spanish" },
+      { "k": "Commercial contact", "v": "commercial@gbc-foods.com" }
+    ],
+    "cta_title": "Want to see the catalogue?",
+    "cta_text": "Coffee, peanuts, Brazil nuts, macadamia, sesame, peanut oil, sugar, milk powder, corn starch and almonds — each with its specification, packing and container load."
+  },
+
+  "pt": {
+    "meta_title": "Empresa — GBC Foods, a divisão de alimentos do GBC Group",
+    "meta_description": "A GBC Foods é o braço de alimentos do GBC Group, trading brasileira sediada em Santos que opera a própria logística internacional. Café, castanhas, sementes, açúcar, pós e amêndoas de Portugal.",
+    "title": "Uma trading que também leva a carga",
+    "lead": "A GBC Foods é o braço de alimentos do GBC Group, uma trading brasileira sediada em Santos que opera a própria estrutura de logística internacional. Cada lote que embarcamos é fornecido conforme a especificação do comprador e os requisitos do mercado de destino.",
+    "sections": [
+      {
+        "h": "Onde estamos",
+        "p": [
+          "Somos sediados em Santos, São Paulo, no porto por onde sai a maior parte das exportações agrícolas do Brasil. Estar no porto não é detalhe: o terminal, os despachantes, os supervisores de carga e os armadores ficam a minutos, e a equipe que negocia o seu contrato é a mesma que vê o contêiner sair.",
+          "Nossas origens ficam no interior. O café vem de uma cooperativa parceira de famílias produtoras no Sudoeste de Minas Gerais; amendoim, castanha-do-brasil, macadâmia, gergelim, açúcar e produtos em pó vêm de beneficiadores com quem trabalhamos safra após safra; as amêndoas são cultivadas nos pomares próprios do grupo em Portugal."
+        ]
+      },
+      {
+        "h": "Como trabalhamos",
+        "p": [
+          "Especificação primeiro. Você informa classificação, peneira ou calibre, embalagem, destino e janela de embarque, e nós originamos conforme isso. As amostras são preparadas e conferidas antes de qualquer compra, e nada é comprado antes de você aprovar amostra e preço.",
+          "Uma única equipe do armazém ao seu porto. Transporte rodoviário, movimentação em terminal, desembaraço aduaneiro, fumigação, certificados fitossanitário e do MAPA, booking, conhecimento de embarque e seguro de carga são tratados dentro do grupo, por gente que senta ao lado de quem te vendeu o lote. Quando algo muda — atraso de navio, um documento, uma inspeção — você fica sabendo por nós, no mesmo dia."
+        ]
+      },
+      {
+        "h": "Duas divisões",
+        "p": [
+          "A GBC Foods origina, classifica e contrata. A GBC Logistics move a carga e cuida da documentação. As duas dividem escritório, sistema e telefone, e é isso que nos permite cotar FOB, CFR ou CIF a partir de Santos com o frete já conhecido, e não estimado."
+        ]
+      }
+    ],
+    "facts_title": "Em resumo",
+    "facts": [
+      { "k": "Empresa", "v": "GBC Foods — divisão de alimentos do GBC Group" },
+      { "k": "Sede", "v": "Santos, São Paulo, Brasil" },
+      { "k": "Porto de embarque", "v": "Santos (BRSSZ)" },
+      { "k": "Termos", "v": "FOB · CFR · CIF" },
+      { "k": "Idiomas", "v": "Português, inglês, espanhol" },
+      { "k": "Contato comercial", "v": "commercial@gbc-foods.com" }
+    ],
+    "cta_title": "Quer ver o catálogo?",
+    "cta_text": "Café, amendoim, castanha-do-brasil, macadâmia, gergelim, óleo de amendoim, açúcar, leite em pó, amido de milho e amêndoas — cada um com especificação, embalagem e carga por contêiner."
+  },
+
+  "es": {
+    "meta_title": "Empresa — GBC Foods, la división de alimentos de GBC Group",
+    "meta_description": "GBC Foods es la división de alimentos de GBC Group, trading brasileña con sede en Santos que opera su propia logística internacional. Café, frutos secos, semillas, azúcar, polvos y almendras de Portugal.",
+    "title": "Una trading que también lleva la carga",
+    "lead": "GBC Foods es la división de alimentos de GBC Group, una trading brasileña con sede en Santos que opera su propia estructura de logística internacional. Cada lote que embarcamos se suministra según la especificación del comprador y los requisitos del mercado de destino.",
+    "sections": [
+      {
+        "h": "Dónde estamos",
+        "p": [
+          "Tenemos sede en Santos, São Paulo, el puerto por donde sale la mayor parte de las exportaciones agrícolas de Brasil. Estar en el puerto no es un detalle: la terminal, los agentes de aduana, los inspectores de carga y las navieras están a minutos, y el equipo que negocia su contrato es el mismo que ve salir el contenedor.",
+          "Nuestras zonas de origen están en el interior del país. El café proviene de una cooperativa asociada de familias productoras del suroeste de Minas Gerais; cacahuete, nuez de Brasil, macadamia, sésamo, azúcar y productos en polvo provienen de procesadores con los que trabajamos cosecha tras cosecha; las almendras se cultivan en las plantaciones propias del grupo en Portugal."
+        ]
+      },
+      {
+        "h": "Cómo trabajamos",
+        "p": [
+          "Primero la especificación. Usted indica clasificación, criba o calibre, envase, destino y ventana de embarque, y nosotros originamos según eso. Las muestras se preparan y verifican antes de cualquier compra, y nada se compra antes de que apruebe muestra y precio.",
+          "Un único equipo del almacén a su puerto. Transporte terrestre, manejo en terminal, despacho aduanero, fumigación, certificados fitosanitario y del MAPA, booking, conocimiento de embarque y seguro de carga se gestionan dentro del grupo, por personas que se sientan al lado de quien le vendió el lote. Cuando algo cambia — un retraso del buque, un documento, una inspección — lo sabe por nosotros, el mismo día."
+        ]
+      },
+      {
+        "h": "Dos divisiones",
+        "p": [
+          "GBC Foods origina, clasifica y contrata. GBC Logistics mueve la carga y gestiona la documentación. Ambas comparten oficina, sistema y teléfono, y eso es lo que nos permite cotizar FOB, CFR o CIF desde Santos con el flete ya conocido, no estimado."
+        ]
+      }
+    ],
+    "facts_title": "En resumen",
+    "facts": [
+      { "k": "Empresa", "v": "GBC Foods — división de alimentos de GBC Group" },
+      { "k": "Sede", "v": "Santos, São Paulo, Brasil" },
+      { "k": "Puerto de embarque", "v": "Santos (BRSSZ)" },
+      { "k": "Términos", "v": "FOB · CFR · CIF" },
+      { "k": "Idiomas", "v": "Español, inglés, portugués" },
+      { "k": "Contacto comercial", "v": "commercial@gbc-foods.com" }
+    ],
+    "cta_title": "¿Quiere ver el catálogo?",
+    "cta_text": "Café, cacahuete, nuez de Brasil, macadamia, sésamo, aceite de cacahuete, azúcar, leche en polvo, almidón de maíz y almendras — cada uno con especificación, envase y carga por contenedor."
+  },
+
+  "ru": {
+    "meta_title": "О компании — GBC Foods, продовольственное подразделение GBC Group",
+    "meta_description": "GBC Foods — продовольственное подразделение GBC Group, бразильской торговой компании из Сантоса с собственной международной логистикой. Кофе, орехи, семена, сахар, порошки и миндаль из Португалии.",
+    "title": "Торговая компания, которая сама везёт груз",
+    "lead": "GBC Foods — продовольственное подразделение GBC Group, бразильской торговой компании из Сантоса с собственной структурой международной логистики. Каждая партия поставляется по спецификации покупателя и требованиям рынка назначения.",
+    "sections": [
+      {
+        "h": "Где мы находимся",
+        "p": [
+          "Наш головной офис — в Сантосе, штат Сан-Паулу, в порту, через который уходит большая часть сельскохозяйственного экспорта Бразилии. Присутствие в порту — не мелочь: терминал, таможенные брокеры, сюрвейеры и судоходные линии находятся в нескольких минутах от нас, а команда, которая ведёт ваш контракт, — та же, что провожает контейнер.",
+          "Наши источники — во внутренних регионах. Кофе поступает от кооператива-партнёра семейных хозяйств на юго-западе штата Минас-Жерайс; арахис, бразильский орех, макадамия, кунжут, сахар и порошковая продукция — от переработчиков, с которыми мы работаем сезон за сезоном; миндаль выращивается в собственных садах группы в Португалии."
+        ]
+      },
+      {
+        "h": "Как мы работаем",
+        "p": [
+          "Сначала спецификация. Вы сообщаете сорт, калибр, упаковку, порт назначения и период отгрузки, и мы закупаем в соответствии с этим. Образцы готовятся и проверяются до любой закупки, и ничего не покупается до утверждения вами образца и цены.",
+          "Одна команда от склада до вашего порта. Автоперевозка, обработка на терминале, таможенное оформление, фумигация, фитосанитарный сертификат и сертификат MAPA, букинг, коносамент и страхование груза выполняются внутри группы — людьми, которые сидят рядом с теми, кто продал вам партию. Если что-то меняется — задержка судна, документ, инспекция — вы узнаёте об этом от нас в тот же день."
+        ]
+      },
+      {
+        "h": "Два подразделения",
+        "p": [
+          "GBC Foods закупает, классифицирует и заключает контракты. GBC Logistics перевозит груз и оформляет документы. У них общий офис, общая система и общий телефон — именно поэтому мы можем давать цены на условиях FOB, CFR или CIF Сантос с уже известной, а не расчётной ставкой фрахта."
+        ]
+      }
+    ],
+    "facts_title": "Коротко",
+    "facts": [
+      { "k": "Компания", "v": "GBC Foods — продовольственное подразделение GBC Group" },
+      { "k": "Головной офис", "v": "Сантос, штат Сан-Паулу, Бразилия" },
+      { "k": "Порт отгрузки", "v": "Сантос (BRSSZ)" },
+      { "k": "Условия", "v": "FOB · CFR · CIF" },
+      { "k": "Языки", "v": "Английский, португальский, испанский" },
+      { "k": "Коммерческий контакт", "v": "commercial@gbc-foods.com" }
+    ],
+    "cta_title": "Хотите посмотреть каталог?",
+    "cta_text": "Кофе, арахис, бразильский орех, макадамия, кунжут, арахисовое масло, сахар, сухое молоко, кукурузный крахмал и миндаль — со спецификацией, упаковкой и загрузкой контейнера для каждого."
+  }
+}

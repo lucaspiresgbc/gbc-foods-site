@@ -1,0 +1,179 @@
+{
+  "_comentario": "Página GBC Foods (dentro de Serviços). Apresenta as três origens e leva aos produtos.",
+
+  "en": {
+    "meta_title": "GBC Foods — green coffee, nuts, seeds, sugar and powders from Brazil, almonds from Portugal",
+    "meta_description": "The food division of GBC Group: green arabica coffee from a partner cooperative in Minas Gerais, Brazilian peanuts, Brazil nuts, macadamia, sesame, sugar, milk powder and corn starch, and almonds from the group's own orchards in Portugal.",
+    "title": "GBC Foods",
+    "lead": "The food division of the group. We originate against your specification, check every lot before it is bought, and ship it with our own logistics. Three origins, two families of product, one way of working.",
+    "origins_title": "Three origins",
+    "origins": [
+      {
+        "h": "Coffee — southwest of Minas Gerais",
+        "p": "Green arabica from a cooperative of producer families in the southwest of Minas Gerais, in the belt where the Atlantic Forest meets the cerrado, between 700 and 1,250 metres. Natural process, sun-dried on the patio, offered in three standards: Special Coffee 17/18, Fine Cup 16/18 and Good Cup 14/16 and 16/18. The cooperative holds Fairtrade certification; certified lots are available on request.",
+        "img": "coffee/region-aerial.jpg",
+        "alt": "Aerial view of coffee farms in the southwest of Minas Gerais"
+      },
+      {
+        "h": "Nuts, seeds, sugar and powders — Brazil",
+        "p": "Runner peanuts raw and blanched, Brazil nuts, macadamia, natural, black and hulled sesame, mechanically pressed peanut oil, crystal sugar ICUMSA 45 and 150, milk powder and corn starch. Sourced from processors we work with season after season, packed to your specification and loaded in Santos.",
+        "img": "products/peanut-raw.jpg",
+        "alt": "Raw shelled peanuts with red skins"
+      },
+      {
+        "h": "Almonds — Portugal",
+        "p": "Almonds grown on the group's own orchards in Portugal, GLOBALG.A.P. certified, sold as kernels by variety and calibre. The one product in the catalogue that is ours from the tree to the container.",
+        "img": "products/almond-orchard.jpg",
+        "alt": "Almond trees in bloom"
+      }
+    ],
+    "cup_title": "The cup, as the cooperative describes it",
+    "cup": [
+      { "k": "Taste", "v": "Sweet — chocolate, caramel, hazelnut, yellow and red fruits, dried fruits, honey, molasses" },
+      { "k": "Aroma", "v": "Chocolate, fruity, brown sugar" },
+      { "k": "Body", "v": "Full-bodied, creamy" },
+      { "k": "Acidity", "v": "Predominantly citric" },
+      { "k": "Finish", "v": "Long and pleasant" }
+    ],
+    "how_title": "How to buy from us",
+    "how": [
+      ["Send the specification", "Product, grade, calibre or screen, packing, volume, Incoterm, destination port and shipment window. The quote form writes it for you."],
+      ["Receive the sample and the price", "Samples are prepared and checked here, then couriered to you. The price comes with the freight already known, because the logistics is ours."],
+      ["Approve, and we ship", "Contract in your language, preparation to specification, and one team from the warehouse to the release at your port."]
+    ],
+    "cta_title": "The catalogue",
+    "cta_text": "Each product has its own page with specification, packing, container load, Incoterms and availability."
+  },
+
+  "pt": {
+    "meta_title": "GBC Foods — café verde, castanhas, sementes, açúcar e pós do Brasil, amêndoas de Portugal",
+    "meta_description": "A divisão de alimentos do GBC Group: café arábica verde de uma cooperativa parceira em Minas Gerais, amendoim, castanha-do-brasil, macadâmia, gergelim, açúcar, leite em pó e amido de milho do Brasil, e amêndoas dos pomares próprios do grupo em Portugal.",
+    "title": "GBC Foods",
+    "lead": "A divisão de alimentos do grupo. Originamos conforme a sua especificação, conferimos cada lote antes da compra e embarcamos com logística própria. Três origens, duas famílias de produto, um jeito de trabalhar.",
+    "origins_title": "Três origens",
+    "origins": [
+      {
+        "h": "Café — Sudoeste de Minas",
+        "p": "Arábica verde de uma cooperativa de famílias produtoras no Sudoeste de Minas Gerais, na faixa onde a mata atlântica encontra o cerrado, entre 700 e 1.250 metros. Processo natural, secagem ao sol em terreiro, oferecido em três padrões: Special Coffee 17/18, Fine Cup 16/18 e Good Cup 14/16 e 16/18. A cooperativa tem certificação Fairtrade; lotes certificados disponíveis mediante solicitação.",
+        "img": "coffee/region-aerial.jpg",
+        "alt": "Vista aérea de lavouras de café no Sudoeste de Minas"
+      },
+      {
+        "h": "Castanhas, sementes, açúcar e pós — Brasil",
+        "p": "Amendoim Runner cru e blancheado, castanha-do-brasil, macadâmia, gergelim natural, preto e descascado, óleo de amendoim de prensagem mecânica, açúcar cristal ICUMSA 45 e 150, leite em pó e amido de milho. Originados de beneficiadores com quem trabalhamos safra após safra, embalados na sua especificação e ovados em Santos.",
+        "img": "products/peanut-raw.jpg",
+        "alt": "Amendoim cru descascado com película vermelha"
+      },
+      {
+        "h": "Amêndoas — Portugal",
+        "p": "Amêndoas cultivadas nos pomares próprios do grupo em Portugal, com certificação GLOBALG.A.P., vendidas em miolo por variedade e calibre. O único produto do catálogo que é nosso da árvore ao contêiner.",
+        "img": "products/almond-orchard.jpg",
+        "alt": "Amendoeiras em flor"
+      }
+    ],
+    "cup_title": "A xícara, como a cooperativa a descreve",
+    "cup": [
+      { "k": "Sabor", "v": "Doce — chocolate, caramelo, avelã, frutas amarelas e vermelhas, frutas secas, mel, melaço" },
+      { "k": "Aroma", "v": "Chocolate, frutado, açúcar mascavo" },
+      { "k": "Corpo", "v": "Encorpado, cremoso" },
+      { "k": "Acidez", "v": "Predominantemente cítrica" },
+      { "k": "Finalização", "v": "Longa e agradável" }
+    ],
+    "how_title": "Como comprar da gente",
+    "how": [
+      ["Mande a especificação", "Produto, classificação, calibre ou peneira, embalagem, volume, Incoterm, porto de destino e janela de embarque. O formulário de cotação escreve isso por você."],
+      ["Receba a amostra e o preço", "As amostras são preparadas e conferidas aqui, depois enviadas para você. O preço vem com o frete já conhecido, porque a logística é nossa."],
+      ["Aprove, e nós embarcamos", "Contrato na sua língua, preparo conforme a especificação, e uma única equipe do armazém à liberação no seu porto."]
+    ],
+    "cta_title": "O catálogo",
+    "cta_text": "Cada produto tem página própria com especificação, embalagem, carga por contêiner, Incoterms e disponibilidade."
+  },
+
+  "es": {
+    "meta_title": "GBC Foods — café verde, frutos secos, semillas, azúcar y polvos de Brasil, almendras de Portugal",
+    "meta_description": "La división de alimentos de GBC Group: café arábica verde de una cooperativa asociada en Minas Gerais, cacahuete, nuez de Brasil, macadamia, sésamo, azúcar, leche en polvo y almidón de maíz de Brasil, y almendras de las plantaciones propias del grupo en Portugal.",
+    "title": "GBC Foods",
+    "lead": "La división de alimentos del grupo. Originamos según su especificación, verificamos cada lote antes de comprarlo y lo embarcamos con logística propia. Tres orígenes, dos familias de producto, una forma de trabajar.",
+    "origins_title": "Tres orígenes",
+    "origins": [
+      {
+        "h": "Café — suroeste de Minas Gerais",
+        "p": "Arábica verde de una cooperativa de familias productoras del suroeste de Minas Gerais, en la franja donde la Mata Atlántica se encuentra con el cerrado, entre 700 y 1.250 metros. Proceso natural, secado al sol en patio, ofrecido en tres estándares: Special Coffee 17/18, Fine Cup 16/18 y Good Cup 14/16 y 16/18. La cooperativa cuenta con certificación Fairtrade; lotes certificados disponibles bajo solicitud.",
+        "img": "coffee/region-aerial.jpg",
+        "alt": "Vista aérea de fincas de café en el suroeste de Minas Gerais"
+      },
+      {
+        "h": "Frutos secos, semillas, azúcar y polvos — Brasil",
+        "p": "Cacahuete Runner crudo y blanqueado, nuez de Brasil, macadamia, sésamo natural, negro y descascarillado, aceite de cacahuete de prensado mecánico, azúcar cristal ICUMSA 45 y 150, leche en polvo y almidón de maíz. Originados de procesadores con los que trabajamos cosecha tras cosecha, envasados según su especificación y cargados en Santos.",
+        "img": "products/peanut-raw.jpg",
+        "alt": "Cacahuete crudo pelado con piel roja"
+      },
+      {
+        "h": "Almendras — Portugal",
+        "p": "Almendras cultivadas en las plantaciones propias del grupo en Portugal, con certificación GLOBALG.A.P., vendidas en grano por variedad y calibre. El único producto del catálogo que es nuestro del árbol al contenedor.",
+        "img": "products/almond-orchard.jpg",
+        "alt": "Almendros en flor"
+      }
+    ],
+    "cup_title": "La taza, como la describe la cooperativa",
+    "cup": [
+      { "k": "Sabor", "v": "Dulce — chocolate, caramelo, avellana, frutas amarillas y rojas, frutas secas, miel, melaza" },
+      { "k": "Aroma", "v": "Chocolate, frutal, azúcar moreno" },
+      { "k": "Cuerpo", "v": "Pleno, cremoso" },
+      { "k": "Acidez", "v": "Predominantemente cítrica" },
+      { "k": "Final", "v": "Largo y agradable" }
+    ],
+    "how_title": "Cómo comprarnos",
+    "how": [
+      ["Envíe la especificación", "Producto, clasificación, calibre o criba, envase, volumen, Incoterm, puerto de destino y ventana de embarque. El formulario de cotización lo escribe por usted."],
+      ["Reciba la muestra y el precio", "Las muestras se preparan y verifican aquí, y luego se le envían. El precio llega con el flete ya conocido, porque la logística es nuestra."],
+      ["Apruebe, y embarcamos", "Contrato en su idioma, preparación según la especificación, y un único equipo del almacén a la liberación en su puerto."]
+    ],
+    "cta_title": "El catálogo",
+    "cta_text": "Cada producto tiene su propia página con especificación, envase, carga por contenedor, Incoterms y disponibilidad."
+  },
+
+  "ru": {
+    "meta_title": "GBC Foods — зелёный кофе, орехи, семена, сахар и порошки из Бразилии, миндаль из Португалии",
+    "meta_description": "Продовольственное подразделение GBC Group: зелёный кофе арабика от кооператива-партнёра в Минас-Жерайс, бразильский арахис, бразильский орех, макадамия, кунжут, сахар, сухое молоко и кукурузный крахмал, а также миндаль из собственных садов группы в Португалии.",
+    "title": "GBC Foods",
+    "lead": "Продовольственное подразделение группы. Мы закупаем по вашей спецификации, проверяем каждую партию до покупки и отгружаем силами собственной логистики. Три региона происхождения, две группы продукции, один подход к работе.",
+    "origins_title": "Три региона происхождения",
+    "origins": [
+      {
+        "h": "Кофе — юго-запад штата Минас-Жерайс",
+        "p": "Зелёная арабика от кооператива семейных хозяйств на юго-западе штата Минас-Жерайс, на границе Атлантического леса и серрадо, на высоте от 700 до 1 250 метров. Натуральная обработка, сушка на солнце на патио, три стандарта: Special Coffee 17/18, Fine Cup 16/18 и Good Cup 14/16 и 16/18. Кооператив имеет сертификат Fairtrade; сертифицированные партии — по запросу.",
+        "img": "coffee/region-aerial.jpg",
+        "alt": "Вид с воздуха на кофейные плантации на юго-западе Минас-Жерайс"
+      },
+      {
+        "h": "Орехи, семена, сахар и порошки — Бразилия",
+        "p": "Арахис Runner сырой и бланшированный, бразильский орех, макадамия, кунжут натуральный, чёрный и очищенный, арахисовое масло механического отжима, кристаллический сахар ICUMSA 45 и 150, сухое молоко и кукурузный крахмал. Закупаются у переработчиков, с которыми мы работаем сезон за сезоном, упаковываются по вашей спецификации и загружаются в Сантосе.",
+        "img": "products/peanut-raw.jpg",
+        "alt": "Сырой очищенный арахис в красной кожице"
+      },
+      {
+        "h": "Миндаль — Португалия",
+        "p": "Миндаль из собственных садов группы в Португалии, сертифицированных по GLOBALG.A.P., продаётся ядрами по сортам и калибрам. Единственный продукт каталога, который принадлежит нам от дерева до контейнера.",
+        "img": "products/almond-orchard.jpg",
+        "alt": "Цветущие миндальные деревья"
+      }
+    ],
+    "cup_title": "Чашка — как её описывает кооператив",
+    "cup": [
+      { "k": "Вкус", "v": "Сладкий — шоколад, карамель, фундук, жёлтые и красные фрукты, сухофрукты, мёд, патока" },
+      { "k": "Аромат", "v": "Шоколад, фруктовый, коричневый сахар" },
+      { "k": "Тело", "v": "Плотное, кремовое" },
+      { "k": "Кислотность", "v": "Преимущественно цитрусовая" },
+      { "k": "Послевкусие", "v": "Долгое и приятное" }
+    ],
+    "how_title": "Как у нас купить",
+    "how": [
+      ["Отправьте спецификацию", "Продукт, сорт, калибр, упаковка, объём, Инкотермс, порт назначения и период отгрузки. Форма запроса цены составит её за вас."],
+      ["Получите образец и цену", "Образцы готовятся и проверяются у нас, затем отправляются вам курьером. Цена приходит с уже известным фрахтом, потому что логистика наша."],
+      ["Утвердите — и мы отгружаем", "Контракт на английском или другом согласованном языке, подготовка по спецификации и одна команда от склада до выпуска груза в вашем порту."]
+    ],
+    "cta_title": "Каталог",
+    "cta_text": "У каждого продукта своя страница со спецификацией, упаковкой, загрузкой контейнера, Инкотермс и наличием."
+  }
+}

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m %}
+{% block content %}
+{{ m.crumbs(breadcrumbs, ui) }}
+<section class="page-hero">
+  <div class="wrap">
+    <h1>{{ page.blog_title }}</h1>
+    <p class="prose lead">{{ page.blog_lead }}</p>
+  </div>
+</section>
+<section class="catalog">
+  <div class="wrap">
+    <div class="grid3">
+      {% for post in posts %}{{ m.post_card(post, post_url, ui, picture) }}{% endfor %}
+    </div>
+  </div>
+</section>
+{{ m.cta(ui('cta.title'), ui('cta.text'), ui('btn.quote'), url('quote'), ui('btn.products'), url('products')) }}
+{% endblock %}

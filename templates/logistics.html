@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m %}
+{% block content %}
+{{ m.crumbs(breadcrumbs, ui) }}
+<section class="page-hero">
+  <div class="wrap two">
+    <div>
+      <div class="div-label big"><span>GBC</span><em class="blue">Logistics</em></div>
+      <h1>{{ page.title }}</h1>
+      <p class="prose lead">{{ page.lead }}</p>
+      <div class="cta">
+        <a class="btn solid blue" href="{{ url('quote') }}">{{ ui('btn.quote') }}</a>
+        <a class="btn ghost" href="#steps">{{ page.steps_title }}</a>
+      </div>
+    </div>
+    <div class="page-hero-photo">{{ picture('products/ship-sea.jpg', '', sizes="(max-width: 900px) 100vw, 45vw", loading="eager")|safe }}</div>
+  </div>
+</section>
+
+<section class="two-roof">
+  <div class="wrap">
+    <div class="head"><h2>{{ page.two_title }}</h2></div>
+    <div class="duo">
+      <article class="roof-card">
+        <span class="roof-tag red">{{ page.trading_h }}</span>
+        <h3>{{ page.trading_sub }}</h3>
+        <p class="prose">{{ page.trading_p }}</p>
+        <ul class="ticks">{% for i in page.trading_items %}<li>{{ i }}</li>{% endfor %}</ul>
+      </article>
+      <article class="roof-card">
+        <span class="roof-tag blue">{{ page.log_h }}</span>
+        <h3>{{ page.log_sub }}</h3>
+        <p class="prose">{{ page.log_p }}</p>
+        <ul class="ticks">{% for i in page.log_items %}<li>{{ i }}</li>{% endfor %}</ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="svc-list">
+  <div class="wrap">
+    <div class="head"><h2>{{ page.services_title }}</h2></div>
+    <div class="grid3">
+      {% for s in page.services %}
+      <article class="svc-item"><h3>{{ s[0] }}</h3><p>{{ s[1] }}</p></article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="container-sec">
+  <div class="wrap two-1">
+    <div>
+      <h2>{{ page.container_title }}</h2>
+      <p class="prose">{{ page.container_text }}</p>
+      <div class="boxes">
+        <figure class="box"><div class="box-shape s20"><span>20′</span></div><figcaption>{{ page.container_rows[0].v }}</figcaption></figure>
+        <figure class="box"><div class="box-shape s40"><span>40′ HC</span></div><figcaption>{{ page.container_rows[1].v }}</figcaption></figure>
+      </div>
+    </div>
+    <aside class="panel">
+      <dl class="facts">
+        {% for r in page.container_rows %}<div><dt>{{ r.k }}</dt><dd>{{ r.v }}</dd></div>{% endfor %}
+      </dl>
+    </aside>
+  </div>
+</section>
+
+<section class="how" id="steps">
+  <div class="wrap">
+    <div class="head"><h2>{{ page.steps_title }}</h2><p class="prose">{{ page.steps_text }}</p></div>
+    {{ m.steps_list(steps) }}
+  </div>
+</section>
+
+{{ m.cta(page.cta_title, page.cta_text, ui('btn.quote'), url('quote'), ui('btn.contact'), url('contact')) }}
+{% endblock %}

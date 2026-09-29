@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m %}
+{% block content %}
+{{ m.crumbs(breadcrumbs, ui) }}
+<section class="page-hero">
+  <div class="wrap two">
+    <div>
+      <h1>{{ page.title }}</h1>
+      <p class="prose lead">{{ page.lead }}</p>
+    </div>
+    <div class="page-hero-photo">{{ picture('products/port-santos.jpg', '', sizes="(max-width: 900px) 100vw, 45vw", loading="eager")|safe }}</div>
+  </div>
+</section>
+
+<section class="article">
+  <div class="wrap two-1">
+    <div class="prose-col">
+      {% for s in page.sections %}
+      <h2>{{ s.h }}</h2>
+      {% for para in s.p %}<p class="prose">{{ para }}</p>{% endfor %}
+      {% endfor %}
+    </div>
+    <aside class="panel">
+      <h3>{{ page.facts_title }}</h3>
+      <dl class="facts">
+        {% for f in page.facts %}<div><dt>{{ f.k }}</dt><dd>{{ f.v }}</dd></div>{% endfor %}
+      </dl>
+    </aside>
+  </div>
+</section>
+
+<section class="mosaic">
+  <div class="wrap mosaic-grid">
+    <div class="tall">{{ picture('coffee/mosaic-1.jpg', '', sizes="(max-width: 700px) 100vw, 33vw")|safe }}</div>
+    <div class="tall">{{ picture('coffee/mosaic-2.jpg', '', sizes="(max-width: 700px) 100vw, 33vw")|safe }}</div>
+    <div class="tall">{{ picture('coffee/origin-lavoura.jpg', '', sizes="(max-width: 700px) 100vw, 33vw")|safe }}</div>
+  </div>
+</section>
+
+{{ m.cta(page.cta_title, page.cta_text, ui('btn.products'), url('products'), ui('btn.quote'), url('quote')) }}
+{% endblock %}

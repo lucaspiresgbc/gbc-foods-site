@@ -1,0 +1,191 @@
+{
+  "_comentario": "Página GBC Logistics — Logística e transporte.",
+
+  "en": {
+    "meta_title": "GBC Logistics — logistics and transport from Santos, Brazil",
+    "meta_description": "The logistics division of GBC Group: inland haulage, terminal, customs clearance, fumigation, phytosanitary and MAPA certificates, booking, bill of lading, cargo insurance and foreign-exchange contract, from Santos to your port.",
+    "title": "Logistics and transport",
+    "lead": "Most exporters sell you the goods and hand the shipment to somebody else. In this group both sit in the same building — which changes what we can tell you, and when.",
+    "two_title": "Trading and logistics under one roof",
+    "trading_h": "Trading",
+    "trading_sub": "Origination and contract",
+    "trading_p": "Sourcing at origin, sampling and checking, grading, price formation and contract.",
+    "trading_items": [
+      "Direct origination from a fixed base of producers and processors",
+      "Sampling and grading before purchase",
+      "FOB, CFR and CIF",
+      "Foreign-exchange contract handled in-house"
+    ],
+    "log_h": "Logistics",
+    "log_sub": "From the warehouse to your port",
+    "log_p": "Inland haulage, terminal, customs clearance, booking and documents — controlled by the same team that sold you the lot.",
+    "log_items": [
+      "Inland haulage and terminal handling",
+      "Customs clearance and certificate of origin",
+      "Fumigation, phytosanitary certificate and MAPA inspection",
+      "Booking, bill of lading and cargo insurance"
+    ],
+    "services_title": "What the logistics division does",
+    "services": [
+      ["Inland haulage", "Road transport from the origin — the cooperative warehouse, the processing plant, the sugar mill — to the terminal in Santos, with the load checked at pick-up."],
+      ["Terminal and stuffing", "Container booking with the line, positioning, stuffing under supervision, weighing, seal and gate-in. You receive the stuffing report and the seal number."],
+      ["Customs clearance", "Export registration, customs channel, inspection when called, and release. Handled by our team, at the port where we are based."],
+      ["Certificates", "Fumigation, phytosanitary certificate, MAPA inspection, certificate of origin (including preferential origin where the destination allows), and any analysis the buyer or the destination requires."],
+      ["Documents", "Commercial invoice, packing list, bill of lading — original or telex release — and courier of the originals or presentation to the bank under letter of credit."],
+      ["Insurance and follow-up", "Cargo insurance on CIF sales, vessel tracking, and one contact for questions until the cargo is released at destination."]
+    ],
+    "container_title": "How the cargo travels",
+    "container_text": "A 20′ standard container takes about 19 tonnes of coffee — 320 bags of 60 kg; a 40′ high cube takes 440 bags. The limit is weight, not floor space, which is why the larger box is not double the smaller one. For nuts, sugar and powders on pallets or in big bags, the load per container depends on the packing; we confirm it in the quote.",
+    "container_rows": [
+      { "k": "20′ standard", "v": "320 bags of 60 kg · about 19 t" },
+      { "k": "40′ high cube", "v": "440 bags of 60 kg · about 26 t" },
+      { "k": "Port of loading", "v": "Santos (BRSSZ)" },
+      { "k": "Terms", "v": "FOB · CFR · CIF" }
+    ],
+    "steps_title": "How a shipment runs",
+    "steps_text": "The same ten steps every time, whichever product you buy.",
+    "cta_title": "Want a CFR or CIF price with the freight already in it?",
+    "cta_text": "Tell us the product, the volume and the destination port. Because the freight is ours, the price comes back as a number, not an estimate."
+  },
+
+  "pt": {
+    "meta_title": "GBC Logistics — logística e transporte a partir de Santos, Brasil",
+    "meta_description": "A divisão de logística do GBC Group: transporte rodoviário, terminal, desembaraço aduaneiro, fumigação, certificados fitossanitário e do MAPA, booking, conhecimento de embarque, seguro de carga e contrato de câmbio, de Santos ao seu porto.",
+    "title": "Logística e transporte",
+    "lead": "A maioria dos exportadores vende a mercadoria e entrega o embarque a outra empresa. Neste grupo, as duas coisas ficam no mesmo prédio — o que muda o que conseguimos te informar, e quando.",
+    "two_title": "Trading e logística sob o mesmo teto",
+    "trading_h": "Trading",
+    "trading_sub": "Originação e contrato",
+    "trading_p": "Compra na origem, amostragem e conferência, classificação, formação de preço e contrato.",
+    "trading_items": [
+      "Originação direta de base fixa de produtores e beneficiadores",
+      "Amostragem e classificação antes da compra",
+      "FOB, CFR e CIF",
+      "Contrato de câmbio conduzido internamente"
+    ],
+    "log_h": "Logística",
+    "log_sub": "Do armazém ao seu porto",
+    "log_p": "Transporte rodoviário, terminal, desembaraço, booking e documentação — controlados pela mesma equipe que te vendeu o lote.",
+    "log_items": [
+      "Transporte rodoviário e movimentação em terminal",
+      "Desembaraço aduaneiro e certificado de origem",
+      "Fumigação, certificado fitossanitário e inspeção do MAPA",
+      "Booking, conhecimento de embarque e seguro de carga"
+    ],
+    "services_title": "O que a divisão de logística faz",
+    "services": [
+      ["Transporte rodoviário", "Transporte da origem — o armazém da cooperativa, a unidade de beneficiamento, a usina — até o terminal em Santos, com a carga conferida na coleta."],
+      ["Terminal e ova", "Booking do contêiner com o armador, posicionamento, ova acompanhada, pesagem, lacre e gate-in. Você recebe o relatório de ova e o número do lacre."],
+      ["Desembaraço aduaneiro", "Registro de exportação, canal aduaneiro, inspeção quando chamada, e liberação. Conduzido pela nossa equipe, no porto onde estamos sediados."],
+      ["Certificados", "Fumigação, certificado fitossanitário, inspeção do MAPA, certificado de origem (inclusive origem preferencial quando o destino permite) e qualquer análise que o comprador ou o destino exija."],
+      ["Documentos", "Invoice, packing list, conhecimento de embarque — original ou telex release — e envio dos originais por courier ou apresentação ao banco em carta de crédito."],
+      ["Seguro e acompanhamento", "Seguro de carga nas vendas CIF, rastreamento do navio e um único contato para dúvidas até a liberação da carga no destino."]
+    ],
+    "container_title": "Como a carga viaja",
+    "container_text": "Um contêiner 20′ standard leva cerca de 19 toneladas de café — 320 sacas de 60 kg; um 40′ high cube leva 440 sacas. O limite é o peso, não o piso, e por isso a caixa maior não é o dobro da menor. Para castanhas, açúcar e pós em pallets ou big bags, a carga por contêiner depende da embalagem; confirmamos na cotação.",
+    "container_rows": [
+      { "k": "20′ standard", "v": "320 sacas de 60 kg · cerca de 19 t" },
+      { "k": "40′ high cube", "v": "440 sacas de 60 kg · cerca de 26 t" },
+      { "k": "Porto de embarque", "v": "Santos (BRSSZ)" },
+      { "k": "Termos", "v": "FOB · CFR · CIF" }
+    ],
+    "steps_title": "Como corre um embarque",
+    "steps_text": "Os mesmos dez passos, em qualquer produto.",
+    "cta_title": "Quer um preço CFR ou CIF com o frete já dentro?",
+    "cta_text": "Diga o produto, o volume e o porto de destino. Como o frete é nosso, o preço volta como número, não como estimativa."
+  },
+
+  "es": {
+    "meta_title": "GBC Logistics — logística y transporte desde Santos, Brasil",
+    "meta_description": "La división de logística de GBC Group: transporte terrestre, terminal, despacho aduanero, fumigación, certificados fitosanitario y del MAPA, booking, conocimiento de embarque, seguro de carga y contrato de cambio, de Santos a su puerto.",
+    "title": "Logística y transporte",
+    "lead": "La mayoría de los exportadores vende la mercadería y entrega el embarque a otra empresa. En este grupo, ambas cosas están en el mismo edificio — lo que cambia lo que podemos informarle, y cuándo.",
+    "two_title": "Trading y logística bajo un mismo techo",
+    "trading_h": "Trading",
+    "trading_sub": "Originación y contrato",
+    "trading_p": "Compra en origen, muestreo y verificación, clasificación, formación de precio y contrato.",
+    "trading_items": [
+      "Originación directa de una base fija de productores y procesadores",
+      "Muestreo y clasificación antes de la compra",
+      "FOB, CFR y CIF",
+      "Contrato de cambio gestionado internamente"
+    ],
+    "log_h": "Logística",
+    "log_sub": "Del almacén a su puerto",
+    "log_p": "Transporte terrestre, terminal, despacho, booking y documentación — controlados por el mismo equipo que le vendió el lote.",
+    "log_items": [
+      "Transporte terrestre y manejo en terminal",
+      "Despacho aduanero y certificado de origen",
+      "Fumigación, certificado fitosanitario e inspección del MAPA",
+      "Booking, conocimiento de embarque y seguro de carga"
+    ],
+    "services_title": "Qué hace la división de logística",
+    "services": [
+      ["Transporte terrestre", "Transporte desde el origen — el almacén de la cooperativa, la planta procesadora, el ingenio — hasta la terminal en Santos, con la carga verificada en la recogida."],
+      ["Terminal y llenado", "Booking del contenedor con la naviera, posicionamiento, llenado supervisado, pesaje, precinto y gate-in. Usted recibe el informe de llenado y el número de precinto."],
+      ["Despacho aduanero", "Registro de exportación, canal aduanero, inspección cuando corresponde, y liberación. Gestionado por nuestro equipo, en el puerto donde tenemos sede."],
+      ["Certificados", "Fumigación, certificado fitosanitario, inspección del MAPA, certificado de origen (incluido el origen preferencial cuando el destino lo permite) y cualquier análisis que exija el comprador o el destino."],
+      ["Documentos", "Factura comercial, packing list, conocimiento de embarque — original o telex release — y envío de originales por courier o presentación al banco bajo carta de crédito."],
+      ["Seguro y seguimiento", "Seguro de carga en ventas CIF, rastreo del buque y un único contacto para consultas hasta la liberación de la carga en destino."]
+    ],
+    "container_title": "Cómo viaja la carga",
+    "container_text": "Un contenedor 20′ estándar lleva unas 19 toneladas de café — 320 sacos de 60 kg; un 40′ high cube lleva 440 sacos. El límite es el peso, no el piso, y por eso la caja mayor no es el doble de la menor. Para frutos secos, azúcar y polvos en pallets o big bags, la carga por contenedor depende del envase; la confirmamos en la cotización.",
+    "container_rows": [
+      { "k": "20′ estándar", "v": "320 sacos de 60 kg · unas 19 t" },
+      { "k": "40′ high cube", "v": "440 sacos de 60 kg · unas 26 t" },
+      { "k": "Puerto de embarque", "v": "Santos (BRSSZ)" },
+      { "k": "Términos", "v": "FOB · CFR · CIF" }
+    ],
+    "steps_title": "Cómo se desarrolla un embarque",
+    "steps_text": "Los mismos diez pasos, con cualquier producto.",
+    "cta_title": "¿Quiere un precio CFR o CIF con el flete ya incluido?",
+    "cta_text": "Díganos el producto, el volumen y el puerto de destino. Como el flete es nuestro, le damos un precio firme, no una estimación."
+  },
+
+  "ru": {
+    "meta_title": "GBC Logistics — логистика и перевозки из Сантоса, Бразилия",
+    "meta_description": "Логистическое подразделение GBC Group: автоперевозка, терминал, таможенное оформление, фумигация, фитосанитарный сертификат и сертификат MAPA, букинг, коносамент, страхование груза и оформление валютной сделки — из Сантоса в ваш порт.",
+    "title": "Логистика и перевозки",
+    "lead": "Большинство экспортёров продают товар, а отгрузку передают сторонней компании. В нашей группе обе задачи решаются в одном здании — и это меняет то, что и когда мы можем вам сообщить.",
+    "two_title": "Трейдинг и логистика под одной крышей",
+    "trading_h": "Трейдинг",
+    "trading_sub": "Закупка и контракт",
+    "trading_p": "Закупка в месте происхождения, отбор образцов и проверка, классификация, формирование цены и контракт.",
+    "trading_items": [
+      "Прямая закупка у постоянной базы производителей и переработчиков",
+      "Отбор образцов и классификация до покупки",
+      "FOB, CFR и CIF",
+      "Валютная сделка оформляется внутри компании"
+    ],
+    "log_h": "Логистика",
+    "log_sub": "От склада до вашего порта",
+    "log_p": "Автоперевозка, терминал, таможенное оформление, букинг и документы — под контролем той же команды, которая продала вам партию.",
+    "log_items": [
+      "Автоперевозка и обработка на терминале",
+      "Таможенное оформление и сертификат происхождения",
+      "Фумигация, фитосанитарный сертификат и инспекция MAPA",
+      "Букинг, коносамент и страхование груза"
+    ],
+    "services_title": "Что делает логистическое подразделение",
+    "services": [
+      ["Автоперевозка", "Доставка автотранспортом от места происхождения — склада кооператива, перерабатывающего предприятия, сахарного завода — до терминала в Сантосе, с проверкой груза при погрузке."],
+      ["Терминал и загрузка", "Букинг контейнера у линии, подача, загрузка под контролем, взвешивание, пломба и gate-in. Вы получаете отчёт о загрузке и номер пломбы."],
+      ["Таможенное оформление", "Экспортная регистрация, таможенный коридор, досмотр при назначении и выпуск. Выполняется нашей командой в порту, где находится наш офис."],
+      ["Сертификаты", "Фумигация, фитосанитарный сертификат, инспекция MAPA, сертификат происхождения (в том числе преференциальный, если это допускает страна назначения) и любые анализы, которые требует покупатель или страна назначения."],
+      ["Документы", "Коммерческий инвойс, упаковочный лист, коносамент — оригинал или telex release — и отправка оригиналов курьером или представление в банк по аккредитиву."],
+      ["Страхование и сопровождение", "Страхование груза при продаже на условиях CIF, отслеживание судна и один контакт по всем вопросам до выпуска груза в порту назначения."]
+    ],
+    "container_title": "Как перевозится груз",
+    "container_text": "Стандартный 20-футовый контейнер вмещает около 19 тонн кофе — 320 мешков по 60 кг; 40-футовый high cube — 440 мешков. Ограничение — по весу, а не по площади, поэтому большой контейнер не вмещает вдвое больше. Для орехов, сахара и порошков на паллетах или в биг-бэгах загрузка контейнера зависит от упаковки; мы подтверждаем её в коммерческом предложении.",
+    "container_rows": [
+      { "k": "20′ standard", "v": "320 мешков по 60 кг · около 19 т" },
+      { "k": "40′ high cube", "v": "440 мешков по 60 кг · около 26 т" },
+      { "k": "Порт отгрузки", "v": "Сантос (BRSSZ)" },
+      { "k": "Условия", "v": "FOB · CFR · CIF" }
+    ],
+    "steps_title": "Как проходит отгрузка",
+    "steps_text": "Одни и те же десять шагов для любого продукта.",
+    "cta_title": "Нужна цена CFR или CIF с уже включённым фрахтом?",
+    "cta_text": "Сообщите продукт, объём и порт назначения. Поскольку фрахт организуем мы сами, вы получаете точную цену, а не ориентировочную."
+  }
+}

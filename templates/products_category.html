@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m %}
+{% block content %}
+{{ m.crumbs(breadcrumbs, ui) }}
+<section class="page-hero">
+  <div class="wrap">
+    <h1>{{ cat_title }}</h1>
+    <p class="prose lead">{{ cat_lead }}</p>
+  </div>
+</section>
+
+<section class="catalog">
+  <div class="wrap">
+    <div class="grid3">
+      {% for p in items %}{{ m.product_card(p, L, product_url, ui, placeholder_svg, picture) }}{% endfor %}
+    </div>
+    <p class="note">{{ page.note_photo }}</p>
+  </div>
+</section>
+
+{{ m.cta(page.cta_title, page.cta_text, ui('btn.quote'), url('quote'), ui('btn.all_products'), url('products')) }}
+{% endblock %}

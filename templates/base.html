@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}{% if lang == 'pt' %}-BR{% endif %}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ title }}</title>
+<meta name="description" content="{{ description }}">
+{% if noindex %}<meta name="robots" content="noindex">{% else %}<meta name="robots" content="index, follow, max-image-preview:large">{% endif %}
+<link rel="canonical" href="{{ canonical }}">
+{% for l, u in alternates.items() %}
+<link rel="alternate" hreflang="{{ l }}{% if l == 'pt' %}-BR{% endif %}" href="{{ domain }}{{ u }}">
+{% endfor %}
+{% if alternates|length == langs|length %}<link rel="alternate" hreflang="x-default" href="{{ domain }}/">{% endif %}
+<meta property="og:type" content="{{ og_type or 'website' }}">
+<meta property="og:site_name" content="GBC Foods">
+<meta property="og:title" content="{{ title }}">
+<meta property="og:description" content="{{ description }}">
+<meta property="og:url" content="{{ canonical }}">
+<meta property="og:image" content="{{ og_image }}">
+<meta property="og:locale" content="{{ {'pt':'pt_BR','en':'en_US','es':'es_ES','ru':'ru_RU'}[lang] }}">
+{% for l in langs if l != lang %}<meta property="og:locale:alternate" content="{{ {'pt':'pt_BR','en':'en_US','es':'es_ES','ru':'ru_RU'}[l] }}">
+{% endfor %}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#26375E">
+{% if cfg.google_site_verification %}<meta name="google-site-verification" content="{{ cfg.google_site_verification }}">{% endif %}
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+{% if lang == 'ru' %}
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+{% else %}
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+{% endif %}
+<link rel="stylesheet" href="/css/site.css">
+{% for ld in jsonld %}
+<script type="application/ld+json">{{ ld|tojson_ld|safe }}</script>
+{% endfor %}
+<script>
+window.GBC = {
+  lang: "{{ lang }}",
+  wa: "{{ wa }}",
+  ga: "{{ ga }}",
+  lead: "{{ lead_endpoint }}",
+  domain: "{{ domain }}",
+  email: "{{ cfg.email_comercial }}",
+  privacyUrl: "{{ url('privacy') }}",
+  quoteUrl: "{{ url('quote') }}",
+  t: {
+    err_name: "{{ ui('form.err_name') }}", err_email: "{{ ui('form.err_email') }}",
+    err_consent: "{{ ui('form.err_consent') }}", err_product: "{{ ui('form.err_product') }}",
+    opening: "{{ ui('form.opening') }}", sent: "{{ ui('form.sent') }}", open_again: "{{ ui('form.open_again') }}",
+    wa_greeting: "{{ ui('form.wa_greeting') }}", wa_contact_greeting: "{{ ui('form.wa_contact_greeting') }}",
+    product: "{{ ui('form.product') }}", volume: "{{ ui('form.volume') }}", incoterm: "{{ ui('form.incoterm') }}",
+    port: "{{ ui('form.port') }}", window: "{{ ui('form.window') }}", payment: "{{ ui('form.payment') }}",
+    company: "{{ ui('form.company') }}", name: "{{ ui('form.name') }}", email: "{{ ui('form.email') }}",
+    phone: "{{ ui('form.phone') }}", country: "{{ ui('form.country') }}", message: "{{ ui('form.message') }}"
+  }
+};
+</script>
+</head>
+<body class="{{ body_class or '' }}">
+<a class="skip" href="#main">{{ ui('misc.skip') }}</a>
+
+<header class="site-header">
+  <div class="bar">
+    <a class="logo" href="{{ url('home') }}" aria-label="GBC Foods">
+      <img src="/img/brand/logo-color.png" alt="GBC Foods" width="520" height="126">
+    </a>
+    <nav class="nav" id="nav" aria-label="{{ ui('nav.menu') }}">
+      <ul>
+        <li><a href="{{ url('home') }}" {% if path == url('home') %}aria-current="page"{% endif %}>{{ ui('nav.home') }}</a></li>
+        <li><a href="{{ url('company') }}" {% if path == url('company') %}aria-current="page"{% endif %}>{{ ui('nav.company') }}</a></li>
+        <li class="has-sub">
+          <a href="{{ url('services') }}" {% if path.startswith(url('services')) %}aria-current="page"{% endif %}>{{ ui('nav.services') }}</a>
+          <button class="sub-toggle" aria-expanded="false" aria-label="{{ ui('nav.services') }}"><svg width="12" height="12" viewBox="0 0 12 12"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+          <div class="sub">
+            <div class="sub-col">
+              <a class="sub-head" href="{{ url('foods') }}">{{ ui('nav.foods') }}</a>
+              <a href="{{ url('products') }}">{{ ui('nav.products') }}</a>
+              <a class="sub-indent" href="{{ url('bulk') }}">{{ ui('nav.bulk') }}</a>
+              <a class="sub-indent" href="{{ url('powders') }}">{{ ui('nav.powders') }}</a>
+            </div>
+            <div class="sub-col">
+              <a class="sub-head" href="{{ url('logistics') }}">{{ ui('nav.logistics') }}</a>
+              <a href="{{ url('logistics') }}">{{ ui('nav.logistics_sub') }}</a>
+            </div>
+          </div>
+        </li>
+        <li><a href="{{ url('blog') }}" {% if path.startswith(url('blog')) %}aria-current="page"{% endif %}>{{ ui('nav.blog') }}</a></li>
+        <li><a href="{{ url('contact') }}" {% if path == url('contact') %}aria-current="page"{% endif %}>{{ ui('nav.contact') }}</a></li>
+        <li class="nav-cta"><a class="btn solid small" href="{{ url('quote') }}">{{ ui('nav.quote') }}</a></li>
+      </ul>
+    </nav>
+    <div class="lang" id="lang">
+      <button class="lang-btn" aria-haspopup="listbox" aria-expanded="false" aria-label="{{ ui('nav.language') }}">
+        <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="M1.5 8h13M8 1.5c2.5 2.6 2.5 10.4 0 13M8 1.5c-2.5 2.6-2.5 10.4 0 13" fill="none" stroke="currentColor" stroke-width="1.1"/></svg>
+        <span>{{ lang|upper }}</span>
+      </button>
+      <ul class="lang-list" role="listbox">
+        {% for l, u in alternates.items() %}
+        <li><a role="option" href="{{ u }}" hreflang="{{ l }}" lang="{{ l }}" data-lang="{{ l }}" {% if l == lang %}aria-selected="true"{% endif %}>{{ lang_names[l] }}</a></li>
+        {% endfor %}
+        {% for l in langs if l not in alternates %}
+        <li><a role="option" href="/{{ l }}/" hreflang="{{ l }}" lang="{{ l }}" data-lang="{{ l }}">{{ lang_names[l] }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+    <button class="burger" id="burger" aria-controls="nav" aria-expanded="false" aria-label="{{ ui('nav.menu') }}">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+{% block content %}{% endblock %}
+</main>
+
+<footer class="site-footer">
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <img src="/img/brand/logo-white.png" alt="GBC Foods" width="520" height="126">
+      <p>{{ ui('footer.tagline') }}</p>
+      <p class="foot-group">{{ ui('footer.group_note') }}</p>
+    </div>
+    <div>
+      <h4>{{ ui('footer.company') }}</h4>
+      <ul>
+        <li><a href="{{ url('company') }}">{{ ui('nav.company') }}</a></li>
+        <li><a href="{{ url('foods') }}">{{ ui('nav.foods') }}</a></li>
+        <li><a href="{{ url('logistics') }}">{{ ui('nav.logistics') }} — {{ ui('nav.logistics_sub') }}</a></li>
+        <li><a href="{{ url('blog') }}">{{ ui('nav.blog') }}</a></li>
+        <li><a href="{{ url('quote') }}">{{ ui('nav.quote') }}</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>{{ ui('footer.products') }}</h4>
+      <ul>
+        <li><a href="{{ url('bulk') }}">{{ ui('nav.bulk') }}</a></li>
+        <li><a href="{{ url('powders') }}">{{ ui('nav.powders') }}</a></li>
+        {% for p in products if p.featured %}
+        <li><a href="{{ product_url(p) }}">{{ L(p.name) }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div>
+      <h4>{{ ui('footer.contact') }}</h4>
+      <ul class="foot-contact">
+        <li><a href="mailto:{{ cfg.email_comercial }}">{{ cfg.email_comercial }}</a></li>
+        <li><a href="tel:{{ cfg.telefone_link }}">{{ cfg.telefone }}</a></li>
+        {% if wa %}<li><a href="https://wa.me/{{ wa }}?text={{ ui('form.wa_contact_greeting')|urlencode }}" rel="noopener" target="_blank">WhatsApp</a></li>{% endif %}
+        <li>{{ cfg.endereco.cidade }}, {{ cfg.endereco.estado }} — {{ cfg.endereco['pais_' ~ lang] }}</li>
+      </ul>
+      <h4 class="foot-legal-h">{{ ui('footer.legal') }}</h4>
+      <ul>
+        <li><a href="{{ url('privacy') }}">{{ ui('nav.privacy') }}</a></li>
+        <li><a href="{{ url('cookies') }}">{{ ui('nav.cookies') }}</a></li>
+        <li><button type="button" class="linklike" id="manage-cookies">{{ ui('cookies.manage') }}</button></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap foot-bottom">
+    <span>© {{ year }} GBC Foods · GBC Group. {{ ui('footer.rights') }}</span>
+    <span class="foot-langs">{% for l in langs %}<a href="{{ alternates[l] if l in alternates else '/' ~ l ~ '/' }}" hreflang="{{ l }}" data-lang="{{ l }}" {% if l == lang %}aria-current="true"{% endif %}>{{ lang_names[l] }}</a>{% endfor %}</span>
+  </div>
+</footer>
+
+<div class="cookie" id="cookie" hidden role="dialog" aria-live="polite" aria-labelledby="cookie-title">
+  <div class="cookie-in">
+    <div>
+      <strong id="cookie-title">{{ ui('cookies.title') }}</strong>
+      <p>{{ ui('cookies.text') }} <a href="{{ url('cookies') }}">{{ ui('cookies.policy') }}</a></p>
+    </div>
+    <div class="cookie-btns">
+      <button type="button" class="btn ghost small" id="cookie-reject">{{ ui('cookies.reject') }}</button>
+      <button type="button" class="btn solid small" id="cookie-accept">{{ ui('cookies.accept') }}</button>
+    </div>
+  </div>
+</div>
+
+{% if wa %}
+<a class="wa-float" href="https://wa.me/{{ wa }}?text={{ ui('form.wa_contact_greeting')|urlencode }}" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 32 32" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M16 3C8.8 3 3 8.7 3 15.8c0 2.6.8 5.1 2.2 7.2L3 29l6.2-2.1c2 1.1 4.4 1.7 6.8 1.7 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.3c-2.1 0-4.2-.6-6-1.7l-.4-.2-3.7 1.2 1.2-3.6-.3-.4a10.4 10.4 0 0 1-1.7-5.8C5.1 10 10 5.2 16 5.2s10.9 4.8 10.9 10.6S22 26.3 16 26.3zm6-7.9c-.3-.2-1.9-1-2.2-1.1-.3-.1-.5-.2-.7.2-.2.3-.8 1.1-1 1.3-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6.3-.5c.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.5c.2.2 2.4 3.6 5.8 5 .8.4 1.4.6 1.9.7.8.3 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg>
+</a>
+{% endif %}
+
+<script src="/js/site.js" defer></script>
+</body>
+</html>

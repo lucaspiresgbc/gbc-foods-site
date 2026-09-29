@@ -1,0 +1,51 @@
+{
+  "id": "peanut-raw",
+  "category": "granel",
+  "order": 2,
+  "featured": true,
+  "image": "products/peanut-raw.jpg",
+  "hs": "1202.42",
+  "slug": { "pt": "amendoim-runner-cru", "en": "raw-runner-peanuts", "es": "cacahuete-runner-crudo", "ru": "raw-runner-peanuts" },
+  "name": { "pt": "Amendoim Runner cru", "en": "Raw Runner peanuts", "es": "Cacahuete Runner crudo", "ru": "Арахис Runner сырой" },
+  "image_alt": { "pt": "Amendoim cru descascado com película vermelha", "en": "Raw shelled peanuts with red skins", "es": "Cacahuete crudo pelado con piel roja", "ru": "Сырой очищенный арахис в красной кожице" },
+  "short": {
+    "pt": "Grão descascado com película, contagens de 38/42 a 80/100 e splits, do principal polo produtor do Brasil.",
+    "en": "Shelled kernels with skin, counts from 38/42 to 80/100 plus splits, from Brazil's main peanut-growing area.",
+    "es": "Grano pelado con piel, conteos de 38/42 a 80/100 y splits, del principal polo productor de Brasil.",
+    "ru": "Очищенные ядра в кожице, калибры от 38/42 до 80/100 и половинки, из главного арахисового региона Бразилии."
+  },
+  "description": {
+    "pt": [
+      "Amendoim do tipo Runner, descascado, com a película vermelha, classificado por contagem de grãos por onça. Vem do interior de São Paulo, o principal polo produtor do Brasil, de beneficiadores que fazem a secagem, o descascamento, a classificação por tamanho e a seleção eletrônica de cor.",
+      "As contagens disponíveis vão de 38/42 (o grão mais graúdo) a 80/100, além de splits (metades). A análise de aflatoxina é feita por lote, no limite exigido pelo mercado de destino, e o laudo acompanha a documentação de embarque."
+    ],
+    "en": [
+      "Runner-type peanuts, shelled, with the red skin on, graded by the number of kernels per ounce. They come from the interior of São Paulo state, Brazil's main peanut-growing area, from processors who handle drying, shelling, sizing and electronic colour sorting.",
+      "Counts run from 38/42 (the largest kernel) to 80/100, plus splits (halves). Aflatoxin is tested lot by lot against the limit required by the destination market, and the certificate travels with the shipping documents."
+    ],
+    "es": [
+      "Cacahuete tipo Runner, pelado, con la piel roja, clasificado por número de granos por onza. Proviene del interior del estado de São Paulo, el principal polo productor de Brasil, de procesadores que realizan el secado, el descascarado, la clasificación por tamaño y la selección electrónica de color.",
+      "Los conteos disponibles van de 38/42 (el grano más grande) a 80/100, además de splits (mitades). El análisis de aflatoxina se realiza por lote, conforme al límite exigido por el mercado de destino, y el certificado acompaña la documentación de embarque."
+    ],
+    "ru": [
+      "Арахис типа Runner, очищенный от скорлупы, в красной кожице, калибруется по количеству ядер на унцию. Поступает из внутренних районов штата Сан-Паулу — главного арахисового региона Бразилии — от переработчиков, выполняющих сушку, лущение, калибровку и электронную сортировку по цвету.",
+      "Калибры — от 38/42 (самое крупное ядро) до 80/100, а также половинки (splits). Каждая партия проверяется на афлатоксин на соответствие нормам рынка назначения; сертификат прилагается к отгрузочным документам."
+    ]
+  },
+  "specs": [
+    { "k": { "pt": "Tipo", "en": "Type", "es": "Tipo", "ru": "Тип" },
+      "v": { "pt": "Runner, descascado, com película", "en": "Runner, shelled, skin on", "es": "Runner, pelado, con piel", "ru": "Runner, очищенный, в кожице" } },
+    { "k": { "pt": "Contagens (grãos/onça)", "en": "Counts (kernels/oz)", "es": "Conteos (granos/onza)", "ru": "Калибры (ядер/унция)" },
+      "v": { "pt": "38/42 · 40/50 · 50/60 · 60/70 · 70/80 · 80/100", "en": "38/42 · 40/50 · 50/60 · 60/70 · 70/80 · 80/100", "es": "38/42 · 40/50 · 50/60 · 60/70 · 70/80 · 80/100", "ru": "38/42 · 40/50 · 50/60 · 60/70 · 70/80 · 80/100" } },
+    { "k": { "pt": "Splits", "en": "Splits", "es": "Splits", "ru": "Половинки" },
+      "v": { "pt": "Disponíveis", "en": "Available", "es": "Disponibles", "ru": "Поставляются" } },
+    { "k": { "pt": "Aflatoxina", "en": "Aflatoxin", "es": "Aflatoxina", "ru": "Афлатоксин" },
+      "v": { "pt": "Análise por lote, no limite do mercado de destino", "en": "Tested per lot against the destination market's limit", "es": "Análisis por lote, conforme al límite del mercado de destino", "ru": "Анализ каждой партии на соответствие норме рынка назначения" } },
+    { "k": { "pt": "Safra", "en": "Harvest", "es": "Cosecha", "ru": "Сбор урожая" },
+      "v": { "pt": "Fevereiro a maio", "en": "February to May", "es": "Febrero a mayo", "ru": "Февраль – май" } }
+  ],
+  "origin": { "pt": "Estado de São Paulo, Brasil", "en": "São Paulo state, Brazil", "es": "Estado de São Paulo, Brasil", "ru": "Штат Сан-Паулу, Бразилия" },
+  "packaging": { "pt": "Sacos de 25 kg ou 50 kg; big bags de 1.000 kg", "en": "25 kg or 50 kg bags; 1,000 kg big bags", "es": "Sacos de 25 kg o 50 kg; big bags de 1.000 kg", "ru": "Мешки по 25 или 50 кг; биг-бэги по 1 000 кг" },
+  "container": { "pt": "20′ ≈ 18 – 19 t · 40′ HC ≈ 25 – 26 t, conforme a embalagem", "en": "20′ ≈ 18 – 19 t · 40′ HC ≈ 25 – 26 t, depending on packing", "es": "20′ ≈ 18 – 19 t · 40′ HC ≈ 25 – 26 t, según el envase", "ru": "20′ ≈ 18 – 19 т · 40′ HC ≈ 25 – 26 т, в зависимости от упаковки" },
+  "availability": { "pt": "Ao longo do ano, com maior oferta de março a setembro", "en": "Year-round, with the widest availability from March to September", "es": "Durante todo el año, con mayor oferta de marzo a septiembre", "ru": "В течение года, наибольшее предложение с марта по сентябрь" }
+}

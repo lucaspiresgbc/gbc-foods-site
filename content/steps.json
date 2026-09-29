@@ -1,0 +1,51 @@
+{
+  "_comentario": "Os dez passos de um embarque. Usados na home e na página de logística.",
+  "en": [
+    ["Specification", "You tell us the product, grade, screen or calibre, packing, destination and shipment window."],
+    ["Origination", "We go to the producers and processors in our supplier base and select the lots that meet it."],
+    ["Sample and approval", "Samples are prepared, checked here and couriered to your desk. Nothing is bought before you approve sample and price."],
+    ["Contract", "Volume, quality, Incoterm, payment terms and shipment window on paper, in your language."],
+    ["Preparation and packing", "The lot is cleaned, graded and packed to the agreed specification."],
+    ["Inland haulage", "Road transport from origin to the terminal in Santos."],
+    ["Clearance and certificates", "Customs, fumigation, phytosanitary certificate, MAPA inspection and certificate of origin."],
+    ["Shipment", "Booking, stuffing, seal and departure from Santos."],
+    ["Documents and exchange", "Bill of lading, invoice, packing list, foreign-exchange contract and courier of originals."],
+    ["Arrival", "We follow the vessel and stay with you until the cargo is released at destination."]
+  ],
+  "pt": [
+    ["Especificação", "Você informa produto, classificação, peneira ou calibre, embalagem, destino e janela de embarque."],
+    ["Originação", "Vamos aos produtores e beneficiadores da nossa base e levantamos os lotes que atendem a ela."],
+    ["Amostra e aprovação", "As amostras são preparadas, conferidas aqui e enviadas para a sua mesa. Nada é comprado antes de você aprovar amostra e preço."],
+    ["Contrato", "Volume, qualidade, Incoterm, condição de pagamento e janela de embarque no papel, na sua língua."],
+    ["Preparo e embalagem", "O lote é limpo, classificado e embalado na especificação acordada."],
+    ["Transporte rodoviário", "Transporte da origem até o terminal em Santos."],
+    ["Desembaraço e certificados", "Aduana, fumigação, certificado fitossanitário, inspeção do MAPA e certificado de origem."],
+    ["Embarque", "Booking, ova, lacre e saída de Santos."],
+    ["Documentos e câmbio", "Conhecimento de embarque, invoice, packing list, contrato de câmbio e envio dos originais."],
+    ["Chegada", "Acompanhamos o navio e ficamos com você até a liberação da carga no destino."]
+  ],
+  "es": [
+    ["Especificación", "Usted indica producto, clasificación, criba o calibre, envase, destino y ventana de embarque."],
+    ["Originación", "Vamos a los productores y procesadores de nuestra base y seleccionamos los lotes que la cumplen."],
+    ["Muestra y aprobación", "Las muestras se preparan, se verifican aquí y se envían a su mesa. Nada se compra antes de que apruebe muestra y precio."],
+    ["Contrato", "Volumen, calidad, Incoterm, condición de pago y ventana de embarque por escrito, en su idioma."],
+    ["Preparación y envasado", "El lote se limpia, clasifica y envasa según la especificación acordada."],
+    ["Transporte terrestre", "Transporte desde el origen hasta la terminal en Santos."],
+    ["Despacho y certificados", "Aduana, fumigación, certificado fitosanitario, inspección del MAPA y certificado de origen."],
+    ["Embarque", "Booking, llenado, precinto y salida de Santos."],
+    ["Documentos y cambio", "Conocimiento de embarque, factura, packing list, contrato de cambio y envío de originales."],
+    ["Llegada", "Seguimos el buque y nos quedamos con usted hasta la liberación de la carga en destino."]
+  ],
+  "ru": [
+    ["Спецификация", "Вы сообщаете продукт, сорт, калибр, упаковку, порт назначения и период отгрузки."],
+    ["Закупка", "Мы обращаемся к производителям и переработчикам из нашей базы и отбираем партии, соответствующие спецификации."],
+    ["Образец и утверждение", "Образцы готовятся, проверяются у нас и отправляются курьером вам. Ничего не покупается до утверждения вами образца и цены."],
+    ["Контракт", "Объём, качество, Инкотермс, условия оплаты и период отгрузки — на бумаге, на согласованном языке."],
+    ["Подготовка и упаковка", "Партия очищается, калибруется и упаковывается по согласованной спецификации."],
+    ["Автоперевозка", "Доставка автотранспортом от места происхождения до терминала в Сантосе."],
+    ["Оформление и сертификаты", "Таможня, фумигация, фитосанитарный сертификат, инспекция MAPA и сертификат происхождения."],
+    ["Отгрузка", "Букинг, загрузка контейнера, пломба и выход из Сантоса."],
+    ["Документы и валютная сделка", "Коносамент, инвойс, упаковочный лист, оформление валютной сделки и отправка оригиналов."],
+    ["Прибытие", "Мы отслеживаем судно и остаёмся с вами до выпуска груза в порту назначения."]
+  ]
+}

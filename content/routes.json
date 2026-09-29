@@ -1,0 +1,17 @@
+{
+  "_comentario": "Endereço de cada página em cada idioma (sem a barra do idioma na frente). Mudar um slug muda a URL — se o site já estiver no ar, evite trocar, ou o Google perde a página.",
+
+  "home":      { "pt": "", "en": "", "es": "", "ru": "" },
+  "company":   { "pt": "empresa", "en": "company", "es": "empresa", "ru": "company" },
+  "services":  { "pt": "servicos", "en": "services", "es": "servicios", "ru": "services" },
+  "foods":     { "pt": "servicos/gbc-foods", "en": "services/gbc-foods", "es": "servicios/gbc-foods", "ru": "services/gbc-foods" },
+  "logistics": { "pt": "servicos/gbc-logistics", "en": "services/gbc-logistics", "es": "servicios/gbc-logistics", "ru": "services/gbc-logistics" },
+  "products":  { "pt": "produtos", "en": "products", "es": "productos", "ru": "products" },
+  "bulk":      { "pt": "produtos/a-granel", "en": "products/bulk", "es": "productos/a-granel", "ru": "products/bulk" },
+  "powders":   { "pt": "produtos/em-po", "en": "products/powders", "es": "productos/en-polvo", "ru": "products/powders" },
+  "blog":      { "pt": "blog", "en": "blog", "es": "blog", "ru": "blog" },
+  "quote":     { "pt": "cotacao", "en": "quote", "es": "cotizacion", "ru": "quote" },
+  "contact":   { "pt": "contato", "en": "contact", "es": "contacto", "ru": "contact" },
+  "privacy":   { "pt": "politica-de-privacidade", "en": "privacy-policy", "es": "politica-de-privacidad", "ru": "privacy-policy" },
+  "cookies":   { "pt": "politica-de-cookies", "en": "cookie-policy", "es": "politica-de-cookies", "ru": "cookie-policy" }
+}

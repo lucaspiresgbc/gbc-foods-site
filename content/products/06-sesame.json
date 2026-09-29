@@ -1,0 +1,49 @@
+{
+  "id": "sesame",
+  "category": "granel",
+  "order": 6,
+  "featured": true,
+  "image": "products/sesame.jpg",
+  "hs": "1207.40",
+  "slug": { "pt": "gergelim", "en": "sesame-seeds", "es": "sesamo", "ru": "sesame-seeds" },
+  "name": { "pt": "Gergelim", "en": "Sesame seeds", "es": "Sésamo", "ru": "Кунжут" },
+  "image_alt": { "pt": "Sementes de gergelim natural", "en": "Natural sesame seeds", "es": "Semillas de sésamo natural", "ru": "Семена натурального кунжута" },
+  "short": {
+    "pt": "Natural K3 com pureza sortex de 99,95 a 99,98 %, preto e descascado, do Centro-Oeste do Brasil.",
+    "en": "Natural K3 at 99.95–99.98 % sortex purity, plus black and hulled sesame, from Brazil's Centre-West.",
+    "es": "Natural K3 con pureza sortex de 99,95 a 99,98 %, negro y descascarillado, del centro-oeste de Brasil.",
+    "ru": "Натуральный K3 с чистотой sortex от 99,95 до 99,98 %, чёрный и очищенный, из центральной Бразилии."
+  },
+  "description": {
+    "pt": [
+      "O Brasil virou um dos grandes exportadores de gergelim na última década, com a semente plantada na segunda safra do Centro-Oeste, depois da soja. Fornecemos três apresentações: o natural K3, limpo em máquina e selecionado eletronicamente (sortex) em três níveis de pureza — 99,95, 99,97 e 99,98 % —, o gergelim preto e o descascado.",
+      "A pureza é o que define o destino: 99,95 % atende a indústria de óleo e tahine; 99,97 e 99,98 % vão para panificação e uso direto em alimentos. O teor de óleo, a umidade e a análise de resíduos são informados por lote."
+    ],
+    "en": [
+      "Brazil has become one of the major sesame exporters over the last decade, with the seed grown as a second crop in the centre-west, after soybeans. We supply three presentations: natural K3, machine-cleaned and electronically sorted (sortex) to three purity levels — 99.95, 99.97 and 99.98 % — black sesame, and hulled sesame.",
+      "Purity is what sets the destination: 99.95 % serves the oil and tahini industry; 99.97 and 99.98 % go to bakery and direct food use. Oil content, moisture and residue analysis are reported per lot."
+    ],
+    "es": [
+      "Brasil se ha convertido en uno de los grandes exportadores de sésamo en la última década, con la semilla sembrada en la segunda cosecha del centro-oeste, después de la soja. Suministramos tres presentaciones: el natural K3, limpiado a máquina y seleccionado electrónicamente (sortex) en tres niveles de pureza — 99,95, 99,97 y 99,98 % —, el sésamo negro y el descascarillado.",
+      "La pureza es lo que define el destino: 99,95 % atiende a la industria de aceite y tahini; 99,97 y 99,98 % van a panificación y uso directo en alimentos. El contenido de aceite, la humedad y el análisis de residuos se informan por lote."
+    ],
+    "ru": [
+      "За последнее десятилетие Бразилия стала одним из крупнейших экспортёров кунжута: семена выращиваются вторым урожаем в центрально-западном регионе после сои. Мы поставляем три вида: натуральный K3, машинной очистки и электронной сортировки (sortex) с тремя уровнями чистоты — 99,95, 99,97 и 99,98 %, — чёрный кунжут и очищенный кунжут.",
+      "Чистота определяет назначение: 99,95 % — для производства масла и тахини; 99,97 и 99,98 % — для хлебопечения и прямого пищевого использования. Масличность, влажность и анализ остатков сообщаются по каждой партии."
+    ]
+  },
+  "specs": [
+    { "k": { "pt": "Natural K3", "en": "Natural K3", "es": "Natural K3", "ru": "Натуральный K3" },
+      "v": { "pt": "Sortex 99,95 % · 99,97 % · 99,98 %", "en": "Sortex 99.95 % · 99.97 % · 99.98 %", "es": "Sortex 99,95 % · 99,97 % · 99,98 %", "ru": "Sortex 99,95 % · 99,97 % · 99,98 %" } },
+    { "k": { "pt": "Preto", "en": "Black", "es": "Negro", "ru": "Чёрный" },
+      "v": { "pt": "Limpo e selecionado", "en": "Cleaned and sorted", "es": "Limpio y seleccionado", "ru": "Очищен от примесей и отсортирован" } },
+    { "k": { "pt": "Descascado", "en": "Hulled", "es": "Descascarillado", "ru": "Очищенный (без оболочки)" },
+      "v": { "pt": "Mecânico, seco", "en": "Mechanically hulled, dried", "es": "Mecánico, seco", "ru": "Механическая очистка, сушёный" } },
+    { "k": { "pt": "Safra", "en": "Harvest", "es": "Cosecha", "ru": "Сбор урожая" },
+      "v": { "pt": "Maio a agosto", "en": "May to August", "es": "Mayo a agosto", "ru": "Май – август" } }
+  ],
+  "origin": { "pt": "Mato Grosso e Goiás, Brasil", "en": "Mato Grosso and Goiás, Brazil", "es": "Mato Grosso y Goiás, Brasil", "ru": "Штаты Мату-Гросу и Гояс, Бразилия" },
+  "packaging": { "pt": "Sacos de 25 kg ou 50 kg; big bags de 1.000 kg", "en": "25 kg or 50 kg bags; 1,000 kg big bags", "es": "Sacos de 25 kg o 50 kg; big bags de 1.000 kg", "ru": "Мешки по 25 или 50 кг; биг-бэги по 1 000 кг" },
+  "container": { "pt": "20′ ≈ 19 – 20 t · 40′ HC ≈ 25 – 26 t", "en": "20′ ≈ 19 – 20 t · 40′ HC ≈ 25 – 26 t", "es": "20′ ≈ 19 – 20 t · 40′ HC ≈ 25 – 26 t", "ru": "20′ ≈ 19 – 20 т · 40′ HC ≈ 25 – 26 т" },
+  "availability": { "pt": "Ao longo do ano, com maior oferta de junho a dezembro", "en": "Year-round, with the widest availability from June to December", "es": "Durante todo el año, con mayor oferta de junio a diciembre", "ru": "В течение года, наибольшее предложение с июня по декабрь" }
+}

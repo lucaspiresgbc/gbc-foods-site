@@ -1,0 +1,673 @@
+{
+  "_comentario": "Textos de interface (menu, botões, rodapé, formulário, banner de cookies). Cada chave tem as quatro línguas. Para mudar um texto, edite as quatro versões e rode python3 build.py",
+  "lang_name": {
+    "pt": "Português",
+    "en": "English",
+    "es": "Español",
+    "ru": "Русский"
+  },
+  "nav": {
+    "home": {
+      "pt": "Home",
+      "en": "Home",
+      "es": "Inicio",
+      "ru": "Главная"
+    },
+    "company": {
+      "pt": "Empresa",
+      "en": "Company",
+      "es": "Empresa",
+      "ru": "О компании"
+    },
+    "services": {
+      "pt": "Serviços",
+      "en": "Services",
+      "es": "Servicios",
+      "ru": "Услуги"
+    },
+    "foods": {
+      "pt": "GBC Foods",
+      "en": "GBC Foods",
+      "es": "GBC Foods",
+      "ru": "GBC Foods"
+    },
+    "logistics": {
+      "pt": "GBC Logistics",
+      "en": "GBC Logistics",
+      "es": "GBC Logistics",
+      "ru": "GBC Logistics"
+    },
+    "logistics_sub": {
+      "pt": "Logística e transporte",
+      "en": "Logistics and transport",
+      "es": "Logística y transporte",
+      "ru": "Логистика и перевозки"
+    },
+    "products": {
+      "pt": "Produtos",
+      "en": "Products",
+      "es": "Productos",
+      "ru": "Продукция"
+    },
+    "bulk": {
+      "pt": "Produtos a granel",
+      "en": "Bulk products",
+      "es": "Productos a granel",
+      "ru": "Насыпная продукция"
+    },
+    "powders": {
+      "pt": "Produtos em pó",
+      "en": "Powdered products",
+      "es": "Productos en polvo",
+      "ru": "Порошковая продукция"
+    },
+    "blog": {
+      "pt": "Blog",
+      "en": "Blog",
+      "es": "Blog",
+      "ru": "Блог"
+    },
+    "quote": {
+      "pt": "Cotação",
+      "en": "Quote",
+      "es": "Cotización",
+      "ru": "Запрос цены"
+    },
+    "contact": {
+      "pt": "Contato",
+      "en": "Contact",
+      "es": "Contacto",
+      "ru": "Контакты"
+    },
+    "privacy": {
+      "pt": "Política de Privacidade",
+      "en": "Privacy Policy",
+      "es": "Política de Privacidad",
+      "ru": "Политика конфиденциальности"
+    },
+    "cookies": {
+      "pt": "Política de Cookies",
+      "en": "Cookie Policy",
+      "es": "Política de Cookies",
+      "ru": "Политика cookie"
+    },
+    "menu": {
+      "pt": "Menu",
+      "en": "Menu",
+      "es": "Menú",
+      "ru": "Меню"
+    },
+    "close": {
+      "pt": "Fechar",
+      "en": "Close",
+      "es": "Cerrar",
+      "ru": "Закрыть"
+    },
+    "language": {
+      "pt": "Idioma",
+      "en": "Language",
+      "es": "Idioma",
+      "ru": "Язык"
+    }
+  },
+  "btn": {
+    "quote": {
+      "pt": "Pedir cotação",
+      "en": "Request a quote",
+      "es": "Solicitar cotización",
+      "ru": "Запросить цену"
+    },
+    "quote_product": {
+      "pt": "Cotar este produto",
+      "en": "Quote this product",
+      "es": "Cotizar este producto",
+      "ru": "Запросить цену на этот продукт"
+    },
+    "products": {
+      "pt": "Ver produtos",
+      "en": "See products",
+      "es": "Ver productos",
+      "ru": "Смотреть продукцию"
+    },
+    "all_products": {
+      "pt": "Todos os produtos",
+      "en": "All products",
+      "es": "Todos los productos",
+      "ru": "Вся продукция"
+    },
+    "contact": {
+      "pt": "Falar com a equipe",
+      "en": "Talk to the team",
+      "es": "Hablar con el equipo",
+      "ru": "Связаться с командой"
+    },
+    "read": {
+      "pt": "Ler o artigo",
+      "en": "Read the article",
+      "es": "Leer el artículo",
+      "ru": "Читать статью"
+    },
+    "all_posts": {
+      "pt": "Todos os artigos",
+      "en": "All articles",
+      "es": "Todos los artículos",
+      "ru": "Все статьи"
+    },
+    "whatsapp": {
+      "pt": "Enviar pelo WhatsApp",
+      "en": "Send via WhatsApp",
+      "es": "Enviar por WhatsApp",
+      "ru": "Отправить в WhatsApp"
+    },
+    "whatsapp_short": {
+      "pt": "WhatsApp",
+      "en": "WhatsApp",
+      "es": "WhatsApp",
+      "ru": "WhatsApp"
+    },
+    "email": {
+      "pt": "Enviar e-mail",
+      "en": "Send an e-mail",
+      "es": "Enviar correo",
+      "ru": "Написать на e-mail"
+    },
+    "back": {
+      "pt": "Voltar",
+      "en": "Back",
+      "es": "Volver",
+      "ru": "Назад"
+    },
+    "more": {
+      "pt": "Saiba mais",
+      "en": "Learn more",
+      "es": "Más información",
+      "ru": "Подробнее"
+    },
+    "details": {
+      "pt": "Ver ficha",
+      "en": "See details",
+      "es": "Ver ficha",
+      "ru": "Подробнее"
+    },
+    "logistics": {
+      "pt": "Como embarcamos",
+      "en": "How we ship",
+      "es": "Cómo embarcamos",
+      "ru": "Как мы отгружаем"
+    }
+  },
+  "labels": {
+    "specs": {
+      "pt": "Especificação",
+      "en": "Specification",
+      "es": "Especificación",
+      "ru": "Спецификация"
+    },
+    "origin": {
+      "pt": "Origem",
+      "en": "Origin",
+      "es": "Origen",
+      "ru": "Происхождение"
+    },
+    "packaging": {
+      "pt": "Embalagem",
+      "en": "Packaging",
+      "es": "Envase",
+      "ru": "Упаковка"
+    },
+    "container": {
+      "pt": "Contêiner",
+      "en": "Container",
+      "es": "Contenedor",
+      "ru": "Контейнер"
+    },
+    "incoterms": {
+      "pt": "Incoterms",
+      "en": "Incoterms",
+      "es": "Incoterms",
+      "ru": "Инкотермс"
+    },
+    "port": {
+      "pt": "Porto de embarque",
+      "en": "Port of loading",
+      "es": "Puerto de embarque",
+      "ru": "Порт отгрузки"
+    },
+    "availability": {
+      "pt": "Disponibilidade",
+      "en": "Availability",
+      "es": "Disponibilidad",
+      "ru": "Наличие"
+    },
+    "category": {
+      "pt": "Categoria",
+      "en": "Category",
+      "es": "Categoría",
+      "ru": "Категория"
+    },
+    "related": {
+      "pt": "Outros produtos",
+      "en": "Other products",
+      "es": "Otros productos",
+      "ru": "Другая продукция"
+    },
+    "documents": {
+      "pt": "Documentação",
+      "en": "Documents",
+      "es": "Documentación",
+      "ru": "Документы"
+    },
+    "published": {
+      "pt": "Publicado em",
+      "en": "Published",
+      "es": "Publicado el",
+      "ru": "Опубликовано"
+    },
+    "reading": {
+      "pt": "min de leitura",
+      "en": "min read",
+      "es": "min de lectura",
+      "ru": "мин чтения"
+    },
+    "by": {
+      "pt": "por",
+      "en": "by",
+      "es": "por",
+      "ru": "автор"
+    },
+    "latest": {
+      "pt": "Do blog",
+      "en": "From the blog",
+      "es": "Del blog",
+      "ru": "Из блога"
+    },
+    "share": {
+      "pt": "Compartilhar",
+      "en": "Share",
+      "es": "Compartir",
+      "ru": "Поделиться"
+    },
+    "phone": {
+      "pt": "Telefone",
+      "en": "Phone",
+      "es": "Teléfono",
+      "ru": "Телефон"
+    },
+    "email": {
+      "pt": "E-mail",
+      "en": "E-mail",
+      "es": "Correo",
+      "ru": "E-mail"
+    },
+    "address": {
+      "pt": "Sede",
+      "en": "Head office",
+      "es": "Sede",
+      "ru": "Головной офис"
+    },
+    "hours": {
+      "pt": "Horário comercial",
+      "en": "Business hours",
+      "es": "Horario comercial",
+      "ru": "Часы работы"
+    },
+    "hours_value": {
+      "pt": "Segunda a sexta, 8h às 18h (horário de Brasília, UTC−3)",
+      "en": "Monday to Friday, 8 am to 6 pm (Brasília time, UTC−3)",
+      "es": "Lunes a viernes, de 8 a 18 h (hora de Brasilia, UTC−3)",
+      "ru": "Понедельник – пятница, 8:00–18:00 (время Бразилиа, UTC−3)"
+    },
+    "breadcrumb": {
+      "pt": "Você está em",
+      "en": "You are here",
+      "es": "Está en",
+      "ru": "Вы здесь"
+    },
+    "on_request": {
+      "pt": "Sob consulta",
+      "en": "On request",
+      "es": "Bajo consulta",
+      "ru": "По запросу"
+    },
+    "coffee_cup": {
+      "pt": "Perfil de xícara",
+      "en": "Cup profile",
+      "es": "Perfil de taza",
+      "ru": "Профиль чашки"
+    },
+    "photo_note": {
+      "pt": "Foto ilustrativa",
+      "en": "Illustrative photo",
+      "es": "Foto ilustrativa",
+      "ru": "Иллюстративное фото"
+    }
+  },
+  "form": {
+    "title": {
+      "pt": "Pedido de cotação",
+      "en": "Quote request",
+      "es": "Solicitud de cotización",
+      "ru": "Запрос коммерческого предложения"
+    },
+    "intro": {
+      "pt": "Preencha o que souber. Ao enviar, o WhatsApp abre com a mensagem para a nossa equipe comercial já escrita — você só confirma. Respondemos em horário comercial, em português, inglês ou espanhol.",
+      "en": "Fill in what you know. When you submit, WhatsApp opens with your message to our commercial team already written — you just press send. We reply during business hours, in English, Portuguese or Spanish.",
+      "es": "Complete lo que sepa. Al enviar, se abre WhatsApp con su mensaje para nuestro equipo comercial ya redactado; usted solo confirma el envío. Respondemos en horario comercial, en español, inglés o portugués.",
+      "ru": "Заполните то, что известно. После отправки формы откроется WhatsApp с готовым сообщением для нашего коммерческого отдела — вам останется только подтвердить. Отвечаем в рабочие часы на английском, португальском или испанском языке."
+    },
+    "name": {
+      "pt": "Seu nome",
+      "en": "Your name",
+      "es": "Su nombre",
+      "ru": "Ваше имя"
+    },
+    "company": {
+      "pt": "Empresa",
+      "en": "Company",
+      "es": "Empresa",
+      "ru": "Компания"
+    },
+    "email": {
+      "pt": "E-mail",
+      "en": "E-mail",
+      "es": "Correo electrónico",
+      "ru": "E-mail"
+    },
+    "phone": {
+      "pt": "Telefone / WhatsApp",
+      "en": "Phone / WhatsApp",
+      "es": "Teléfono / WhatsApp",
+      "ru": "Телефон / WhatsApp"
+    },
+    "country": {
+      "pt": "País",
+      "en": "Country",
+      "es": "País",
+      "ru": "Страна"
+    },
+    "product": {
+      "pt": "Produto",
+      "en": "Product",
+      "es": "Producto",
+      "ru": "Продукт"
+    },
+    "product_other": {
+      "pt": "Outro produto",
+      "en": "Other product",
+      "es": "Otro producto",
+      "ru": "Другой продукт"
+    },
+    "product_choose": {
+      "pt": "Escolha um produto",
+      "en": "Choose a product",
+      "es": "Elija un producto",
+      "ru": "Выберите продукт"
+    },
+    "volume": {
+      "pt": "Volume",
+      "en": "Volume",
+      "es": "Volumen",
+      "ru": "Объём"
+    },
+    "volume_hint": {
+      "pt": "Ex.: 1 contêiner de 20′, 19 t, 320 sacas",
+      "en": "E.g. 1 × 20′ container, 19 t, 320 bags",
+      "es": "Ej.: 1 contenedor de 20′, 19 t, 320 sacos",
+      "ru": "Напр.: 1 контейнер 20′, 19 т, 320 мешков"
+    },
+    "incoterm": {
+      "pt": "Incoterm",
+      "en": "Incoterm",
+      "es": "Incoterm",
+      "ru": "Инкотермс"
+    },
+    "port": {
+      "pt": "Porto de destino",
+      "en": "Destination port",
+      "es": "Puerto de destino",
+      "ru": "Порт назначения"
+    },
+    "window": {
+      "pt": "Janela de embarque",
+      "en": "Shipment window",
+      "es": "Ventana de embarque",
+      "ru": "Период отгрузки"
+    },
+    "window_hint": {
+      "pt": "Ex.: novembro–dezembro",
+      "en": "E.g. November–December",
+      "es": "Ej.: noviembre–diciembre",
+      "ru": "Напр.: ноябрь–декабрь"
+    },
+    "payment": {
+      "pt": "Condição de pagamento",
+      "en": "Payment terms",
+      "es": "Condición de pago",
+      "ru": "Условия оплаты"
+    },
+    "payment_hint": {
+      "pt": "Ex.: carta de crédito, CAD, antecipado",
+      "en": "E.g. letter of credit, CAD, advance",
+      "es": "Ej.: carta de crédito, CAD, anticipado",
+      "ru": "Напр.: аккредитив, CAD, предоплата"
+    },
+    "message": {
+      "pt": "Especificação ou observações",
+      "en": "Specification or remarks",
+      "es": "Especificación u observaciones",
+      "ru": "Спецификация или комментарии"
+    },
+    "consent": {
+      "pt": "Autorizo a GBC Foods a usar estes dados para responder ao meu pedido, conforme a",
+      "en": "I authorise GBC Foods to use this data to answer my request, as described in the",
+      "es": "Autorizo a GBC Foods a usar estos datos para responder a mi solicitud, según la",
+      "ru": "Я разрешаю GBC Foods использовать эти данные для ответа на мой запрос в соответствии с"
+    },
+    "consent_link": {
+      "pt": "Política de Privacidade",
+      "en": "Privacy Policy",
+      "es": "Política de Privacidad",
+      "ru": "Политикой конфиденциальности"
+    },
+    "required": {
+      "pt": "obrigatório",
+      "en": "required",
+      "es": "obligatorio",
+      "ru": "обязательно"
+    },
+    "err_name": {
+      "pt": "Informe seu nome.",
+      "en": "Please enter your name.",
+      "es": "Indique su nombre.",
+      "ru": "Укажите ваше имя."
+    },
+    "err_email": {
+      "pt": "Informe um e-mail válido.",
+      "en": "Please enter a valid e-mail.",
+      "es": "Indique un correo válido.",
+      "ru": "Укажите корректный e-mail."
+    },
+    "err_consent": {
+      "pt": "É preciso autorizar o uso dos dados para enviar.",
+      "en": "You need to authorise the use of your data to send.",
+      "es": "Debe autorizar el uso de los datos para enviar.",
+      "ru": "Для отправки необходимо разрешить использование данных."
+    },
+    "err_product": {
+      "pt": "Escolha um produto.",
+      "en": "Please choose a product.",
+      "es": "Elija un producto.",
+      "ru": "Выберите продукт."
+    },
+    "opening": {
+      "pt": "Abrindo o WhatsApp…",
+      "en": "Opening WhatsApp…",
+      "es": "Abriendo WhatsApp…",
+      "ru": "Открываем WhatsApp…"
+    },
+    "sent": {
+      "pt": "Mensagem pronta no WhatsApp. Se a janela não abriu, use o botão abaixo.",
+      "en": "Your message is ready in WhatsApp. If the window did not open, use the button below.",
+      "es": "Su mensaje está listo en WhatsApp. Si la ventana no se abrió, use el botón de abajo.",
+      "ru": "Сообщение готово в WhatsApp. Если окно не открылось, воспользуйтесь кнопкой ниже."
+    },
+    "open_again": {
+      "pt": "Abrir o WhatsApp",
+      "en": "Open WhatsApp",
+      "es": "Abrir WhatsApp",
+      "ru": "Открыть WhatsApp"
+    },
+    "no_whatsapp": {
+      "pt": "Prefere e-mail? Escreva para",
+      "en": "Prefer e-mail? Write to",
+      "es": "¿Prefiere correo? Escriba a",
+      "ru": "Предпочитаете e-mail? Пишите на"
+    },
+    "wa_greeting": {
+      "pt": "Olá, GBC Foods. Gostaria de uma cotação.",
+      "en": "Hello GBC Foods, I would like a quote.",
+      "es": "Hola, GBC Foods. Quisiera una cotización.",
+      "ru": "Здравствуйте, GBC Foods. Прошу выслать коммерческое предложение."
+    },
+    "wa_contact_greeting": {
+      "pt": "Olá, GBC Foods. Gostaria de falar com a equipe comercial.",
+      "en": "Hello GBC Foods, I would like to speak with the commercial team.",
+      "es": "Hola, GBC Foods. Quisiera hablar con el equipo comercial.",
+      "ru": "Здравствуйте, GBC Foods. Хотел(а) бы связаться с коммерческим отделом."
+    }
+  },
+  "cookies": {
+    "title": {
+      "pt": "Cookies neste site",
+      "en": "Cookies on this site",
+      "es": "Cookies en este sitio",
+      "ru": "Файлы cookie на этом сайте"
+    },
+    "text": {
+      "pt": "Usamos cookies essenciais para o site funcionar e, com a sua autorização, cookies de estatística (Google Analytics) para entender como o site é usado. Você pode mudar a escolha a qualquer momento.",
+      "en": "We use essential cookies to run the site and, with your permission, analytics cookies (Google Analytics) to understand how it is used. You can change your choice at any time.",
+      "es": "Usamos cookies esenciales para que el sitio funcione y, con su autorización, cookies de estadística (Google Analytics) para entender cómo se usa. Puede cambiar su elección en cualquier momento.",
+      "ru": "Мы используем необходимые cookie для работы сайта и, с вашего согласия, аналитические cookie (Google Analytics), чтобы понимать, как сайт используется. Вы можете изменить выбор в любой момент."
+    },
+    "accept": {
+      "pt": "Aceitar todos",
+      "en": "Accept all",
+      "es": "Aceptar todas",
+      "ru": "Принять все"
+    },
+    "reject": {
+      "pt": "Só os essenciais",
+      "en": "Essential only",
+      "es": "Solo las esenciales",
+      "ru": "Только необходимые"
+    },
+    "policy": {
+      "pt": "Política de Cookies",
+      "en": "Cookie Policy",
+      "es": "Política de Cookies",
+      "ru": "Политика cookie"
+    },
+    "manage": {
+      "pt": "Gerenciar cookies",
+      "en": "Manage cookies",
+      "es": "Gestionar cookies",
+      "ru": "Настройки cookie"
+    }
+  },
+  "footer": {
+    "tagline": {
+      "pt": "Trading de alimentos com logística internacional própria. Café, amendoim, castanhas, sementes, açúcar e produtos em pó, do Brasil e de Portugal para o seu porto.",
+      "en": "Food trading with its own international logistics. Coffee, peanuts, nuts, seeds, sugar and powdered products, from Brazil and Portugal to your port.",
+      "es": "Trading de alimentos con logística internacional propia. Café, cacahuete, frutos secos, semillas, azúcar y productos en polvo, de Brasil y Portugal a su puerto.",
+      "ru": "Торговля продовольствием с собственной международной логистикой. Кофе, арахис, орехи, семена, сахар и порошковая продукция — из Бразилии и Португалии в ваш порт."
+    },
+    "company": {
+      "pt": "Empresa",
+      "en": "Company",
+      "es": "Empresa",
+      "ru": "Компания"
+    },
+    "products": {
+      "pt": "Produtos",
+      "en": "Products",
+      "es": "Productos",
+      "ru": "Продукция"
+    },
+    "legal": {
+      "pt": "Legal",
+      "en": "Legal",
+      "es": "Legal",
+      "ru": "Правовая информация"
+    },
+    "contact": {
+      "pt": "Contato",
+      "en": "Contact",
+      "es": "Contacto",
+      "ru": "Контакты"
+    },
+    "rights": {
+      "pt": "Todos os direitos reservados.",
+      "en": "All rights reserved.",
+      "es": "Todos los derechos reservados.",
+      "ru": "Все права защищены."
+    },
+    "group_note": {
+      "pt": "GBC Foods é a divisão de alimentos do GBC Group.",
+      "en": "GBC Foods is the food division of GBC Group.",
+      "es": "GBC Foods es la división de alimentos de GBC Group.",
+      "ru": "GBC Foods — продовольственное подразделение GBC Group."
+    }
+  },
+  "misc": {
+    "skip": {
+      "pt": "Ir para o conteúdo",
+      "en": "Skip to content",
+      "es": "Ir al contenido",
+      "ru": "Перейти к содержимому"
+    },
+    "not_found_title": {
+      "pt": "Página não encontrada",
+      "en": "Page not found",
+      "es": "Página no encontrada",
+      "ru": "Страница не найдена"
+    },
+    "not_found_text": {
+      "pt": "O endereço pode ter mudado. Use o menu ou volte para a página inicial.",
+      "en": "The address may have changed. Use the menu or go back to the home page.",
+      "es": "La dirección puede haber cambiado. Use el menú o vuelva a la página de inicio.",
+      "ru": "Адрес мог измениться. Воспользуйтесь меню или вернитесь на главную страницу."
+    },
+    "redirect_text": {
+      "pt": "Redirecionando para a sua língua…",
+      "en": "Redirecting to your language…",
+      "es": "Redirigiendo a su idioma…",
+      "ru": "Перенаправляем на ваш язык…"
+    },
+    "choose_lang": {
+      "pt": "Escolha o idioma",
+      "en": "Choose your language",
+      "es": "Elija su idioma",
+      "ru": "Выберите язык"
+    },
+    "in_lang": {
+      "pt": "Site em português",
+      "en": "Site in English",
+      "es": "Sitio en español",
+      "ru": "Сайт на русском"
+    }
+  },
+  "cta": {
+    "title": {
+      "pt": "Diga a especificação. Nós fazemos o resto.",
+      "en": "Tell us the specification. We do the rest.",
+      "es": "Díganos la especificación. Nosotros hacemos el resto.",
+      "ru": "Сообщите спецификацию. Остальное сделаем мы."
+    },
+    "text": {
+      "pt": "Produto, classificação, volume, Incoterm, porto de destino e janela de embarque. O pedido abre no WhatsApp, já escrito e endereçado à nossa equipe comercial.",
+      "en": "Product, grade, volume, Incoterm, destination port and shipment window. Your request opens in WhatsApp, already written and addressed to our commercial team.",
+      "es": "Producto, clasificación, volumen, Incoterm, puerto de destino y ventana de embarque. La solicitud se abre en WhatsApp, ya redactada y dirigida a nuestro equipo comercial.",
+      "ru": "Продукт, сорт, объём, Инкотермс, порт назначения и период отгрузки. Запрос откроется в WhatsApp уже готовым и адресованным нашему коммерческому отделу."
+    }
+  }
+}

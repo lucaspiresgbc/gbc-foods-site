@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m %}
+{% set og_type = "article" %}
+{% block content %}
+{{ m.crumbs(breadcrumbs, ui) }}
+<article class="post">
+  <header class="post-head wrap">
+    <div class="meta"><time datetime="{{ post.date }}">{{ post.date_fmt }}</time> · {{ post.minutes }} {{ ui('labels.reading') }} · {{ post.author }}</div>
+    <h1>{{ post.title }}</h1>
+    <p class="prose lead">{{ post.description }}</p>
+  </header>
+  {% if post.image %}
+  <div class="post-cover wrap">{{ picture(post.image, post.image_alt or '', sizes="(max-width: 1200px) 100vw, 1180px", loading="eager", fetchpriority="high")|safe }}</div>
+  {% endif %}
+  <div class="post-body wrap prose">
+    {{ post.body_html|safe }}
+    {% if post.tags %}<p class="tags">{% for tg in post.tags %}<span class="tag">{{ tg }}</span>{% endfor %}</p>{% endif %}
+  </div>
+</article>
+
+{% if related %}
+<section class="related">
+  <div class="wrap">
+    <div class="head split"><h2>{{ ui('labels.latest') }}</h2><div class="head-links"><a href="{{ url('blog') }}">{{ ui('btn.all_posts') }}</a></div></div>
+    <div class="grid3">
+      {% for r in related %}{{ m.post_card(r, post_url, ui, picture) }}{% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+{{ m.cta(ui('cta.title'), ui('cta.text'), ui('btn.quote'), url('quote'), ui('btn.products'), url('products')) }}
+{% endblock %}

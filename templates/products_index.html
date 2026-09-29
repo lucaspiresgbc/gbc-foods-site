@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m %}
+{% block content %}
+{{ m.crumbs(breadcrumbs, ui) }}
+<section class="page-hero">
+  <div class="wrap">
+    <h1>{{ page.index_title }}</h1>
+    <p class="prose lead">{{ page.index_lead }}</p>
+  </div>
+</section>
+
+<section class="catalog">
+  <div class="wrap">
+    <div class="head split">
+      <h2 id="granel">{{ ui('nav.bulk') }}</h2>
+      <div class="head-links"><a href="{{ url('bulk') }}">{{ ui('btn.more') }}</a></div>
+    </div>
+    <div class="grid3">
+      {% for p in bulk %}{{ m.product_card(p, L, product_url, ui, placeholder_svg, picture) }}{% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="catalog">
+  <div class="wrap">
+    <div class="head split">
+      <h2 id="po">{{ ui('nav.powders') }}</h2>
+      <div class="head-links"><a href="{{ url('powders') }}">{{ ui('btn.more') }}</a></div>
+    </div>
+    <div class="grid3">
+      {% for p in powders %}{{ m.product_card(p, L, product_url, ui, placeholder_svg, picture) }}{% endfor %}
+    </div>
+    <p class="note">{{ page.note_photo }}</p>
+  </div>
+</section>
+
+{{ m.cta(page.cta_title, page.cta_text, ui('btn.quote'), url('quote'), ui('btn.contact'), url('contact')) }}
+{% endblock %}

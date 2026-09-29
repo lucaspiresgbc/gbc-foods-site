@@ -1,0 +1,47 @@
+{
+  "id": "peanut-blanched",
+  "category": "granel",
+  "order": 3,
+  "featured": false,
+  "image": "products/peanut-blanched.jpg",
+  "hs": "1202.42",
+  "slug": { "pt": "amendoim-blancheado", "en": "blanched-peanuts", "es": "cacahuete-blanqueado", "ru": "blanched-peanuts" },
+  "name": { "pt": "Amendoim blancheado", "en": "Blanched peanuts", "es": "Cacahuete blanqueado", "ru": "Арахис бланшированный" },
+  "image_alt": { "pt": "Amendoim blancheado, sem película", "en": "Blanched peanuts, skin removed", "es": "Cacahuete blanqueado, sin piel", "ru": "Бланшированный арахис без кожицы" },
+  "short": {
+    "pt": "Grão sem película, inteiro 38/42 ou splits, cru ou torrado, pronto para a indústria de snacks, confeitaria e pasta.",
+    "en": "Skinless kernels, whole 38/42 or splits, raw or roasted, ready for snack, confectionery and peanut-butter lines.",
+    "es": "Grano sin piel, entero 38/42 o splits, crudo o tostado, listo para snacks, confitería y crema de cacahuete.",
+    "ru": "Ядра без кожицы, целые 38/42 или половинки, сырые или обжаренные — для снеков, кондитерских изделий и арахисовой пасты."
+  },
+  "description": {
+    "pt": [
+      "O mesmo amendoim Runner, depois do blancheamento: a película é removida por calor e atrito, e o grão passa por nova seleção eletrônica. O resultado é um miolo claro e uniforme, que vai direto para a linha de snacks, confeitaria, pasta de amendoim ou panificação.",
+      "Fornecido inteiro na contagem 38/42 — outras contagens mediante consulta — ou em splits. Cru é o padrão; torrado é preparado por pedido. Como no cru, a análise de aflatoxina acompanha cada lote."
+    ],
+    "en": [
+      "The same Runner peanut after blanching: the skin is removed by heat and friction and the kernel is electronically sorted again. The result is a pale, uniform kernel that goes straight to snack, confectionery, peanut-butter or bakery lines.",
+      "Supplied whole in count 38/42 — other counts on request — or as splits. Raw is the standard; roasted is prepared to order. As with the raw kernel, the aflatoxin analysis travels with every lot."
+    ],
+    "es": [
+      "El mismo cacahuete Runner después del blanqueado: la piel se retira por calor y fricción, y el grano pasa por una nueva selección electrónica. El resultado es un grano claro y uniforme que va directo a la línea de snacks, confitería, crema de cacahuete o panificación.",
+      "Suministrado entero en conteo 38/42 — otros conteos bajo consulta — o en splits. Crudo es el estándar; tostado se prepara a pedido. Como en el crudo, el análisis de aflatoxina acompaña cada lote."
+    ],
+    "ru": [
+      "Тот же арахис Runner после бланширования: кожица снимается нагревом и трением, ядро проходит повторную электронную сортировку. В результате — светлое однородное ядро, готовое для линий снеков, кондитерских изделий, арахисовой пасты или выпечки.",
+      "Поставляется целым в калибре 38/42 — другие калибры по запросу — или половинками. Сырой — стандарт; обжаренный готовится под заказ. Как и для сырого ядра, анализ на афлатоксин прилагается к каждой партии."
+    ]
+  },
+  "specs": [
+    { "k": { "pt": "Tipo", "en": "Type", "es": "Tipo", "ru": "Тип" },
+      "v": { "pt": "Runner, blancheado (sem película)", "en": "Runner, blanched (skin removed)", "es": "Runner, blanqueado (sin piel)", "ru": "Runner, бланшированный (без кожицы)" } },
+    { "k": { "pt": "Formas", "en": "Forms", "es": "Formas", "ru": "Формы" },
+      "v": { "pt": "Inteiro 38/42 · splits · torrado por pedido", "en": "Whole 38/42 · splits · roasted to order", "es": "Entero 38/42 · splits · tostado a pedido", "ru": "Целый 38/42 · половинки · обжаренный под заказ" } },
+    { "k": { "pt": "Aflatoxina", "en": "Aflatoxin", "es": "Aflatoxina", "ru": "Афлатоксин" },
+      "v": { "pt": "Análise por lote, no limite do mercado de destino", "en": "Tested per lot against the destination market's limit", "es": "Análisis por lote, conforme al límite del mercado de destino", "ru": "Анализ каждой партии на соответствие норме рынка назначения" } }
+  ],
+  "origin": { "pt": "Estado de São Paulo, Brasil", "en": "São Paulo state, Brazil", "es": "Estado de São Paulo, Brasil", "ru": "Штат Сан-Паулу, Бразилия" },
+  "packaging": { "pt": "Sacos de 25 kg; embalagem a vácuo mediante solicitação", "en": "25 kg bags; vacuum packing on request", "es": "Sacos de 25 kg; envase al vacío bajo solicitud", "ru": "Мешки по 25 кг; вакуумная упаковка по запросу" },
+  "container": { "pt": "20′ ≈ 18 – 19 t · 40′ HC ≈ 25 – 26 t", "en": "20′ ≈ 18 – 19 t · 40′ HC ≈ 25 – 26 t", "es": "20′ ≈ 18 – 19 t · 40′ HC ≈ 25 – 26 t", "ru": "20′ ≈ 18 – 19 т · 40′ HC ≈ 25 – 26 т" },
+  "availability": { "pt": "Ao longo do ano", "en": "Year-round", "es": "Durante todo el año", "ru": "В течение года" }
+}

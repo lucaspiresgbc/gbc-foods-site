@@ -1,0 +1,49 @@
+{
+  "id": "brazil-nuts",
+  "category": "granel",
+  "order": 4,
+  "featured": true,
+  "image": "",
+  "hs": "0801.22",
+  "slug": { "pt": "castanha-do-brasil", "en": "brazil-nuts", "es": "nuez-de-brasil", "ru": "brazil-nuts" },
+  "name": { "pt": "Castanha-do-brasil", "en": "Brazil nuts", "es": "Nuez de Brasil", "ru": "Бразильский орех" },
+  "image_alt": { "pt": "Miolo de castanha-do-brasil", "en": "Brazil nut kernels", "es": "Nuez de Brasil pelada", "ru": "Ядра бразильского ореха" },
+  "short": {
+    "pt": "Miolo descascado, tamanhos pequeno, médio e grande, de coleta extrativista na Amazônia.",
+    "en": "Shelled kernels in small, medium and large sizes, wild-harvested in the Amazon.",
+    "es": "Grano pelado, tamaños pequeño, mediano y grande, de recolección silvestre en la Amazonía.",
+    "ru": "Очищенные ядра мелкого, среднего и крупного размера, дикий сбор в Амазонии."
+  },
+  "description": {
+    "pt": [
+      "A castanha-do-brasil não é plantada: é colhida de árvores nativas na floresta amazônica, em ouriços que caem no chão entre o fim e o começo do ano. Depois da coleta, a castanha é seca, descascada e classificada por tamanho — pequeno, médio e grande — e selecionada à mão e eletronicamente.",
+      "Fornecemos o miolo descascado, embalado a vácuo para preservar o óleo do grão durante o transporte. A análise de aflatoxina é feita por lote no limite do mercado de destino, e o laudo segue com os documentos de embarque."
+    ],
+    "en": [
+      "Brazil nuts are not planted: they are gathered from native trees in the Amazon forest, in pods that fall to the ground around the turn of the year. After collection the nut is dried, shelled and sized — small, medium and large — and sorted by hand and electronically.",
+      "We supply the shelled kernel, vacuum-packed to protect the kernel's oil in transit. Aflatoxin is tested per lot against the destination market's limit, and the certificate travels with the shipping documents."
+    ],
+    "es": [
+      "La nuez de Brasil no se planta: se recolecta de árboles nativos en la selva amazónica, en cocos que caen al suelo alrededor del cambio de año. Tras la recolección, la nuez se seca, se descascara y se clasifica por tamaño — pequeño, mediano y grande — y se selecciona a mano y electrónicamente.",
+      "Suministramos el grano pelado, envasado al vacío para proteger el aceite del grano durante el transporte. El análisis de aflatoxina se realiza por lote conforme al límite del mercado de destino, y el certificado acompaña los documentos de embarque."
+    ],
+    "ru": [
+      "Бразильский орех не выращивают на плантациях: его собирают с дикорастущих деревьев в амазонском лесу — плоды-коробочки падают на землю на рубеже года. После сбора орех сушат, очищают от скорлупы, калибруют — мелкий, средний, крупный — и сортируют вручную и электронно.",
+      "Мы поставляем очищенные ядра в вакуумной упаковке, защищающей масло ядра при транспортировке. Каждая партия проверяется на афлатоксин на соответствие норме рынка назначения; сертификат прилагается к отгрузочным документам."
+    ]
+  },
+  "specs": [
+    { "k": { "pt": "Forma", "en": "Form", "es": "Forma", "ru": "Форма" },
+      "v": { "pt": "Miolo descascado", "en": "Shelled kernels", "es": "Grano pelado", "ru": "Очищенные ядра" } },
+    { "k": { "pt": "Tamanhos", "en": "Sizes", "es": "Tamaños", "ru": "Размеры" },
+      "v": { "pt": "Pequeno · médio · grande", "en": "Small · medium · large", "es": "Pequeño · mediano · grande", "ru": "Мелкий · средний · крупный" } },
+    { "k": { "pt": "Aflatoxina", "en": "Aflatoxin", "es": "Aflatoxina", "ru": "Афлатоксин" },
+      "v": { "pt": "Análise por lote, no limite do mercado de destino", "en": "Tested per lot against the destination market's limit", "es": "Análisis por lote, conforme al límite del mercado de destino", "ru": "Анализ каждой партии на соответствие норме рынка назначения" } },
+    { "k": { "pt": "Coleta", "en": "Collection season", "es": "Recolección", "ru": "Сезон сбора" },
+      "v": { "pt": "Dezembro a abril", "en": "December to April", "es": "Diciembre a abril", "ru": "Декабрь – апрель" } }
+  ],
+  "origin": { "pt": "Amazônia, Brasil", "en": "Amazon region, Brazil", "es": "Amazonía, Brasil", "ru": "Амазония, Бразилия" },
+  "packaging": { "pt": "Sacos a vácuo de 20 kg em caixas de papelão", "en": "20 kg vacuum bags in cartons", "es": "Bolsas al vacío de 20 kg en cajas de cartón", "ru": "Вакуумные пакеты по 20 кг в картонных коробках" },
+  "container": { "pt": "Confirmado na cotação, conforme a paletização", "en": "Confirmed in the quote, depending on palletisation", "es": "Confirmado en la cotización, según la paletización", "ru": "Подтверждается в коммерческом предложении в зависимости от паллетирования" },
+  "availability": { "pt": "Ao longo do ano, com maior oferta de março a agosto", "en": "Year-round, with the widest availability from March to August", "es": "Durante todo el año, con mayor oferta de marzo a agosto", "ru": "В течение года, наибольшее предложение с марта по август" }
+}

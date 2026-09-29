@@ -1,0 +1,47 @@
+{
+  "id": "peanut-oil",
+  "category": "granel",
+  "order": 7,
+  "featured": false,
+  "image": "",
+  "hs": "1508.10",
+  "slug": { "pt": "oleo-de-amendoim", "en": "peanut-oil", "es": "aceite-de-cacahuete", "ru": "peanut-oil" },
+  "name": { "pt": "Óleo de amendoim", "en": "Peanut oil", "es": "Aceite de cacahuete", "ru": "Арахисовое масло" },
+  "image_alt": { "pt": "Óleo de amendoim", "en": "Peanut oil", "es": "Aceite de cacahuete", "ru": "Арахисовое масло" },
+  "short": {
+    "pt": "Óleo de prensagem mecânica, sem solvente, bruto ou refinado, em flexitank, IBC ou tambor.",
+    "en": "Mechanically pressed oil, solvent-free, crude or refined, in flexitank, IBC or drums.",
+    "es": "Aceite de prensado mecánico, sin solvente, crudo o refinado, en flexitank, IBC o tambor.",
+    "ru": "Масло механического отжима, без растворителей, сырое или рафинированное, во флекситанках, IBC или бочках."
+  },
+  "description": {
+    "pt": [
+      "Óleo extraído do mesmo amendoim Runner por prensagem mecânica, sem uso de solvente. É fornecido bruto — para refino no destino — ou refinado, conforme o pedido, com o laudo de acidez, umidade, índice de peróxidos e perfil de ácidos graxos por lote.",
+      "O volume define a embalagem: flexitank em contêiner de 20′ para cargas completas, IBC de 1.000 litros ou tambores de 200 litros para volumes menores ou cargas consolidadas."
+    ],
+    "en": [
+      "Oil extracted from the same Runner peanut by mechanical pressing, without solvent. It is supplied crude — for refining at destination — or refined, to order, with the certificate of acidity, moisture, peroxide value and fatty-acid profile per lot.",
+      "Volume sets the packing: a flexitank in a 20′ container for full loads, 1,000-litre IBCs or 200-litre drums for smaller volumes or consolidated cargo."
+    ],
+    "es": [
+      "Aceite extraído del mismo cacahuete Runner por prensado mecánico, sin uso de solvente. Se suministra crudo — para refinar en destino — o refinado, según el pedido, con el certificado de acidez, humedad, índice de peróxidos y perfil de ácidos grasos por lote.",
+      "El volumen define el envase: flexitank en contenedor de 20′ para cargas completas, IBC de 1.000 litros o tambores de 200 litros para volúmenes menores o cargas consolidadas."
+    ],
+    "ru": [
+      "Масло, полученное из того же арахиса Runner механическим отжимом, без растворителей. Поставляется сырым — для рафинации в стране назначения — или рафинированным под заказ, с сертификатом кислотности, влажности, перекисного числа и жирнокислотного состава по каждой партии.",
+      "Упаковка зависит от объёма: флекситанк в 20-футовом контейнере для полных партий, IBC-контейнеры по 1 000 литров или бочки по 200 литров для меньших объёмов или сборных грузов."
+    ]
+  },
+  "specs": [
+    { "k": { "pt": "Extração", "en": "Extraction", "es": "Extracción", "ru": "Способ получения" },
+      "v": { "pt": "Prensagem mecânica, sem solvente", "en": "Mechanical pressing, solvent-free", "es": "Prensado mecánico, sin solvente", "ru": "Механический отжим, без растворителей" } },
+    { "k": { "pt": "Tipo", "en": "Grade", "es": "Tipo", "ru": "Тип" },
+      "v": { "pt": "Bruto ou refinado, por pedido", "en": "Crude or refined, to order", "es": "Crudo o refinado, a pedido", "ru": "Сырое или рафинированное, под заказ" } },
+    { "k": { "pt": "Laudo", "en": "Analysis", "es": "Análisis", "ru": "Анализ" },
+      "v": { "pt": "Acidez, umidade, peróxidos e perfil de ácidos graxos por lote", "en": "Acidity, moisture, peroxide value and fatty-acid profile per lot", "es": "Acidez, humedad, peróxidos y perfil de ácidos grasos por lote", "ru": "Кислотность, влажность, перекисное число и жирнокислотный состав по партии" } }
+  ],
+  "origin": { "pt": "Estado de São Paulo, Brasil", "en": "São Paulo state, Brazil", "es": "Estado de São Paulo, Brasil", "ru": "Штат Сан-Паулу, Бразилия" },
+  "packaging": { "pt": "Flexitank (20′) · IBC de 1.000 L · tambores de 200 L", "en": "Flexitank (20′) · 1,000 L IBC · 200 L drums", "es": "Flexitank (20′) · IBC de 1.000 L · tambores de 200 L", "ru": "Флекситанк (20′) · IBC 1 000 л · бочки 200 л" },
+  "container": { "pt": "Flexitank ≈ 20 – 22 t por 20′", "en": "Flexitank ≈ 20 – 22 t per 20′", "es": "Flexitank ≈ 20 – 22 t por 20′", "ru": "Флекситанк ≈ 20 – 22 т на 20′" },
+  "availability": { "pt": "Por pedido", "en": "To order", "es": "A pedido", "ru": "Под заказ" }
+}
