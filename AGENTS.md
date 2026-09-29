@@ -152,6 +152,18 @@ Abrir PR com verificação quebrada é perder tempo do revisor.
   `.env`: nunca. No CI eles vivem em *Secrets* do GitHub (`CF_API_TOKEN`,
   `CF_ACCOUNT_ID`). O site só conhece a URL pública da função `site-lead`, nunca uma
   chave.
+- **Motion tem regras** (`static/motion.css` + `static/js/motion.js`, feitos com a skill
+  *design-motion-principles*, ponderação Jakub · Jhey · Emil): só `transform`, `opacity`
+  e `filter` animam; entrada = opacidade + `translateY` + blur com `var(--ease-out)`,
+  saída sempre mais curta com `var(--ease-in)`; durações pelos tokens `--d-fast`
+  (menus, hover), `--d-base` (fades), `--d-slow` (blocos ao rolar) — nunca `ease` puro,
+  nunca `width/height/top/left`. Toda animação nova entra também no bloco
+  `@media (prefers-reduced-motion: reduce)` com o estado final. Nada pode depender de JS
+  para ficar visível: o estado "escondido" só existe sob `html.js`, e há uma rede de
+  segurança de 2,5 s. Bloco novo que deve entrar ao rolar: acrescente o seletor nas
+  duas listas iguais (`motion.css` e `REVEAL_SELECTOR` em `motion.js`). Sem loops
+  chamativos (pulsar, brilhar): o único loop é o shimmer do skeleton e o spinner do
+  botão, ambos funcionais.
 - O manual completo de administração é o `README.md`; o roteiro de publicação e domínio
   é o `COMO-PUBLICAR.md`.
 

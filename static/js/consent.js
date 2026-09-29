@@ -1,6 +1,9 @@
 /* Consentimento de cookies (Google Consent Mode v2, modo básico): nada do Google carrega antes do aceite. */
 import { getCookie, setCookie } from "./util.js";
 
+/** O banner entra depois que o herói assentou, para não competir com ele. */
+export const BANNER_DELAY_MS = 600;
+
 export function initConsent(G, doc = document) {
   window.dataLayer = window.dataLayer || [];
   function gtag() {
@@ -27,10 +30,12 @@ export function initConsent(G, doc = document) {
   }
 
   const banner = doc.getElementById("cookie");
-  const showBanner = () => {
+  const showBanner = (delay = 0) => {
     if (!banner) return;
-    banner.hidden = false;
-    doc.body.classList.add("has-cookie");
+    window.setTimeout(() => {
+      banner.hidden = false;
+      doc.body.classList.add("has-cookie");
+    }, delay);
   };
   const hideBanner = () => {
     if (!banner) return;
@@ -45,7 +50,7 @@ export function initConsent(G, doc = document) {
 
   const consent = getCookie("gbc_consent");
   if (consent === "all") loadAnalytics();
-  else if (consent !== "essential") showBanner();
+  else if (consent !== "essential") showBanner(BANNER_DELAY_MS);
 
   doc.getElementById("cookie-accept")?.addEventListener("click", () => applyConsent("all"));
   doc.getElementById("cookie-reject")?.addEventListener("click", () => applyConsent("essential"));

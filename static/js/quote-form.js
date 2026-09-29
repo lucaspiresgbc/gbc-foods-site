@@ -81,6 +81,9 @@ export function initQuoteForm(G, doc = document) {
     }
 
     const url = whatsappUrl(G.wa, buildMessage(d, T, { lang: G.lang, domain: G.domain }));
+    const submit = form.querySelector("button[type=submit]");
+    submit?.classList.add("is-loading");
+    submit?.setAttribute("aria-busy", "true");
     status.textContent = T.opening || "";
     sendLead(G, d);
     let w = null;
@@ -97,7 +100,10 @@ export function initQuoteForm(G, doc = document) {
       w = null;
     }
     if (!w) location.href = url; // bloqueador de pop-up: abre na mesma aba
+    submit?.classList.remove("is-loading");
+    submit?.removeAttribute("aria-busy");
     status.innerHTML = "";
+    status.classList.add("pop"); // a mensagem final entra com o mesmo recorte de "materializar" das entradas
     const p = doc.createElement("span");
     p.textContent = T.sent || "";
     status.appendChild(p);

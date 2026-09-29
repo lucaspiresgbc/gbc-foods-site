@@ -24,3 +24,19 @@ export function setCookie(name, value, days) {
 export function bareDomain(url) {
   return String(url || "").replace(/^https?:\/\//, "");
 }
+
+/**
+ * Um clique num link vai carregar outra página deste site? (Serve para a barra de progresso de navegação.)
+ * `a` precisa de target/hasAttribute/getAttribute/host/pathname/search/hash; `e` do evento (botão e modificadores).
+ */
+export function isInternalNavigation(a, e, loc) {
+  if (e.defaultPrevented || e.button !== 0) return false;
+  if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return false;
+  if (a.target && a.target !== "_self") return false;
+  if (a.hasAttribute("download")) return false;
+  const href = a.getAttribute("href") || "";
+  if (!href || href.startsWith("#") || /^(mailto|tel|javascript):/i.test(href)) return false;
+  if (a.host && a.host !== loc.host) return false;
+  if (a.pathname === loc.pathname && a.search === loc.search && a.hash) return false;
+  return true;
+}

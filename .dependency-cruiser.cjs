@@ -2,7 +2,7 @@
  * Módulos puros (sem DOM) não podem depender de módulos que tocam o DOM; site.js é o único ponto de entrada.
  * Rodar: npx depcruise static/js --config .dependency-cruiser.cjs */
 const PURE = "^static/js/(util|quote-message)\\.js$";
-const DOM = "^static/js/(nav|consent|quote-form|site)\\.js$";
+// tudo o que não é puro toca o DOM (nav, consent, quote-form, motion, site…)
 
 module.exports = {
   forbidden: [
@@ -12,7 +12,7 @@ module.exports = {
         "util.js e quote-message.js são puros e testáveis sem navegador; não podem importar módulos de DOM.",
       severity: "error",
       from: { path: PURE },
-      to: { path: DOM },
+      to: { path: "^static/js/", pathNot: PURE },
     },
     {
       name: "ninguem-importa-o-entrypoint",
