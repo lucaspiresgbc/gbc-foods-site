@@ -1,0 +1,10 @@
+[run]
+include = build.py, check_links.py, check_contract.py
+branch = True
+
+[report]
+show_missing = True
+skip_covered = False
+exclude_lines =
+    pragma: no cover
+    if __name__ == .__main__.:

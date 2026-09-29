@@ -1,2 +1,4 @@
 # Ferramentas de desenvolvimento (lint e testes do Python). Instalar: pip install -r requirements-dev.txt
 ruff==0.16.9
+pytest==9.0.2
+pytest-cov==7.1.0

@@ -1,6 +1,7 @@
 # Verificação de todo Pull Request (AGENTS.md, seções 2.4 e 3).
-# Três frentes em paralelo: qualidade (lint, formatação, contratos, commits), site (gera, confere idiomas e links,
-# anexa dist/ para o revisor) e — quando existirem — testes.
+# Frentes em paralelo: qualidade (lint, formatação, contratos, commits), site (gera, confere idiomas e links, anexa
+# dist/ para o revisor), testes Python (unitários + integração sobre dist/), testes JavaScript (Vitest + mutation
+# testing com Stryker) e end-to-end (Playwright, desktop e móvel). Cobertura vai para o Codecov quando houver token.
 name: CI
 
 on:
@@ -86,4 +87,109 @@ jobs:
         with:
           name: site-dist
           path: dist/
+          retention-days: 14
+
+  testes-python:
+    name: Testes Python (pytest + cobertura)
+    runs-on: ubuntu-latest
+    env:
+      HAS_CODECOV: ${{ secrets.CODECOV_TOKEN != '' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Instalar dependências
+        run: pip install -r requirements.txt -r requirements-dev.txt
+
+      - name: pytest (unitários de build.py, integração sobre dist/, scripts)
+        run: pytest --cov --cov-report=term --cov-report=xml:coverage-python.xml
+
+      - name: Cobertura → Codecov (python)
+        if: env.HAS_CODECOV == 'true'
+        uses: codecov/codecov-action@v5
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          files: coverage-python.xml
+          flags: python
+          fail_ci_if_error: false
+
+  testes-js:
+    name: Testes JavaScript (Vitest + Stryker)
+    runs-on: ubuntu-latest
+    env:
+      HAS_CODECOV: ${{ secrets.CODECOV_TOKEN != '' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Instalar dependências
+        run: npm ci
+
+      - name: Vitest com cobertura
+        run: npx vitest run --coverage
+
+      - name: Cobertura → Codecov (js)
+        if: env.HAS_CODECOV == 'true'
+        uses: codecov/codecov-action@v5
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          files: coverage-js/lcov.info
+          flags: js
+          fail_ci_if_error: false
+
+      - name: Mutation testing (Stryker, mínimo 70 %)
+        run: npx stryker run
+
+      - name: Relatório de mutação
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mutation-report
+          path: reports/mutation/
+          retention-days: 14
+
+  e2e:
+    name: End-to-end (Playwright, desktop e móvel)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Instalar dependências
+        run: |
+          pip install -r requirements.txt
+          npm ci
+          npx playwright install --with-deps chromium
+
+      - name: Gerar o site
+        run: python3 build.py
+
+      - name: Playwright
+        run: npx playwright test
+
+      - name: Relatório do Playwright (só em falha)
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: |
+            playwright-report/
+            test-results/
           retention-days: 14

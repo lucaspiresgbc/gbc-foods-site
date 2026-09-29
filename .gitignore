@@ -20,3 +20,13 @@ Thumbs.db
 
 # Node (só ferramentas de qualidade e teste)
 node_modules/
+
+# Relatórios de teste (gerados)
+coverage-js/
+coverage-python.xml
+.coverage
+reports/
+.stryker-tmp/
+playwright-report/
+test-results/
+.pytest_cache/

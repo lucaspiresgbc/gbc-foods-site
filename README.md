@@ -33,6 +33,8 @@ gbc-foods-site/
 │   ├── js/                ← comportamento (site.js é a entrada; módulos puros e de DOM separados)
 │   └── favicon, og-image  ← ícones e imagem de compartilhamento
 ├── templates/             ← a estrutura HTML das páginas (só mexer se quiser mudar o layout)
+├── tests/                 ← testes Python (pytest) e JavaScript (tests/js, Vitest)
+├── e2e/                   ← testes end-to-end (Playwright) sobre o site gerado
 ├── check_links.py         ← confere os links internos de dist/
 ├── check_contract.py      ← contratos de arquitetura (URLs estáveis, segredos, templates)
 ├── routes.lock.json       ← registro dos slugs publicados (não editar à mão)
