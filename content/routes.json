@@ -9,6 +9,7 @@
   "products":  { "pt": "produtos", "en": "products", "es": "productos", "ru": "products" },
   "bulk":      { "pt": "produtos/a-granel", "en": "products/bulk", "es": "productos/a-granel", "ru": "products/bulk" },
   "powders":   { "pt": "produtos/em-po", "en": "products/powders", "es": "productos/en-polvo", "ru": "products/powders" },
+  "packaged":  { "pt": "produtos/embalados", "en": "products/packaged", "es": "productos/envasados", "ru": "products/packaged" },
   "blog":      { "pt": "blog", "en": "blog", "es": "blog", "ru": "blog" },
   "quote":     { "pt": "cotacao", "en": "quote", "es": "cotizacion", "ru": "quote" },
   "contact":   { "pt": "contato", "en": "contact", "es": "contacto", "ru": "contact" },

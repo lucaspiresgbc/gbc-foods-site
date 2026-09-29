@@ -55,7 +55,7 @@
   <div class="wrap">
     <div class="head split">
       <div><h2>{{ page.fam_title }}</h2><p class="prose">{{ page.fam_text }}</p></div>
-      <div class="head-links"><a href="{{ url('bulk') }}">{{ page.fam_bulk }}</a><a href="{{ url('powders') }}">{{ page.fam_powders }}</a></div>
+      <div class="head-links"><a href="{{ url('bulk') }}">{{ page.fam_bulk }}</a><a href="{{ url('powders') }}">{{ page.fam_powders }}</a>{% if has_packaged %}<a href="{{ url('packaged') }}">{{ page.fam_packaged }}</a>{% endif %}</div>
     </div>
     <div class="grid3">
       {% for p in featured %}{{ m.product_card(p, L, product_url, ui, placeholder_svg, picture) }}{% endfor %}

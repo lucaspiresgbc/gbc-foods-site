@@ -37,6 +37,7 @@
     "fam_text": "Two families of product, one way of working: you set the specification, we source against it, and nothing is bought before you approve sample and price.",
     "fam_bulk": "Bulk products",
     "fam_powders": "Powdered products",
+    "fam_packaged": "Packaged products",
     "coffee_title": "Coffee from the southwest of Minas Gerais",
     "coffee_text": "Our arabica comes from a cooperative of producer families in the southwest of Minas Gerais, in the belt where the Atlantic Forest meets the cerrado, between 700 and 1,250 metres. Natural process, sun-dried on the patio, graded into three cup standards. We know the farms, and we go back to them every harvest.",
     "coffee_facts": [
@@ -104,6 +105,7 @@
     "fam_text": "Duas famílias de produto, um jeito de trabalhar: você define a especificação, nós originamos conforme ela, e nada é comprado antes de você aprovar amostra e preço.",
     "fam_bulk": "Produtos a granel",
     "fam_powders": "Produtos em pó",
+    "fam_packaged": "Produtos embalados",
     "coffee_title": "Café do Sudoeste de Minas",
     "coffee_text": "Nosso arábica vem de uma cooperativa de famílias produtoras no Sudoeste de Minas Gerais, na faixa onde a mata atlântica encontra o cerrado, entre 700 e 1.250 metros. Processo natural, secagem ao sol em terreiro, classificado em três padrões de bebida. Conhecemos as lavouras, e voltamos a elas a cada safra.",
     "coffee_facts": [
@@ -171,6 +173,7 @@
     "fam_text": "Dos familias de producto, una forma de trabajar: usted define la especificación, nosotros originamos según ella, y nada se compra antes de que apruebe muestra y precio.",
     "fam_bulk": "Productos a granel",
     "fam_powders": "Productos en polvo",
+    "fam_packaged": "Productos envasados",
     "coffee_title": "Café del suroeste de Minas Gerais",
     "coffee_text": "Nuestro arábica proviene de una cooperativa de familias productoras del suroeste de Minas Gerais, en la franja donde la Mata Atlántica se encuentra con el cerrado, entre 700 y 1.250 metros. Proceso natural, secado al sol en patio, clasificado en tres estándares de taza. Conocemos las fincas, y volvemos a ellas en cada cosecha.",
     "coffee_facts": [
@@ -238,6 +241,7 @@
     "fam_text": "Две группы продукции, один подход к работе: вы задаёте спецификацию, мы закупаем в соответствии с ней, и ничего не покупается до того, как вы утвердите образец и цену.",
     "fam_bulk": "Насыпная продукция",
     "fam_powders": "Порошковая продукция",
+    "fam_packaged": "Фасованная продукция",
     "coffee_title": "Кофе с юго-запада штата Минас-Жерайс",
     "coffee_text": "Наша арабика поступает от кооператива семейных хозяйств на юго-западе штата Минас-Жерайс, на границе Атлантического леса и серрадо, на высоте от 700 до 1 250 метров. Натуральная обработка, сушка на солнце на патио, три стандарта качества чашки. Мы знаем эти хозяйства и возвращаемся к ним каждый урожай.",
     "coffee_facts": [

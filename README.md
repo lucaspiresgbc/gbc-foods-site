@@ -83,7 +83,7 @@ Regras dos arquivos JSON: texto sempre entre aspas duplas; vírgula entre um ite
 | Campo | Significado |
 |---|---|
 | `id` | identificador interno, sem espaços (`macadamia`) — usado no link da cotação |
-| `category` | `granel` (Produtos a granel) ou `po` (Produtos em pó) |
+| `category` | `granel` (Produtos a granel), `po` (Produtos em pó) ou `embalados` (Produtos embalados) |
 | `order` | posição na lista |
 | `featured` | `true` = aparece na home e no rodapé |
 | `image` | caminho da foto dentro de `static/img/` (ex.: `products/macadamia.jpg`). Vazio = painel ilustrado da marca |
@@ -93,6 +93,25 @@ Regras dos arquivos JSON: texto sempre entre aspas duplas; vírgula entre um ite
 | `name`, `short`, `description`, `specs`, `origin`, `packaging`, `container`, `availability` | textos, sempre nos 4 idiomas |
 
 `specs` é uma lista de linhas da tabela; cada linha tem `k` (rótulo) e `v` (valor), cada um nos 4 idiomas. Para tirar um produto do ar, apague o arquivo (ou mova para fora da pasta).
+
+#### A terceira família: Produtos embalados
+
+A categoria **Produtos embalados** já está montada no site inteiro — endereço próprio nos
+4 idiomas (`/pt/produtos/embalados/`, `/en/products/packaged/`, `/es/productos/envasados/`,
+`/ru/products/packaged/`), menu, rodapé, home, página de Produtos e página de Serviços —
+mas **fica invisível enquanto não houver nenhum produto nela**. Isso é de propósito: uma
+categoria vazia no ar dá impressão de site inacabado.
+
+Para ativá-la, basta criar o primeiro produto:
+
+1. Copie `content/products/MODELO-embalado.json.exemplo` para `content/products/12-<id>.json`
+   (sem o `.exemplo` — o build ignora arquivos que não terminam em `.json`).
+2. Preencha os campos nos 4 idiomas, mantendo `"category": "embalados"`.
+3. Rode `python3 build.py`.
+
+A partir daí a categoria aparece sozinha em todos os lugares, e o texto de abertura da
+página de Produtos troca de "duas famílias" para "três famílias" automaticamente (as duas
+versões estão em `content/pages/products.json`, nas chaves `index_lead` e `index_lead_3`).
 
 ### Blog
 

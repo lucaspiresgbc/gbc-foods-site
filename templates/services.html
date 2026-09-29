@@ -21,6 +21,7 @@
           <a class="btn solid small" href="{{ url('foods') }}">{{ ui('btn.more') }}</a>
           <a href="{{ url('bulk') }}">{{ page.foods_links[0] }}</a>
           <a href="{{ url('powders') }}">{{ page.foods_links[1] }}</a>
+          {% if has_packaged %}<a href="{{ url('packaged') }}">{{ page.foods_links[2] }}</a>{% endif %}
         </div>
       </div>
     </article>
