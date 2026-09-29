@@ -1,0 +1,36 @@
+{
+  "_comentario": "MODELO de ficha para a família 'Produtos embalados'. Para ativar: copie este arquivo para content/products/12-<id>.json (sem o .exemplo), preencha os quatro idiomas e rode python3 build.py. A categoria aparece sozinha no menu, na home, na página de Produtos e em Serviços assim que existir pelo menos um produto com \"category\": \"embalados\".",
+
+  "id": "id-do-produto",
+  "category": "embalados",
+  "order": 12,
+  "featured": false,
+  "image": "",
+  "hs": "0000.00",
+
+  "slug":      { "pt": "slug-em-portugues", "en": "slug-in-english", "es": "slug-en-espanol", "ru": "slug-in-english" },
+  "name":      { "pt": "Nome do produto", "en": "Product name", "es": "Nombre del producto", "ru": "Название продукта" },
+  "image_alt": { "pt": "", "en": "", "es": "", "ru": "" },
+  "short":     { "pt": "Uma frase: o que é e em que embalagem vai.", "en": "", "es": "", "ru": "" },
+
+  "description": [
+    { "pt": "Primeiro parágrafo: o produto, o processo e a especificação que o comprador confere.", "en": "", "es": "", "ru": "" },
+    { "pt": "Segundo parágrafo: embalagem, rotulagem, validade e habilitação para o mercado de destino.", "en": "", "es": "", "ru": "" }
+  ],
+
+  "specs": [
+    { "k": { "pt": "Embalagem primária", "en": "Primary pack", "es": "Envase primario", "ru": "Первичная упаковка" },
+      "v": { "pt": "", "en": "", "es": "", "ru": "" } },
+    { "k": { "pt": "Caixa", "en": "Case", "es": "Caja", "ru": "Короб" },
+      "v": { "pt": "", "en": "", "es": "", "ru": "" } },
+    { "k": { "pt": "Validade", "en": "Shelf life", "es": "Vida útil", "ru": "Срок годности" },
+      "v": { "pt": "", "en": "", "es": "", "ru": "" } },
+    { "k": { "pt": "Rotulagem", "en": "Labelling", "es": "Etiquetado", "ru": "Маркировка" },
+      "v": { "pt": "", "en": "", "es": "", "ru": "" } }
+  ],
+
+  "origin":       { "pt": "Brasil", "en": "Brazil", "es": "Brasil", "ru": "Бразилия" },
+  "packaging":    { "pt": "", "en": "", "es": "", "ru": "" },
+  "container":    { "pt": "", "en": "", "es": "", "ru": "" },
+  "availability": { "pt": "", "en": "", "es": "", "ru": "" }
+}

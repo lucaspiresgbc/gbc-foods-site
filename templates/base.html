@@ -80,6 +80,7 @@ window.GBC = {
               <a href="{{ url('products') }}">{{ ui('nav.products') }}</a>
               <a class="sub-indent" href="{{ url('bulk') }}">{{ ui('nav.bulk') }}</a>
               <a class="sub-indent" href="{{ url('powders') }}">{{ ui('nav.powders') }}</a>
+              {% if has_packaged %}<a class="sub-indent" href="{{ url('packaged') }}">{{ ui('nav.packaged') }}</a>{% endif %}
             </div>
             <div class="sub-col">
               <a class="sub-head" href="{{ url('logistics') }}">{{ ui('nav.logistics') }}</a>
@@ -138,6 +139,7 @@ window.GBC = {
       <ul>
         <li><a href="{{ url('bulk') }}">{{ ui('nav.bulk') }}</a></li>
         <li><a href="{{ url('powders') }}">{{ ui('nav.powders') }}</a></li>
+        {% if has_packaged %}<li><a href="{{ url('packaged') }}">{{ ui('nav.packaged') }}</a></li>{% endif %}
         {% for p in products if p.featured %}
         <li><a href="{{ product_url(p) }}">{{ L(p.name) }}</a></li>
         {% endfor %}

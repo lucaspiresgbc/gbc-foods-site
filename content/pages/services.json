@@ -8,7 +8,7 @@
     "lead": "Two divisions, one operation. GBC Foods originates, grades and contracts; GBC Logistics carries the cargo and handles the paperwork. You deal with one team from the specification to the release at destination.",
     "foods_title": "GBC Foods",
     "foods_text": "Green arabica coffee, peanuts, Brazil nuts, macadamia, sesame, peanut oil, crystal sugar, milk powder and corn starch from Brazil, and almonds grown on the group's own orchards in Portugal. Sold in bulk or powdered form, against your specification.",
-    "foods_links": ["Bulk products", "Powdered products"],
+    "foods_links": ["Bulk products", "Powdered products", "Packaged products"],
     "log_title": "GBC Logistics",
     "log_text": "Inland haulage, terminal, customs clearance, fumigation, phytosanitary and MAPA certificates, certificate of origin, booking, bill of lading, cargo insurance and foreign-exchange contract — from Santos to any port your line calls at.",
     "log_link": "Logistics and transport"
@@ -20,7 +20,7 @@
     "lead": "Duas divisões, uma operação. A GBC Foods origina, classifica e contrata; a GBC Logistics leva a carga e cuida da documentação. Você trata com uma única equipe, da especificação à liberação no destino.",
     "foods_title": "GBC Foods",
     "foods_text": "Café arábica verde, amendoim, castanha-do-brasil, macadâmia, gergelim, óleo de amendoim, açúcar cristal, leite em pó e amido de milho do Brasil, e amêndoas cultivadas nos pomares próprios do grupo em Portugal. Vendidos a granel ou em pó, conforme a sua especificação.",
-    "foods_links": ["Produtos a granel", "Produtos em pó"],
+    "foods_links": ["Produtos a granel", "Produtos em pó", "Produtos embalados"],
     "log_title": "GBC Logistics",
     "log_text": "Transporte rodoviário, terminal, desembaraço aduaneiro, fumigação, certificados fitossanitário e do MAPA, certificado de origem, booking, conhecimento de embarque, seguro de carga e contrato de câmbio — de Santos a qualquer porto atendido pelo seu armador.",
     "log_link": "Logística e transporte"
@@ -32,7 +32,7 @@
     "lead": "Dos divisiones, una operación. GBC Foods origina, clasifica y contrata; GBC Logistics lleva la carga y gestiona la documentación. Usted trata con un único equipo, desde la especificación hasta la liberación en destino.",
     "foods_title": "GBC Foods",
     "foods_text": "Café arábica verde, cacahuete, nuez de Brasil, macadamia, sésamo, aceite de cacahuete, azúcar cristal, leche en polvo y almidón de maíz de Brasil, y almendras cultivadas en las plantaciones propias del grupo en Portugal. Vendidos a granel o en polvo, según su especificación.",
-    "foods_links": ["Productos a granel", "Productos en polvo"],
+    "foods_links": ["Productos a granel", "Productos en polvo", "Productos envasados"],
     "log_title": "GBC Logistics",
     "log_text": "Transporte terrestre, terminal, despacho aduanero, fumigación, certificados fitosanitario y del MAPA, certificado de origen, booking, conocimiento de embarque, seguro de carga y contrato de cambio — de Santos a cualquier puerto que atienda su naviera.",
     "log_link": "Logística y transporte"
@@ -44,7 +44,7 @@
     "lead": "Два подразделения — одна команда. GBC Foods закупает, классифицирует и заключает контракты; GBC Logistics перевозит груз и оформляет документы. Вы работаете с одной командой — от спецификации до выпуска груза в порту назначения.",
     "foods_title": "GBC Foods",
     "foods_text": "Зелёный кофе арабика, арахис, бразильский орех, макадамия, кунжут, арахисовое масло, кристаллический сахар, сухое молоко и кукурузный крахмал из Бразилии, а также миндаль из собственных садов группы в Португалии. Насыпная и порошковая продукция — по вашей спецификации.",
-    "foods_links": ["Насыпная продукция", "Порошковая продукция"],
+    "foods_links": ["Насыпная продукция", "Порошковая продукция", "Фасованная продукция"],
     "log_title": "GBC Logistics",
     "log_text": "Автоперевозка, терминал, таможенное оформление, фумигация, фитосанитарный сертификат и сертификат MAPA, сертификат происхождения, букинг, коносамент, страхование груза и оформление валютной сделки — из Сантоса в любой порт, куда заходит ваша линия.",
     "log_link": "Логистика и перевозки"

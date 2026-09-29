@@ -309,6 +309,8 @@ def render(template, path, lang, *, title, description, alternates, breadcrumbs=
         post_url=lambda pid, l=None: post_url(pid, l or lang),
         lang_names={l: UI["lang_name"][l] for l in LANGS},
         products=PRODUCTS, posts=POSTS[lang], steps=STEPS[lang],
+        # A terceira família só aparece no menu depois que houver produtos nela.
+        has_packaged=any(p["category"] == "embalados" for p in PRODUCTS),
         wa=WA, wa_ok=WA_OK, ga=GA if GA_OK else "", lead_endpoint=CFG.get("lead_endpoint", ""),
         year=datetime.date.today().year,
     )
@@ -361,9 +363,14 @@ def build():
         # Produtos
         bulk = [p for p in PRODUCTS if p["category"] == "granel"]
         powders = [p for p in PRODUCTS if p["category"] == "po"]
+        packaged = [p for p in PRODUCTS if p["category"] == "embalados"]
         crumb_prod = (t("nav.products", lang), url("products", lang))
+        # O texto de abertura fala em duas ou em três famílias conforme a
+        # categoria "embalados" tenha produtos cadastrados.
+        index_lead = P["index_lead_3"] if packaged else P["index_lead"]
         render("products_index.html", url("products", lang), lang, title=P["index_meta_title"], description=P["index_meta_description"],
-               alternates=alt("products"), page=P, bulk=bulk, powders=powders, priority="0.9",
+               alternates=alt("products"), page=P, bulk=bulk, powders=powders, packaged=packaged,
+               index_lead=index_lead, priority="0.9",
                breadcrumbs=[crumb_home, crumb_prod])
         render("products_category.html", url("bulk", lang), lang, title=P["bulk_meta_title"], description=P["bulk_meta_description"],
                alternates=alt("bulk"), page=P, items=bulk, cat_title=P["bulk_title"], cat_lead=P["bulk_lead"], priority="0.9",
@@ -371,8 +378,12 @@ def build():
         render("products_category.html", url("powders", lang), lang, title=P["powders_meta_title"], description=P["powders_meta_description"],
                alternates=alt("powders"), page=P, items=powders, cat_title=P["powders_title"], cat_lead=P["powders_lead"], priority="0.9",
                breadcrumbs=[crumb_home, crumb_prod, (t("nav.powders", lang), url("powders", lang))])
+        if packaged:
+            render("products_category.html", url("packaged", lang), lang, title=P["packaged_meta_title"], description=P["packaged_meta_description"],
+                   alternates=alt("packaged"), page=P, items=packaged, cat_title=P["packaged_title"], cat_lead=P["packaged_lead"], priority="0.9",
+                   breadcrumbs=[crumb_home, crumb_prod, (t("nav.packaged", lang), url("packaged", lang))])
         for prod in PRODUCTS:
-            cat_key = "bulk" if prod["category"] == "granel" else "powders"
+            cat_key = {"granel": "bulk", "po": "powders", "embalados": "packaged"}[prod["category"]]
             name = prod["name"][lang]
             pu = product_url(prod, lang)
             ld = {"@context": "https://schema.org", "@type": "Product", "name": name,

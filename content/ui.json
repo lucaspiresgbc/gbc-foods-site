@@ -61,6 +61,12 @@
       "es": "Productos en polvo",
       "ru": "Порошковая продукция"
     },
+    "packaged": {
+      "pt": "Produtos embalados",
+      "en": "Packaged products",
+      "es": "Productos envasados",
+      "ru": "Фасованная продукция"
+    },
     "blog": {
       "pt": "Blog",
       "en": "Blog",
