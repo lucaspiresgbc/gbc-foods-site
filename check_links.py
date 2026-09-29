@@ -5,10 +5,14 @@ Uso:  python3 check_links.py [--dist dist]
 Sai com código 1 se houver link interno apontando para página ou arquivo inexistente.
 Roda depois de `python3 build.py`; o CI executa este script em todo PR.
 """
-import argparse, re, sys
+
+import argparse
+import re
+import sys
 from pathlib import Path
 
 HREF = re.compile(r'(?:href|src|content)="(/[^"#?]*)')
+
 
 def main():
     ap = argparse.ArgumentParser()
@@ -39,13 +43,14 @@ def main():
                 continue  # imagem, css, js, sitemap, etc.
             bad.append((f.relative_to(dist).as_posix(), href))
 
-    print(f"{checked} links internos conferidos em {len(pages)//2 or len(pages)} páginas")
+    print(f"{checked} links internos conferidos em {len(pages) // 2 or len(pages)} páginas")
     if bad:
         print(f"ERRO — {len(bad)} link(s) interno(s) quebrado(s):")
         for page, href in bad:
             print(f"  {page}  →  {href}")
         sys.exit(1)
     print("ok — 0 links internos quebrados")
+
 
 if __name__ == "__main__":
     main()

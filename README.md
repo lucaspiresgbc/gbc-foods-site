@@ -28,9 +28,15 @@ gbc-foods-site/
 │   ├── img/coffee/        ← fotos da cooperativa (café)
 │   ├── img/products/      ← fotos dos produtos
 │   ├── img/brand/         ← logos
-│   ├── site.css / site.js ← visual e comportamento
+│   ├── site.css           ← visual
+│   ├── js/                ← comportamento (site.js é a entrada; módulos puros e de DOM separados)
 │   └── favicon, og-image  ← ícones e imagem de compartilhamento
 ├── templates/             ← a estrutura HTML das páginas (só mexer se quiser mudar o layout)
+├── check_links.py         ← confere os links internos de dist/
+├── check_contract.py      ← contratos de arquitetura (URLs estáveis, segredos, templates)
+├── routes.lock.json       ← registro dos slugs publicados (não editar à mão)
+├── AGENTS.md / CLAUDE.md  ← padrão de trabalho para pessoas e agentes
+├── biome.json, knip.json, .dependency-cruiser.cjs, commitlint.config.cjs, ruff.toml ← lint
 └── dist/                  ← O SITE PRONTO (gerada pelo build; não é versionada no git)
 ```
 

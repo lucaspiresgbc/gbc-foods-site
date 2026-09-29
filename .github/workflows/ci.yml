@@ -1,18 +1,64 @@
-# Verificação de todo Pull Request (AGENTS.md, seção 2.4).
-# Gera o site, confere os 4 idiomas e os links internos, e anexa dist/ ao PR
-# para o revisor abrir localmente sem instalar nada.
+# Verificação de todo Pull Request (AGENTS.md, seções 2.4 e 3).
+# Três frentes em paralelo: qualidade (lint, formatação, contratos, commits), site (gera, confere idiomas e links,
+# anexa dist/ para o revisor) e — quando existirem — testes.
 name: CI
 
 on:
-  pull_request:
-    branches: [main]
+  pull_request: # qualquer base — PRs empilhados (base numa branch de trabalho) também passam pelo CI
   workflow_dispatch:
 
 permissions:
   contents: read
 
+concurrency:
+  group: ci-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
 jobs:
-  build:
+  qualidade:
+    name: Lint, formatação e contratos
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # commitlint precisa do histórico do PR
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Instalar dependências
+        run: |
+          pip install -r requirements.txt -r requirements-dev.txt
+          npm ci
+
+      - name: Python — ruff (lint + formatação)
+        run: |
+          ruff check .
+          ruff format --check .
+
+      - name: JavaScript / CSS / JSON — Biome
+        run: npx biome ci .
+
+      - name: JavaScript — código sem uso (knip)
+        run: npx knip
+
+      - name: JavaScript — fronteiras entre módulos (dependency-cruiser)
+        run: npx depcruise static/js --config .dependency-cruiser.cjs
+
+      - name: Contratos de arquitetura
+        run: python3 check_contract.py
+
+      - name: Mensagens de commit (commitlint)
+        run: npx commitlint --from ${{ github.event.pull_request.base.sha }} --to ${{ github.event.pull_request.head.sha }} --verbose
+
+  site:
     name: Gerar e verificar o site
     runs-on: ubuntu-latest
     steps:

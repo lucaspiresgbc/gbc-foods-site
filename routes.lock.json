@@ -1,0 +1,182 @@
+{
+  "routes": {
+    "home": {
+      "pt": "",
+      "en": "",
+      "es": "",
+      "ru": ""
+    },
+    "company": {
+      "pt": "empresa",
+      "en": "company",
+      "es": "empresa",
+      "ru": "company"
+    },
+    "services": {
+      "pt": "servicos",
+      "en": "services",
+      "es": "servicios",
+      "ru": "services"
+    },
+    "foods": {
+      "pt": "servicos/gbc-foods",
+      "en": "services/gbc-foods",
+      "es": "servicios/gbc-foods",
+      "ru": "services/gbc-foods"
+    },
+    "logistics": {
+      "pt": "servicos/gbc-logistics",
+      "en": "services/gbc-logistics",
+      "es": "servicios/gbc-logistics",
+      "ru": "services/gbc-logistics"
+    },
+    "products": {
+      "pt": "produtos",
+      "en": "products",
+      "es": "productos",
+      "ru": "products"
+    },
+    "bulk": {
+      "pt": "produtos/a-granel",
+      "en": "products/bulk",
+      "es": "productos/a-granel",
+      "ru": "products/bulk"
+    },
+    "powders": {
+      "pt": "produtos/em-po",
+      "en": "products/powders",
+      "es": "productos/en-polvo",
+      "ru": "products/powders"
+    },
+    "packaged": {
+      "pt": "produtos/embalados",
+      "en": "products/packaged",
+      "es": "productos/envasados",
+      "ru": "products/packaged"
+    },
+    "blog": {
+      "pt": "blog",
+      "en": "blog",
+      "es": "blog",
+      "ru": "blog"
+    },
+    "quote": {
+      "pt": "cotacao",
+      "en": "quote",
+      "es": "cotizacion",
+      "ru": "quote"
+    },
+    "contact": {
+      "pt": "contato",
+      "en": "contact",
+      "es": "contacto",
+      "ru": "contact"
+    },
+    "privacy": {
+      "pt": "politica-de-privacidade",
+      "en": "privacy-policy",
+      "es": "politica-de-privacidad",
+      "ru": "privacy-policy"
+    },
+    "cookies": {
+      "pt": "politica-de-cookies",
+      "en": "cookie-policy",
+      "es": "politica-de-cookies",
+      "ru": "cookie-policy"
+    }
+  },
+  "products": {
+    "coffee-arabica": {
+      "pt": "cafe-verde-arabica",
+      "en": "green-arabica-coffee",
+      "es": "cafe-verde-arabica",
+      "ru": "green-arabica-coffee"
+    },
+    "peanut-raw": {
+      "pt": "amendoim-runner-cru",
+      "en": "raw-runner-peanuts",
+      "es": "cacahuete-runner-crudo",
+      "ru": "raw-runner-peanuts"
+    },
+    "peanut-blanched": {
+      "pt": "amendoim-blancheado",
+      "en": "blanched-peanuts",
+      "es": "cacahuete-blanqueado",
+      "ru": "blanched-peanuts"
+    },
+    "brazil-nuts": {
+      "pt": "castanha-do-brasil",
+      "en": "brazil-nuts",
+      "es": "nuez-de-brasil",
+      "ru": "brazil-nuts"
+    },
+    "macadamia": {
+      "pt": "macadamia",
+      "en": "macadamia",
+      "es": "macadamia",
+      "ru": "macadamia"
+    },
+    "sesame": {
+      "pt": "gergelim",
+      "en": "sesame-seeds",
+      "es": "sesamo",
+      "ru": "sesame-seeds"
+    },
+    "peanut-oil": {
+      "pt": "oleo-de-amendoim",
+      "en": "peanut-oil",
+      "es": "aceite-de-cacahuete",
+      "ru": "peanut-oil"
+    },
+    "sugar": {
+      "pt": "acucar-cristal",
+      "en": "crystal-sugar",
+      "es": "azucar-cristal",
+      "ru": "crystal-sugar"
+    },
+    "almonds": {
+      "pt": "amendoas-de-portugal",
+      "en": "almonds-from-portugal",
+      "es": "almendras-de-portugal",
+      "ru": "almonds-from-portugal"
+    },
+    "milk-powder": {
+      "pt": "leite-em-po",
+      "en": "milk-powder",
+      "es": "leche-en-polvo",
+      "ru": "milk-powder"
+    },
+    "corn-starch": {
+      "pt": "amido-de-milho",
+      "en": "corn-starch",
+      "es": "almidon-de-maiz",
+      "ru": "corn-starch"
+    }
+  },
+  "posts": {
+    "01-peneiras-e-bebidas-do-cafe": {
+      "pt": "peneira-bebida-defeitos-cafe-verde-brasileiro",
+      "en": "brazilian-green-coffee-screens-cup-defects",
+      "es": "criba-taza-defectos-cafe-verde-brasileno",
+      "ru": "brazilian-green-coffee-screen-cup-defects"
+    },
+    "02-amendoim-runner-contagens": {
+      "pt": "amendoim-runner-brasileiro-contagens",
+      "en": "brazilian-runner-peanuts-counts-grades",
+      "es": "cacahuete-runner-brasileno-conteos",
+      "ru": "brazilian-runner-peanuts-counts"
+    },
+    "03-fob-cfr-cif-santos": {
+      "pt": "fob-cfr-cif-santos-exportacao-alimentos",
+      "en": "fob-cfr-cif-santos-food-exports",
+      "es": "fob-cfr-cif-santos-exportacion-alimentos",
+      "ru": "fob-cfr-cif-santos-food-exports"
+    },
+    "04-documentos-exportacao-alimentos": {
+      "pt": "documentos-exportacao-alimentos-brasil",
+      "en": "export-documents-food-brazil",
+      "es": "documentos-exportacion-alimentos-brasil",
+      "ru": "export-documents-food-brazil"
+    }
+  }
+}

@@ -1,0 +1,2 @@
+# Ferramentas de desenvolvimento (lint e testes do Python). Instalar: pip install -r requirements-dev.txt
+ruff==0.16.9

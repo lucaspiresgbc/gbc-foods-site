@@ -78,16 +78,22 @@ Exemplos: `fix/hreflang-cotacao-ru`, `feat/produtos-embalados`, `melhoria/fotos-
 
 ### 2.4 Antes de abrir o PR — verificação obrigatória
 
-Rode, na raiz do repositório, e só siga se os três passarem:
+Rode, na raiz do repositório, e só siga se tudo passar:
 
 ```bash
-python3 build.py --check     # conteúdo completo nos 4 idiomas (PT/EN/ES/RU)
-python3 build.py             # gera dist/ sem erro
-python3 check_links.py       # 0 links internos quebrados em dist/
+# instalar uma vez: pip install -r requirements.txt -r requirements-dev.txt && npm ci
+ruff check . && ruff format --check .   # Python: lint e formatação (build.py, check_*.py, cf-deploy.py)
+npm run lint                            # Biome (JS/CSS/JSON) + knip (código sem uso) + dependency-cruiser (fronteiras)
+python3 check_contract.py               # contratos de arquitetura (URLs estáveis, segredos, templates, produtos)
+python3 build.py --check                # conteúdo completo nos 4 idiomas (PT/EN/ES/RU)
+python3 build.py                        # gera dist/ sem erro
+python3 check_links.py                  # 0 links internos quebrados em dist/
 ```
 
-O CI roda exatamente isso em cada PR. Abrir PR com verificação quebrada é perder tempo
-do revisor.
+`ruff format .` e `npm run lint:fix` corrigem o que é automático. O CI roda exatamente isso
+em cada PR (workflow `CI`), mais o **commitlint** sobre as mensagens de commit do PR e a
+conferência de que a descrição do PR menciona a Issue (workflow `PR menciona a Issue`).
+Abrir PR com verificação quebrada é perder tempo do revisor.
 
 ### 2.5 Pull Request
 
@@ -120,16 +126,28 @@ do revisor.
 ## 3. Como o site funciona (o mínimo para não quebrar nada)
 
 - **Gerador estático em Python**: `build.py` + Jinja2. Dependências em
-  `requirements.txt`. Não há CMS, banco nem servidor.
+  `requirements.txt` (ferramentas de desenvolvimento em `requirements-dev.txt` e
+  `package.json`). Não há CMS, banco nem servidor, e **não há bundler**: o JavaScript vai
+  para o navegador como está.
 - **Tudo o que aparece no site vem de `content/`**: `pages/*.json`, `products/*.json`
   (um arquivo por produto), `blog/`, `legal/`, `ui.json`, `routes.json`, `config.json`.
   Os templates HTML ficam em `templates/`; o visual em `static/`.
 - **`dist/` é gerada e não é versionada.** Nunca edite nada dentro de `dist/`; a
   alteração some no próximo build.
+- **JavaScript em módulos ES**, em `static/js/`: `site.js` é o único ponto de entrada
+  (carregado com `type="module"`); `util.js` e `quote-message.js` são **puros** (sem DOM,
+  testáveis em Node); `nav.js`, `consent.js` e `quote-form.js` tocam o DOM. Módulo novo:
+  puro se puder, importado por `site.js`, sem dependência externa — o dependency-cruiser
+  (`.dependency-cruiser.cjs`) recusa import de módulo de DOM a partir de módulo puro,
+  ciclos, órfãos e pacotes npm no código do site.
+- **URLs são um contrato.** `routes.lock.json` registra todos os slugs publicados (rotas,
+  produtos, artigos). `check_contract.py` falha se algum mudar ou sumir. Só se atualiza o
+  lock (`python3 check_contract.py --update`) com decisão registrada na Issue e redirect
+  da URL antiga.
 - **Quatro idiomas, sempre.** Toda chave de texto existe em `pt`, `en`, `es` e `ru`.
   Chave nova em um bloco = chave nova nos quatro. `build.py --check` reclama se faltar.
 - **`routes.json` define as URLs.** Depois que o site está no ar, **não se troca slug**:
-  o Google perde a página. Página nova, sim; renomear, não.
+  o Google perde a página. Página nova, sim; renomear, não (o lock acima garante).
 - **Segredos não entram no repositório.** Token da Cloudflare, chaves do Supabase,
   `.env`: nunca. No CI eles vivem em *Secrets* do GitHub (`CF_API_TOKEN`,
   `CF_ACCOUNT_ID`). O site só conhece a URL pública da função `site-lead`, nunca uma
@@ -170,7 +188,8 @@ trabalho já rejeitado.
 3. Criei a branch a partir de `main` atualizada, com o prefixo certo.
 4. Fiz a alteração em `content/`, `templates/` ou `static/` — nunca em `dist/`.
 5. Chave nova? Está nos quatro idiomas.
-6. `build.py --check`, `build.py` e `check_links.py` passaram.
+6. `ruff`, `npm run lint`, `check_contract.py`, `build.py --check`, `build.py` e
+   `check_links.py` passaram (seção 2.4).
 7. Abri o PR com `Closes #N`, descrição pelo template, print se for visual.
 8. Não mesclei. Entreguei o link do PR para a pessoa e disse o que ela vai ver.
 9. Se algo neste fluxo estava fora do meu alcance, disse isso claramente em vez de

@@ -1,0 +1,31 @@
+# Todo PR precisa mencionar a Issue que resolve (AGENTS.md, seção 2.5): "Closes #N", "Fixes #N" ou "Resolves #N".
+# Roda também quando a descrição é editada, para o autor corrigir sem novo push.
+name: PR menciona a Issue
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize, reopened]
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  issue:
+    name: Descrição com Closes #N
+    runs-on: ubuntu-latest
+    env:
+      PR_BODY: ${{ github.event.pull_request.body }}
+      PR_TITLE: ${{ github.event.pull_request.title }}
+    steps:
+      - name: Conferir
+        run: |
+          if ! printf '%s' "$PR_BODY" | grep -Eiq '(close[sd]?|fix(e[sd])?|resolve[sd]?) #[0-9]+'; then
+            echo "::error::A descrição do PR precisa mencionar a Issue com 'Closes #N' (ou Fixes/Resolves). Veja AGENTS.md, seção 2.5."
+            exit 1
+          fi
+          if [ "${#PR_TITLE}" -lt 10 ]; then
+            echo "::error::Título do PR curto demais — use o título da Issue."
+            exit 1
+          fi
+          echo "ok — PR ligado à Issue"

@@ -1,0 +1,19 @@
+{
+  "name": "gbc-foods-site",
+  "version": "2.1.0",
+  "private": true,
+  "description": "Site institucional GBC Foods — gerador estático em Python; este package.json só traz as ferramentas de qualidade e teste do JavaScript.",
+  "type": "module",
+  "scripts": {
+    "lint": "biome check . && knip && depcruise static/js --config .dependency-cruiser.cjs",
+    "lint:fix": "biome check --write .",
+    "format": "biome format --write .",
+    "commitlint": "commitlint"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.5.14",
+    "@commitlint/cli": "21.2.3",
+    "dependency-cruiser": "18.4.0",
+    "knip": "6.38.0"
+  }
+}

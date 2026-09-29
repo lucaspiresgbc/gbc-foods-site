@@ -1,0 +1,21 @@
+# Lint e formatação dos scripts Python do gerador. Rodar: ruff check . && ruff format --check .
+target-version = "py311"
+line-length = 120
+extend-exclude = ["dist", "node_modules", "static"]
+
+[lint]
+select = ["E", "F", "W", "I", "UP", "B", "SIM", "C4", "RUF"]
+ignore = [
+  "E501",   # linhas longas: o formatador cuida; strings de HTML e URLs passam de 120
+  "RUF001", "RUF002", "RUF003",  # caracteres unicode (—, ′, …) fazem parte do texto do site
+  "B008",   # argumentos padrão com chamada (Path(...)) são intencionais nos scripts
+  "E741",   # `l` como variável de idioma é convenção do gerador (for l in LANGS)
+  "SIM108", # if/else explícito é mais legível que ternário nos trechos de render
+]
+
+[lint.isort]
+known-first-party = []
+
+[format]
+quote-style = "double"
+line-ending = "lf"
