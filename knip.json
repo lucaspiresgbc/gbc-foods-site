@@ -1,0 +1,10 @@
+{
+  "$schema": "https://unpkg.com/knip@6/schema.json",
+  "entry": [
+    "static/js/site.js"
+  ],
+  "project": [
+    "static/js/**/*.js"
+  ],
+  "ignoreExportsUsedInFile": true
+}

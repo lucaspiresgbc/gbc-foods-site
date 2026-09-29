@@ -17,3 +17,6 @@ Thumbs.db
 .env.*
 .dev.vars
 .wrangler/
+
+# Node (só ferramentas de qualidade e teste)
+node_modules/

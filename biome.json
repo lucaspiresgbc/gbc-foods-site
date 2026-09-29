@@ -1,0 +1,40 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.5.14/schema.json",
+  "vcs": { "enabled": true, "clientKind": "git", "useIgnoreFile": true },
+  "files": {
+    "includes": ["**", "!dist", "!node_modules", "!static/img", "!templates", "!package-lock.json"]
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineWidth": 110
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "preset": "recommended",
+      "suspicious": { "noAssignInExpressions": "error", "noConsole": "warn", "noDocumentCookie": "off" },
+      "correctness": { "noUnusedVariables": "error", "noUnusedImports": "error" },
+      "style": { "useConst": "error", "useTemplate": "warn", "noDescendingSpecificity": "off" },
+      "complexity": { "noForEach": "off", "noArguments": "off", "noImportantStyles": "off" }
+    }
+  },
+  "javascript": {
+    "formatter": { "quoteStyle": "double", "semicolons": "always", "trailingCommas": "all" }
+  },
+  "css": {
+    "formatter": { "enabled": false },
+    "linter": { "enabled": true }
+  },
+  "json": {
+    "formatter": { "enabled": false },
+    "linter": { "enabled": true }
+  },
+  "overrides": [
+    {
+      "includes": ["content/**/*.json", "routes.lock.json"],
+      "linter": { "enabled": false }
+    }
+  ]
+}
