@@ -2,11 +2,13 @@
 import { initConsent } from "./consent.js";
 import { initMotion } from "./motion.js";
 import { initLanguage, initMenu } from "./nav.js";
+import { initObservability } from "./observability.js";
 import { initQuoteForm } from "./quote-form.js";
 
 const G = window.GBC || {};
 initMotion();
 initLanguage();
 initMenu();
+initObservability(G); // registra o gancho antes de initConsent decidir se já há consentimento
 initConsent(G);
 initQuoteForm(G);

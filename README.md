@@ -53,6 +53,7 @@ Abra `content/config.json` e preencha:
 |---|---|---|
 | `whatsapp_numero` | Número que recebe as cotações | Só dígitos, com país e DDD: `5513991234567` |
 | `ga4_measurement_id` | ID do Google Analytics 4 | Começa com `G-`. Enquanto estiver com `X`, o Analytics não é publicado (o banner de cookies funciona mesmo assim) |
+| `sentry_dsn` | DSN do projeto no Sentry (monitoramento de erros e desempenho) | Vazio = o Sentry não é carregado nem referenciado. Só carrega depois de *Aceitar todos*. `sentry_traces_sample_rate` = fração das visitas medidas (0.2 = 20 %) |
 | `google_site_verification` | Código do Google Search Console (opcional) | Só se escolher verificar por tag HTML; por DNS não precisa |
 | `email_comercial`, `telefone` | Contato exibido no site | — |
 | `dominio` | Endereço público | `https://gbc-foods.com` — muda o canonical, o sitemap e os links compartilhados |
@@ -191,6 +192,8 @@ Depois de publicar com o domínio final, cadastre na função `site-lead` do Sup
 - **Quatro idiomas** em endereços próprios (`/pt/`, `/en/`, `/es/`, `/ru/`). A raiz `/` detecta o idioma do navegador e redireciona; a escolha no seletor fica guardada por 12 meses (cookie `gbc_lang`).
 - **Cotação → WhatsApp.** O formulário monta a mensagem no idioma do visitante e abre o WhatsApp do número configurado. Em paralelo, grava uma cópia no ERP (coleção `leadsSite`) pela função `site-lead` — sem chave nenhuma no site. Se o Supabase estiver fora do ar, o WhatsApp funciona do mesmo jeito.
 - **Google Analytics 4 com Consent Mode v2.** Nada do Google carrega antes de o visitante clicar em *Aceitar todos*. Quem clica em *Só os essenciais* navega sem cookie de estatística. O link *Gerenciar cookies* no rodapé reabre o banner.
+- **Sentry, com o mesmo consentimento.** Erros de JavaScript, falhas de carregamento e Web Vitals (LCP, CLS, INP) das páginas, com a versão do site (SHA do commit) em cada evento, sem dados pessoais e sem replay. Só existe se `sentry_dsn` estiver preenchido; só carrega depois de *Aceitar todos*.
+- **Monitor de disponibilidade.** A cada 30 minutos o GitHub confere que o site responde nos 4 idiomas (variável `SITE_URL` no repositório) e abre uma Issue de `Correção` se não responder.
 - **SEO:** título e descrição por página e idioma, `hreflang` entre as versões (com `x-default`), `canonical`, `sitemap.xml` com as alternativas de idioma, `robots.txt`, dados estruturados schema.org (Organization, WebSite, BreadcrumbList, Product em cada ficha, BlogPosting em cada artigo), Open Graph e Twitter Card para compartilhamento, imagens em WebP com largura e altura declaradas, fontes com `display=swap`, cabeçalhos de segurança (`_headers`).
 - **Acessibilidade:** navegação por teclado, foco visível, contraste AA, `aria` nos menus, `prefers-reduced-motion`.
 

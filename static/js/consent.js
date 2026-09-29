@@ -4,6 +4,14 @@ import { getCookie, setCookie } from "./util.js";
 /** O banner entra depois que o herói assentou, para não competir com ele. */
 export const BANNER_DELAY_MS = 600;
 
+const listeners = [];
+
+/** Chama `fn` quando o visitante aceita "todos" — agora, se já aceitou, ou no clique futuro. */
+export function onConsentAll(fn) {
+  listeners.push(fn);
+  if (getCookie("gbc_consent") === "all") fn();
+}
+
 export function initConsent(G, doc = document) {
   window.dataLayer = window.dataLayer || [];
   function gtag() {
@@ -45,7 +53,10 @@ export function initConsent(G, doc = document) {
   function applyConsent(v) {
     setCookie("gbc_consent", v, 365);
     hideBanner();
-    if (v === "all") loadAnalytics();
+    if (v === "all") {
+      loadAnalytics();
+      for (const fn of listeners) fn();
+    }
   }
 
   const consent = getCookie("gbc_consent");
