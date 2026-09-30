@@ -487,6 +487,7 @@ def render(
         "has_packaged": any(p["category"] == "embalados" for p in PRODUCTS),
         "wa": WA,
         "wa_ok": WA_OK,
+        "precisa_consentimento": GA_OK or SENTRY_OK,
         "ga": GA if GA_OK else "",
         "sentry_dsn": SENTRY_DSN if SENTRY_OK else "",
         "sentry_rate": SENTRY_RATE,
@@ -846,11 +847,14 @@ def build():
             "AVISO: whatsapp_numero em content/config.json ainda está com o valor de exemplo. O botão de cotação abrirá o WhatsApp com esse número."
         )
     if not GA_OK:
-        print(
-            "AVISO: ga4_measurement_id não configurado — o Google Analytics não foi incluído (o banner de cookies funciona mesmo assim)."
-        )
+        print("AVISO: ga4_measurement_id não configurado — o Google Analytics não foi incluído.")
     if not SENTRY_OK:
         print("info: sentry_dsn vazio — monitoramento de erros (Sentry) não incluído. Release:", RELEASE or "(sem git)")
+    if not (GA_OK or SENTRY_OK):
+        print(
+            "info: nenhum rastreamento ativo — o banner de cookies não foi gerado. "
+            "Ele volta sozinho assim que ga4_measurement_id ou sentry_dsn for preenchido."
+        )
 
 
 def write_sitemap():

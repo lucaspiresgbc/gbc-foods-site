@@ -2,19 +2,6 @@ import { expect, test } from "@playwright/test";
 
 const LANGS = ["en", "pt", "es", "ru"];
 
-/**
- * Clica num botão do banner de cookies. O banner é `position: fixed` no rodapé e entra com transição; na emulação
- * móvel do Chromium, o "scroll into view" do Playwright desloca a viewport visual (visualViewport.offsetTop) e o
- * ponto do clique cai no conteúdo atrás do banner — artefato da emulação, não do site (no navegador real e no
- * hit-test da própria página o alvo é o botão). Por isso: espera a transição assentar e dispara o clique direto.
- */
-async function clickBanner(page, id) {
-  const banner = page.locator("#cookie");
-  await expect(banner).toBeVisible();
-  await banner.evaluate((el) => Promise.all(el.getAnimations().map((a) => a.finished.catch(() => {}))));
-  await page.locator(`#${id}`).dispatchEvent("click");
-}
-
 test.describe("idioma", () => {
   test("a raiz redireciona pelo idioma do navegador e a escolha fica no cookie", async ({ browser }) => {
     const ctx = await browser.newContext({ locale: "es-ES" });
@@ -97,7 +84,6 @@ test.describe("navegação", () => {
 test.describe("cotação", () => {
   test("monta a mensagem no idioma, abre o WhatsApp e mostra o botão de reabrir", async ({ page }) => {
     await page.goto("/es/cotizacion/");
-    await clickBanner(page, "cookie-reject");
     await page.evaluate(() => {
       window.__opened = [];
       window.open = (u) => {
@@ -124,7 +110,6 @@ test.describe("cotação", () => {
 
   test("validação: sem e-mail válido não abre nada e marca o campo", async ({ page }) => {
     await page.goto("/en/quote/");
-    await clickBanner(page, "cookie-reject");
     await page.evaluate(() => {
       window.__opened = 0;
       window.open = () => {
@@ -143,7 +128,7 @@ test.describe("cotação", () => {
 });
 
 test.describe("consentimento", () => {
-  test("banner aparece, 'só essenciais' grava o cookie e nada do Google carrega", async ({
+  test("sem rastreamento ativo não há banner, nem cookie de consentimento, nem chamada externa", async ({
     page,
     context,
   }) => {
@@ -151,29 +136,31 @@ test.describe("consentimento", () => {
     page.on("request", (r) => {
       if (/googletagmanager|google-analytics|sentry/.test(r.url())) external.push(r.url());
     });
+
     await page.goto("/pt/");
-    await clickBanner(page, "cookie-reject");
-    await expect(page.locator("#cookie")).toBeHidden();
-    const cookies = await context.cookies();
-    expect(cookies.find((c) => c.name === "gbc_consent")?.value).toBe("essential");
+    await expect(page.locator("#cookie")).toHaveCount(0);
+    await expect(page.locator("#manage-cookies")).toHaveCount(0);
+
     await page.goto("/pt/empresa/");
-    await expect(page.locator("#cookie")).toBeHidden();
     expect(external).toEqual([]);
+
+    // o único cookie do site é o de idioma — funcional, não pede consentimento
+    const nomes = (await context.cookies()).map((c) => c.name);
+    expect(nomes).not.toContain("gbc_consent");
+    expect(nomes.filter((n) => n.startsWith("_ga"))).toEqual([]);
   });
 
-  test("'Gerenciar cookies' no rodapé reabre o banner", async ({ page }) => {
-    await page.goto("/en/");
-    await clickBanner(page, "cookie-accept");
-    await expect(page.locator("#cookie")).toBeHidden();
-    await page.click("#manage-cookies");
-    await expect(page.locator("#cookie")).toBeVisible();
+  test("a política de cookies continua acessível pelo rodapé", async ({ page }) => {
+    await page.goto("/pt/");
+    await page.click('.site-footer a[href*="politica-de-cookies"]');
+    await expect(page).toHaveURL(/politica-de-cookies/);
+    await expect(page.locator("body")).toContainText("gbc_lang");
   });
 });
 
 test.describe("motion e carregamento", () => {
   test("imagens perdem o skeleton ao carregar; blocos abaixo da dobra entram ao rolar", async ({ page }) => {
     await page.goto("/pt/produtos/");
-    await clickBanner(page, "cookie-reject");
     await expect(page.locator("html")).toHaveClass(/js/);
     const first = page.locator("picture").first();
     await expect(first).toHaveClass(/is-loaded/);

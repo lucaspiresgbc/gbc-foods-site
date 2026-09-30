@@ -174,3 +174,52 @@ def test_categoria_embalados_aparece_quando_ha_produto(build_mod, dist):
         build_mod.WRITTEN.clear()
         build_mod.SITEMAP.clear()
         build_mod.build()  # deixa dist/ como estava para os outros testes
+
+
+# --------------------------------------------- banner de cookies condicional (Issue #30)
+
+
+def test_sem_rastreamento_nenhum_banner_de_cookies_e_gerado(dist):
+    """Com GA4 e Sentry desligados não há o que consentir: o banner não vai para o ar."""
+    com_banner = [
+        str(f.relative_to(dist)) for f in dist.rglob("index.html") if 'id="cookie"' in read(dist, f.relative_to(dist))
+    ]
+    assert not com_banner, com_banner[:5]
+    home = read(dist, "pt/index.html")
+    assert 'id="manage-cookies"' not in home
+    # o consent.js continua embarcado: ele volta a agir sozinho quando o banner voltar
+    assert "consent.js" in read(dist, "js/site.js") or (dist / "js" / "consent.js").exists()
+
+
+def test_politica_de_cookies_continua_publicada_nos_quatro_idiomas(dist, langs):
+    """Tirar o banner não tira a transparência: a página fica, porque gbc_lang continua existindo."""
+    rotas = {
+        "pt": "pt/politica-de-cookies",
+        "en": "en/cookie-policy",
+        "es": "es/politica-de-cookies",
+        "ru": "ru/cookie-policy",
+    }
+    for lang in langs:
+        html = read(dist, f"{rotas[lang]}/index.html")
+        assert "gbc_lang" in html, lang
+
+
+def test_com_ga4_configurado_o_banner_volta(build_mod, dist):
+    """A rede de segurança: ligar o GA4 tem de trazer o consentimento de volta sozinho."""
+    original = build_mod.GA_OK
+    build_mod.GA_OK = True
+    try:
+        build_mod.WRITTEN.clear()
+        build_mod.SITEMAP.clear()
+        build_mod.build()
+        home = read(dist, "pt/index.html")
+        assert 'id="cookie"' in home
+        assert 'id="cookie-accept"' in home and 'id="cookie-reject"' in home
+        assert 'id="manage-cookies"' in home
+        # o GA continua atrás do consentimento, nunca inline na página
+        assert "googletagmanager.com" not in home
+    finally:
+        build_mod.GA_OK = original
+        build_mod.WRITTEN.clear()
+        build_mod.SITEMAP.clear()
+        build_mod.build()
