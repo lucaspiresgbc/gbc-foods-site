@@ -174,3 +174,34 @@ def test_categoria_embalados_aparece_quando_ha_produto(build_mod, dist):
         build_mod.WRITTEN.clear()
         build_mod.SITEMAP.clear()
         build_mod.build()  # deixa dist/ como estava para os outros testes
+
+
+# ------------------------------------------------ seta no botão do hero (Issue #38)
+
+
+def test_a_seta_esta_so_no_botao_principal_do_hero(dist, langs):
+    for lang in langs:
+        home = read(dist, f"{lang}/index.html")
+        assert home.count("btn-seta") == 1, (lang, home.count("btn-seta"))
+        # e ela está dentro do sólido, não do de contorno
+        cta = home[home.index('<div class="cta">') : home.index("</div>", home.index('<div class="cta">'))]
+        solido = cta[cta.index('class="btn solid"') : cta.index("</a>", cta.index('class="btn solid"'))]
+        assert "btn-seta" in solido, lang
+    # nenhuma outra página ganhou seta, mesmo tendo botão sólido
+    outras = [f for f in dist.rglob("index.html") if f.parent.name != f.parts[-2] or True]
+    com_seta = [str(f.relative_to(dist)) for f in outras if "btn-seta" in f.read_text(encoding="utf-8")]
+    assert sorted(com_seta) == sorted(f"{lang}/index.html" for lang in langs), com_seta
+
+
+def test_a_seta_nao_e_anunciada_por_leitor_de_tela(dist):
+    home = read(dist, "pt/index.html")
+    svg = home[home.index('<svg class="btn-seta"') : home.index("</svg>", home.index('<svg class="btn-seta"'))]
+    assert 'aria-hidden="true"' in svg and 'focusable="false"' in svg
+
+
+def test_o_avanco_da_seta_respeita_movimento_reduzido(dist):
+    """AGENTS.md: toda animação nova entra também no bloco de prefers-reduced-motion."""
+    css = read(dist, "css/site.css")
+    assert ".btn:hover .btn-seta{transform:translateX(3px)}" in css
+    reduzido = css[css.index("@media (prefers-reduced-motion:reduce){") :]
+    assert ".btn-seta" in reduzido and "transform:none" in reduzido

@@ -57,6 +57,9 @@ section{padding:80px 0}
 .btn.ghost:hover{background:var(--navy);color:#fff}
 .btn.ghost.light{color:#fff;border-color:rgba(255,255,255,.7)}
 .btn.ghost.light:hover{background:#fff;color:var(--navy)}
+.btn-seta{width:20px;height:20px;flex:0 0 auto;margin-right:-4px;
+  transition:transform var(--d-fast,.16s) var(--ease-out,cubic-bezier(.22,1,.36,1))}
+.btn:hover .btn-seta{transform:translateX(3px)}
 .btn.small{padding:10px 16px;font-size:.92rem;border-radius:8px}
 .btn.wide{width:100%;justify-content:center;margin-top:18px}
 .cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
