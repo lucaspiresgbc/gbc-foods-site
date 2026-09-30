@@ -161,7 +161,7 @@ window.GBC = {
       <ul>
         <li><a href="{{ url('privacy') }}">{{ ui('nav.privacy') }}</a></li>
         <li><a href="{{ url('cookies') }}">{{ ui('nav.cookies') }}</a></li>
-        <li><button type="button" class="linklike" id="manage-cookies">{{ ui('cookies.manage') }}</button></li>
+        {% if precisa_consentimento %}<li><button type="button" class="linklike" id="manage-cookies">{{ ui('cookies.manage') }}</button></li>{% endif %}
       </ul>
     </div>
   </div>
@@ -171,6 +171,7 @@ window.GBC = {
   </div>
 </footer>
 
+{% if precisa_consentimento %}
 <div class="cookie" id="cookie" hidden role="dialog" aria-live="polite" aria-labelledby="cookie-title">
   <div class="cookie-in">
     <div>
@@ -181,6 +182,7 @@ window.GBC = {
       <button type="button" class="btn ghost small" id="cookie-reject">{{ ui('cookies.reject') }}</button>
       <button type="button" class="btn solid small" id="cookie-accept">{{ ui('cookies.accept') }}</button>
     </div>
+{% endif %}
   </div>
 </div>
 
