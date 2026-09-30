@@ -1,6 +1,7 @@
 """check_links.py e check_contract.py: os dois guardiões do CI, testados como scripts."""
 
 import json
+import re
 import shutil
 import subprocess
 import sys
@@ -77,3 +78,54 @@ def test_check_contract_detecta_segredo(tmp_path):
     out = run("check_contract.py", cwd=tmp_path)
     assert out.returncode == 1
     assert "segredo versionado" in out.stdout
+
+
+# --------------------------------------------------- paleta e contraste (Issue #32)
+
+_CSS = Path(__file__).resolve().parents[1] / "static" / "site.css"
+
+
+def _tokens():
+    raiz = _CSS.read_text(encoding="utf-8").split(":root{", 1)[1].split("}", 1)[0]
+    return dict(re.findall(r"--([a-z0-9-]+):\s*(#[0-9A-Fa-f]{6})", raiz))
+
+
+def _lum(hexa):
+    h = hexa.lstrip("#")
+    canais = [int(h[i : i + 2], 16) / 255 for i in (0, 2, 4)]
+    canais = [c / 12.92 if c <= 0.04045 else ((c + 0.055) / 1.055) ** 2.4 for c in canais]
+    return 0.2126 * canais[0] + 0.7152 * canais[1] + 0.0722 * canais[2]
+
+
+def _contraste(a, b):
+    la, lb = _lum(a), _lum(b)
+    return (max(la, lb) + 0.05) / (min(la, lb) + 0.05)
+
+
+def test_fundo_e_branco_puro():
+    assert _tokens()["paper"].upper() == "#FFFFFF"
+
+
+def test_toda_cor_de_texto_passa_em_contraste_sobre_o_fundo():
+    """O vermelho antigo dava 4,32 e reprovava. A paleta escura existe para isso."""
+    t = _tokens()
+    fundo = t["paper"]
+    reprovados = {
+        nome: round(_contraste(t[nome], fundo), 2)
+        for nome in ("navy", "navy-soft", "red", "blue", "ink", "text", "grey")
+        if _contraste(t[nome], fundo) < 4.5
+    }
+    assert not reprovados, reprovados
+
+
+def test_nenhuma_cor_da_paleta_antiga_sobrou_no_repositorio():
+    raiz = _CSS.parents[1]
+    antigas = ("#26375E", "#1B2842", "#3E4F76", "#EC2337", "#F0453A", "#1D7AC1", "#169AD2", "#FBFBF9")
+    achados = []
+    for alvo in ("static", "templates"):
+        for f in (raiz / alvo).rglob("*"):
+            if f.suffix.lower() not in (".css", ".html", ".svg", ".js"):
+                continue
+            texto = f.read_text(encoding="utf-8", errors="ignore").upper()
+            achados += [(str(f.relative_to(raiz)), c) for c in antigas if c in texto]
+    assert not achados, achados
