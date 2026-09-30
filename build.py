@@ -363,7 +363,7 @@ def placeholder_svg(label):
         '<g transform="translate(380 230) rotate(-28)"><ellipse rx="46" ry="30" fill="#A9AF88"/><path d="M-30 0 Q0 12 30 0" fill="none" stroke="#7E855F" stroke-width="5" stroke-linecap="round"/></g>'
     )
     out.append(
-        f'<text x="40" y="{h - 36}" font-family="Outfit, sans-serif" font-size="22" font-weight="600" fill="#26375E">{html.escape(label)}</text>'
+        f'<text x="40" y="{h - 36}" font-family="Outfit, sans-serif" font-size="22" font-weight="600" fill="#1C2C4C">{html.escape(label)}</text>'
     )
     out.append("</svg>")
     return "".join(out)

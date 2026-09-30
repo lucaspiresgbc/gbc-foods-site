@@ -1,15 +1,15 @@
 /* GBC Foods — folha de estilo do site. Cores e tipografia vêm do manual de marca. */
 :root{
-  --navy:#26375E; --navy-deep:#1B2842; --navy-soft:#3E4F76;
-  --red:#EC2337; --red-warm:#F0453A;
-  --blue:#1D7AC1; --blue-light:#169AD2;
+  --navy:#1C2C4C; --navy-deep:#101B30; --navy-soft:#35496F;
+  --red:#C8102E; --red-warm:#DE2133;
+  --blue:#155E96; --blue-light:#2079BD;
   --bean:#A9AF88; --bean-line:#7E855F; --bean-pale:#E7E9DC;
-  --paper:#FBFBF9; --paper-2:#F3F4EF; --panel:#F4F4F4;
+  --paper:#FFFFFF; --paper-2:#F4F5F3; --panel:#F1F1EF;
   --ink:#22262E; --text:#393536; --grey:#5C6470; --line:#DEE0D9;
   --wrap:1180px; --measure:66ch;
   --sans:'Outfit',system-ui,-apple-system,'Segoe UI',sans-serif;
   --serif:'Source Serif 4',Georgia,'Times New Roman',serif;
-  --r:14px; --shadow:0 18px 40px -22px rgba(27,40,66,.35);
+  --r:14px; --shadow:0 18px 40px -22px rgba(16,27,48,.32);
 }
 html[lang=ru]{--sans:'Montserrat',system-ui,-apple-system,'Segoe UI',sans-serif}
 html[lang=ru] h1{font-size:clamp(1.9rem,3.9vw,3rem);letter-spacing:-.02em}
@@ -51,7 +51,7 @@ section{padding:80px 0}
 /* botões */
 .btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--sans);font-weight:600;font-size:1rem;padding:14px 24px;border-radius:10px;text-decoration:none;border:1.5px solid transparent;cursor:pointer;transition:transform .12s,background .15s,color .15s,border-color .15s;line-height:1.1}
 .btn:hover{transform:translateY(-1px)}
-.btn.solid{background:linear-gradient(90deg,var(--red-warm),var(--red));color:#fff;box-shadow:0 10px 24px -14px rgba(236,35,55,.7)}
+.btn.solid{background:linear-gradient(90deg,var(--red-warm),var(--red));color:#fff;box-shadow:0 10px 24px -14px rgba(200,16,46,.55)}
 .btn.solid.blue{background:linear-gradient(90deg,var(--blue-light),var(--blue));box-shadow:0 10px 24px -14px rgba(29,122,193,.7)}
 .btn.ghost{background:transparent;color:var(--navy);border-color:var(--navy)}
 .btn.ghost:hover{background:var(--navy);color:#fff}
@@ -63,7 +63,7 @@ section{padding:80px 0}
 .linklike{background:none;border:0;padding:0;font:inherit;color:inherit;cursor:pointer;text-decoration:underline}
 
 /* cabeçalho */
-.site-header{position:sticky;top:0;z-index:60;background:rgba(251,251,249,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.site-header{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .bar{display:flex;align-items:center;gap:22px;height:74px;max-width:var(--wrap);margin:0 auto;padding:0 24px}
 .logo{display:flex;align-items:center;margin-right:auto}
 .logo img{height:28px;width:auto;display:block}
@@ -116,7 +116,7 @@ section{padding:80px 0}
 .hero-screen{position:absolute;left:-6%;bottom:-2%;width:36%;opacity:.95;filter:drop-shadow(0 14px 22px rgba(27,40,66,.3));border-radius:12px}
 
 /* faixa de fatos */
-.strip{padding:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--paper-2)}
+.strip{padding:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--paper)}
 .strip-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
 .strip-grid>div{padding:22px 20px;border-left:1px solid var(--line);display:flex;flex-direction:column;gap:4px}
 .strip-grid>div:first-child{border-left:0;padding-left:0}
@@ -225,7 +225,7 @@ section{padding:80px 0}
 .origin-photo{aspect-ratio:4/3;border-radius:var(--r);overflow:hidden}
 .origin-photo picture{height:100%}
 .origin-text h3{font-size:1.5rem;margin-bottom:14px}
-.cup{background:var(--paper-2)}
+.cup{background:var(--paper);border-top:1px solid var(--line)}
 .cup-photo{aspect-ratio:1;border-radius:50%;overflow:hidden;border:8px solid #fff;box-shadow:var(--shadow);max-width:360px;margin-left:auto}
 .cup-photo picture{height:100%}
 .cup h2{margin-bottom:20px}
@@ -239,7 +239,7 @@ section{padding:80px 0}
 .ticks{list-style:none;margin:16px 0 0;padding:0}
 .ticks li{position:relative;padding:8px 0 8px 28px;border-top:1px solid var(--line)}
 .ticks li::before{content:"";position:absolute;left:2px;top:14px;width:9px;height:5px;border-left:2px solid var(--red);border-bottom:2px solid var(--red);transform:rotate(-45deg)}
-.svc-list{background:var(--paper-2)}
+.svc-list{background:var(--paper);border-top:1px solid var(--line)}
 .svc-item{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px}
 .svc-item h3{margin-bottom:10px}
 .svc-item p{margin:0;color:var(--text);font-size:.98rem;line-height:1.55}
@@ -265,7 +265,7 @@ table.spec td{color:var(--navy);font-weight:500}
 .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px}
 .gallery>div{aspect-ratio:4/3;border-radius:10px;overflow:hidden}
 .gallery picture{height:100%}
-.related{background:var(--paper-2)}
+.related{background:var(--paper);border-top:1px solid var(--line)}
 
 /* blog / legal */
 .post-head{padding-top:28px;max-width:800px}
