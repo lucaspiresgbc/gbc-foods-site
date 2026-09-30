@@ -100,9 +100,12 @@ section{padding:80px 0}
 /* migalhas */
 .crumbs{padding-top:18px;font-size:.88rem;color:var(--grey)}
 .crumbs ol{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
-.crumbs li+li::before{content:"›";margin-right:6px;color:var(--line)}
-.crumbs a{text-decoration:none}
+.crumbs li{display:flex;align-items:center;gap:6px}
+.crumbs li+li::before{content:"";flex:0 0 auto;width:14px;height:14px;background-color:var(--line);
+  -webkit-mask:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2020%2020%22%20fill%3D%22currentColor%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20d%3D%22M7.293%2014.707a1%201%200%20010-1.414L10.586%2010%207.293%206.707a1%201%200%20011.414-1.414l4%204a1%201%200%20010%201.414l-4%204a1%201%200%2001-1.414%200z%22%20clip-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2020%2020%22%20fill%3D%22currentColor%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20d%3D%22M7.293%2014.707a1%201%200%20010-1.414L10.586%2010%207.293%206.707a1%201%200%20011.414-1.414l4%204a1%201%200%20010%201.414l-4%204a1%201%200%2001-1.414%200z%22%20clip-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E") center/contain no-repeat}
+.crumbs a{text-decoration:none;color:inherit;transition:color var(--d-fast,.16s) var(--ease-out,ease)}
 .crumbs a:hover{color:var(--navy);text-decoration:underline}
+.crumbs [aria-current=page]{color:var(--navy);font-weight:500}
 
 /* herói da home */
 .hero{padding:64px 0 56px}
