@@ -174,3 +174,20 @@ def test_categoria_embalados_aparece_quando_ha_produto(build_mod, dist):
         build_mod.WRITTEN.clear()
         build_mod.SITEMAP.clear()
         build_mod.build()  # deixa dist/ como estava para os outros testes
+
+
+def test_o_nivel_discreto_e_usado_de_verdade(dist, langs):
+    """Componente que não é usado é código morto: o knip pega no JS, aqui é na mão."""
+    paginas = {
+        "pt": "pt/produtos/cafe-verde-arabica",
+        "en": "en/products/green-arabica-coffee",
+        "es": "es/productos/cafe-verde-arabica",
+        "ru": "ru/products/green-arabica-coffee",
+    }
+    for lang in langs:
+        html = read(dist, f"{paginas[lang]}/index.html")
+        cta = html[html.index('<div class="cta">') : html.index("</div>", html.index('<div class="cta">'))]
+        assert 'class="btn solid"' in cta, lang
+        assert 'class="btn quiet"' in cta, lang
+        # a logística deixou de competir com a cotação
+        assert 'class="btn ghost"' not in cta, lang
