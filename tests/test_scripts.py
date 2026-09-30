@@ -129,3 +129,23 @@ def test_nenhuma_cor_da_paleta_antiga_sobrou_no_repositorio():
             texto = f.read_text(encoding="utf-8", errors="ignore").upper()
             achados += [(str(f.relative_to(raiz)), c) for c in antigas if c in texto]
     assert not achados, achados
+
+
+def test_o_logo_carrega_a_paleta_nova():
+    """A marca não pode ficar mais clara que a interface que a cerca."""
+    from PIL import Image
+
+    raiz = _CSS.parents[1]
+    t = _tokens()
+    novo_navy = tuple(int(t["navy"].lstrip("#")[i : i + 2], 16) for i in (0, 2, 4))
+    im = Image.open(raiz / "static" / "img" / "brand" / "logo-color.png").convert("RGBA")
+    # getcolors, e não getdata: não é depreciado e já vem agrupado
+    px = [cor[:3] for _, cor in im.getcolors(maxcolors=1 << 20) if cor[3] > 240]
+
+    assert novo_navy in px, f"o navy {t['navy']} não aparece no logo"
+    for antiga in ((38, 55, 94), (236, 35, 55), (240, 69, 58)):
+        assert antiga not in px, f"cor antiga {antiga} ainda no logo"
+
+    # o descritor continua em gradiente: o vermelho varia da esquerda para a direita
+    vermelhos = [p for p in px if p[0] > p[2] + 25]
+    assert len(set(vermelhos)) > 3, "o gradiente do descritor foi achatado"
