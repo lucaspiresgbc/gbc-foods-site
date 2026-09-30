@@ -34,7 +34,7 @@
 .page-hero h1{animation-delay:40ms}
 
 /* --- blocos revelados ao entrar na tela (JS adiciona .in; sem JS nada fica escondido) --- */
-html.js :where(.grid3>*,.steps>li,.strip-grid>div,.duo>*,.head,.origin-row,.roof-card,.svc-item,.channel,.panel,.cup-photo,.cup h2,.cup .prose,.cta-in>*,.form,.spec-card,.mosaic-grid>*,.gallery>div,.two>*,.two-1>*,.coffee-text>*,.contact-photo,.mini-steps):not(.in){
+html.js :where(.grid3>*,.steps>li,.strip-grid>div,.duo>*,.head,.origin-row,.roof-card,.svc-item,.channel,.panel,.cup-photo,.cup h2,.cup .prose,.cta-in>*,.form,.spec-card,.mosaic-grid>*,.gallery>div,.two>*,.two-1>*,.coffee-text>*,.contact-photo,.mini-steps,.etapa,.origem-texto>*,.certificacao>.wrap>*):not(.in){
   opacity:0;transform:translateY(10px);filter:blur(4px);
   /* rede de segurança: se o JS não rodar em 2,5 s, o CSS mostra tudo */
   animation:reveal-fallback 0s linear 2.5s both;
@@ -105,7 +105,7 @@ html:not(.js) picture{background:transparent}
 
 /* --- movimento reduzido: estados finais, sem transição, sem skeleton animado, sem troca de página animada --- */
 @media (prefers-reduced-motion:reduce){
-  html.js :where(.grid3>*,.steps>li,.strip-grid>div,.duo>*,.head,.origin-row,.roof-card,.svc-item,.channel,.panel,.cup-photo,.cup h2,.cup .prose,.cta-in>*,.form,.spec-card,.mosaic-grid>*,.gallery>div,.two>*,.two-1>*,.coffee-text>*,.contact-photo,.mini-steps):not(.in){opacity:1;transform:none;filter:none}
+  html.js :where(.grid3>*,.steps>li,.strip-grid>div,.duo>*,.head,.origin-row,.roof-card,.svc-item,.channel,.panel,.cup-photo,.cup h2,.cup .prose,.cta-in>*,.form,.spec-card,.mosaic-grid>*,.gallery>div,.two>*,.two-1>*,.coffee-text>*,.contact-photo,.mini-steps,.etapa,.origem-texto>*,.certificacao>.wrap>*):not(.in){opacity:1;transform:none;filter:none}
   html.js picture img{opacity:1}
   picture::before{animation:none;display:none}
   .hero h1,.hero .lead,.hero .cta,.hero-art,.page-hero h1,.page-hero .lead,.page-hero .eyebrow,.page-hero .cta,.page-hero-photo,.post-head>*,.post-cover{animation:none}

@@ -224,3 +224,52 @@ test.describe("motion e carregamento", () => {
     await expect(page.locator("#progress")).toHaveCount(1);
   });
 });
+
+test.describe("landing de produto (Issue #24)", () => {
+  test("a página do café conta a origem, mostra as etapas e chega na cotação", async ({ page }) => {
+    await page.goto("/pt/produtos/cafe-verde-arabica/");
+
+    // a origem
+    const origem = page.locator("section.origem");
+    await expect(origem).toHaveCount(1);
+    await expect(origem.locator("h2")).toContainText("Sudoeste de Minas");
+    await expect(origem.locator(".origem-foto img")).toBeVisible();
+
+    // três etapas numeradas, cada uma com foto e texto
+    const etapas = page.locator(".etapa");
+    await expect(etapas).toHaveCount(3);
+    for (let i = 0; i < 3; i++) {
+      await expect(etapas.nth(i).locator(".etapa-foto img")).toHaveAttribute("alt", /.+/);
+      await expect(etapas.nth(i).locator("h3")).not.toBeEmpty();
+    }
+
+    // certificação em nome da GBC, sem imagem de selo
+    const cert = page.locator("section.certificacao");
+    await expect(cert).toContainText("Rainforest");
+    await expect(cert).toContainText("Fairtrade");
+    await expect(cert.locator("img")).toHaveCount(0);
+
+    // a landing termina levando para a cotação daquele produto
+    await page.locator('.spec-card a[href*="produto=coffee-arabica"]').click();
+    await expect(page).toHaveURL(/cotacao/);
+  });
+
+  test("o amendoim revela os blocos ao rolar e não repete foto", async ({ page }) => {
+    await page.goto("/pt/produtos/amendoim-runner-cru/");
+    const etapas = page.locator(".etapa");
+    await expect(etapas).toHaveCount(3);
+    await etapas.last().scrollIntoViewIfNeeded();
+    await expect(etapas.last()).toHaveClass(/\bin\b/, { timeout: 4000 });
+
+    const fontes = await page
+      .locator(".origem-foto img, .etapa-foto img")
+      .evaluateAll((els) => els.map((el) => el.getAttribute("src")));
+    expect(new Set(fontes).size).toBe(fontes.length);
+  });
+
+  test("um produto sem story continua na ficha antiga", async ({ page }) => {
+    await page.goto("/pt/produtos/acucar-cristal/");
+    await expect(page.locator("section.origem")).toHaveCount(0);
+    await expect(page.locator(".spec-card")).toHaveCount(1);
+  });
+});

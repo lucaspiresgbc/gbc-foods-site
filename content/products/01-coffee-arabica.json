@@ -4,11 +4,30 @@
   "order": 1,
   "featured": true,
   "image": "coffee/coffee-green.jpg",
-  "gallery": ["coffee/origin-secagem.jpg", "coffee/coffee-special.jpg", "coffee/region-aerial.jpg"],
+  "gallery": [
+    "coffee/origin-secagem.jpg",
+    "coffee/coffee-special.jpg",
+    "coffee/region-aerial.jpg"
+  ],
   "hs": "0901.11",
-  "slug": { "pt": "cafe-verde-arabica", "en": "green-arabica-coffee", "es": "cafe-verde-arabica", "ru": "green-arabica-coffee" },
-  "name": { "pt": "Café verde arábica", "en": "Green arabica coffee", "es": "Café verde arábica", "ru": "Зелёный кофе арабика" },
-  "image_alt": { "pt": "Grãos de café verde", "en": "Green coffee beans", "es": "Granos de café verde", "ru": "Зёрна зелёного кофе" },
+  "slug": {
+    "pt": "cafe-verde-arabica",
+    "en": "green-arabica-coffee",
+    "es": "cafe-verde-arabica",
+    "ru": "green-arabica-coffee"
+  },
+  "name": {
+    "pt": "Café verde arábica",
+    "en": "Green arabica coffee",
+    "es": "Café verde arábica",
+    "ru": "Зелёный кофе арабика"
+  },
+  "image_alt": {
+    "pt": "Grãos de café verde",
+    "en": "Green coffee beans",
+    "es": "Granos de café verde",
+    "ru": "Зёрна зелёного кофе"
+  },
   "short": {
     "pt": "Arábica natural do Sudoeste de Minas, em três padrões: Special Coffee 17/18, Fine Cup 16/18 e Good Cup 14/16 e 16/18.",
     "en": "Natural arabica from the southwest of Minas Gerais, in three standards: Special Coffee 17/18, Fine Cup 16/18 and Good Cup 14/16 and 16/18.",
@@ -34,23 +53,239 @@
     ]
   },
   "specs": [
-    { "k": { "pt": "Espécie", "en": "Species", "es": "Especie", "ru": "Вид" },
-      "v": { "pt": "Coffea arabica", "en": "Coffea arabica", "es": "Coffea arabica", "ru": "Coffea arabica" } },
-    { "k": { "pt": "Special Coffee", "en": "Special Coffee", "es": "Special Coffee", "ru": "Special Coffee" },
-      "v": { "pt": "Peneira 17/18 · 1.000 – 1.250 m · lotes limitados por safra", "en": "Screen 17/18 · 1,000 – 1,250 m · limited lots per harvest", "es": "Criba 17/18 · 1.000 – 1.250 m · lotes limitados por cosecha", "ru": "Сито 17/18 · 1 000 – 1 250 м · ограниченные партии в каждый урожай" } },
-    { "k": { "pt": "Fine Cup", "en": "Fine Cup", "es": "Fine Cup", "ru": "Fine Cup" },
-      "v": { "pt": "Peneira 16/18 · 900 – 1.150 m · volume recorrente", "en": "Screen 16/18 · 900 – 1,150 m · recurring volume", "es": "Criba 16/18 · 900 – 1.150 m · volumen recurrente", "ru": "Сито 16/18 · 900 – 1 150 м · регулярный объём" } },
-    { "k": { "pt": "Good Cup", "en": "Good Cup", "es": "Good Cup", "ru": "Good Cup" },
-      "v": { "pt": "Peneira 14/16 e 16/18 · 700 – 1.000 m · volume mensal recorrente", "en": "Screen 14/16 and 16/18 · 700 – 1,000 m · recurring monthly volume", "es": "Criba 14/16 y 16/18 · 700 – 1.000 m · volumen mensual recurrente", "ru": "Сито 14/16 и 16/18 · 700 – 1 000 м · регулярный ежемесячный объём" } },
-    { "k": { "pt": "Processo", "en": "Process", "es": "Proceso", "ru": "Обработка" },
-      "v": { "pt": "Natural, secagem ao sol em terreiro", "en": "Natural, sun-dried on the patio", "es": "Natural, secado al sol en patio", "ru": "Натуральная, сушка на солнце на патио" } },
-    { "k": { "pt": "Colheita", "en": "Harvest", "es": "Cosecha", "ru": "Сбор урожая" },
-      "v": { "pt": "Maio a setembro; embarques de julho a março", "en": "May to September; shipments from July to March", "es": "Mayo a septiembre; embarques de julio a marzo", "ru": "Май – сентябрь; отгрузки с июля по март" } },
-    { "k": { "pt": "Certificação", "en": "Certification", "es": "Certificación", "ru": "Сертификация" },
-      "v": { "pt": "Cooperativa certificada Fairtrade — lotes certificados mediante solicitação", "en": "Fairtrade-certified cooperative — certified lots on request", "es": "Cooperativa certificada Fairtrade — lotes certificados bajo solicitud", "ru": "Кооператив сертифицирован Fairtrade — сертифицированные партии по запросу" } }
+    {
+      "k": {
+        "pt": "Espécie",
+        "en": "Species",
+        "es": "Especie",
+        "ru": "Вид"
+      },
+      "v": {
+        "pt": "Coffea arabica",
+        "en": "Coffea arabica",
+        "es": "Coffea arabica",
+        "ru": "Coffea arabica"
+      }
+    },
+    {
+      "k": {
+        "pt": "Special Coffee",
+        "en": "Special Coffee",
+        "es": "Special Coffee",
+        "ru": "Special Coffee"
+      },
+      "v": {
+        "pt": "Peneira 17/18 · 1.000 – 1.250 m · lotes limitados por safra",
+        "en": "Screen 17/18 · 1,000 – 1,250 m · limited lots per harvest",
+        "es": "Criba 17/18 · 1.000 – 1.250 m · lotes limitados por cosecha",
+        "ru": "Сито 17/18 · 1 000 – 1 250 м · ограниченные партии в каждый урожай"
+      }
+    },
+    {
+      "k": {
+        "pt": "Fine Cup",
+        "en": "Fine Cup",
+        "es": "Fine Cup",
+        "ru": "Fine Cup"
+      },
+      "v": {
+        "pt": "Peneira 16/18 · 900 – 1.150 m · volume recorrente",
+        "en": "Screen 16/18 · 900 – 1,150 m · recurring volume",
+        "es": "Criba 16/18 · 900 – 1.150 m · volumen recurrente",
+        "ru": "Сито 16/18 · 900 – 1 150 м · регулярный объём"
+      }
+    },
+    {
+      "k": {
+        "pt": "Good Cup",
+        "en": "Good Cup",
+        "es": "Good Cup",
+        "ru": "Good Cup"
+      },
+      "v": {
+        "pt": "Peneira 14/16 e 16/18 · 700 – 1.000 m · volume mensal recorrente",
+        "en": "Screen 14/16 and 16/18 · 700 – 1,000 m · recurring monthly volume",
+        "es": "Criba 14/16 y 16/18 · 700 – 1.000 m · volumen mensual recurrente",
+        "ru": "Сито 14/16 и 16/18 · 700 – 1 000 м · регулярный ежемесячный объём"
+      }
+    },
+    {
+      "k": {
+        "pt": "Processo",
+        "en": "Process",
+        "es": "Proceso",
+        "ru": "Обработка"
+      },
+      "v": {
+        "pt": "Natural, secagem ao sol em terreiro",
+        "en": "Natural, sun-dried on the patio",
+        "es": "Natural, secado al sol en patio",
+        "ru": "Натуральная, сушка на солнце на патио"
+      }
+    },
+    {
+      "k": {
+        "pt": "Colheita",
+        "en": "Harvest",
+        "es": "Cosecha",
+        "ru": "Сбор урожая"
+      },
+      "v": {
+        "pt": "Maio a setembro; embarques de julho a março",
+        "en": "May to September; shipments from July to March",
+        "es": "Mayo a septiembre; embarques de julio a marzo",
+        "ru": "Май – сентябрь; отгрузки с июля по март"
+      }
+    },
+    {
+      "k": {
+        "pt": "Certificação",
+        "en": "Certification",
+        "es": "Certificación",
+        "ru": "Сертификация"
+      },
+      "v": {
+        "pt": "Cooperativa certificada Fairtrade — lotes certificados mediante solicitação",
+        "en": "Fairtrade-certified cooperative — certified lots on request",
+        "es": "Cooperativa certificada Fairtrade — lotes certificados bajo solicitud",
+        "ru": "Кооператив сертифицирован Fairtrade — сертифицированные партии по запросу"
+      }
+    }
   ],
-  "origin": { "pt": "Sudoeste de Minas Gerais, Brasil", "en": "Southwest of Minas Gerais, Brazil", "es": "Suroeste de Minas Gerais, Brasil", "ru": "Юго-запад штата Минас-Жерайс, Бразилия" },
-  "packaging": { "pt": "Sacas de juta de 60 kg; liner GrainPro ou big bag mediante solicitação", "en": "60 kg jute bags; GrainPro liner or big bags on request", "es": "Sacos de yute de 60 kg; liner GrainPro o big bags bajo solicitud", "ru": "Джутовые мешки по 60 кг; вкладыш GrainPro или биг-бэги по запросу" },
-  "container": { "pt": "20′ · 320 sacas (≈ 19 t) — 40′ HC · 440 sacas (≈ 26 t)", "en": "20′ · 320 bags (≈ 19 t) — 40′ HC · 440 bags (≈ 26 t)", "es": "20′ · 320 sacos (≈ 19 t) — 40′ HC · 440 sacos (≈ 26 t)", "ru": "20′ · 320 мешков (≈ 19 т) — 40′ HC · 440 мешков (≈ 26 т)" },
-  "availability": { "pt": "Fine Cup e Good Cup: volume recorrente. Special Coffee: lotes limitados por safra.", "en": "Fine Cup and Good Cup: recurring volume. Special Coffee: limited lots per harvest.", "es": "Fine Cup y Good Cup: volumen recurrente. Special Coffee: lotes limitados por cosecha.", "ru": "Fine Cup и Good Cup: регулярный объём. Special Coffee: ограниченные партии в каждый урожай." }
+  "origin": {
+    "pt": "Sudoeste de Minas Gerais, Brasil",
+    "en": "Southwest of Minas Gerais, Brazil",
+    "es": "Suroeste de Minas Gerais, Brasil",
+    "ru": "Юго-запад штата Минас-Жерайс, Бразилия"
+  },
+  "packaging": {
+    "pt": "Sacas de juta de 60 kg; liner GrainPro ou big bag mediante solicitação",
+    "en": "60 kg jute bags; GrainPro liner or big bags on request",
+    "es": "Sacos de yute de 60 kg; liner GrainPro o big bags bajo solicitud",
+    "ru": "Джутовые мешки по 60 кг; вкладыш GrainPro или биг-бэги по запросу"
+  },
+  "container": {
+    "pt": "20′ · 320 sacas (≈ 19 t) — 40′ HC · 440 sacas (≈ 26 t)",
+    "en": "20′ · 320 bags (≈ 19 t) — 40′ HC · 440 bags (≈ 26 t)",
+    "es": "20′ · 320 sacos (≈ 19 t) — 40′ HC · 440 sacos (≈ 26 t)",
+    "ru": "20′ · 320 мешков (≈ 19 т) — 40′ HC · 440 мешков (≈ 26 т)"
+  },
+  "availability": {
+    "pt": "Fine Cup e Good Cup: volume recorrente. Special Coffee: lotes limitados por safra.",
+    "en": "Fine Cup and Good Cup: recurring volume. Special Coffee: limited lots per harvest.",
+    "es": "Fine Cup y Good Cup: volumen recurrente. Special Coffee: lotes limitados por cosecha.",
+    "ru": "Fine Cup и Good Cup: регулярный объём. Special Coffee: ограниченные партии в каждый урожай."
+  },
+  "story": {
+    "hero": "coffee/origem-cereja.jpg",
+    "hero_alt": {
+      "pt": "Cerejas de café arábica maduras e verdes no galho",
+      "en": "Ripe and unripe arabica coffee cherries on the branch",
+      "es": "Cerezas de café arábica maduras y verdes en la rama",
+      "ru": "Спелые и зелёные ягоды арабики на ветке"
+    },
+    "origin_title": {
+      "pt": "Sudoeste de Minas, entre 900 e 1.200 metros",
+      "en": "Southwest Minas Gerais, between 900 and 1,200 metres",
+      "es": "Suroeste de Minas Gerais, entre 900 y 1.200 metros",
+      "ru": "Юго-запад Минас-Жерайс, 900–1200 метров"
+    },
+    "origin": {
+      "pt": [
+        "O café que a GBC embarca vem do Sudoeste de Minas Gerais, na transição entre o Cerrado e a Mantiqueira. É um planalto alto e de inverno seco — e é o inverno seco que faz a diferença: a chuva para justo quando o fruto precisa amadurecer por igual, e não volta antes da colheita terminar. Por isso a região dá café natural com regularidade que outras origens só alcançam em ano bom.",
+        "A altitude entre 900 e 1.200 metros atrasa a maturação. O grão passa mais tempo no galho, acumula mais açúcar, e é daí que sai a doçura de corpo médio que o comprador reconhece na xícara antes de olhar a ficha."
+      ],
+      "en": [
+        "The coffee GBC ships comes from the southwest of Minas Gerais, where the Cerrado meets the Mantiqueira range. It is high tableland with a dry winter — and the dry winter is what matters: the rain stops exactly when the fruit needs to ripen evenly, and it does not return before the harvest is over. That is why the region produces natural coffee with a consistency other origins reach only in a good year.",
+        "Altitude between 900 and 1,200 metres slows ripening. The bean spends longer on the branch and accumulates more sugar, and that is where the medium-bodied sweetness comes from — the one buyers recognise in the cup before they look at the spec sheet."
+      ],
+      "es": [
+        "El café que embarca GBC viene del suroeste de Minas Gerais, en la transición entre el Cerrado y la Mantiqueira. Es una meseta alta de invierno seco — y el invierno seco es lo que importa: la lluvia cesa justo cuando el fruto necesita madurar parejo, y no vuelve antes de terminar la cosecha. Por eso la región da café natural con una regularidad que otros orígenes solo alcanzan en un buen año.",
+        "La altitud de 900 a 1.200 metros retrasa la maduración. El grano pasa más tiempo en la rama y acumula más azúcar, y de ahí viene el dulzor de cuerpo medio que el comprador reconoce en la taza antes de mirar la ficha."
+      ],
+      "ru": [
+        "Кофе, который отгружает GBC, происходит с юго-запада штата Минас-Жерайс, на стыке Серрадо и хребта Мантикейра. Это высокое плато с сухой зимой — и решает именно сухая зима: дожди прекращаются ровно тогда, когда плоду нужно вызреть равномерно, и не возвращаются до конца сбора. Поэтому регион даёт кофе натуральной обработки со стабильностью, которой другие происхождения достигают лишь в удачный год.",
+        "Высота от 900 до 1200 метров замедляет созревание. Зерно дольше остаётся на ветке и накапливает больше сахара — отсюда та сладость среднего тела, которую покупатель узнаёт в чашке раньше, чем откроет спецификацию."
+      ]
+    },
+    "steps": [
+      {
+        "img": "coffee/mosaic-2.jpg",
+        "alt": {
+          "pt": "Carreta carregada de cereja de café recém-colhida",
+          "en": "Trailer loaded with freshly picked coffee cherries",
+          "es": "Remolque cargado de cereza de café recién cosechada",
+          "ru": "Прицеп с только что собранными ягодами кофе"
+        },
+        "t": {
+          "pt": "Colheita · maio a setembro",
+          "en": "Harvest · May to September",
+          "es": "Cosecha · mayo a septiembre",
+          "ru": "Сбор · май–сентябрь"
+        },
+        "d": {
+          "pt": "Colhe-se quando a lavoura chega ao ponto, não quando o calendário manda. No plano a colheita é mecânica; na encosta continua sendo derriça, pé a pé.",
+          "en": "Picking starts when the field is ready, not when the calendar says so. On flat ground it is mechanical; on the slopes it is still stripped by hand, tree by tree.",
+          "es": "Se cosecha cuando el cafetal llega al punto, no cuando lo manda el calendario. En el llano es mecánica; en la ladera sigue siendo manual, planta por planta.",
+          "ru": "Сбор начинают, когда созрела плантация, а не когда велит календарь. На равнине — машинами; на склонах по-прежнему вручную, куст за кустом."
+        }
+      },
+      {
+        "img": "coffee/origem-terreiro.jpg",
+        "alt": {
+          "pt": "Cerejas de café secando em terreiro",
+          "en": "Coffee cherries drying on the patio",
+          "es": "Cerezas de café secando en el patio",
+          "ru": "Ягоды кофе сушатся на площадке"
+        },
+        "t": {
+          "pt": "Secagem em terreiro",
+          "en": "Patio drying",
+          "es": "Secado en patio",
+          "ru": "Сушка на площадке"
+        },
+        "d": {
+          "pt": "Natural: o fruto seca inteiro, com a polpa. É o que dá o corpo e a doçura — e é o processo mais exigente, porque o lote precisa ser revolvido várias vezes por dia para não fermentar de um lado só.",
+          "en": "Natural: the fruit dries whole, pulp and all. That is where the body and sweetness come from — and it is the most demanding process, because the lot has to be turned several times a day or it ferments unevenly.",
+          "es": "Natural: el fruto seca entero, con la pulpa. De ahí vienen el cuerpo y el dulzor — y es el proceso más exigente, porque el lote debe removerse varias veces al día para que no fermente de un solo lado.",
+          "ru": "Натуральная обработка: плод сушится целиком, вместе с мякотью. Отсюда тело и сладость — и это самый требовательный процесс, потому что партию нужно ворошить несколько раз в день, иначе она забродит неравномерно."
+        }
+      },
+      {
+        "img": "coffee/origem-verde.jpg",
+        "alt": {
+          "pt": "Grãos de café verde após o beneficiamento",
+          "en": "Green coffee beans after milling",
+          "es": "Granos de café verde tras el beneficio",
+          "ru": "Зелёные зёрна кофе после обработки"
+        },
+        "t": {
+          "pt": "Beneficiamento e classificação",
+          "en": "Milling and grading",
+          "es": "Beneficio y clasificación",
+          "ru": "Обработка и классификация"
+        },
+        "d": {
+          "pt": "Descascado, o grão passa pela peneira — 17/18, 16/18, 14/16 — e pela prova de xícara. Peneira é tamanho; bebida é sabor. As duas entram no contrato, e é sobre as duas que a amostra é aprovada.",
+          "en": "Hulled, the bean goes through the screen — 17/18, 16/18, 14/16 — and through the cupping table. Screen is size; cup is flavour. Both go into the contract, and the sample is approved on both.",
+          "es": "Descascarillado, el grano pasa por la criba — 17/18, 16/18, 14/16 — y por la cata. La criba es tamaño; la taza es sabor. Ambas entran en el contrato, y sobre ambas se aprueba la muestra.",
+          "ru": "После обрушивания зерно проходит сито — 17/18, 16/18, 14/16 — и каппинг. Сито — это размер, чашка — вкус. В контракт входят оба, и образец утверждают по обоим."
+        }
+      }
+    ],
+    "certifications": {
+      "title": {
+        "pt": "Certificações",
+        "en": "Certifications",
+        "es": "Certificaciones",
+        "ru": "Сертификация"
+      },
+      "body": {
+        "pt": "A GBC é detentora de certificação Rainforest Alliance e Fairtrade para o café verde. Os números de certificado e a validade são informados na cotação e acompanham os documentos de embarque.",
+        "en": "GBC holds Rainforest Alliance and Fairtrade certification for green coffee. Certificate numbers and validity are provided with the quotation and travel with the shipping documents.",
+        "es": "GBC es titular de certificación Rainforest Alliance y Fairtrade para el café verde. Los números de certificado y la vigencia se informan en la cotización y acompañan los documentos de embarque.",
+        "ru": "GBC является держателем сертификатов Rainforest Alliance и Fairtrade на зелёный кофе. Номера сертификатов и сроки действия сообщаются при котировке и сопровождают отгрузочные документы."
+      }
+    }
+  }
 }

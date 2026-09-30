@@ -4,7 +4,7 @@ import { isInternalNavigation } from "./util.js";
 
 /** Os mesmos seletores de motion.css — blocos que entram quando aparecem na tela. */
 export const REVEAL_SELECTOR =
-  ".grid3>*,.steps>li,.strip-grid>div,.duo>*,.head,.origin-row,.roof-card,.svc-item,.channel,.panel,.cup-photo,.cup h2,.cup .prose,.cta-in>*,.form,.spec-card,.mosaic-grid>*,.gallery>div,.two>*,.two-1>*,.coffee-text>*,.contact-photo,.mini-steps";
+  ".grid3>*,.steps>li,.strip-grid>div,.duo>*,.head,.origin-row,.roof-card,.svc-item,.channel,.panel,.cup-photo,.cup h2,.cup .prose,.cta-in>*,.form,.spec-card,.mosaic-grid>*,.gallery>div,.two>*,.two-1>*,.coffee-text>*,.contact-photo,.mini-steps,.etapa,.origem-texto>*,.certificacao>.wrap>*";
 
 export const MAX_STAGGER = 5;
 export const PROGRESS_DELAY_MS = 300;

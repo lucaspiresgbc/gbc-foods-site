@@ -174,3 +174,91 @@ def test_categoria_embalados_aparece_quando_ha_produto(build_mod, dist):
         build_mod.WRITTEN.clear()
         build_mod.SITEMAP.clear()
         build_mod.build()  # deixa dist/ como estava para os outros testes
+
+
+# --------------------------------------------------------- landing de produto (Issue #24)
+
+STORY_PILOTO = {"coffee-arabica", "peanut-raw"}
+
+
+def test_story_so_existe_nos_produtos_piloto(build_mod):
+    """O modelo de landing é opcional: quem não tem story continua renderizando a ficha antiga."""
+    com = {p["id"] for p in build_mod.PRODUCTS if p.get("story")}
+    assert com == STORY_PILOTO, com
+
+
+def test_story_completo_nos_quatro_idiomas(build_mod, langs):
+    """AGENTS.md: chave nova em um bloco = chave nova nos quatro idiomas."""
+    faltas = []
+    for p in build_mod.PRODUCTS:
+        s = p.get("story")
+        if not s:
+            continue
+        blocos = [s["hero_alt"], s["origin_title"], s["origin"]]
+        for e in s["steps"]:
+            blocos += [e["alt"], e["t"], e["d"]]
+        if s.get("certifications"):
+            blocos += [s["certifications"]["title"], s["certifications"]["body"]]
+        for b in blocos:
+            faltas += [(p["id"], lang) for lang in langs if not b.get(lang)]
+    assert not faltas, faltas
+
+
+def test_story_nao_repete_foto(build_mod):
+    """Herói e etapas usam fotos distintas — repetir a mesma imagem é o erro que o PR #? corrigiu."""
+    for p in build_mod.PRODUCTS:
+        s = p.get("story")
+        if not s:
+            continue
+        usadas = [s["hero"]] + [e["img"] for e in s["steps"]]
+        assert len(usadas) == len(set(usadas)), (p["id"], usadas)
+
+
+def test_pagina_piloto_traz_origem_etapas_e_fotos(dist, langs):
+    slugs = {
+        "pt": ("produtos/cafe-verde-arabica", "produtos/amendoim-runner-cru"),
+        "en": ("products/green-arabica-coffee", "products/raw-runner-peanuts"),
+        "es": ("productos/cafe-verde-arabica", "productos/cacahuete-runner-crudo"),
+        "ru": ("products/green-arabica-coffee", "products/raw-runner-peanuts"),
+    }
+    for lang in langs:
+        for slug in slugs[lang]:
+            html = read(dist, f"{lang}/{slug}/index.html")
+            assert 'class="origem"' in html, (lang, slug)
+            assert "etapa-grade" in html, (lang, slug)
+            # três etapas numeradas, cada uma com a sua foto
+            assert html.count('class="etapa"') == 3, (lang, slug)
+            assert html.count('class="etapa-foto"') == 3, (lang, slug)
+            # nenhuma foto sem alt
+            assert ' alt=""' not in html.split('class="origem"')[1].split("</ol>")[0], (lang, slug)
+
+
+def test_certificacao_so_no_cafe_e_atribuida_a_gbc(dist, langs):
+    """Issue #26: a GBC é detentora, então a afirmação é em nome dela — e sem imagem de selo."""
+    for lang in langs:
+        cafe = {
+            "pt": "produtos/cafe-verde-arabica",
+            "es": "productos/cafe-verde-arabica",
+        }.get(lang, "products/green-arabica-coffee")
+        html = read(dist, f"{lang}/{cafe}/index.html")
+        assert 'class="certificacao"' in html, lang
+        assert "Rainforest" in html and "Fairtrade" in html, lang
+    # nenhum arquivo de selo entrou no repositório junto
+    selos = [
+        p
+        for p in (dist / "img").rglob("*")
+        if p.is_file() and ("rainforest" in p.name.lower() or "fairtrade" in p.name.lower())
+    ]
+    assert not selos, selos
+
+
+def test_fotos_novas_estao_creditadas(build_mod):
+    """AGENTS.md §4: toda foto de banco entra em creditos-fotos.md."""
+    creditos = (build_mod.ROOT / "content" / "creditos-fotos.md").read_text(encoding="utf-8")
+    for p in build_mod.PRODUCTS:
+        s = p.get("story")
+        if not s:
+            continue
+        for rel in [s["hero"]] + [e["img"] for e in s["steps"]]:
+            if rel.startswith("peanut/") or rel.startswith("coffee/origem-"):
+                assert rel in creditos, rel

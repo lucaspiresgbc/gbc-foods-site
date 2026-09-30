@@ -354,6 +354,47 @@ body.has-cookie .wa-float{bottom:120px}
 .notfound h1{font-size:1.6rem;margin-bottom:6px}
 
 /* responsivo */
+/* ---------- landing de produto: origem e etapas ---------- */
+.origem{padding:0 0 84px}
+.origem-foto{position:relative;aspect-ratio:21/9;overflow:hidden;margin-bottom:56px;background:var(--bean-pale)}
+.origem-foto picture,.origem-foto img{width:100%;height:100%;object-fit:cover;display:block}
+.origem-foto::after{content:"";position:absolute;inset:auto 0 0 0;height:38%;
+  background-image:linear-gradient(to top,rgba(27,40,66,.34),transparent);pointer-events:none}
+.origem-texto .eyebrow{margin-bottom:8px}
+.origem-texto h2{font-size:1.9rem;line-height:1.2;margin-bottom:20px;max-width:var(--measure)}
+.origem-texto .prose+.prose{margin-top:18px}
+.origem-lado{position:sticky;top:96px}
+.origem-dados{margin:0;border-top:2px solid var(--navy)}
+.origem-dados dt{font-size:.8rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;
+  color:var(--muted);padding-top:16px}
+.origem-dados dd{margin:4px 0 16px;color:var(--navy);font-weight:500;border-bottom:1px solid var(--line);padding-bottom:16px}
+.origem-dados dd:last-child{border-bottom:0}
+
+.etapas{background:var(--bean-pale);padding:84px 0}
+.etapa-grade{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:34px;counter-reset:etapa}
+.etapa{counter-increment:etapa;min-width:0}
+.etapa-foto{aspect-ratio:4/3;border-radius:14px;overflow:hidden;margin-bottom:18px;background:#fff}
+.etapa-foto picture,.etapa-foto img{width:100%;height:100%;object-fit:cover;display:block}
+.etapa h3{font-size:1.15rem;line-height:1.3;margin-bottom:10px;color:var(--navy)}
+.etapa h3::before{content:counter(etapa,decimal-leading-zero);display:block;
+  font-family:var(--sans);font-size:.8rem;font-weight:700;letter-spacing:.08em;color:var(--red);margin-bottom:6px}
+.etapa .prose{font-size:1rem;line-height:1.65}
+
+.certificacao{padding:72px 0;border-top:1px solid var(--line)}
+.certificacao h2{font-size:1.5rem;margin-bottom:14px}
+
+@media (max-width:900px){
+  .origem-foto{aspect-ratio:16/9;margin-bottom:38px}
+  .origem-lado{position:static}
+  .etapa-grade{grid-template-columns:1fr;gap:30px}
+}
+@media (max-width:600px){
+  .origem{padding-bottom:56px}
+  .etapas{padding:56px 0}
+  .origem-texto h2{font-size:1.5rem}
+  .origem-foto{aspect-ratio:4/3}
+}
+
 @media (max-width:1040px){
   .steps.compact{grid-template-columns:repeat(3,1fr)}
   .foot-grid{grid-template-columns:1fr 1fr}
