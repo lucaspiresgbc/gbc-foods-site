@@ -262,3 +262,16 @@ def test_fotos_novas_estao_creditadas(build_mod):
         for rel in [s["hero"]] + [e["img"] for e in s["steps"]]:
             if rel.startswith("peanut/") or rel.startswith("coffee/origem-"):
                 assert rel in creditos, rel
+
+
+def test_toda_foto_do_story_existe_no_repositorio(build_mod):
+    """Remover uma foto reprovada não pode deixar referência pendurada no JSON."""
+    faltas = []
+    for p in build_mod.PRODUCTS:
+        s = p.get("story")
+        if not s:
+            continue
+        for rel in [s["hero"]] + [e["img"] for e in s["steps"]]:
+            if not (build_mod.ROOT / "static" / "img" / rel).exists():
+                faltas.append((p["id"], rel))
+    assert not faltas, faltas

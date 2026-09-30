@@ -144,12 +144,12 @@
     "ru": "В течение года, наибольшее предложение с марта по сентябрь"
   },
   "story": {
-    "hero": "peanut/origem-colheita.jpg",
+    "hero": "peanut/origem-leira.jpg",
     "hero_alt": {
-      "pt": "Tratores arrancando amendoim numa lavoura do interior paulista",
-      "en": "Tractors digging peanuts on a farm in inland São Paulo",
-      "es": "Tractores arrancando maní en un campo del interior paulista",
-      "ru": "Тракторы выкапывают арахис на поле в глубине штата Сан-Паулу"
+      "pt": "Leiras de amendoim invertidas secando ao sol, no interior paulista",
+      "en": "Inverted peanut windrows drying in the sun, inland São Paulo",
+      "es": "Hileras de maní invertidas secando al sol, en el interior paulista",
+      "ru": "Перевёрнутые валки арахиса сохнут на солнце, в глубине штата Сан-Паулу"
     },
     "origin_title": {
       "pt": "Alta Paulista: o amendoim que cresce no ano de reforma da cana",
@@ -189,37 +189,37 @@
           "ru": "Арахис в скорлупе, только что извлечённый из земли"
         },
         "t": {
-          "pt": "Plantio set–nov, arranquio fev–mai",
-          "en": "Planting Sep–Nov, digging Feb–May",
-          "es": "Siembra sep–nov, arranque feb–may",
-          "ru": "Посев сен–ноя, выкопка фев–май"
+          "pt": "Arranquio e inversão — fev a mai",
+          "en": "Digging and inversion — Feb to May",
+          "es": "Arranque e inversión — feb a may",
+          "ru": "Выкопка и переворот — фев–май"
         },
         "d": {
-          "pt": "O amendoim frutifica debaixo da terra: a flor é fecundada em cima e o ginóforo enterra o ovário. Por isso não dá para olhar a lavoura e saber o ponto — arranca-se uma amostra e conta-se a vagem madura.",
-          "en": "The peanut fruits underground: the flower is fertilised above and the peg buries the ovary. So you cannot judge ripeness by looking at the field — you dig a sample and count the mature pods.",
-          "es": "El maní fructifica bajo tierra: la flor se fecunda arriba y el ginóforo entierra el ovario. Por eso no se puede mirar el cultivo y saber el punto — se arranca una muestra y se cuenta la vaina madura.",
-          "ru": "Арахис плодоносит под землёй: цветок оплодотворяется наверху, а гинофор зарывает завязь. Поэтому зрелость нельзя определить по виду поля — выкапывают пробу и считают вызревшие бобы."
+          "pt": "O amendoim frutifica debaixo da terra, então não dá para olhar a lavoura e saber o ponto: arranca-se uma amostra e conta-se a vagem madura. Arrancada, a planta é virada de cabeça para baixo na própria linha, com a vagem para cima, e fica dias secando no campo. É a etapa que mais decide o lote — leira mal formada ou chuva fora de hora é onde nasce o problema de aflatoxina.",
+          "en": "The peanut fruits underground, so you cannot judge ripeness by looking at the field: you dig a sample and count the mature pods. Once lifted, the plant is turned upside down in its own row, pods facing up, and left for days drying in the field. This is the stage that decides the lot — a badly formed windrow or rain at the wrong moment is where an aflatoxin problem is born.",
+          "es": "El maní fructifica bajo tierra, así que no se puede mirar el cultivo y saber el punto: se arranca una muestra y se cuenta la vaina madura. Arrancada, la planta se voltea boca abajo en su propia línea, con la vaina hacia arriba, y queda días secando en el campo. Es la etapa que más decide el lote — una hilera mal formada o lluvia a destiempo es donde nace el problema de aflatoxina.",
+          "ru": "Арахис плодоносит под землёй, поэтому зрелость нельзя определить по виду поля: выкапывают пробу и считают вызревшие бобы. После выкопки растение переворачивают вверх дном прямо в ряду, бобами кверху, и оставляют на несколько дней сохнуть в поле. Именно этот этап решает судьбу партии — плохо сформированный валок или несвоевременный дождь: там и рождается проблема афлатоксина."
         }
       },
       {
-        "img": "peanut/origem-leira.jpg",
+        "img": "products/peanut-raw.jpg",
         "alt": {
-          "pt": "Leiras de amendoim invertidas secando ao sol",
-          "en": "Inverted peanut windrows drying in the sun",
-          "es": "Hileras de maní invertidas secando al sol",
-          "ru": "Перевёрнутые валки арахиса сушатся на солнце"
+          "pt": "Amendoim runner cru com a pele vermelha",
+          "en": "Raw runner peanut kernels with red skin",
+          "es": "Maní runner crudo con la piel roja",
+          "ru": "Сырое ядро арахиса раннер в красной кожице"
         },
         "t": {
-          "pt": "Inversão e secagem em leira",
-          "en": "Inversion and windrow drying",
-          "es": "Inversión y secado en hilera",
-          "ru": "Переворот и сушка в валках"
+          "pt": "Recolhimento e beneficiamento",
+          "en": "Picking and processing",
+          "es": "Recolección y beneficio",
+          "ru": "Подбор и переработка"
         },
         "d": {
-          "pt": "A planta é arrancada e virada de cabeça para baixo na própria linha, com a vagem para cima. Fica dias assim, secando no campo. É a etapa que mais decide a qualidade do lote: leira mal formada ou chuva fora de hora é onde nasce o problema de aflatoxina.",
-          "en": "The plant is lifted and turned upside down in its own row, pods facing up. It stays like that for days, drying in the field. This is the stage that decides the lot: a badly formed windrow or rain at the wrong moment is where an aflatoxin problem is born.",
-          "es": "La planta se arranca y se voltea boca abajo en su propia línea, con la vaina hacia arriba. Queda así varios días, secando en el campo. Es la etapa que más decide el lote: una hilera mal formada o lluvia a destiempo es donde nace el problema de aflatoxina.",
-          "ru": "Растение выдёргивают и переворачивают вверх дном прямо в ряду, бобами кверху. Так оно лежит несколько дней, высыхая в поле. Именно этот этап решает судьбу партии: плохо сформированный валок или несвоевременный дождь — там и рождается проблема афлатоксина."
+          "pt": "A colhedora recolhe a leira e separa a vagem da rama. No beneficiamento vem o descasque, a secagem final até a umidade de contrato e a seleção eletrônica, que tira grão quebrado, chocho e qualquer corpo estranho.",
+          "en": "The combine picks up the windrow and strips the pods from the vines. Processing brings shelling, final drying down to contract moisture, and electronic sorting, which removes split, shrivelled and foreign material.",
+          "es": "La cosechadora recoge la hilera y separa la vaina de la rama. En el beneficio vienen el descascarado, el secado final hasta la humedad de contrato y la selección electrónica, que retira grano partido, vano y cualquier cuerpo extraño.",
+          "ru": "Комбайн подбирает валок и отделяет бобы от ботвы. На переработке — обрушивание, окончательная сушка до контрактной влажности и электронная сортировка, удаляющая колотое, щуплое зерно и посторонние примеси."
         }
       },
       {
@@ -231,16 +231,16 @@
           "ru": "Раскрытый боб арахиса с двумя ядрами в кожице"
         },
         "t": {
-          "pt": "Beneficiamento e contagem",
-          "en": "Processing and count",
-          "es": "Beneficio y conteo",
-          "ru": "Переработка и калибровка"
+          "pt": "Contagem por onça",
+          "en": "Count per ounce",
+          "es": "Conteo por onza",
+          "ru": "Калибровка по унции"
         },
         "d": {
-          "pt": "Descascado e selecionado, o grão é classificado pela contagem por onça: 38/42 é o calibre grande, 80/100 o miúdo. Quanto menor o número, maior o grão. O blancheado passa ainda pelo forno que solta a pele vermelha e pelo eletrônico que tira o que ficou.",
-          "en": "Shelled and sorted, the kernel is graded by count per ounce: 38/42 is the large size, 80/100 the small. The lower the number, the bigger the kernel. Blanched peanut also goes through the oven that loosens the red skin and the electronic sorter that removes what is left.",
-          "es": "Descascarado y seleccionado, el grano se clasifica por conteo por onza: 38/42 es el calibre grande, 80/100 el menudo. Cuanto menor el número, mayor el grano. El blanqueado pasa además por el horno que suelta la piel roja y por el sorter electrónico que retira lo que quedó.",
-          "ru": "После обрушивания и отбора ядро калибруют по числу штук на унцию: 38/42 — крупный калибр, 80/100 — мелкий. Чем меньше число, тем крупнее ядро. Бланшированный арахис дополнительно проходит печь, отделяющую красную кожицу, и электронный сортировщик."
+          "pt": "O grão é classificado pela contagem por onça: 38/42 é o calibre grande, 80/100 o miúdo. Quanto menor o número, maior o grão. O blancheado passa ainda pelo forno que solta a pele vermelha e pelo eletrônico que tira o que ficou.",
+          "en": "The kernel is graded by count per ounce: 38/42 is the large size, 80/100 the small. The lower the number, the bigger the kernel. Blanched peanut also goes through the oven that loosens the red skin and the sorter that removes what is left.",
+          "es": "El grano se clasifica por conteo por onza: 38/42 es el calibre grande, 80/100 el menudo. Cuanto menor el número, mayor el grano. El blanqueado pasa además por el horno que suelta la piel roja y por el sorter que retira lo que quedó.",
+          "ru": "Ядро калибруют по числу штук на унцию: 38/42 — крупный калибр, 80/100 — мелкий. Чем меньше число, тем крупнее ядро. Бланшированный арахис дополнительно проходит печь, отделяющую красную кожицу, и сортировщик."
         }
       }
     ]

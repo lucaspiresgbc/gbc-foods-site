@@ -2,7 +2,7 @@
 
 As fotos abaixo vêm do [Unsplash](https://unsplash.com) ([Unsplash License](https://unsplash.com/license)) e do [Pexels](https://www.pexels.com) ([Pexels License](https://www.pexels.com/license/)). Ambas as licenças permitem uso comercial sem atribuição obrigatória — os créditos são listados aqui como boa prática, e a origem de cada arquivo fica rastreável.
 
-Nenhuma das fotos listadas abaixo tem pessoa com rosto identificável, nem marca de terceiro visível.
+Nenhuma das fotos listadas abaixo tem pessoa com rosto identificável, nem marca de terceiro visível. Uma foto de colheita foi removida em 09/2026 por trazer a marca do fabricante do implemento estampada duas vezes — a regra vale também para maquinário, que é onde ela costuma passar despercebida.
 
 | Arquivo | Descrição (título no Unsplash) | Autor | Página da foto (URL) |
 |---|---|---|---|
@@ -19,7 +19,6 @@ Nenhuma das fotos listadas abaixo tem pessoa com rosto identificável, nem marca
 | coffee/origem-cereja.jpg | Green and Brown Round Fruits (cerejas de café no galho) | Michael Burrows | https://www.pexels.com/photo/food-dawn-coffee-agriculture-6065023/ |
 | coffee/origem-terreiro.jpg | Pile of raw coffee beans drying in sun | Rodrigo Souza | https://www.pexels.com/photo/pile-of-raw-coffee-beans-drying-in-sun-7125597/ |
 | coffee/origem-verde.jpg | Heap of raw coffee beans drying in daylight | Rodrigo Souza | https://www.pexels.com/photo/heap-of-raw-coffee-beans-drying-in-daylight-7125598/ |
-| peanut/origem-colheita.jpg | Tractors Harvesting Peanuts | Greta Hoffman | https://www.pexels.com/photo/tractors-harvesting-peanuts-9799044/ |
 | peanut/origem-leira.jpg | Harvested Peanuts on the Ground | Greta Hoffman | https://www.pexels.com/photo/harvested-peanuts-on-the-ground-9799045/ |
 | peanut/origem-vagem.jpg | Close Up Photo of Peanuts (vagem aberta com os dois grãos) | Marta Branco | https://www.pexels.com/photo/close-up-photo-of-peanuts-135755/ |
 | peanut/origem-textura.jpg | Close-Up Shot of Peanuts | Kafeel Ahmed | https://www.pexels.com/photo/close-up-shot-of-peanuts-7717463/ |
