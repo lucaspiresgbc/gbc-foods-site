@@ -105,6 +105,7 @@ html:not(.js) picture{background:transparent}
 
 /* --- movimento reduzido: estados finais, sem transição, sem skeleton animado, sem troca de página animada --- */
 @media (prefers-reduced-motion:reduce){
+  .btn-seta,.btn:hover .btn-seta{transition:none;transform:none}
   html.js :where(.grid3>*,.steps>li,.strip-grid>div,.duo>*,.head,.origin-row,.roof-card,.svc-item,.channel,.panel,.cup-photo,.cup h2,.cup .prose,.cta-in>*,.form,.spec-card,.mosaic-grid>*,.gallery>div,.two>*,.two-1>*,.coffee-text>*,.contact-photo,.mini-steps):not(.in){opacity:1;transform:none;filter:none}
   html.js picture img{opacity:1}
   picture::before{animation:none;display:none}
