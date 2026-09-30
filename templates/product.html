@@ -51,6 +51,52 @@
     </div>
   </section>
 
+  {% if product.story %}
+  <section class="origem">
+    <div class="origem-foto">
+      {{ picture(product.story.hero, L(product.story.hero_alt), sizes="100vw")|safe }}
+    </div>
+    <div class="wrap two-1 origem-texto">
+      <div class="prose-col">
+        <span class="eyebrow">{{ ui('labels.origin_story') }}</span>
+        <h2>{{ L(product.story.origin_title) }}</h2>
+        {% for para in L(product.story.origin) %}<p class="prose">{{ para }}</p>{% endfor %}
+      </div>
+      <aside class="origem-lado">
+        <dl class="origem-dados">
+          <dt>{{ ui('labels.origin') }}</dt><dd>{{ L(product.origin) }}</dd>
+          <dt>{{ ui('labels.packaging') }}</dt><dd>{{ L(product.packaging) }}</dd>
+          <dt>{{ ui('labels.port') }}</dt><dd>{{ cfg.porto_embarque }}</dd>
+        </dl>
+      </aside>
+    </div>
+  </section>
+
+  <section class="etapas">
+    <div class="wrap">
+      <div class="head"><h2>{{ ui('labels.from_field') }}</h2></div>
+      <ol class="etapa-grade">
+        {% for e in product.story.steps %}
+        <li class="etapa">
+          <div class="etapa-foto">{{ picture(e.img, L(e.alt), sizes="(max-width: 700px) 100vw, 32vw")|safe }}</div>
+          <h3>{{ L(e.t) }}</h3>
+          <p class="prose">{{ L(e.d) }}</p>
+        </li>
+        {% endfor %}
+      </ol>
+    </div>
+  </section>
+
+  {% if product.story.certifications %}
+  <section class="certificacao">
+    <div class="wrap">
+      <h2>{{ L(product.story.certifications.title) }}</h2>
+      <p class="prose">{{ L(product.story.certifications.body) }}</p>
+    </div>
+  </section>
+  {% endif %}
+  {% endif %}
+
   <section class="related">
     <div class="wrap">
       <div class="head split"><h2>{{ ui('labels.related') }}</h2><div class="head-links"><a href="{{ url('products') }}">{{ ui('btn.all_products') }}</a></div></div>

@@ -346,6 +346,18 @@
       "en": "Illustrative photo",
       "es": "Foto ilustrativa",
       "ru": "Иллюстративное фото"
+    },
+    "origin_story": {
+      "pt": "A origem",
+      "en": "The origin",
+      "es": "El origen",
+      "ru": "Происхождение"
+    },
+    "from_field": {
+      "pt": "Do campo ao contêiner",
+      "en": "From field to container",
+      "es": "Del campo al contenedor",
+      "ru": "От поля до контейнера"
     }
   },
   "form": {

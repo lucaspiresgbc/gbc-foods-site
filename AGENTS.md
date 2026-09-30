@@ -200,9 +200,19 @@ trabalho já rejeitado.
   originação, margens, preço máximo de compra, preço de referência de cooperativa,
   contato direto de cooperativa ou fornecedor.
 - **Nunca** texto do tipo "o que não fazemos" / "não compramos em mercado aberto".
-- Certificações (Fairtrade, Rainforest, C.A.F.E. Practices) aparecem **só em texto**,
-  atribuídas à origem ("origem certificada mediante solicitação"). Nenhuma imagem de
-  selo: a GBC não é a detentora.
+- **Certificações.** A GBC confirmou em 09/2026 que **é detentora** de Rainforest Alliance
+  e Fairtrade para o café verde. Daí em diante:
+  - certificação **da GBC** pode ser afirmada em nome da GBC, com o número de certificado
+    informado na cotação — não no site;
+  - certificação **da origem** (produtor, cooperativa, C.A.F.E. Practices) continua
+    atribuída à origem: "origem certificada mediante solicitação";
+  - **imagem de selo só entra no repositório com a licença de uso da certificadora
+    arquivada.** Rainforest Alliance e Fairtrade aprovam cada aplicação antes do uso.
+    Enquanto a licença não chegar, a certificação aparece só em texto.
+
+  Esta regra substituiu a anterior ("a GBC não é a detentora"), que estava errada. Se
+  você é um agente e leu essa frase em algum lugar, ela é histórica — não reverta o
+  texto do café por causa dela.
 - Cada produto tem a **sua própria página dentro deste site**. Nada de link para site
   externo do café ou de qualquer outro produto.
 - "Serviços" é uma seção **informativa** sobre a trading e a logística. O nome fica.

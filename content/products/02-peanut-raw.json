@@ -5,9 +5,24 @@
   "featured": true,
   "image": "products/peanut-raw.jpg",
   "hs": "1202.42",
-  "slug": { "pt": "amendoim-runner-cru", "en": "raw-runner-peanuts", "es": "cacahuete-runner-crudo", "ru": "raw-runner-peanuts" },
-  "name": { "pt": "Amendoim Runner cru", "en": "Raw Runner peanuts", "es": "Cacahuete Runner crudo", "ru": "Арахис Runner сырой" },
-  "image_alt": { "pt": "Amendoim cru descascado com película vermelha", "en": "Raw shelled peanuts with red skins", "es": "Cacahuete crudo pelado con piel roja", "ru": "Сырой очищенный арахис в красной кожице" },
+  "slug": {
+    "pt": "amendoim-runner-cru",
+    "en": "raw-runner-peanuts",
+    "es": "cacahuete-runner-crudo",
+    "ru": "raw-runner-peanuts"
+  },
+  "name": {
+    "pt": "Amendoim Runner cru",
+    "en": "Raw Runner peanuts",
+    "es": "Cacahuete Runner crudo",
+    "ru": "Арахис Runner сырой"
+  },
+  "image_alt": {
+    "pt": "Amendoim cru descascado com película vermelha",
+    "en": "Raw shelled peanuts with red skins",
+    "es": "Cacahuete crudo pelado con piel roja",
+    "ru": "Сырой очищенный арахис в красной кожице"
+  },
   "short": {
     "pt": "Grão descascado com película, contagens de 38/42 a 80/100 e splits, do principal polo produtor do Brasil.",
     "en": "Shelled kernels with skin, counts from 38/42 to 80/100 plus splits, from Brazil's main peanut-growing area.",
@@ -33,19 +48,201 @@
     ]
   },
   "specs": [
-    { "k": { "pt": "Tipo", "en": "Type", "es": "Tipo", "ru": "Тип" },
-      "v": { "pt": "Runner, descascado, com película", "en": "Runner, shelled, skin on", "es": "Runner, pelado, con piel", "ru": "Runner, очищенный, в кожице" } },
-    { "k": { "pt": "Contagens (grãos/onça)", "en": "Counts (kernels/oz)", "es": "Conteos (granos/onza)", "ru": "Калибры (ядер/унция)" },
-      "v": { "pt": "38/42 · 40/50 · 50/60 · 60/70 · 70/80 · 80/100", "en": "38/42 · 40/50 · 50/60 · 60/70 · 70/80 · 80/100", "es": "38/42 · 40/50 · 50/60 · 60/70 · 70/80 · 80/100", "ru": "38/42 · 40/50 · 50/60 · 60/70 · 70/80 · 80/100" } },
-    { "k": { "pt": "Splits", "en": "Splits", "es": "Splits", "ru": "Половинки" },
-      "v": { "pt": "Disponíveis", "en": "Available", "es": "Disponibles", "ru": "Поставляются" } },
-    { "k": { "pt": "Aflatoxina", "en": "Aflatoxin", "es": "Aflatoxina", "ru": "Афлатоксин" },
-      "v": { "pt": "Análise por lote, no limite do mercado de destino", "en": "Tested per lot against the destination market's limit", "es": "Análisis por lote, conforme al límite del mercado de destino", "ru": "Анализ каждой партии на соответствие норме рынка назначения" } },
-    { "k": { "pt": "Safra", "en": "Harvest", "es": "Cosecha", "ru": "Сбор урожая" },
-      "v": { "pt": "Fevereiro a maio", "en": "February to May", "es": "Febrero a mayo", "ru": "Февраль – май" } }
+    {
+      "k": {
+        "pt": "Tipo",
+        "en": "Type",
+        "es": "Tipo",
+        "ru": "Тип"
+      },
+      "v": {
+        "pt": "Runner, descascado, com película",
+        "en": "Runner, shelled, skin on",
+        "es": "Runner, pelado, con piel",
+        "ru": "Runner, очищенный, в кожице"
+      }
+    },
+    {
+      "k": {
+        "pt": "Contagens (grãos/onça)",
+        "en": "Counts (kernels/oz)",
+        "es": "Conteos (granos/onza)",
+        "ru": "Калибры (ядер/унция)"
+      },
+      "v": {
+        "pt": "38/42 · 40/50 · 50/60 · 60/70 · 70/80 · 80/100",
+        "en": "38/42 · 40/50 · 50/60 · 60/70 · 70/80 · 80/100",
+        "es": "38/42 · 40/50 · 50/60 · 60/70 · 70/80 · 80/100",
+        "ru": "38/42 · 40/50 · 50/60 · 60/70 · 70/80 · 80/100"
+      }
+    },
+    {
+      "k": {
+        "pt": "Splits",
+        "en": "Splits",
+        "es": "Splits",
+        "ru": "Половинки"
+      },
+      "v": {
+        "pt": "Disponíveis",
+        "en": "Available",
+        "es": "Disponibles",
+        "ru": "Поставляются"
+      }
+    },
+    {
+      "k": {
+        "pt": "Aflatoxina",
+        "en": "Aflatoxin",
+        "es": "Aflatoxina",
+        "ru": "Афлатоксин"
+      },
+      "v": {
+        "pt": "Análise por lote, no limite do mercado de destino",
+        "en": "Tested per lot against the destination market's limit",
+        "es": "Análisis por lote, conforme al límite del mercado de destino",
+        "ru": "Анализ каждой партии на соответствие норме рынка назначения"
+      }
+    },
+    {
+      "k": {
+        "pt": "Safra",
+        "en": "Harvest",
+        "es": "Cosecha",
+        "ru": "Сбор урожая"
+      },
+      "v": {
+        "pt": "Fevereiro a maio",
+        "en": "February to May",
+        "es": "Febrero a mayo",
+        "ru": "Февраль – май"
+      }
+    }
   ],
-  "origin": { "pt": "Estado de São Paulo, Brasil", "en": "São Paulo state, Brazil", "es": "Estado de São Paulo, Brasil", "ru": "Штат Сан-Паулу, Бразилия" },
-  "packaging": { "pt": "Sacos de 25 kg ou 50 kg; big bags de 1.000 kg", "en": "25 kg or 50 kg bags; 1,000 kg big bags", "es": "Sacos de 25 kg o 50 kg; big bags de 1.000 kg", "ru": "Мешки по 25 или 50 кг; биг-бэги по 1 000 кг" },
-  "container": { "pt": "20′ ≈ 18 – 19 t · 40′ HC ≈ 25 – 26 t, conforme a embalagem", "en": "20′ ≈ 18 – 19 t · 40′ HC ≈ 25 – 26 t, depending on packing", "es": "20′ ≈ 18 – 19 t · 40′ HC ≈ 25 – 26 t, según el envase", "ru": "20′ ≈ 18 – 19 т · 40′ HC ≈ 25 – 26 т, в зависимости от упаковки" },
-  "availability": { "pt": "Ao longo do ano, com maior oferta de março a setembro", "en": "Year-round, with the widest availability from March to September", "es": "Durante todo el año, con mayor oferta de marzo a septiembre", "ru": "В течение года, наибольшее предложение с марта по сентябрь" }
+  "origin": {
+    "pt": "Estado de São Paulo, Brasil",
+    "en": "São Paulo state, Brazil",
+    "es": "Estado de São Paulo, Brasil",
+    "ru": "Штат Сан-Паулу, Бразилия"
+  },
+  "packaging": {
+    "pt": "Sacos de 25 kg ou 50 kg; big bags de 1.000 kg",
+    "en": "25 kg or 50 kg bags; 1,000 kg big bags",
+    "es": "Sacos de 25 kg o 50 kg; big bags de 1.000 kg",
+    "ru": "Мешки по 25 или 50 кг; биг-бэги по 1 000 кг"
+  },
+  "container": {
+    "pt": "20′ ≈ 18 – 19 t · 40′ HC ≈ 25 – 26 t, conforme a embalagem",
+    "en": "20′ ≈ 18 – 19 t · 40′ HC ≈ 25 – 26 t, depending on packing",
+    "es": "20′ ≈ 18 – 19 t · 40′ HC ≈ 25 – 26 t, según el envase",
+    "ru": "20′ ≈ 18 – 19 т · 40′ HC ≈ 25 – 26 т, в зависимости от упаковки"
+  },
+  "availability": {
+    "pt": "Ao longo do ano, com maior oferta de março a setembro",
+    "en": "Year-round, with the widest availability from March to September",
+    "es": "Durante todo el año, con mayor oferta de marzo a septiembre",
+    "ru": "В течение года, наибольшее предложение с марта по сентябрь"
+  },
+  "story": {
+    "hero": "peanut/origem-leira.jpg",
+    "hero_alt": {
+      "pt": "Leiras de amendoim invertidas secando ao sol, no interior paulista",
+      "en": "Inverted peanut windrows drying in the sun, inland São Paulo",
+      "es": "Hileras de maní invertidas secando al sol, en el interior paulista",
+      "ru": "Перевёрнутые валки арахиса сохнут на солнце, в глубине штата Сан-Паулу"
+    },
+    "origin_title": {
+      "pt": "Alta Paulista: o amendoim que cresce no ano de reforma da cana",
+      "en": "Alta Paulista: the peanut that grows in the sugarcane renewal year",
+      "es": "Alta Paulista: el maní que crece en el año de reforma de la caña",
+      "ru": "Альта-Паулиста: арахис, растущий в год перезакладки тростника"
+    },
+    "origin": {
+      "pt": [
+        "Quase todo o amendoim brasileiro de exportação sai do interior de São Paulo — Alta Paulista e Alta Mogiana, em torno de Tupã e Marília. E sai de um lugar curioso: da área de reforma do canavial. A cada cinco ou seis anos o canavial precisa ser replantado, e naquele intervalo a terra fica livre por uma safra.",
+        "É nessa janela que entra o amendoim. A leguminosa fixa nitrogênio e devolve o solo melhor do que pegou, o usineiro ganha uma safra onde teria pousio, e o produtor de amendoim planta em terra corrigida, mecanizada e de topografia plana. Não é acaso que o Brasil produza amendoim de calibre grande e uniforme: ele é plantado na melhor terra do estado, no ano em que ela está disponível.",
+        "É esse produto que a GBC movimenta há mais de dez anos — o mais antigo da casa, e o que ensinou o resto."
+      ],
+      "en": [
+        "Almost all of Brazil's export peanut comes from inland São Paulo — Alta Paulista and Alta Mogiana, around Tupã and Marília. And it comes from a curious place: the sugarcane renewal area. Every five or six years the cane field has to be replanted, and in that interval the land is free for one season.",
+        "That window is where the peanut goes. The legume fixes nitrogen and hands the soil back better than it found it, the mill gets a crop where it would have had fallow, and the peanut grower plants in corrected, mechanised, flat-topography land. It is no accident that Brazil produces large, uniform-count peanut: it is planted on the best land in the state, in the year that land is available.",
+        "This is the product GBC has been moving for more than ten years — the oldest in the house, and the one that taught it everything else."
+      ],
+      "es": [
+        "Casi todo el maní brasileño de exportación sale del interior de São Paulo — Alta Paulista y Alta Mogiana, en torno a Tupã y Marília. Y sale de un lugar curioso: del área de reforma del cañaveral. Cada cinco o seis años el cañaveral debe replantarse, y en ese intervalo la tierra queda libre por una zafra.",
+        "En esa ventana entra el maní. La leguminosa fija nitrógeno y devuelve el suelo mejor de lo que lo encontró, el ingenio gana una zafra donde habría tenido barbecho, y el productor de maní siembra en tierra corregida, mecanizada y de topografía plana. No es casualidad que Brasil produzca maní de calibre grande y uniforme: se siembra en la mejor tierra del estado, el año en que esa tierra está disponible.",
+        "Es el producto que GBC mueve hace más de diez años — el más antiguo de la casa, y el que enseñó todo lo demás."
+      ],
+      "ru": [
+        "Почти весь бразильский экспортный арахис происходит из внутренних районов штата Сан-Паулу — Альта-Паулиста и Альта-Могиана, вокруг Тупана и Марилии. И происходит из любопытного места: с участков перезакладки сахарного тростника. Каждые пять-шесть лет плантацию тростника нужно пересаживать, и в этот промежуток земля свободна на один сезон.",
+        "В это окно и заходит арахис. Бобовое фиксирует азот и возвращает почву лучше, чем получило, завод получает урожай там, где был бы пар, а производитель арахиса сеет на выровненной, механизированной земле с ровным рельефом. Не случайно Бразилия даёт арахис крупного и однородного калибра: его сеют на лучшей земле штата в тот год, когда она доступна.",
+        "Именно этот продукт GBC перевозит более десяти лет — самый давний в компании и тот, что научил всему остальному."
+      ]
+    },
+    "steps": [
+      {
+        "img": "peanut/origem-textura.jpg",
+        "alt": {
+          "pt": "Amendoim em casca recém-saído da terra",
+          "en": "In-shell peanuts fresh out of the ground",
+          "es": "Maní con cáscara recién salido de la tierra",
+          "ru": "Арахис в скорлупе, только что извлечённый из земли"
+        },
+        "t": {
+          "pt": "Arranquio e inversão — fev a mai",
+          "en": "Digging and inversion — Feb to May",
+          "es": "Arranque e inversión — feb a may",
+          "ru": "Выкопка и переворот — фев–май"
+        },
+        "d": {
+          "pt": "O amendoim frutifica debaixo da terra, então não dá para olhar a lavoura e saber o ponto: arranca-se uma amostra e conta-se a vagem madura. Arrancada, a planta é virada de cabeça para baixo na própria linha, com a vagem para cima, e fica dias secando no campo. É a etapa que mais decide o lote — leira mal formada ou chuva fora de hora é onde nasce o problema de aflatoxina.",
+          "en": "The peanut fruits underground, so you cannot judge ripeness by looking at the field: you dig a sample and count the mature pods. Once lifted, the plant is turned upside down in its own row, pods facing up, and left for days drying in the field. This is the stage that decides the lot — a badly formed windrow or rain at the wrong moment is where an aflatoxin problem is born.",
+          "es": "El maní fructifica bajo tierra, así que no se puede mirar el cultivo y saber el punto: se arranca una muestra y se cuenta la vaina madura. Arrancada, la planta se voltea boca abajo en su propia línea, con la vaina hacia arriba, y queda días secando en el campo. Es la etapa que más decide el lote — una hilera mal formada o lluvia a destiempo es donde nace el problema de aflatoxina.",
+          "ru": "Арахис плодоносит под землёй, поэтому зрелость нельзя определить по виду поля: выкапывают пробу и считают вызревшие бобы. После выкопки растение переворачивают вверх дном прямо в ряду, бобами кверху, и оставляют на несколько дней сохнуть в поле. Именно этот этап решает судьбу партии — плохо сформированный валок или несвоевременный дождь: там и рождается проблема афлатоксина."
+        }
+      },
+      {
+        "img": "products/peanut-raw.jpg",
+        "alt": {
+          "pt": "Amendoim runner cru com a pele vermelha",
+          "en": "Raw runner peanut kernels with red skin",
+          "es": "Maní runner crudo con la piel roja",
+          "ru": "Сырое ядро арахиса раннер в красной кожице"
+        },
+        "t": {
+          "pt": "Recolhimento e beneficiamento",
+          "en": "Picking and processing",
+          "es": "Recolección y beneficio",
+          "ru": "Подбор и переработка"
+        },
+        "d": {
+          "pt": "A colhedora recolhe a leira e separa a vagem da rama. No beneficiamento vem o descasque, a secagem final até a umidade de contrato e a seleção eletrônica, que tira grão quebrado, chocho e qualquer corpo estranho.",
+          "en": "The combine picks up the windrow and strips the pods from the vines. Processing brings shelling, final drying down to contract moisture, and electronic sorting, which removes split, shrivelled and foreign material.",
+          "es": "La cosechadora recoge la hilera y separa la vaina de la rama. En el beneficio vienen el descascarado, el secado final hasta la humedad de contrato y la selección electrónica, que retira grano partido, vano y cualquier cuerpo extraño.",
+          "ru": "Комбайн подбирает валок и отделяет бобы от ботвы. На переработке — обрушивание, окончательная сушка до контрактной влажности и электронная сортировка, удаляющая колотое, щуплое зерно и посторонние примеси."
+        }
+      },
+      {
+        "img": "peanut/origem-vagem.jpg",
+        "alt": {
+          "pt": "Vagem de amendoim aberta mostrando os dois grãos com pele",
+          "en": "Open peanut pod showing the two red-skinned kernels",
+          "es": "Vaina de maní abierta mostrando los dos granos con piel",
+          "ru": "Раскрытый боб арахиса с двумя ядрами в кожице"
+        },
+        "t": {
+          "pt": "Contagem por onça",
+          "en": "Count per ounce",
+          "es": "Conteo por onza",
+          "ru": "Калибровка по унции"
+        },
+        "d": {
+          "pt": "O grão é classificado pela contagem por onça: 38/42 é o calibre grande, 80/100 o miúdo. Quanto menor o número, maior o grão. O blancheado passa ainda pelo forno que solta a pele vermelha e pelo eletrônico que tira o que ficou.",
+          "en": "The kernel is graded by count per ounce: 38/42 is the large size, 80/100 the small. The lower the number, the bigger the kernel. Blanched peanut also goes through the oven that loosens the red skin and the sorter that removes what is left.",
+          "es": "El grano se clasifica por conteo por onza: 38/42 es el calibre grande, 80/100 el menudo. Cuanto menor el número, mayor el grano. El blanqueado pasa además por el horno que suelta la piel roja y por el sorter que retira lo que quedó.",
+          "ru": "Ядро калибруют по числу штук на унцию: 38/42 — крупный калибр, 80/100 — мелкий. Чем меньше число, тем крупнее ядро. Бланшированный арахис дополнительно проходит печь, отделяющую красную кожицу, и сортировщик."
+        }
+      }
+    ]
+  }
 }
