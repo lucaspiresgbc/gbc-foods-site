@@ -174,3 +174,31 @@ def test_categoria_embalados_aparece_quando_ha_produto(build_mod, dist):
         build_mod.WRITTEN.clear()
         build_mod.SITEMAP.clear()
         build_mod.build()  # deixa dist/ como estava para os outros testes
+
+
+# ------------------------------------------- breadcrumb com chevron em ícone (Issue #34)
+
+
+def test_o_separador_do_breadcrumb_e_icone_e_nao_caractere(dist):
+    css = read(dist, "css/site.css")
+    assert 'content:"›"' not in css, "o separador voltou a ser caractere tipográfico"
+    regra = css[css.index(".crumbs li+li::before") :][:400]
+    assert "mask:url(" in regra and "background-color:var(--line)" in regra
+
+
+def test_o_breadcrumb_nao_ganhou_elemento_no_html(dist, langs):
+    """O separador é fundo CSS: não entra no markup e não é anunciado por leitor de tela."""
+    paginas = {
+        "pt": "pt/produtos/cafe-verde-arabica",
+        "en": "en/products/green-arabica-coffee",
+        "es": "es/productos/cafe-verde-arabica",
+        "ru": "ru/products/green-arabica-coffee",
+    }
+    for lang in langs:
+        html = read(dist, f"{paginas[lang]}/index.html")
+        nav = html[html.index('<nav class="crumbs') : html.index("</nav>", html.index('<nav class="crumbs'))]
+        assert "<svg" not in nav, lang
+        assert "aria-hidden" not in nav, lang
+        # quatro níveis: Home › categoria raiz › família › produto
+        assert nav.count("<li>") == 4, (lang, nav.count("<li>"))
+        assert nav.count('aria-current="page"') == 1, lang
